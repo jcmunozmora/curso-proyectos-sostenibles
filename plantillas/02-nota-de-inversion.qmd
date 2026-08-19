@@ -1,4 +1,17 @@
-# Nota de Inversión — `[nombre del proyecto]`
+---
+title: "Nota de Inversión"
+subtitle: "Entregable final · máximo 4 páginas · miércoles 16 de septiembre"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+  docx:
+    toc: false
+---
+
+::: {.callout-tip appearance="simple"}
+📄 **[Descargar en Word](02-nota-de-inversion.docx)** — para llenar y entregar.
+:::
 
 > Entregable final. **Máximo 4 páginas.** Formato de la industria, no de trabajo académico.
 > Se entrega el **miércoles 16 de septiembre**, antes del Investor Day.

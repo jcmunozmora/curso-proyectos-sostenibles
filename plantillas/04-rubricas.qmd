@@ -1,4 +1,11 @@
-# Rúbricas de Evaluación — MF7011
+---
+title: "Rúbricas de Evaluación"
+subtitle: "R1 a R5 · escala 0.0–5.0"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+---
 
 **Escala institucional 0.0–5.0.** Conversión: `nota = total/100 × 5.0`
 Nota aprobatoria: **[POR-VERIFICAR con Registro Académico]**
@@ -12,12 +19,12 @@ Nota aprobatoria: **[POR-VERIFICAR con Registro Académico]**
 | **Calidad como evaluador** | **15%** | **R5** | Profesor |
 | | **100%** | | |
 
-**Modulador individual:** la co-evaluación de contribución intra-equipo aplica un factor de **0,85 a 1,15** sobre los componentes de equipo (R1, R2, R3, R4). Ver [co-evaluación](06-coevaluacion-comite.md) §Capa 2.
+**Modulador individual:** la co-evaluación de contribución intra-equipo aplica un factor de **0,85 a 1,15** sobre los componentes de equipo (R1, R2, R3, R4). Ver [co-evaluación](06-coevaluacion-comite.qmd) §Capa 2.
 
-::: nota
+:::{.callout-note}
 **La co-evaluación entra por tres vías:** el 50% de R4 (el comité puntúa los proyectos), el modulador intra-equipo, y R5 —que califica **la calidad del juicio de cada estudiante como evaluador**. Esa tercera vía es la que hace honestas a las otras dos: si evaluar fuera gratis, se degradaría en cortesía mutua.
 
-Instrumentos, salvaguardas y detección de valores atípicos: [`06-coevaluacion-comite.md`](06-coevaluacion-comite.md).
+Instrumentos, salvaguardas y detección de valores atípicos: [`06-coevaluacion-comite.md`](06-coevaluacion-comite.qmd).
 :::
 
 ---
@@ -53,7 +60,7 @@ Cuatro entregas. Se evalúa **la calidad de la auditoría**, no la del modelo au
 
 **Bonificación por hallazgo material:** +2 puntos al equipo auditor por cada error **estructural** encontrado y confirmado por el profesor. Máximo +6 por sesión.
 
-::: nota
+:::{.callout-note}
 **Que a un equipo le encuentren un error no resta puntos.** No corregirlo para la sesión siguiente sí: tope de 12/20 en el artefacto de R1.
 :::
 
@@ -92,7 +99,7 @@ Sobre 100 puntos.
 
 $$R4 = 0{,}50 \times \text{profesor} + 0{,}50 \times \text{mediana del comité}$$
 
-Se usa la **mediana** de las puntuaciones del comité, no el promedio: es robusta a un evaluador extremo. Las puntuaciones del comité se recogen con la **tarjeta de co-evaluación** ([`06-coevaluacion-comite.md`](06-coevaluacion-comite.md) §Capa 1), que exige evidencia específica en los cinco criterios.
+Se usa la **mediana** de las puntuaciones del comité, no el promedio: es robusta a un evaluador extremo. Las puntuaciones del comité se recogen con la **tarjeta de co-evaluación** ([`06-coevaluacion-comite.md`](06-coevaluacion-comite.qmd) §Capa 1), que exige evidencia específica en los cinco criterios.
 
 **Umbral de validez:** si un proyecto recibe menos de **3 evaluaciones válidas** (con evidencia), la co-evaluación no se aplica y R4 = 100% profesor. Se informa al grupo.
 
@@ -139,7 +146,7 @@ Se evalúa **la calidad del juicio, nunca la severidad o la generosidad.**
 | Valor atípico (>1,5 pts de la mediana) **sin** evidencia sólida | se descarta de R4 y −3 en R5 |
 | Valor atípico (>1,5 pts de la mediana) **con** evidencia sólida | **se mantiene y puntúa alto en R5** |
 
-::: nota
+:::{.callout-note}
 **Hablar mucho no puntúa.** Una pregunta que deja a un equipo sin respuesta vale más que diez comentarios de acuerdo. Y un evaluador que se aparta de la mediana **porque vio algo que nadie más vio** es exactamente el objetivo del ejercicio, no una desviación a corregir.
 :::
 

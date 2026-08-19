@@ -1,4 +1,17 @@
-# Fichas de Rol — Investor Day (Sesión 5)
+---
+title: "Fichas de Rol · Investor Day"
+subtitle: "Sesión 5 · cada estudiante recibe una"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+  docx:
+    toc: false
+---
+
+::: {.callout-tip appearance="simple"}
+📄 **[Descargar en Word](03-fichas-de-rol-investor-day.docx)** — para llenar y entregar.
+:::
 
 > Imprimir y repartir al inicio. Cada estudiante recibe **una**.
 > Durante los pitches de otros equipos, **no son estudiantes: son su rol.**

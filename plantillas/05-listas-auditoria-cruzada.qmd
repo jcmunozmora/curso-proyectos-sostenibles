@@ -1,4 +1,11 @@
-# Listas de Auditoría Cruzada
+---
+title: "Listas de Auditoría Cruzada"
+subtitle: "Sesiones 1 a 4 · últimos 20 minutos de cada sábado"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+---
 
 > Se reparten en los últimos 20 minutos de cada sábado.
 > El equipo A recibe el modelo del equipo B y **esta lista cerrada**.

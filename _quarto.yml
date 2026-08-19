@@ -5,6 +5,7 @@ project:
     - "*.qmd"
     - "literatura/*.qmd"
     - "slides/**/*.qmd"
+    - "plantillas/*.qmd"
     - "!instructor/"
     - "!00_Inputs/"
 
@@ -44,8 +45,24 @@ website:
           - text: "---"
           - text: "S5 · Investor Day"
             href: slides/s05/s05-investor-day.qmd
-      - href: materiales.qmd
-        text: Materiales
+      - text: Materiales
+        menu:
+          - href: materiales.qmd
+            text: Índice de materiales
+          - text: "---"
+          - href: plantillas/01-ficha-de-proyecto.qmd
+            text: "Ficha de proyecto"
+          - href: plantillas/02-nota-de-inversion.qmd
+            text: "Nota de inversión"
+          - text: "---"
+          - href: plantillas/04-rubricas.qmd
+            text: "Rúbricas"
+          - href: plantillas/05-listas-auditoria-cruzada.qmd
+            text: "Listas de auditoría cruzada"
+          - href: plantillas/06-coevaluacion-comite.qmd
+            text: "Co-evaluación del comité"
+          - href: plantillas/03-fichas-de-rol-investor-day.qmd
+            text: "Fichas de rol · Investor Day"
       - text: Literatura
         menu:
           - href: literatura/revision-literatura.qmd

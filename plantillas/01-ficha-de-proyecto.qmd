@@ -1,4 +1,17 @@
-# Ficha de Proyecto — `[nombre del equipo]`
+---
+title: "Ficha de Proyecto"
+subtitle: "Entregable de la Sesión 1 · se actualiza en cada sesión"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+  docx:
+    toc: false
+---
+
+::: {.callout-tip appearance="simple"}
+📄 **[Descargar en Word](01-ficha-de-proyecto.docx)** — para llenar y entregar.
+:::
 
 > Entregable de la Sesión 1. Se sube **antes de salir del salón**.
 > Se actualiza en cada sesión. Máximo 2 páginas.

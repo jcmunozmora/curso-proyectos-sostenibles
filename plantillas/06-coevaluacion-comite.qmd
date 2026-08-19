@@ -1,4 +1,11 @@
-# El Comité de Inversión como órgano de co-evaluación
+---
+title: "Co-evaluación del Comité de Inversión"
+subtitle: "Sesión 5 · instrumentos, salvaguardas y cálculo"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+---
 
 **Sesión 5 · Investor Day** · MF7011
 
@@ -18,7 +25,7 @@ El comité de inversión resuelve eso estructuralmente:
 | Represalias entre equipos | Las puntuaciones son **confidenciales**; sólo la asignación de presupuesto es pública |
 | Calificar es gratis | **La calidad de tu evaluación se califica** (R6). Evaluar mal cuesta nota |
 
-::: importante
+:::{.callout-important}
 **El giro central:** no se evalúa "qué tan generoso o severo fuiste". Se evalúa **qué tan buen juicio tuviste**. Eso es lo único que hace honesta una co-evaluación.
 :::
 
@@ -58,7 +65,7 @@ CAPA 3 · META-EVALUACIÓN                  (la califica el profesor)
 | 4 | **Bancabilidad desde MI rol** — ¿yo podría financiarlo? | ☐ | ☐ | ☐ | ☐ | ☐ | |
 | 5 | **Calidad de la respuesta** — respondieron o esquivaron | ☐ | ☐ | ☐ | ☐ | ☐ | |
 
-::: aviso
+:::{.callout-warning}
 **La columna Evidencia es obligatoria en los cinco criterios.** Una puntuación sin evidencia específica —celda, cifra o frase textual del pitch— **no se cuenta**, y baja tu nota de R6.
 
 Evidencia válida: *"Descontaron el FCA al WACC; lo vi en la hoja Criterios, celda B8."*
@@ -104,7 +111,7 @@ factor_individual = puntos_recibidos_promedio / (100 / n)
 nota_individual = nota_del_equipo × factor_individual   [acotado a 0,85 – 1,15]
 ```
 
-::: nota
+:::{.callout-note}
 **El acotamiento a ±15% es deliberado.** La co-evaluación de contribución corrige asimetrías reales, no reescribe la nota. Si un caso excede ese rango, es un problema de gestión de equipo que el profesor conversa con el equipo — no un problema aritmético.
 :::
 
@@ -148,7 +155,7 @@ Para cada proyecto se calcula la mediana de las puntuaciones recibidas. Una punt
 2. Si la evidencia es sólida → **se mantiene** (un evaluador que vio algo que otros no vieron merece R6 alto)
 3. Si la evidencia es débil o ausente → **se descarta** de la Capa 1 y baja R6
 
-::: importante
+:::{.callout-important}
 Un valor atípico **bien sustentado no es un error: es el objetivo del ejercicio.** El escéptico financiero que encuentra el doble conteo que nadie más vio *debe* apartarse de la mediana.
 :::
 
@@ -179,6 +186,6 @@ Se usa la **mediana**, no el promedio: es robusta a un evaluador extremo.
 4. Los extremos justifican. El grupo converge.
 5. El profesor fija el ancla: *"esto es un 2, y esta es la razón"*.
 
-::: nota
+:::{.callout-note}
 La dispersión inicial **es el aprendizaje**. Que descubran que "solidez" significaba cosas distintas para cada uno es lo que hace que la evaluación posterior sea comparable.
 :::
