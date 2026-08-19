@@ -9,6 +9,7 @@ format:
     transition: none
     width: 1600
     height: 900
+    include-after-body: ../cronometro.html
 ---
 
 ## {background-color="#000066"}
@@ -78,7 +79,7 @@ No cree en nada. Busca el supuesto frágil, el doble conteo, la celda codificada
 
 ---
 
-## Calibración · 15 minutos {background-color="#f5f5f5"}
+## Calibración · 15 minutos {background-color="#f5f5f5" data-cron="900" data-cron-label="calibración"}
 
 Antes de evaluar a nadie, tenemos que **acordar qué significa cada puntuación.**
 
@@ -101,7 +102,7 @@ El ancla es: esto es un 2. VPN presentado +10,7 M → corregido −0,7 M.
 
 ---
 
-## Estructura del pitch · 12 minutos {.smaller}
+## Estructura del pitch · 12 minutos {.smaller data-cron="720" data-cron-label="pitch"}
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -148,7 +149,7 @@ Noten que **"el VPN más alto" no es un criterio.** Un VPN alto construido sobre
 
 ---
 
-## Las preguntas que el comité va a hacer {.smaller}
+## Las preguntas que el comité va a hacer {.smaller data-cron="720" data-cron-label="interrogatorio"}
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -197,7 +198,7 @@ Se evalúa si tuvieron buen juicio.
 
 ---
 
-## La tarjeta de co-evaluación {.smaller}
+## La tarjeta de co-evaluación {.smaller data-cron="1200" data-cron-label="co-evaluación"}
 
 Una tarjeta por cada proyecto **que no es el suyo**. No pueden evaluar el propio.
 
@@ -248,7 +249,7 @@ Apartarse de la mediana **porque vieron algo que nadie más vio es el objetivo d
 
 ---
 
-## {background-color="#00A9E0"}
+## {background-color="#00A9E0" data-cron="1800" data-cron-label="comité"}
 
 ::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
 COMITÉ DE INVERSIÓN

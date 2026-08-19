@@ -9,9 +9,10 @@ format:
     transition: none
     width: 1600
     height: 900
+    include-after-body: ../cronometro.html
 ---
 
-## Recuperación · 20 min {.smaller}
+## Recuperación · 20 min {.smaller data-cron="1200" data-cron-label="recuperación"}
 
 1. Escriban la fórmula del $K_e$ y digan qué representa cada término.
 2. ¿Por qué hay que convertir un $K_e$ construido en USD antes de usarlo con flujos en COP?
@@ -22,6 +23,24 @@ format:
 ::: {.notes}
 MIN 0–20. La 4 es la que más fallan. Es el concepto del día.
 :::
+
+## El plan de hoy {.smaller background-color="#f5f5f5"}
+
+| | Bloque | Min |
+|---|---|---:|
+| **8:00** | Recuperación | 20 |
+| 8:20 | **FCLD vs. FCA** · dos flujos, dos preguntas, dos tasas | 20 |
+| 8:40 | **Construcción 1** · hoja FCLD | **40** |
+| 9:20 | Síntesis · los tres errores del día | 15 |
+| **9:35** | **Pausa** | 20 |
+| 9:55 | Por qué la TIR miente · TIR Modificada | 20 |
+| 10:15 | **Construcción 2** · criterios de decisión | **40** |
+| 10:55 | Síntesis | 15 |
+| **11:10** | **Pausa** | 15 |
+| 11:25 | Punto de equilibrio · GAO · GAF | 20 |
+| 11:45 | **Construcción 3** · FCA y amortización | **40** |
+| 12:25 | Auditoría cruzada | 20 |
+| **13:00** | **Fin** | |
 
 ---
 
@@ -89,7 +108,7 @@ Descontar el **FCA** al **WACC**. Cuenta el beneficio de la deuda dos veces: en 
 
 ---
 
-## Construcción 1 · 40 min {background-color="#f5f5f5"}
+## Construcción 1 · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="construcción 1"}
 
 **Hoja `FCLD` de la plantilla:**
 
@@ -111,7 +130,7 @@ Descontar el **FCA** al **WACC**. Cuenta el beneficio de la deuda dos veces: en 
 
 ---
 
-## Síntesis 1 · los tres errores del día {background-color="#f5f5f5"}
+## Síntesis 1 · los tres errores del día {background-color="#f5f5f5" data-cron="900" data-cron-label="síntesis"}
 
 | # | Error | Por qué pasa | Efecto en el VPN |
 |---|---|---|---|
@@ -125,7 +144,7 @@ Dos de los tres errores inflan el VPN. **No es casualidad.** El sesgo de optimis
 
 ---
 
-## {background-color="#00A9E0"}
+## {background-color="#00A9E0" data-cron="1200" data-cron-label="pausa"}
 
 ::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
 PAUSA · 20 minutos
@@ -186,6 +205,73 @@ Flujo del cacao a USD 7.000/t, con una **obligación de restauración al cierre*
 Lo que sí es cierto: **con más de un cambio de signo, la TIR deja de ser confiable de formas que no se pueden anticipar mirando el flujo.**
 :::
 
+## Teoría · El supuesto de reinversión, en álgebra {.smaller}
+
+La TIR es la tasa que anula el VPN:
+
+$$\sum_{t=0}^{n} \frac{FC_t}{(1+TIR)^t} = 0$$
+
+Reordenando, eso equivale a decir que **el valor futuro de los flujos positivos, capitalizados a la propia TIR**, alcanza justo para devolver la inversión capitalizada a esa misma tasa:
+
+$$\sum_{t} FC_t^{+}\,(1+TIR)^{\,n-t} \;=\; \left|\sum_t FC_t^{-}\right|(1+TIR)^{\,n}$$
+
+::: {.callout-warning}
+**Ahí está el supuesto escondido.** La TIR no sólo mide el rendimiento del proyecto: **asume que todo lo que el proyecto devuelve se reinvierte a esa misma tasa** hasta el final del horizonte.
+
+Si su TIR da 26%, la TIR está suponiendo que ustedes tienen **otro proyecto al 26%** esperando cada peso que salga. Si lo tuvieran, estarían haciendo ese.
+:::
+
+**La TIRM rompe el supuesto separando las dos tasas:**
+
+$$TIRM = \left(\frac{\sum_t FC_t^{+}(1+r_{\text{reinv}})^{\,n-t}}{\left|\sum_t FC_t^{-}\right|(1+r_{\text{fin}})^{-t}}\right)^{1/n} - 1$$
+
+| Tasa | Qué es | En su proyecto |
+|---|---|---|
+| $r_{\text{fin}}$ | a la que consiguen dinero para los flujos negativos | su $K_d$ |
+| $r_{\text{reinv}}$ | a la que **realmente** colocan los excedentes | su WACC, o menos |
+
+---
+
+## Teoría · Por qué la TIR puede no existir {.smaller}
+
+El VPN es un **polinomio de grado $n$** en $\frac{1}{1+r}$. La TIR es una **raíz** de ese polinomio.
+
+**Regla de los signos de Descartes:** el número de raíces reales positivas es, **como máximo**, el número de cambios de signo de la secuencia de flujos — y puede ser menor, siempre en dos unidades.
+
+::: {.columns}
+::: {.column width="50%"}
+```
+FLUJO CONVENCIONAL
+− + + + + + + +
+  1 cambio → 1 TIR, única
+  ✅ la TIR es confiable
+```
+```
+FLUJO NO CONVENCIONAL
+− − − + + + + −
+  2 cambios → 0 ó 2 TIR
+  ⚠️ Excel reporta una sola
+```
+:::
+
+::: {.column width="50%"}
+**Comportamiento en los extremos**
+
+$r \to 0$ : $VPN \to \sum FC_t$ (suma simple)
+
+$r \to \infty$ : $VPN \to FC_0 < 0$
+
+Si $\sum FC_t > 0$ hay un número **impar** de cruces.
+Si $\sum FC_t < 0$, un número **par** — que puede ser **cero**.
+:::
+:::
+
+::: {.callout-important}
+**Por eso el caso de la lámina anterior:** con obligación de cierre de 15,6 M la suma es apenas negativa y hay **dos** TIR. Con 15,7 M la curva no llega a cruzar y **no hay ninguna** — Excel devuelve `#¡NUM!`.
+
+**La verificación de 5 segundos:** sumen sus flujos sin descontar. Si el total es negativo pero el VPN es positivo a alguna tasa, tienen un flujo raro y la TIR no les sirve.
+:::
+
 ---
 
 ## Input 2 · TIR Modificada {.smaller}
@@ -214,7 +300,7 @@ La TIRM **siempre es única** y siempre existe. Y da un número más bajo que la
 
 ---
 
-## Construcción 2 · 40 min {background-color="#f5f5f5"}
+## Construcción 2 · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="construcción 2"}
 
 **Hoja `Criterios`:**
 
@@ -230,6 +316,14 @@ La TIRM **siempre es única** y siempre existe. Y da un número más bajo que la
 
 ::: {.callout-warning}
 **Verifiquen el patrón de signos de su flujo** antes de reportar la TIR. Si hay más de un cambio, escríbanlo en el entregable.
+:::
+
+---
+
+## {background-color="#00A9E0" data-cron="900" data-cron-label="pausa"}
+
+::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
+PAUSA · 15 minutos
 :::
 
 ---
@@ -270,7 +364,7 @@ Deuda alta → GAF alto
 
 ---
 
-## Construcción 3 · 40 min {background-color="#f5f5f5"}
+## Construcción 3 · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="construcción 3"}
 
 1. Construyan el **FCA** a partir del FCLD, con la tabla de amortización de su deuda
 2. Descuenten el FCA al **$K_e$** (no al WACC) → VPN del accionista
@@ -284,7 +378,7 @@ El VPN del proyecto y el del accionista **no** tienen que coincidir. Si el suyo 
 
 ---
 
-## Auditoría cruzada · 20 min {background-color="#000066" style="color:white;"}
+## Auditoría cruzada · 20 min {background-color="#000066" style="color:white;" data-cron="1200" data-cron-label="auditoría"}
 
 ::: {style="font-size:1.05em;"}
 1. ¿El FCLD **excluye** completamente la deuda?

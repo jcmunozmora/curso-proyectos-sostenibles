@@ -9,6 +9,7 @@ format:
     transition: none
     width: 1600
     height: 900
+    include-after-body: ../cronometro.html
 ---
 
 ## {background-color="#000066"}
@@ -30,9 +31,24 @@ MIN 0–15. A USD 3.500/t — el precio real de 2026 — el proyecto es inviable
 Dejar la pregunta abierta. No responder.
 :::
 
+## El plan de esta noche {.smaller background-color="#f5f5f5"}
+
+| | Bloque | Min |
+|---|---|---:|
+| **18:00** | *"Su proyecto destruye valor. ¿Debería hacerse?"* | 15 |
+| 18:15 | **Confrontación** · pongan un número al valor social | **40** |
+| 18:55 | Precios sombra · la regla de las transferencias | 10 |
+| 19:05 | El protocolo del Banco Mundial | 10 |
+| **19:15** | **Pausa** | 15 |
+| 19:30 | Tasa social de descuento · Ramsey vs. Harberger | 15 |
+| 19:45 | Colombia ya usa tasas decrecientes | 10 |
+| 19:55 | **Aplicación** · su posición sobre tres preguntas | **40** |
+| 20:35 | Tribunal · hoy el *discussant* es escéptico fiscal | 20 |
+| **21:00** | **Fin** | |
+
 ---
 
-## Confrontación · 40 min {background-color="#f5f5f5"}
+## Confrontación · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="confrontación"}
 
 ::: {style="font-size:1.15em;"}
 El proyecto no le sirve al inversionista. Pero:
@@ -118,7 +134,7 @@ Este es **el formato de su entregable final**. No aprenden *sobre* el estándar:
 
 ---
 
-## {background-color="#00A9E0"}
+## {background-color="#00A9E0" data-cron="900" data-cron-label="pausa"}
 
 ::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
 PAUSA · 15 minutos
@@ -153,6 +169,92 @@ Pregunta distinta: no *"¿cuánto valoramos el futuro?"* sino *"¿qué rendimien
 ::: {.callout-warning}
 No son dos estimaciones del mismo parámetro. **Son dos parámetros distintos que responden preguntas distintas.** Por eso difieren tanto — y por eso el debate no se resuelve con más datos.
 :::
+
+## Teoría · De dónde sale la regla de Ramsey {.smaller}
+
+Un planificador social maximiza el bienestar descontado de generaciones sucesivas:
+
+$$\max \int_0^{\infty} e^{-\delta t}\, U\big(c(t)\big)\, dt$$
+
+De la condición de optimalidad sale la tasa a la que hay que descontar el **consumo** futuro:
+
+$$\boxed{\; r = \underbrace{\delta}_{\substack{\text{preferencia}\\ \text{temporal pura}}} + \underbrace{\eta}_{\substack{\text{elasticidad de}\\ \text{utilidad marginal}}} \cdot \underbrace{g}_{\substack{\text{crecimiento del}\\ \text{consumo per cápita}}} \;}$$
+
+::: {.columns}
+::: {.column width="50%"}
+**$\delta$ — ¿cuánto vale menos el futuro sólo por ser futuro?**
+
+Stern: $\delta \approx 0{,}1\%$ (sólo riesgo de extinción)
+Nordhaus: $\delta \approx 1{,}5\%$ (revelado por el mercado)
+
+**Es una posición ética, no un dato.**
+:::
+
+::: {.column width="50%"}
+**$\eta$ — aversión a la desigualdad**
+
+Si $\eta$ es alto, un peso vale mucho más para el pobre que para el rico. Como el futuro será más rico, se le descuenta más.
+
+$\eta \approx 1$ a $2$ en la práctica.
+:::
+:::
+
+::: {.callout-important}
+Con $\delta = 0{,}5\%$, $\eta = 1{,}5$ y $g = 1{,}3\%$ → $r = 0{,}5 + 1{,}5(1{,}3) = \mathbf{2{,}45\%}$
+
+Eso está **exactamente** en el rango de la encuesta a 197 expertos (media 2,25%, mediana 2,0%). No es coincidencia: es el mismo modelo.
+:::
+
+---
+
+## Teoría · Las dos escuelas no discrepan, preguntan cosas distintas {.smaller}
+
+| | **Ramsey** | **Harberger** |
+|---|---|---|
+| **La pregunta** | ¿Cuánto vale para la sociedad el consumo futuro frente al presente? | ¿Qué rendimiento deja de obtener la economía al usar estos recursos aquí? |
+| **Objeto** | Preferencia social intertemporal | Costo de oportunidad del capital |
+| **Método** | $r = \delta + \eta g$ | Promedio ponderado del retorno del ahorro y de la inversión desplazada |
+| **Resultado típico** | **2 – 3%** | **8 – 12%** |
+| **Quién la usa** | Reino Unido, Francia, Noruega, literatura climática | **Colombia (DNP)**, BID, buena parte de LatAm |
+
+::: {.callout-warning}
+**Un factor de 4 entre las dos escuelas.** No se resuelve con más datos — son marcos distintos.
+
+Lo que **sí** se les exige a ustedes es **declarar cuál usan y por qué**, y mostrar el resultado con las dos. El Banco Mundial exige exactamente eso con el carbono; nosotros lo extendemos a la tasa.
+:::
+
+---
+
+## Teoría · Qué autoriza a sumar beneficios de gente distinta {.smaller}
+
+El ACB descansa en un criterio explícito, y conviene decirlo en voz alta:
+
+::: {.columns}
+::: {.column width="50%"}
+**Pareto**
+Una política mejora si **alguien gana y nadie pierde**.
+
+→ Casi ninguna política real lo cumple.
+:::
+
+::: {.column width="50%"}
+**Kaldor–Hicks**
+Una política mejora si **los que ganan podrían compensar a los que pierden** y aún quedar mejor.
+
+→ Es el criterio del ACB.
+:::
+:::
+
+::: {.callout-important}
+## La palabra que hace todo el trabajo: *podrían*
+Kaldor–Hicks **no exige que la compensación ocurra**. Sólo que sea teóricamente posible.
+
+Por eso un proyecto con VPN social positivo puede, simultáneamente, **empeorar la vida de la comunidad que vive ahí** — y seguir "pasando" el ACB.
+
+**Cuando el comunero les pregunte en el Investor Day *"¿y nosotros qué?"*, les está preguntando exactamente esto.** La respuesta técnica correcta es: *"el ACB dice que se puede compensar; el diseño del instrumento decide si se compensa."*
+:::
+
+**Por eso el análisis distributivo no es un adorno del ACB: es lo que le falta.**
 
 ---
 
@@ -193,7 +295,7 @@ Un factor de **12×** entre el primero y el último. Sobre el mismo peso, del mi
 
 ---
 
-## Aplicación · 40 min {background-color="#f5f5f5"}
+## Aplicación · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="aplicación"}
 
 **Tomen posición, por escrito, sobre las tres preguntas:**
 
@@ -213,7 +315,7 @@ No hay respuesta correcta. Hay respuestas **defendibles** y respuestas que no lo
 
 ---
 
-## Tribunal · 20 min
+## Tribunal · 20 min {data-cron="1200" data-cron-label="tribunal"}
 
 ::: {style="font-size:1.2em;"}
 El *discussant* de hoy tiene un papel distinto: **es el escéptico fiscal.**

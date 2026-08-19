@@ -9,6 +9,7 @@ format:
     transition: none
     width: 1600
     height: 900
+    include-after-body: ../cronometro.html
 ---
 
 ## {background-color="#000066"}
@@ -32,9 +33,28 @@ MIN 0–15. En realidad cambian dos cosas (precio y tasa) — pero no lo digan a
 Que lo descubran. El punto es que el denominador importa tanto como el numerador.
 :::
 
+## El plan de esta noche {.smaller background-color="#f5f5f5"}
+
+| | Bloque | Min |
+|---|---|---:|
+| **18:00** | Dos VPN del mismo proyecto, signos opuestos | 15 |
+| 18:15 | **Confrontación** · *"¿por qué 14% y no 9%?"* | **40** |
+| 18:55 | Cómo se construye un $K_e$ · el WACC de este proyecto | 20 |
+| **19:15** | **Pausa** | 15 |
+| 19:30 | El intervalo de confianza de la beta | 10 |
+| 19:40 | Welch · si no el CAPM, ¿entonces qué? | 10 |
+| 19:50 | El greenium: −12 pb | 10 |
+| 20:00 | **Aplicación** · su WACC con rango | **40** |
+| 20:35 | Tribunal | 20 |
+| **21:00** | **Fin** | |
+
+::: {.callout-warning}
+La sesión más técnica del curso. Traigan el modelo de la semana pasada abierto.
+:::
+
 ---
 
-## Confrontación · 40 min {background-color="#f5f5f5"}
+## Confrontación · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="confrontación"}
 
 ::: {style="font-size:1.2em;"}
 Su banco les pregunta:
@@ -120,6 +140,80 @@ $WACC = \mathbf{10{,}80\%}$
 **El paso que casi todos saltan es la conversión de moneda.** Tomar un $K_e$ construido con datos en dólares y aplicarlo a un flujo en pesos, sin el diferencial de inflación, es un error silencioso de más de 2 puntos.
 :::
 
+## Teoría · Por qué hay que convertir la moneda {.smaller}
+
+La **relación de Fisher** dice que una tasa nominal contiene dos cosas: rendimiento real y compensación por inflación.
+
+$$(1 + i) = (1 + r)(1 + \pi)$$
+
+Si construyes $K_e$ con datos de EE.UU. contiene $\pi_{USD}$. Si tu flujo está en pesos contiene $\pi_{COP}$. **Aplicar uno al otro es un error de unidades**, no de criterio:
+
+$$(1 + i_{COP}) = (1 + i_{USD}) \cdot \frac{1 + \pi_{COP}}{1 + \pi_{USD}}$$
+
+::: {.columns}
+::: {.column width="50%"}
+**Con los números del proyecto**
+
+$K_e^{USD} = 10{,}65\%$
+
+$\pi_{COP} = 5{,}0\%$ · $\pi_{USD} = 2{,}5\%$
+
+$$K_e^{COP} = 1{,}1065 \times \frac{1{,}050}{1{,}025} - 1$$
+
+$$= \mathbf{13{,}34\%}$$
+:::
+
+::: {.column width="50%"}
+**El atajo que falla**
+
+Sumar el diferencial:
+
+$10{,}65\% + 2{,}5\% = 13{,}15\%$
+
+Error de **19 puntos básicos**. Pequeño aquí, grande con inflaciones altas — y siempre en la misma dirección.
+
+**Multiplicar, no sumar.**
+:::
+:::
+
+::: {.callout-warning}
+**La regla:** o todo nominal, o todo real. Un flujo real descontado a tasa nominal subestima el VPN en, aproximadamente, la inflación acumulada del horizonte.
+:::
+
+---
+
+## Teoría · Qué dice, y qué no dice, el CAPM {.smaller}
+
+$$E[R_i] = R_f + \beta_i \big(E[R_m] - R_f\big), \qquad \beta_i = \frac{\mathrm{Cov}(R_i, R_m)}{\mathrm{Var}(R_m)}$$
+
+::: {.columns}
+::: {.column width="50%"}
+**Lo que afirma**
+
+El único riesgo que se **remunera** es el que **no se puede diversificar** — el que covaría con el mercado.
+
+El riesgo idiosincrático se elimina gratis en un portafolio. Nadie paga por soportarlo.
+:::
+
+::: {.column width="50%"}
+**Lo que implica para su proyecto**
+
+Plaga · sequía · precio del cacao · falla del comprador ancla
+
+→ todos **idiosincráticos**
+→ el CAPM dice: **NO suben la tasa**
+
+Ese riesgo va al **numerador**, como flujos esperados ponderados por probabilidad.
+:::
+:::
+
+::: {.callout-important}
+## La incoherencia que se practica todos los días
+Sumar una **prima de riesgo país** al final **no sale del CAPM**. El inversionista global que el modelo supone **ya diversificó Colombia**.
+
+Se hace porque funciona en la práctica, no porque el modelo lo respalde. Está bien hacerlo — **siempre que sepan que están saliéndose del modelo y lo declaren.**
+:::
+
 ---
 
 ## Input · Ahora el intervalo de confianza de la beta {.smaller}
@@ -142,7 +236,7 @@ Y este proyecto **no tiene comparables públicos con beta observable.** Esa beta
 
 ---
 
-## {background-color="#00A9E0"}
+## {background-color="#00A9E0" data-cron="900" data-cron-label="pausa"}
 
 ::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
 PAUSA · 15 minutos
@@ -206,7 +300,7 @@ El valor real de la etiqueta verde está en **acceso** — plazos más largos, g
 
 ---
 
-## Aplicación · 40 min {background-color="#f5f5f5"}
+## Aplicación · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="aplicación"}
 
 **Reconstruyan el costo de capital de su proyecto:**
 
@@ -223,7 +317,7 @@ Entregable: **una tasa con intervalo y una frase de defensa.** Si su respuesta e
 
 ---
 
-## Tribunal · 20 min
+## Tribunal · 20 min {data-cron="1200" data-cron-label="tribunal"}
 
 ::: {style="font-size:1.2em;"}
 Dos equipos defienden su WACC. El *discussant* pregunta:

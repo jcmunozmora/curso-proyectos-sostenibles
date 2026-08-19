@@ -1,0 +1,116 @@
+<style>
+#cron {
+  position: fixed; right: 26px; bottom: 22px; z-index: 60;
+  font-family: "Inter", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+  background: #000066; color: #fff;
+  border-radius: 14px; padding: 10px 20px 12px;
+  box-shadow: 0 6px 26px rgba(0,0,0,.28);
+  display: none; text-align: center; line-height: 1;
+  transition: background .4s ease, transform .2s ease;
+  cursor: pointer; user-select: none;
+}
+#cron.on { display: block; }
+#cron .t  { font-size: 46px; font-weight: 700; letter-spacing: -.02em; }
+#cron .l  { font-size: 12px; opacity: .82; margin-top: 6px;
+            text-transform: uppercase; letter-spacing: .12em; }
+#cron.aviso { background: #B45309; }
+#cron.final { background: #B91C1C; animation: lat 1s ease-in-out infinite; }
+#cron.pausa { background: #4B5563; }
+#cron.pausa .t { opacity: .55; }
+#cron.fin   { background: #7F1D1D; animation: flash .7s steps(2) infinite; }
+@keyframes lat   { 0%,100%{transform:scale(1)} 50%{transform:scale(1.05)} }
+@keyframes flash { 50% { opacity: .35 } }
+#cron .barra { height: 4px; background: rgba(255,255,255,.28);
+               border-radius: 2px; margin-top: 9px; overflow: hidden; }
+#cron .barra i { display:block; height:100%; background:#00A9E0;
+                 border-radius:2px; transition: width .95s linear; }
+</style>
+
+<div id="cron" title="clic o T = iniciar/pausar · R = reiniciar">
+  <div class="t">00:00</div>
+  <div class="l">—</div>
+  <div class="barra"><i style="width:100%"></i></div>
+</div>
+
+<script>
+(function () {
+  const box = document.getElementById('cron');
+  if (!box) return;
+  const elT = box.querySelector('.t'),
+        elL = box.querySelector('.l'),
+        elB = box.querySelector('.barra i');
+
+  let total = 0, queda = 0, tick = null, corriendo = false;
+
+  const mmss = s => {
+    s = Math.max(0, Math.round(s));
+    return String(Math.floor(s / 60)).padStart(2, '0') + ':' +
+           String(s % 60).padStart(2, '0');
+  };
+
+  function pinta() {
+    elT.textContent = mmss(queda);
+    elB.style.width = total ? (queda / total * 100) + '%' : '0%';
+    box.classList.remove('aviso', 'final', 'pausa', 'fin');
+    if (queda <= 0)                 box.classList.add('fin');
+    else if (!corriendo)            box.classList.add('pausa');
+    else if (queda <= total * 0.10) box.classList.add('final');
+    else if (queda <= total * 0.25) box.classList.add('aviso');
+  }
+
+  function parar() { clearInterval(tick); tick = null; corriendo = false; }
+
+  function arranca() {
+    parar(); corriendo = true;
+    tick = setInterval(() => {
+      queda -= 1;
+      if (queda <= 0) { queda = 0; parar(); }
+      pinta();
+    }, 1000);
+    pinta();
+  }
+
+  function monta(seg, etiqueta) {
+    total = queda = seg;
+    elL.textContent = etiqueta || 'trabajo';
+    box.classList.add('on');
+    parar(); pinta();          // arranca en pausa: el profe decide cuándo
+  }
+
+  function desmonta() { parar(); box.classList.remove('on'); }
+
+  function revisa(slide) {
+    if (!slide) return;
+    const seg = parseInt(slide.getAttribute('data-cron') || '0', 10);
+    if (seg > 0) monta(seg, slide.getAttribute('data-cron-label'));
+    else desmonta();
+  }
+
+  box.addEventListener('click', () => {
+    if (queda <= 0) return;
+    corriendo ? (parar(), pinta()) : arranca();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.target.matches('input, textarea')) return;
+    const k = e.key.toLowerCase();
+    if (k === 't' && box.classList.contains('on')) {
+      e.preventDefault();
+      if (queda <= 0) return;
+      corriendo ? (parar(), pinta()) : arranca();
+    }
+    if (k === 'r' && box.classList.contains('on')) {
+      e.preventDefault(); queda = total; parar(); pinta();
+    }
+  });
+
+  function init() {
+    if (!window.Reveal) return setTimeout(init, 260);
+    Reveal.on('ready',       e => revisa(e.currentSlide));
+    Reveal.on('slidechanged', e => revisa(e.currentSlide));
+    revisa(Reveal.getCurrentSlide());
+  }
+  init();
+})();
+</script>

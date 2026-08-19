@@ -9,9 +9,10 @@ format:
     transition: none
     width: 1600
     height: 900
+    include-after-body: ../cronometro.html
 ---
 
-## Recuperación · 20 min {.smaller}
+## Recuperación · 20 min {.smaller data-cron="1200" data-cron-label="recuperación"}
 
 1. ¿Por qué los impuestos **no** son un costo social?
 2. ¿Cuál es la TSD que Colombia exige para un proyecto ambiental de 15 años?
@@ -24,6 +25,24 @@ MIN 0–20. La 5 es la trampa: es una transferencia del consumidor europeo al pr
 Hay un argumento para incluirla (mejora el bienestar del productor) y uno para excluirla
 (no crea valor nuevo). Que discutan — no hay respuesta única.
 :::
+
+## El plan de hoy {.smaller background-color="#f5f5f5"}
+
+| | Bloque | Min |
+|---|---|---:|
+| **8:00** | Recuperación | 20 |
+| 8:20 | Del flujo privado al social · cuantificar carbono | 20 |
+| 8:40 | **Construcción 1** · hoja FlujoSocial | **40** |
+| 9:20 | Síntesis · sus supuestos son la mitad del resultado | 15 |
+| **9:35** | **Pausa** | 20 |
+| 9:55 | La tabla que lo dice todo · *switching value* | 20 |
+| 10:15 | **Construcción 2** · protocolo Banco Mundial | **40** |
+| 10:55 | Síntesis | 15 |
+| **11:10** | **Pausa** | 15 |
+| 11:25 | Riesgo climático · escenarios NGFS | 20 |
+| 11:45 | **Construcción 3** · los tres escenarios | **40** |
+| 12:25 | Auditoría cruzada | 20 |
+| **13:00** | **Fin** · instrucciones del Investor Day | |
 
 ---
 
@@ -82,7 +101,7 @@ La **línea base es la decisión más contestada** de toda la contabilidad de ca
 
 ---
 
-## Construcción 1 · 40 min {background-color="#f5f5f5"}
+## Construcción 1 · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="construcción 1"}
 
 **Hoja `FlujoSocial`:**
 
@@ -98,7 +117,7 @@ Cada supuesto va en una celda **etiquetada y editable**, nunca dentro de una fó
 
 ---
 
-## Síntesis 1 · sus supuestos son la mitad del resultado {background-color="#f5f5f5"}
+## Síntesis 1 · sus supuestos son la mitad del resultado {background-color="#f5f5f5" data-cron="900" data-cron-label="síntesis"}
 
 ::: {style="font-size:1.2em;"}
 En este taller, **cada equipo eligió**:
@@ -120,7 +139,7 @@ el VPN social difiere en **más del doble**.
 
 ---
 
-## {background-color="#00A9E0"}
+## {background-color="#00A9E0" data-cron="1200" data-cron-label="pausa"}
 
 ::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
 PAUSA · 20 minutos
@@ -176,7 +195,7 @@ Cuando alguien les presente un VPN social sin declarar su tasa **y su justificac
 
 ---
 
-## Construcción 2 · 40 min {background-color="#f5f5f5"}
+## Construcción 2 · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="construcción 2"}
 
 **Construyan su tabla de protocolo Banco Mundial:**
 
@@ -194,6 +213,14 @@ Escriban la **frase de cierre** de su análisis:
 > *"Este proyecto se justifica socialmente si el precio del carbono supera USD ___/tCO₂e, valor que está [dentro / fuera] del rango recomendado por el Banco Mundial."*
 
 Esa frase es la más comunicable de todo el curso. **Va en la primera página de su nota de inversión.**
+:::
+
+---
+
+## {background-color="#00A9E0" data-cron="900" data-cron-label="pausa"}
+
+::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
+PAUSA · 15 minutos
 :::
 
 ---
@@ -221,7 +248,7 @@ Bajar el flujo por riesgo climático **y** subir la tasa por riesgo climático. 
 
 ---
 
-## Construcción 3 · 40 min {background-color="#f5f5f5"}
+## Construcción 3 · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="construcción 3"}
 
 **Corran su modelo bajo los tres escenarios NGFS.** Para cada uno definan:
 
@@ -240,7 +267,7 @@ Bajar el flujo por riesgo climático **y** subir la tasa por riesgo climático. 
 
 ---
 
-## Auditoría cruzada · 20 min {background-color="#000066" style="color:white;"}
+## Auditoría cruzada · 20 min {background-color="#000066" style="color:white;" data-cron="1200" data-cron-label="auditoría"}
 
 ::: {style="font-size:1.05em;"}
 1. ¿Se eliminaron los **impuestos** del flujo social?

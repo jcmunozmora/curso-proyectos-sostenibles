@@ -9,9 +9,10 @@ format:
     transition: none
     width: 1600
     height: 900
+    include-after-body: ../cronometro.html
 ---
 
-## Recuperación · 20 min {.smaller}
+## Recuperación · 20 min {.smaller data-cron="1200" data-cron-label="recuperación"}
 
 Individual (5 min), luego en equipo (10 min). **Sin nota.**
 
@@ -29,6 +30,24 @@ Recuperar de memoria antes de volver a ver el material **es** el mecanismo de ap
 MIN 0–20. Primero individual en silencio. Luego equipo. Luego 3 min de plenaria
 sobre las dos que más fallaron. No corregir todas.
 :::
+
+## El plan de hoy {.smaller background-color="#f5f5f5"}
+
+| | Bloque | Min |
+|---|---|---:|
+| **8:00** | Recuperación · 5 preguntas de ayer | 20 |
+| 8:20 | El estudio de proyectos · quién es dueño | 20 |
+| 8:40 | **Construcción 1** · ficha sección A | **40** |
+| 9:20 | Síntesis · el error de todos | 15 |
+| **9:35** | **Pausa** | 20 |
+| 9:55 | Actores · cadena de resultados | 20 |
+| 10:15 | **Construcción 2** · ficha sección B | **40** |
+| 10:55 | Síntesis · la línea de control | 15 |
+| **11:10** | **Pausa** | 15 |
+| 11:25 | KPI que sirven y KPI que no | 20 |
+| 11:45 | **Construcción 3** · ficha sección C | **40** |
+| 12:25 | Auditoría cruzada | 20 |
+| **13:00** | **Fin** — la ficha se sube **antes de salir** | |
 
 ---
 
@@ -106,7 +125,7 @@ Esta decisión determina **quién descuenta a qué tasa** — y por tanto el VPN
 
 ---
 
-## Construcción 1 · 40 min {background-color="#f5f5f5"}
+## Construcción 1 · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="construcción 1"}
 
 **Ficha de Proyecto v1** — en la plantilla, sección A:
 
@@ -133,7 +152,7 @@ NO resolver — preguntar.
 
 ---
 
-## Síntesis 1 · el error típico
+## Síntesis 1 · el error típico {data-cron="900" data-cron-label="síntesis"}
 
 ::: {style="font-size:1.25em;"}
 Casi todos escribieron el problema **como la ausencia de su solución**:
@@ -154,7 +173,7 @@ Eso es un problema: **tiene magnitud, tiene sujeto, y admite más de una soluci�
 
 ---
 
-## {background-color="#00A9E0"}
+## {background-color="#00A9E0" data-cron="1200" data-cron-label="pausa"}
 
 ::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
 PAUSA · 20 minutos
@@ -219,7 +238,7 @@ $$\text{Insumos} \rightarrow \text{Actividades} \rightarrow \text{Productos} \ri
 
 ---
 
-## Construcción 2 · 40 min {background-color="#f5f5f5"}
+## Construcción 2 · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="construcción 2"}
 
 **Sección B de la ficha:**
 
@@ -230,6 +249,14 @@ $$\text{Insumos} \rightarrow \text{Actividades} \rightarrow \text{Productos} \ri
 
 ::: {.callout-note}
 Al final, cada equipo escribe **una frase de compromiso** en primera persona: *"Nos comprometemos a entregar ___, y aspiramos a contribuir a ___."*
+:::
+
+---
+
+## {background-color="#00A9E0" data-cron="900" data-cron-label="pausa"}
+
+::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
+PAUSA · 15 minutos
 :::
 
 ---
@@ -263,7 +290,7 @@ Al final, cada equipo escribe **una frase de compromiso** en primera persona: *"
 
 ---
 
-## Construcción 3 · 40 min {background-color="#f5f5f5"}
+## Construcción 3 · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="construcción 3"}
 
 **Sección C — cinco KPI, en formato completo:**
 
@@ -280,7 +307,7 @@ Luego: **integren A + B + C** en la ficha final y súbanla.
 
 ---
 
-## Auditoría cruzada · 20 min {background-color="#000066" style="color:white;"}
+## Auditoría cruzada · 20 min {background-color="#000066" style="color:white;" data-cron="1200" data-cron-label="auditoría"}
 
 ::: {style="font-size:1.15em;"}
 Reciben la ficha de otro equipo y esta lista de chequeo:

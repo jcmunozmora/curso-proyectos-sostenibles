@@ -10,6 +10,7 @@ format:
     transition: none
     width: 1600
     height: 900
+    include-after-body: ../cronometro.html
 ---
 
 ## {background-color="#000066"}
@@ -30,9 +31,27 @@ Esta slide está proyectada cuando entran al salón.
 Dejar 60 segundos de silencio antes de hablar.
 :::
 
+## El plan de esta noche {.smaller background-color="#f5f5f5"}
+
+| | Bloque | Min |
+|---|---|---:|
+| **18:00** | Una decisión de inversión — **ustedes deciden primero** | 15 |
+| 18:15 | Trabajo en equipo · sin herramientas | **40** |
+| 18:55 | Lo que acaba de pasar | 20 |
+| **19:15** | **Pausa** | 15 |
+| 19:30 | Cómo se mide la sostenibilidad — y por qué no funciona | 20 |
+| 19:50 | El proyecto del curso · equipos | 10 |
+| 20:00 | Ficha de proyecto v0 · **producción** | **40** |
+| 20:35 | Tribunal · dos equipos defienden | 20 |
+| **21:00** | **Fin. En punto.** | |
+
+::: {.callout-note}
+**El 73% del tiempo trabajan ustedes.** Yo hablo 45 minutos de 180.
+:::
+
 ---
 
-## Lo que saben {.smaller}
+## Lo que saben {.smaller data-cron="2400" data-cron-label="confrontación"}
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -301,7 +320,7 @@ Cuando alguien les muestre un IV, la pregunta es: *¿a qué precio están sustit
 
 ---
 
-## {background-color="#00A9E0"}
+## {background-color="#00A9E0" data-cron="900" data-cron-label="pausa"}
 
 ::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
 PAUSA · 15 minutos
@@ -334,6 +353,87 @@ Y la mayor oportunidad identificada: empresas del sector AFOLU que necesitan red
 Su cliente potencial no es un filántropo. Es una chocolatera con una meta de emisiones que cumplir.
 :::
 
+## Teoría · Qué es exactamente "materialidad" {.smaller}
+
+La palabra que más se usa mal en sostenibilidad. Tiene **dos definiciones incompatibles**, y hay que saber cuál está usando cada quien:
+
+::: {.columns}
+::: {.column width="50%"}
+### Materialidad financiera
+
+> Un asunto es material si **afecta el valor de la empresa**.
+
+Dirección: **del mundo hacia la empresa**
+
+Es la definición del **ISSB / IFRS S1–S2**, y la que le importa a un inversionista.
+
+*El estrés hídrico es material porque baja mi rendimiento.*
+:::
+
+::: {.column width="50%"}
+### Materialidad de impacto
+
+> Un asunto es material si **la empresa afecta al mundo**.
+
+Dirección: **de la empresa hacia el mundo**
+
+Es la definición de **GRI** y, en doble versión, de la **CSRD europea**.
+
+*Mi consumo de agua es material porque deja sin agua al acueducto.*
+:::
+:::
+
+::: {.callout-important}
+## Doble materialidad
+Cuando alguien dice *"esto es material"*, la primera pregunta es **¿para quién?**
+
+Un proyecto puede ser irrelevante financieramente y devastador socialmente — y ser "no material" bajo ISSB y "muy material" bajo GRI. **Las dos afirmaciones son correctas.**
+
+En su ficha de proyecto van a tener que declarar cuál de las dos están usando.
+:::
+
+---
+
+## Teoría · El modelo de valor integrado, formalmente {.smaller}
+
+$$IV = FV + SV + EV$$
+
+::: {.columns}
+::: {.column width="52%"}
+**Lo que reemplaza**
+
+El modelo clásico: la firma maximiza $FV$ sujeta a restricciones legales.
+
+$$\max FV \quad \text{s.a.} \quad \text{ley}$$
+
+El modelo integrado: la firma **optimiza la suma**.
+
+$$\max\; (FV + SV + EV)$$
+:::
+
+::: {.column width="48%"}
+**Lo que exige para funcionar**
+
+Para sumar hay que **conmensurar** — convertir tCO₂e, hectáreas e ingreso de hogar a una sola unidad monetaria.
+
+Esa conversión requiere **una tasa de sustitución**:
+
+$$\frac{\partial FV}{\partial EV} = ?$$
+:::
+:::
+
+::: {.callout-warning}
+## El signo "+" es la parte difícil
+Esa tasa de sustitución **es una decisión ética disfrazada de parámetro técnico.** El modelo no la elimina: la esconde dentro de una suma.
+
+Cuando alguien les muestre un $IV$, la pregunta es:
+**¿a qué precio están sustituyendo una tonelada de CO₂ por un peso de utilidad, y quién autorizó ese precio?**
+:::
+
+::: {.callout-note}
+Schoenmaker y Schramade lo reconocen explícitamente. La mayoría de quienes citan su modelo, no.
+:::
+
 ---
 
 ## Su proyecto {background-color="#000066" style="color:white;"}
@@ -354,7 +454,7 @@ que **tiene presupuesto limitado y va a rechazar proyectos.**
 
 ---
 
-## Aplicación · 40 minutos {.smaller}
+## Aplicación · 40 minutos {.smaller data-cron="2400" data-cron-label="aplicación"}
 
 **Produzcan la Ficha de Proyecto v0** — una página, en la plantilla compartida:
 
@@ -383,9 +483,50 @@ Preguntas útiles: "¿quién firma el contrato?" "¿de dónde sacaste ese númer
 "¿qué pasa si eso no ocurre?"
 :::
 
+## Las reglas del Tribunal {.smaller}
+
+Este curso funciona como un **seminario de investigación**. Esa tradición tiene un problema medido, y nosotros vamos a corregirlo desde el primer día.
+
+**Dupas, Handlan, Sasser Modestino, Niederle, Seré, Sheng, Wolfers (2025)** — miles de seminarios de economía, cada interacción codificada:
+
+| Hallazgo | Dato |
+|---|---:|
+| Interrupciones en un *job talk* | **35 en promedio — una cada 2,5 minutos** |
+| Qué son en realidad | **comentarios y críticas**, no preguntas |
+| Tono negativo | **la mitad de las veces** |
+| Cortan al expositor a mitad de frase | frecuente |
+| Y las mujeres son interrumpidas **más** que los hombres | controlando por características |
+
+::: {.callout-important}
+Un seminario donde te interrumpen cada 2,5 minutos **no es rigor: es ruido**. Y no distribuye el ruido de forma pareja.
+:::
+
 ---
 
-## Tribunal · 20 minutos
+## Las cuatro reglas {background-color="#000066" style="color:white;"}
+
+::: {style="font-size:1.15em;"}
+**1 · Moratoria de los primeros 5 minutos.**
+Nadie interrumpe. El equipo llega hasta su argumento completo.
+
+**2 · El *discussant* pregunta primero.**
+Tiene el turno asignado. El resto espera.
+
+**3 · Pregunta, no comentario.**
+Si lo que va a decir no termina en signo de interrogación, no es su turno. *"Yo habría hecho X"* no es una pregunta.
+
+**4 · Se ataca el supuesto, no a la persona.**
+*"¿De dónde salió ese precio?"* — sí.
+*"Eso está mal"* — no.
+:::
+
+::: {.callout-note}
+La moratoria inicial es una práctica de formato ya usada en seminarios profesionales. **[POR-VERIFICAR]** la afirmación de que elimina por completo la brecha de género — la vi citada pero no pude confirmarla en la fuente primaria.
+:::
+
+---
+
+## Tribunal · 20 minutos {data-cron="1200" data-cron-label="tribunal"}
 
 ::: {style="font-size:1.3em;"}
 **Dos equipos** presentan su ficha — 5 minutos cada uno.

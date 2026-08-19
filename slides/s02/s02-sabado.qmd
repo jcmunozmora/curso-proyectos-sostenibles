@@ -9,9 +9,10 @@ format:
     transition: none
     width: 1600
     height: 900
+    include-after-body: ../cronometro.html
 ---
 
-## Recuperación · 20 min {.smaller}
+## Recuperación · 20 min {.smaller data-cron="1200" data-cron-label="recuperación"}
 
 1. Nombren las tres formas honestas de proyectar un precio de commodity.
 2. ¿Por qué un precio alto de cacao **causa** su propia corrección? ¿En cuántos años?
@@ -22,6 +23,24 @@ format:
 ::: {.notes}
 MIN 0–20. Individual 5, equipo 10, plenaria 5 sobre las dos que peor salieron.
 :::
+
+## El plan de hoy {.smaller background-color="#f5f5f5"}
+
+| | Bloque | Min |
+|---|---|---:|
+| **8:00** | Recuperación | 20 |
+| 8:20 | CapEx · lo que siempre se olvida · el cronograma | 20 |
+| 8:40 | **Construcción 1** · hoja CapEx | **40** |
+| 9:20 | Síntesis · el error de las unidades | 15 |
+| **9:35** | **Pausa** | 20 |
+| 9:55 | **Capital de trabajo** · déficit acumulado máximo | 20 |
+| 10:15 | **Construcción 2** · OpEx y capital de trabajo | **40** |
+| 10:55 | Síntesis | 15 |
+| **11:10** | **Pausa** | 15 |
+| 11:25 | Tamaño y localización como optimización | 20 |
+| 11:45 | **Construcción 3** · costo por tonelada vs. precio | **40** |
+| 12:25 | Auditoría cruzada | 20 |
+| **13:00** | **Fin** | |
 
 ---
 
@@ -90,7 +109,7 @@ Un proyecto agroforestal por naturaleza se establece por etapas. **Modelarlo tod
 
 ---
 
-## Construcción 1 · 40 min {background-color="#f5f5f5"}
+## Construcción 1 · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="construcción 1"}
 
 **Hoja `CapEx` de la plantilla:**
 
@@ -110,7 +129,7 @@ Segunda: "¿ese costo es por hectárea o total? ¿Está seguro?"
 
 ---
 
-## Síntesis 1 · el error del año {background-color="#f5f5f5"}
+## Síntesis 1 · el error del año {background-color="#f5f5f5" data-cron="900" data-cron-label="síntesis"}
 
 ::: {style="font-size:1.25em;"}
 Tres equipos confundieron **costo por hectárea** con **costo total**.
@@ -132,7 +151,7 @@ Este error no es de principiantes. Es el error que hunde modelos profesionales, 
 
 ---
 
-## {background-color="#00A9E0"}
+## {background-color="#00A9E0" data-cron="1200" data-cron-label="pausa"}
 
 ::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
 PAUSA · 20 minutos
@@ -181,7 +200,7 @@ Es **más de la mitad** del CapEx de este proyecto. Un modelo que lo ignora no e
 
 ---
 
-## Construcción 2 · 40 min {background-color="#f5f5f5"}
+## Construcción 2 · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="construcción 2"}
 
 **Hoja `OpEx` + hoja `KTrabajo`:**
 
@@ -193,6 +212,14 @@ Es **más de la mitad** del CapEx de este proyecto. Un modelo que lo ignora no e
 
 ::: {.callout-note}
 Si su mano de obra es familiar y la valoran en cero, escríbanlo explícitamente. En S4 vamos a discutir por qué ese cero es una decisión, no un dato.
+:::
+
+---
+
+## {background-color="#00A9E0" data-cron="900" data-cron-label="pausa"}
+
+::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
+PAUSA · 15 minutos
 :::
 
 ---
@@ -228,7 +255,7 @@ No son decisiones descriptivas. Son **variables de optimización** con consecuen
 
 ---
 
-## Construcción 3 · 40 min {background-color="#f5f5f5"}
+## Construcción 3 · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="construcción 3"}
 
 **Integración + análisis de estructura de costos:**
 
@@ -248,7 +275,7 @@ Si su costo por tonelada está **por encima** del escenario bajo, ya saben algo 
 
 ---
 
-## Auditoría cruzada · 20 min {background-color="#000066" style="color:white;"}
+## Auditoría cruzada · 20 min {background-color="#000066" style="color:white;" data-cron="1200" data-cron-label="auditoría"}
 
 ::: {style="font-size:1.1em;"}
 1. ¿Toda celda numérica tiene **unidad en el encabezado**?

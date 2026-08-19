@@ -9,6 +9,7 @@ format:
     transition: none
     width: 1600
     height: 900
+    include-after-body: ../cronometro.html
 ---
 
 ## {background-color="#000066"}
@@ -28,9 +29,24 @@ MIN 0–15. Proyectada cuando entran. Silencio.
 Luego: "Ábranme su ficha de proyecto. ¿Cuántos escribieron un precio? ¿De dónde salió?"
 :::
 
+## El plan de esta noche {.smaller background-color="#f5f5f5"}
+
+| | Bloque | Min |
+|---|---|---:|
+| **18:00** | La celda que vale más que todas las demás | 15 |
+| 18:15 | **Confrontación** · defiendan un precio a 15 años | **40** |
+| 18:55 | Lo que casi todos hicieron, y por qué falla igual | 10 |
+| 19:05 | Tres formas honestas de proyectar | 10 |
+| **19:15** | **Pausa** | 15 |
+| 19:30 | El ciclo del cacao · teoría del cerdo-maíz | 15 |
+| 19:45 | Sesgo de optimismo | 10 |
+| 19:55 | **Aplicación** · tres escenarios estructurales | **40** |
+| 20:35 | Tribunal | 20 |
+| **21:00** | **Fin** | |
+
 ---
 
-## Confrontación · 40 min {background-color="#f5f5f5"}
+## Confrontación · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="confrontación"}
 
 Su equipo tiene que entregar **mañana** un modelo a 15 años.
 
@@ -134,10 +150,99 @@ Su proyecto es parte de ese mecanismo. **Ustedes son la oferta futura de alguien
 
 ---
 
-## {background-color="#00A9E0"}
+## {background-color="#00A9E0" data-cron="900" data-cron-label="pausa"}
 
 ::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
 PAUSA · 15 minutos
+:::
+
+## Teoría · Por qué los commodities agrícolas oscilan {.smaller}
+
+**El modelo de telaraña** (Ezekiel, 1938). Tres supuestos, y sale todo:
+
+::: {.columns}
+::: {.column width="50%"}
+1. La **oferta responde con rezago**: se siembra hoy mirando el precio de hoy, se cosecha en $t+k$
+
+$$Q^s_t = S(P_{t-k})$$
+
+2. La **demanda responde al instante**
+
+$$Q^d_t = D(P_t)$$
+
+3. El mercado limpia: $Q^s_t = Q^d_t$
+:::
+
+::: {.column width="50%"}
+**El resultado:**
+
+$$P_t = D^{-1}\big(S(P_{t-k})\big)$$
+
+Un precio alto en $t$ genera **sobreoferta** en $t+k$, que genera precio bajo, que genera **subinversión**, que genera precio alto…
+
+**El sistema oscila.** No por irracionalidad: por el rezago.
+:::
+:::
+
+::: {.callout-important}
+**Y la elasticidad decide si converge o explota.**
+
+| Condición | Comportamiento |
+|---|---|
+| $\left\|\frac{\text{pendiente } S}{\text{pendiente } D}\right\| < 1$ | oscila y **converge** |
+| $= 1$ | oscila **para siempre** |
+| $> 1$ | oscila y **diverge** |
+
+El cacao tiene oferta **muy inelástica a corto plazo** (el árbol tarda 4 años) y demanda **inelástica** (el chocolate no tiene sustituto). Ese es el peor par posible.
+:::
+
+---
+
+## Teoría · El cacao no fue una anomalía. Fue el modelo funcionando {.smaller}
+
+```
+  2023  déficit por enfermedad y clima en África Occidental
+          │
+          ▼
+  2024  PRECIO RÉCORD  USD 12.931/t
+          │
+          ├──────────────► señal de siembra masiva
+          │                (mundial, no solo África)
+          ▼
+  2025  mejores cosechas · inventarios se reconstruyen
+          │
+          ▼
+  2026  SUPERÁVIT proyectado 247.000 t · precio ~3.000–4.000
+          │
+          ├──────────────► señal de NO sembrar
+          ▼
+  2030  ¿déficit otra vez?
+```
+
+::: {.callout-warning}
+**Ustedes son parte del mecanismo.**
+
+Su proyecto se siembra hoy y produce en el año 4. El precio que verán en el año 4 depende de **cuánta gente más está sembrando hoy** — información que ustedes no tienen y que el precio de hoy no contiene.
+
+**Modelar el precio de hoy como el precio del año 12 es suponer que el rezago no existe.**
+:::
+
+---
+
+## Teoría · Qué sí contiene información sobre el futuro {.smaller}
+
+| Fuente | Qué sabe | Horizonte útil |
+|---|---|---|
+| **Precio spot** | El desequilibrio de **hoy** | Ninguno |
+| **Curva de futuros** | Dinero real comprometido | 18–24 meses |
+| **Costo marginal del productor marginal** | El **piso** de largo plazo | Estructural |
+| **Área sembrada en los últimos 3 años** | La **oferta futura** ya comprometida | 3–6 años |
+| **Elasticidad de demanda** | Cuánto amortigua el ajuste | Estructural |
+
+::: {.callout-important}
+La variable que más información tiene sobre el precio de su año 4 **no es el precio de hoy: es cuántas hectáreas se sembraron el año pasado en el mundo.**
+
+Eso sí es dato público. Y casi nadie lo mira.
 :::
 
 ---
@@ -172,7 +277,7 @@ Si su escenario "pesimista" todavía tiene VPN positivo, **no construyeron un es
 
 ---
 
-## Aplicación · 40 min {background-color="#f5f5f5"}
+## Aplicación · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="aplicación"}
 
 **Reconstruyan su defensa de precio** con tres escenarios estructurales:
 
@@ -191,7 +296,7 @@ Y declaren: **¿a qué precio su proyecto deja de tener sentido?**
 
 ---
 
-## Tribunal · 20 min
+## Tribunal · 20 min {data-cron="1200" data-cron-label="tribunal"}
 
 ::: {style="font-size:1.25em;"}
 Dos equipos defienden su escenario central.
