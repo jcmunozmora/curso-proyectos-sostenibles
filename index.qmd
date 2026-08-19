@@ -1,0 +1,44 @@
+---
+title: "Formulación y Evaluación de Proyectos Sostenibles"
+subtitle: "MF7011 · Maestría en Finanzas Sostenibles y Cambio Climático · EAFIT · 2026-2"
+---
+
+## El curso en una frase
+
+Van a formular y evaluar un proyecto real de inversión sostenible, y van a defenderlo ante un comité que tiene presupuesto limitado y va a rechazar proyectos.
+
+## La promesa
+
+Al terminar, **no van a volver a firmar un número que no puedan defender.**
+
+## Calendario
+
+| # | Fecha | Horario | Tema |
+|---|---|---|---|
+| **S1** | Vie 21 + Sáb 22 ago | V 18–21 · S 8–13 | ¿Qué es un proyecto sostenible y quién decide que lo es? |
+| **S2** | Vie 28 + Sáb 29 ago | V 18–21 · S 8–13 | Los números que nadie te da |
+| **S3** | Vie 4 + Sáb 5 sep | V 18–21 · S 8–13 | El denominador |
+| **S4** | Vie 11 + Sáb 12 sep | V 18–21 · S 8–13 | El otro flujo de caja |
+| **S5** | Vie 18 sep · **virtual** | 18–22 | Investor Day |
+
+**36 horas · Aula 19-712 · Medellín**
+
+## Cómo funciona
+
+**Viernes — El Tribunal.** Se decide, se debate, se defiende. Portátiles cerrados la primera hora.
+
+**Sábado — El Taller.** Se construye. Todo lo que se produce **se sube antes de salir del salón.**
+
+## Evaluación
+
+| Componente | Peso | Quién califica |
+|---|---:|---|
+| Artefactos de sesión | 25% | Profesor |
+| Auditorías cruzadas | 15% | Profesor |
+| Modelo financiero final | 25% | Profesor |
+| Defensa · Investor Day | 20% | **Profesor 50% + Comité de pares 50%** |
+| **Calidad como evaluador** | **15%** | Profesor |
+
+**Sin exámenes.** Todo lo evaluado se produce en clase, salvo el modelo final.
+
+**Ustedes evalúan.** En el Investor Day cada estudiante recibe un rol y puntúa los proyectos ajenos desde esa lente — vale la mitad de la nota de defensa. Y la calidad de su juicio como evaluador vale el 15% del curso.

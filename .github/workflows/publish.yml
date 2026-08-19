@@ -1,0 +1,55 @@
+name: Publicar sitio del curso
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.7.34
+
+      - name: Renderizar con perfil publico (elimina notas del presentador)
+        run: quarto render --profile publico
+
+      - name: Verificar que no se filtraron notas del presentador
+        run: |
+          if grep -rq 'class="notes"' _site/slides/ 2>/dev/null; then
+            echo "::error::Se filtraron notas del presentador al build publico. Revisar filtros/sin-notas.lua"
+            exit 1
+          fi
+          echo "OK: sin notas del presentador en el build publico"
+
+      - name: Configurar Pages
+        uses: actions/configure-pages@v5
+
+      - name: Subir artefacto
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

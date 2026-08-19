@@ -1,0 +1,268 @@
+---
+title: "El denominador"
+subtitle: "Sesión 3 · Tribunal · Viernes 4 de septiembre"
+author: "Formulación y Evaluación de Proyectos Sostenibles · MF7011"
+format:
+  revealjs:
+    theme: [default, ../eafit.scss]
+    slide-number: c/t
+    transition: none
+    width: 1600
+    height: 900
+---
+
+## {background-color="#000066"}
+
+::: {style="text-align:center; padding-top:170px;"}
+[Mismo proyecto. Mismo flujo de caja.]{style="font-size:1.6em; color:#ffffff;"}
+
+<br>
+
+[VPN = **+USD 12,9 M**]{style="font-size:2em; color:#00A9E0; font-weight:700;"}
+
+[VPN = **−USD 3,5 M**]{style="font-size:2em; color:#ffffff; font-weight:700;"}
+
+<br>
+
+[¿Cuál es el correcto?]{style="font-size:1.5em; color:#00A9E0;"}
+:::
+
+::: {.notes}
+MIN 0–15. En realidad cambian dos cosas (precio y tasa) — pero no lo digan aún.
+Que lo descubran. El punto es que el denominador importa tanto como el numerador.
+:::
+
+---
+
+## Confrontación · 40 min {background-color="#f5f5f5"}
+
+::: {style="font-size:1.2em;"}
+Su banco les pregunta:
+
+> **"¿Por qué descuentan al 14% y no al 9%?"**
+
+<br>
+
+Produzcan una **defensa de una página**:
+
+1. ¿Qué tasa usan y por qué exactamente ese número?
+2. ¿Qué representa esa tasa — costo de qué, de quién?
+3. ¿Su tasa está en términos **reales o nominales**? ¿Y su flujo de caja?
+4. Si el banco les exige 3 puntos más, ¿el proyecto sobrevive?
+:::
+
+::: {.callout-warning}
+Prohibido responder "es la tasa que usa el sector". **Ese es el argumento que vamos a destruir hoy.**
+:::
+
+::: {.notes}
+MIN 15–55. Sin herramientas. Circular.
+Anotar quién distingue real/nominal — casi nadie. Ese es el gancho de la síntesis.
+:::
+
+---
+
+## Input · Cómo se construye un Ke {.smaller}
+
+$$K_e = R_f + \beta \cdot ERP_{\text{mercado maduro}} + \text{prima país}$$
+
+**Datos vigentes — Damodaran, 5 de enero de 2026:**
+
+| Parámetro | Valor |
+|---|---:|
+| Calificación soberana Colombia (Moody's) | Baa3 |
+| Spread por incumplimiento ajustado | 1,87% |
+| **Prima de riesgo país Colombia** | **2,85%** |
+| ERP de mercado maduro | 4,23% |
+| ERP total Colombia | 7,08% |
+
+Contexto regional: México 2,46% · **Colombia 2,85%** · Brasil 3,24%
+
+::: {.callout-note}
+Esta tabla cambia cada seis meses. **Nunca la citen de memoria ni de un apunte de clase: descárguenla el día que la usen.**
+:::
+
+---
+
+## Input · El WACC de este proyecto {.smaller}
+
+::: {.columns}
+::: {.column width="48%"}
+**Supuestos**
+
+| | |
+|---|---:|
+| $R_f$ (Tesoro USA 10a) | 4,20% |
+| $\beta$ (estimación puntual) | 0,85 |
+| Inflación COL / USA | 5,0% / 2,5% |
+| $K_d$ (COP nominal) | 14,0% |
+| Tasa impositiva | 35% |
+| D/(D+E) | 60% |
+:::
+
+::: {.column width="52%"}
+**Resultado**
+
+$K_e^{USD} = 4{,}20 + 0{,}85(4{,}23) + 2{,}85 = \mathbf{10{,}65\%}$
+
+Conversión a COP:
+$$(1+r_{COP}) = (1+r_{USD})\frac{1+\pi_{COP}}{1+\pi_{USD}}$$
+
+$K_e^{COP} = \mathbf{13{,}34\%}$
+
+$WACC = 0{,}40(13{,}34) + 0{,}60(14)(0{,}65)$
+
+$WACC = \mathbf{10{,}80\%}$
+:::
+:::
+
+::: {.callout-warning}
+**El paso que casi todos saltan es la conversión de moneda.** Tomar un $K_e$ construido con datos en dólares y aplicarlo a un flujo en pesos, sin el diferencial de inflación, es un error silencioso de más de 2 puntos.
+:::
+
+---
+
+## Input · Ahora el intervalo de confianza de la beta {.smaller}
+
+Una beta estimada con 5 años de datos mensuales tiene un error estándar tal que el **IC 95% típicamente abarca ±0,5**.
+
+| $\beta$ | $K_e$ USD | $K_e$ COP | **WACC COP** | VPN @ USD 10.400/t |
+|---:|---:|---:|---:|---:|
+| 0,35 *(lím. inf.)* | 8,53% | 11,18% | **9,93%** | 14.688.725 |
+| 0,60 | 9,59% | 12,26% | 10,36% | 13.755.367 |
+| **0,85** *(puntual)* | **10,65%** | **13,34%** | **10,80%** | **12.878.297** |
+| 1,10 | 11,70% | 14,43% | 11,23% | 12.053.565 |
+| 1,35 *(lím. sup.)* | 12,76% | 15,51% | **11,66%** | 11.277.534 |
+
+::: {.callout-important}
+El IC 95% de la beta mueve el WACC **1,7 puntos** y el VPN en **USD 3,4 millones**.
+
+Y este proyecto **no tiene comparables públicos con beta observable.** Esa beta de 0,85 no se estimó: se eligió.
+:::
+
+---
+
+## {background-color="#00A9E0"}
+
+::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
+PAUSA · 15 minutos
+:::
+
+---
+
+## Input · Welch: si no el CAPM, ¿entonces qué? {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**Los tres problemas**
+
+1. **La beta es ruido con formato de dato.** El IC es tan ancho que el VPN puede cambiar de signo dentro de él.
+
+2. **La prima país es un parche sin teoría.** El CAPM dice que sólo se remunera el riesgo *no diversificable*. Un inversionista global ya diversificó Colombia. Sumarla contradice el modelo que dice aplicarse.
+
+3. **El riesgo del cacao es justo el que el CAPM dice NO remunerar.** Plaga, sequía, precio: idiosincrático, diversificable.
+:::
+
+::: {.column width="50%"}
+**La postura defendible**
+
+Usar el CAPM como **punto de partida documentado**, reportar el **rango**, y decidir con juicio explícito.
+
+<br>
+
+::: {.callout-important}
+El riesgo específico va en el **numerador** (flujos ajustados por probabilidad).
+
+El riesgo sistemático va en el **denominador**.
+
+**Nunca en los dos.**
+:::
+:::
+:::
+
+> *El CAPM no les va a dar el número correcto. Les va a dar un número defendible. En finanzas la segunda cosa a veces basta — siempre que sepan cuál de las dos tienen en la mano.*
+
+---
+
+## Input · ¿Y el financiamiento verde no abarata todo esto? {.smaller}
+
+La promesa comercial del campo dice que sí. La evidencia de 2026 es mucho más tibia.
+
+| Medida del *greenium* | Valor |
+|---|---:|
+| Prima verde promedio | **−12,4 pb** |
+| En mercado primario | −21,4 pb |
+| En mercado secundario | −10,4 pb |
+
+::: {.callout-warning}
+**−12 puntos básicos sobre un WACC de 10,8% es una reducción del 1,1% relativo.**
+
+Si el caso de inversión de su proyecto depende del greenium, **no tienen caso de inversión.**
+:::
+
+::: {.callout-note}
+El valor real de la etiqueta verde está en **acceso** — plazos más largos, garantías, inversionistas nuevos, cumplimiento de la Circular 015 del banco — **no en precio**. Esa distinción es un objetivo de aprendizaje del curso.
+:::
+
+---
+
+## Aplicación · 40 min {background-color="#f5f5f5"}
+
+**Reconstruyan el costo de capital de su proyecto:**
+
+1. Bajen **hoy** la tabla de Damodaran. Registren la fecha.
+2. Construyan $K_e$ en USD → conviertan a COP con el diferencial de inflación
+3. Justifiquen su $\beta$ **con un argumento**, no con un número
+4. Calculen el WACC con $\beta$, $\beta-0{,}5$ y $\beta+0{,}5$
+5. **Declaren el rango**, no el punto
+6. Respondan: ¿el VPN cambia de signo dentro de su rango?
+
+::: {.callout-important}
+Entregable: **una tasa con intervalo y una frase de defensa.** Si su respuesta es un número solo, está incompleta.
+:::
+
+---
+
+## Tribunal · 20 min
+
+::: {style="font-size:1.2em;"}
+Dos equipos defienden su WACC. El *discussant* pregunta:
+
+- ¿Su flujo es real o nominal? ¿Y su tasa? **Demuéstrenlo.**
+- ¿De dónde salió esa beta? ¿De qué comparables?
+- ¿Su $K_d$ es la tasa que el banco les cotizó o la que esperan?
+- Los años 0–4 no tienen utilidad gravable. ¿Aplicaron el escudo fiscal igual?
+- Si el WACC sube 2 puntos, ¿qué decisión cambia?
+:::
+
+::: {.callout-warning}
+El escudo fiscal en años sin renta es el error escondido más frecuente. **Si nadie lo pregunta, lo pregunto yo.**
+:::
+
+---
+
+## Para mañana 8:00 {background-color="#f5f5f5"}
+
+::: {.columns}
+::: {.column width="50%"}
+**Traer**
+
+- WACC con rango, subido
+- Modelo de costos de S2 corregido
+- Portátil cargado
+:::
+
+::: {.column width="50%"}
+**Mañana**
+
+Construimos el flujo de caja completo
+
+y descubrimos **por qué la TIR miente.**
+:::
+:::
+
+<br>
+
+::: {style="text-align:center; font-size:1.4em; color:#000066; font-weight:700;"}
+Hoy discutieron el denominador. Mañana lo usan.
+:::

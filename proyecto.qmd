@@ -1,0 +1,65 @@
+---
+title: "El proyecto del curso"
+subtitle: "El Corredor del Cacao — soluciones basadas en la naturaleza en cadena productiva"
+bibliography: literatura/referencias.bib
+---
+
+## El encargo
+
+Cada equipo formula y evalúa un proyecto de inversión que convierte tierra degradada en un **sistema productivo sostenible**, con ingresos que combinan producto agrícola y servicios ecosistémicos.
+
+El caso base es común. **Territorio, escala, cultivo, mezcla de ingresos y estructura de financiación los deciden ustedes.**
+
+## Por qué este proyecto
+
+Colombia necesita **USD 13.500 millones** para desbloquear el potencial de las soluciones basadas en la naturaleza, y hoy invierte menos de **USD 300 millones al año** — una brecha de unas **50 veces**. El sector privado aporta **menos del 1%**. El potencial de mitigación es de **340 MtCO₂e/año a 2050** [@folu2023].
+
+La mayor oportunidad identificada: empresas del sector AFOLU que necesitan reducir su **Alcance 3** — el 30% del potencial de inversión. Su cliente potencial no es un filántropo: es una chocolatera con una meta de emisiones que cumplir.
+
+## Las fuentes de ingreso
+
+| Fuente | Perfil de riesgo | Empieza | Dónde se modela |
+|---|---|---|---|
+| **Producto agrícola** (cacao, café) | Volátil — precio de commodity | Año 4 | S2 · proyección de mercado |
+| **Transitorios** (plátano, maíz) | Bajo, flujo temprano | Año 1 | S2 · capital de trabajo |
+| **Maderables** | Valor terminal | Año 15+ | S2 · valor de desecho |
+| **Créditos de carbono** | Pago por resultados verificados | Año 3+ | S4 · precio sombra vs. mercado |
+| **Crédito de biodiversidad / banco de hábitat** | 30 años, pago por resultado | Año 2+ | S4 · instrumento colombiano [@terrasos] |
+
+## Los cuatro problemas que hacen difícil este proyecto
+
+**1. El capital de trabajo.** El cacao no produce hasta el año 4. Hay que pagar mano de obra e insumos durante cuatro años sin un peso de ingreso.
+
+**2. La TIR se rompe.** Flujos negativos años 0–4, positivos después, negativos otra vez si hay renovación. Múltiples cambios de signo → la TIR deja de ser única. Aquí entra la TIR Modificada.
+
+**3. El precio colapsó.** El cacao pasó de un récord de **USD 12.931/t** en diciembre de 2024 a **~USD 3.000–4.000/t** en 2026 — una caída del 70%. Cualquier modelo construido en 2024 está hoy en incumplimiento.
+
+**4. El VPN privado y el social no coinciden.** Al WACC de mercado el proyecto puede ser inviable; a la tasa social de descuento con carbono al precio sombra del Banco Mundial [@wb2024spc], puede ser excelente. **La pregunta del curso es quién paga la diferencia.**
+
+## Entregables
+
+| # | Entregable | Sesión |
+|---|---|---|
+| 1 | **Ficha de proyecto** — problema, propiedad, actores, cadena de resultados, 5 KPI físicos | S1 |
+| 2 | **Modelo de costos e inversiones** — CapEx, OpEx, cronograma, capital de trabajo | S2 |
+| 3 | **Flujo de caja y criterios de decisión** — proyecto vs. inversionista, WACC con rango, VPN, TIR, TIRM, CAE | S3 |
+| 4 | **Flujo socioeconómico** — precios sombra, TSD, VPN sin/bajo/alto carbono, *switching value*, escenarios NGFS | S4 |
+| 5 | **Nota de inversión** (4 pp) + **defensa** ante comité | S5 |
+
+## Formato del entregable final
+
+Sigue el protocolo del Banco Mundial [@wb2024spc]:
+
+- VPN **sin** precio de carbono
+- VPN con precio **bajo**
+- VPN con precio **alto**
+- ***Switching value***: el precio de carbono al que el VPN cruza cero
+
+Esa última cifra es la más comunicable del curso: *"este proyecto necesita un precio de carbono de al menos USD X para justificarse socialmente."*
+
+## Reglas
+
+1. **Ningún proyecto se defiende con un rating ESG.** Se defiende con magnitudes físicas: tCO₂e, m³, hectáreas, ingreso de hogar. La correlación entre calificadoras ESG va de 0,38 a 0,71 [@berg2022] — no es evidencia.
+2. **Toda cifra tiene fuente verificable.** Sin fuente, la cifra no existe.
+3. **Todo entregable se sube antes de salir del salón.**
+4. **El equipo se compromete con productos y aspira a impactos.** Confundirlos es la raíz del greenwashing.

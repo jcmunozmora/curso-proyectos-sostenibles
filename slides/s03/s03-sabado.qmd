@@ -1,0 +1,328 @@
+---
+title: "El flujo de caja y sus criterios"
+subtitle: "Sesión 3 · Taller · Sábado 5 de septiembre · 8:00–13:00"
+author: "Formulación y Evaluación de Proyectos Sostenibles · MF7011"
+format:
+  revealjs:
+    theme: [default, ../eafit.scss]
+    slide-number: c/t
+    transition: none
+    width: 1600
+    height: 900
+---
+
+## Recuperación · 20 min {.smaller}
+
+1. Escriban la fórmula del $K_e$ y digan qué representa cada término.
+2. ¿Por qué hay que convertir un $K_e$ construido en USD antes de usarlo con flujos en COP?
+3. ¿Cuánto mueve el WACC un IC 95% de beta de ±0,5, en este proyecto?
+4. Riesgo de plaga en el cacao: ¿numerador o denominador? ¿Por qué?
+5. ¿Cuánto vale el greenium y por qué no salva un caso de inversión?
+
+::: {.notes}
+MIN 0–20. La 4 es la que más fallan. Es el concepto del día.
+:::
+
+---
+
+## Hoy construyen {background-color="#000066" style="color:white;"}
+
+::: {style="font-size:1.3em; padding-top:30px;"}
+1. **Flujo de caja del proyecto** (FCLD)
+2. **Flujo de caja del inversionista** (FCA)
+3. **VPN, TIR, TIR Modificada, payback descontado, CAE**
+4. El **punto de equilibrio** y los grados de apalancamiento
+5. La respuesta a: *¿este proyecto crea valor?*
+:::
+
+---
+
+## Input 1 · Dos flujos, dos preguntas {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+### Flujo del PROYECTO (FCLD)
+
+> ¿Es buena **la idea**, sin importar quién la financie?
+
+```
+  EBIT
+− Impuestos sobre EBIT
++ Depreciación
+− CapEx
+− Δ Capital de trabajo
+──────────────────────
+= FCLD
+```
+
+**NO incluye deuda.** Ni desembolso, ni intereses, ni amortización.
+
+Se descuenta al **WACC**.
+:::
+
+::: {.column width="50%"}
+### Flujo del INVERSIONISTA (FCA)
+
+> ¿Le sirve **al accionista**, con esta financiación?
+
+```
+  FCLD
++ Desembolso de deuda
+− Intereses × (1 − t)
+− Amortización
+──────────────────────
+= FCA
+```
+
+**SÍ incluye deuda.**
+
+Se descuenta al **$K_e$**, no al WACC.
+:::
+:::
+
+::: {.callout-important}
+## El error fatal
+Descontar el **FCA** al **WACC**. Cuenta el beneficio de la deuda dos veces: en el flujo (los intereses ya se restaron) y en la tasa (el WACC ya incorpora el menor costo de la deuda). Infla el VPN sistemáticamente.
+
+**La deuda aparece una sola vez — o en el numerador, o en el denominador. Nunca en ambos.**
+:::
+
+---
+
+## Construcción 1 · 40 min {background-color="#f5f5f5"}
+
+**Hoja `FCLD` de la plantilla:**
+
+| Año | 0 | 1 | 2 | … | 15 |
+|---|---|---|---|---|---|
+| Ingresos | | | | | |
+| − Costos operativos | | | | | |
+| − Depreciación | | | | | |
+| **= EBIT** | | | | | |
+| − Impuestos (35% sobre EBIT si > 0) | | | | | |
+| + Depreciación | | | | | |
+| − CapEx | | | | | |
+| − Δ Capital de trabajo | | | | | |
+| **= FCLD** | | | | | |
+
+::: {.callout-warning}
+**Los años 0–4 no tienen utilidad gravable.** El impuesto es cero, no negativo — salvo que apliquen compensación de pérdidas, y entonces deben modelarla explícitamente.
+:::
+
+---
+
+## Síntesis 1 · los tres errores del día {background-color="#f5f5f5"}
+
+| # | Error | Por qué pasa | Efecto en el VPN |
+|---|---|---|---|
+| 1 | Impuesto negativo en años de pérdida | Excel arrastra la fórmula | **Infla** |
+| 2 | Escudo fiscal aplicado desde el año 0 | $K_d(1-t)$ copiado sin pensar | **Infla** |
+| 3 | Capital de trabajo sin recuperación final | "se siente" como costo hundido | **Subestima** |
+
+::: {.callout-important}
+Dos de los tres errores inflan el VPN. **No es casualidad.** El sesgo de optimismo no opera sólo en los supuestos: opera en qué errores uno no revisa.
+:::
+
+---
+
+## {background-color="#00A9E0"}
+
+::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
+PAUSA · 20 minutos
+:::
+
+---
+
+## Input 2 · Por qué la TIR miente {.smaller}
+
+Tres problemas, en orden de **frecuencia real**, no de dramatismo:
+
+::: {.columns}
+::: {.column width="33%"}
+### 1 · Reinversión
+
+La TIR supone que **cada peso que sale del proyecto se reinvierte a la propia TIR** hasta el final.
+
+Si su TIR da 18%, supone que reinvierten al 18%. Falso.
+
+**Este problema está siempre.**
+:::
+
+::: {.column width="33%"}
+### 2 · Ignora la escala
+
+18% sobre USD 1 M pierde contra 12% sobre USD 20 M.
+
+La TIR es un porcentaje. **Se paga con dinero, no con porcentajes.**
+
+**Este problema está casi siempre.**
+:::
+
+::: {.column width="33%"}
+### 3 · Puede no ser única — o no existir
+
+Con más de un cambio de signo, puede haber varias TIR reales, o ninguna.
+
+**Este problema es raro — pero cuando aparece, Excel no avisa.**
+:::
+:::
+
+---
+
+## Input 2 · El caso real de este proyecto {.smaller}
+
+Flujo del cacao a USD 7.000/t, con una **obligación de restauración al cierre** en el año 15:
+
+| Obligación año 15 | Σ flujos | TIR reales |
+|---:|---:|---|
+| USD 15,0 M | +561.000 | **5,27%** — una sola |
+| USD 15,5 M | +61.000 | **3,48%** — una sola |
+| **USD 15,6 M** | −39.000 | **0,39% y 2,74% — ¡dos!** |
+| USD 15,7 M | −139.000 | **ninguna** → Excel devuelve `#¡NUM!` |
+
+::: {.callout-warning}
+**Sean honestos con la regla de Descartes:** el número de cambios de signo es una **cota superior**, no un conteo. Tres cambios de signo no significan tres TIR.
+
+Lo que sí es cierto: **con más de un cambio de signo, la TIR deja de ser confiable de formas que no se pueden anticipar mirando el flujo.**
+:::
+
+---
+
+## Input 2 · TIR Modificada {.smaller}
+
+Hace **explícitos** los dos supuestos que la TIR esconde:
+
+$$TIRM = \left(\frac{VF(\text{flujos} +, \text{ a tasa de reinversión})}{VP(\text{flujos} -, \text{ a tasa de financiación})}\right)^{1/n} - 1$$
+
+En Excel: `=TIRM(rango; tasa_financiación; tasa_reinversión)`
+
+::: {.columns}
+::: {.column width="50%"}
+**Tasa de financiación**
+A la que consiguen dinero para cubrir los flujos negativos → su **$K_d$**
+:::
+
+::: {.column width="50%"}
+**Tasa de reinversión**
+A la que realmente pueden colocar los excedentes → su **WACC**, o menos
+:::
+:::
+
+::: {.callout-important}
+La TIRM **siempre es única** y siempre existe. Y da un número más bajo que la TIR — que es precisamente por lo que a nadie le gusta reportarla.
+:::
+
+---
+
+## Construcción 2 · 40 min {background-color="#f5f5f5"}
+
+**Hoja `Criterios`:**
+
+| Criterio | Valor | Fórmula Excel | ¿Qué decide? |
+|---|---|---|---|
+| VPN @ WACC | | `=VNA(...)+F0` | **Crea o destruye valor** |
+| VPN @ WACC ± rango | | | Robustez |
+| TIR | | `=TIR(...)` | Eficiencia — con cautela |
+| **TIRM** | | `=TIRM(...)` | Eficiencia honesta |
+| Payback descontado | | | Exposición temporal |
+| CAE | | `=PAGO(...)` | Comparar vidas distintas |
+| Índice de rentabilidad | | `VPN/I₀` | Racionamiento de capital |
+
+::: {.callout-warning}
+**Verifiquen el patrón de signos de su flujo** antes de reportar la TIR. Si hay más de un cambio, escríbanlo en el entregable.
+:::
+
+---
+
+## Input 3 · Punto de equilibrio y apalancamiento {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**Punto de equilibrio operativo**
+
+$$Q^* = \frac{CF}{p - cv}$$
+
+En toneladas y en hectáreas. ¿Cuánto tienen que producir para no perder?
+
+**Punto de equilibrio de precio**
+
+¿A qué precio $p^*$ el proyecto deja de crear valor? — Ya lo calcularon: **USD 5.209/t**
+:::
+
+::: {.column width="50%"}
+**Grado de apalancamiento operativo**
+
+$$GAO = \frac{\% \Delta EBIT}{\% \Delta Ventas}$$
+
+Costos fijos altos → GAO alto → **utilidad muy sensible al volumen**
+
+**Grado de apalancamiento financiero**
+
+$$GAF = \frac{\% \Delta UPA}{\% \Delta EBIT}$$
+
+Deuda alta → GAF alto
+:::
+:::
+
+::: {.callout-important}
+**GAO × GAF = apalancamiento total.** Un proyecto agroforestal tiene GAO alto por naturaleza (el mantenimiento no baja si la cosecha falla). Sumarle deuda al 60% multiplica esa fragilidad. **Esa es la conversación con el banco.**
+:::
+
+---
+
+## Construcción 3 · 40 min {background-color="#f5f5f5"}
+
+1. Construyan el **FCA** a partir del FCLD, con la tabla de amortización de su deuda
+2. Descuenten el FCA al **$K_e$** (no al WACC) → VPN del accionista
+3. Calculen punto de equilibrio en toneladas, hectáreas y **precio**
+4. Calculen GAO, GAF y apalancamiento total
+5. **Escriban una frase de conclusión:** ¿este proyecto crea valor, para quién, y bajo qué condición?
+
+::: {.callout-note}
+El VPN del proyecto y el del accionista **no** tienen que coincidir. Si el suyo coincide exactamente, hay un error: probablemente descontaron los dos a la misma tasa.
+:::
+
+---
+
+## Auditoría cruzada · 20 min {background-color="#000066" style="color:white;"}
+
+::: {style="font-size:1.05em;"}
+1. ¿El FCLD **excluye** completamente la deuda?
+2. ¿El FCA se descuenta al $K_e$ y **no** al WACC?
+3. ¿El impuesto es **cero** —no negativo— en los años de pérdida?
+4. ¿El escudo fiscal se aplica sólo cuando hay renta gravable?
+5. ¿Se **recupera** el capital de trabajo en el último año?
+6. ¿La tasa y el flujo están ambos en **nominal** o ambos en **real**?
+7. ¿Se reporta el WACC como **rango**, no como punto?
+8. ¿Verificaron el patrón de **signos** antes de reportar la TIR?
+9. ¿Reportan **TIRM** además de TIR?
+10. ¿El valor terminal usa un $g$ menor que el crecimiento de la economía?
+11. ¿Hay alguna celda **codificada a mano** que debería ser fórmula?
+:::
+
+---
+
+## Para el viernes 11 {background-color="#f5f5f5"}
+
+::: {.columns}
+::: {.column width="50%"}
+**Traer**
+
+- Flujo de caja completo y criterios ✅
+- Auditoría corregida
+- **Su VPN, escrito en un papel**
+:::
+
+::: {.column width="50%"}
+**Leer** (máx. 45 min)
+
+- Banco Mundial (2024), *Guidance Note on Shadow Price of Carbon* — el protocolo
+- Jayachandran et al. (2017), *Cash for Carbon*
+:::
+:::
+
+<br>
+
+::: {style="text-align:center; font-size:1.35em; color:#000066; font-weight:700;"}
+Ya saben si el proyecto le sirve al dueño.<br>La próxima sesión: si le sirve al país.
+:::

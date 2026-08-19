@@ -1,0 +1,47 @@
+---
+title: "Materiales"
+---
+
+## Plantillas de entrega
+
+| Material | Para qué | Sesión |
+|---|---|---|
+| [Modelo financiero — PLANTILLA](plantillas/modelo-financiero-PLANTILLA.xlsx) | El libro de Excel del curso: 10 hojas, de Supuestos a Escenarios NGFS | S2–S4 |
+| [Ficha de proyecto](plantillas/01-ficha-de-proyecto.md) | Problema, propiedad, actores, cadena de resultados, KPI | S1 |
+| [Nota de inversión](plantillas/02-nota-de-inversion.md) | Entregable final, 4 páginas, formato de industria | S5 |
+
+## Reglas del modelo
+
+| # | Regla |
+|---|---|
+| 1 | Ningún número codificado dentro de una fórmula. Todo supuesto vive en la hoja `Supuestos`. |
+| 2 | Toda celda numérica lleva su **unidad** en el encabezado. `USD/ha`, no `Costo`. |
+| 3 | Toda cifra externa lleva su **fuente**. |
+| 4 | Nominal con nominal, real con real. Nunca mezclar. |
+| 5 | La deuda aparece **una** vez: en el numerador (FCA) o en el denominador (WACC). |
+| 6 | Riesgo específico → flujo. Riesgo sistemático → tasa. **Nunca a los dos.** |
+
+## Evaluación
+
+- [Rúbricas completas](plantillas/04-rubricas.md) — R1 a R5, con penalizaciones
+- [Listas de auditoría cruzada](plantillas/05-listas-auditoria-cruzada.md) — S1 a S4
+- [**Co-evaluación del Comité de Inversión**](plantillas/06-coevaluacion-comite.md) — tarjetas, salvaguardas y cómo se calcula
+
+## Investor Day
+
+- [Fichas de rol](plantillas/03-fichas-de-rol-investor-day.md) — banco, fondo de impacto, comprador corporativo, entidad pública, comunidad, escéptico financiero
+
+## Literatura
+
+- [Revisión de literatura](literatura/revision-literatura.qmd) — el mapa del campo
+- [Auditoría de bibliografía](literatura/auditoria-bibliografia.qmd)
+
+**Texto base, acceso abierto:** Schoenmaker & Schramade (2023), *Corporate Finance for Long-Term Value*, Springer.
+
+## Fuentes que hay que descargar el día que se usan
+
+| Fuente | Por qué |
+|---|---|
+| [Damodaran — primas de riesgo país](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html) | Cambia cada 6 meses. Nunca citar de memoria. |
+| Serie de precios del cacao (ICE / ICCO / FAO) | Es el supuesto que más mueve el VPN. |
+| [Taxonomía Verde de Colombia](https://www.taxonomiaverde.gov.co/) | Clasificación vigente de actividades. |

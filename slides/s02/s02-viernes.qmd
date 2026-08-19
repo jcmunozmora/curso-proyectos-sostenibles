@@ -1,0 +1,241 @@
+---
+title: "¿A qué precio vas a vender en el año 12?"
+subtitle: "Sesión 2 · Tribunal · Viernes 28 de agosto"
+author: "Formulación y Evaluación de Proyectos Sostenibles · MF7011"
+format:
+  revealjs:
+    theme: [default, ../eafit.scss]
+    slide-number: c/t
+    transition: none
+    width: 1600
+    height: 900
+---
+
+## {background-color="#000066"}
+
+::: {style="text-align:center; padding-top:150px;"}
+[Su modelo tiene una celda]{style="font-size:1.8em; color:#ffffff;"}
+
+[que vale más que todas las demás juntas.]{style="font-size:1.8em; color:#00A9E0; font-weight:700;"}
+
+<br>
+
+[Es el **precio**.]{style="font-size:2.2em; color:#ffffff; font-weight:700;"}
+:::
+
+::: {.notes}
+MIN 0–15. Proyectada cuando entran. Silencio.
+Luego: "Ábranme su ficha de proyecto. ¿Cuántos escribieron un precio? ¿De dónde salió?"
+:::
+
+---
+
+## Confrontación · 40 min {background-color="#f5f5f5"}
+
+Su equipo tiene que entregar **mañana** un modelo a 15 años.
+
+::: {style="font-size:1.2em;"}
+**La pregunta:** ¿qué precio ponen en el año 12?
+
+<br>
+
+Produzcan **una defensa escrita de media página** que responda:
+
+1. ¿Qué número ponen?
+2. ¿De dónde viene? (fuente, no intuición)
+3. ¿Qué tendría que pasar en el mundo para que ese número esté 50% errado?
+4. Si están errados, ¿el proyecto sobrevive?
+:::
+
+::: {.callout-warning}
+No pueden usar "el precio actual". Ese fue exactamente el error de la semana pasada.
+:::
+
+::: {.notes}
+MIN 15–55. NO dar herramientas de pronóstico todavía.
+Que sufran la pregunta antes de recibir el método.
+Circular y anotar: ¿cuántos usan promedio histórico? ¿cuántos usan el spot?
+¿alguno menciona reversión a la media o costo marginal de producción?
+:::
+
+---
+
+## Lo que casi todos hicieron {.smaller}
+
+| Estrategia | Cuántos equipos | El problema |
+|---|---|---|
+| **Precio spot de hoy, constante** | La mayoría | Supone que hoy es el equilibrio. No hay razón. |
+| **Promedio histórico de 5 años** | Algunos | Mejor. Pero 2023–2025 fue una anomalía histórica. |
+| **Precio spot + inflación** | Algunos | Confunde precio real con nominal. Un commodity **no** sigue la inflación. |
+| **Precio del contrato de compra** | Pocos | El más defendible — **si el contrato dura 15 años.** ¿Dura? |
+
+::: {.callout-important}
+Ninguna de las cuatro está mal por el número. Están mal porque **ninguna declaró su supuesto sobre el mundo.**
+:::
+
+---
+
+## Input · Tres formas honestas de proyectar un precio {.smaller}
+
+::: {.columns}
+::: {.column width="33%"}
+### 1 · Reversión a la media
+
+El precio vuelve al **costo marginal de producción** del productor marginal.
+
+**Para cacao:** ¿cuánto le cuesta producir una tonelada al productor de Costa de Marfil?
+
+✅ Tiene teoría económica detrás
+⚠️ El costo marginal también se mueve
+:::
+
+::: {.column width="33%"}
+### 2 · Mercado de futuros
+
+El precio que **alguien está dispuesto a fijar hoy** para entrega futura.
+
+✅ Es dinero real, no opinión
+⚠️ Sólo llega a 18–24 meses
+⚠️ No es un pronóstico: es una cobertura
+:::
+
+::: {.column width="33%"}
+### 3 · Escenarios estructurales
+
+Tres mundos coherentes, cada uno con su lógica de oferta y demanda.
+
+✅ Comunica la incertidumbre en vez de esconderla
+✅ Es lo que hace un comité de inversión real
+:::
+:::
+
+::: {.callout-note}
+Las tres son legítimas. **La cuarta —un número sin justificación— no lo es.**
+:::
+
+---
+
+## Input · El ciclo del cacao como caso {.smaller}
+
+| Año | Precio USD/t | Qué pasó |
+|---|---:|---|
+| 2022–23 | 2.400–3.000 | Mercado equilibrado |
+| 2023–24 | ↑ | Déficit por enfermedad (*swollen shoot*) y clima en África Occidental |
+| **dic-2024** | **12.931** | Récord histórico. Pánico de oferta. |
+| 2025 | ↓ | Mejores cosechas, reconstrucción de inventarios |
+| **inicio 2026** | **~3.000–4.000** | Superávit proyectado: 247.000 t (25/26), 149.000 t (26/27) |
+| mediados 2026 | ↑ parcial | Inundaciones en Costa de Marfil y Ghana |
+
+::: {.callout-important}
+**La lección de oferta:** un precio alto **causa** su propia corrección. Sembró más gente. El cacao tarda 4 años en producir. El pico de 2024 **está creando** el superávit de 2028.
+
+Su proyecto es parte de ese mecanismo. **Ustedes son la oferta futura de alguien más.**
+:::
+
+---
+
+## {background-color="#00A9E0"}
+
+::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
+PAUSA · 15 minutos
+:::
+
+---
+
+## Input · El sesgo de optimismo no es un defecto moral {.smaller}
+
+Es un patrón sistemático y medido en evaluación de proyectos:
+
+::: {.columns}
+::: {.column width="50%"}
+**Lo que sistemáticamente pasa**
+
+- Los costos se subestiman
+- Los plazos se subestiman
+- Los ingresos se sobreestiman
+- El error **no** es simétrico
+:::
+
+::: {.column width="50%"}
+**Por qué**
+
+- Quien formula quiere que se apruebe
+- Los supuestos favorables no se cuestionan; los desfavorables sí
+- El caso base se construye desde el resultado deseado hacia atrás
+:::
+:::
+
+::: {.callout-warning}
+## La prueba del sesgo
+Si su escenario "pesimista" todavía tiene VPN positivo, **no construyeron un escenario pesimista**. Construyeron tres versiones del optimista.
+:::
+
+---
+
+## Aplicación · 40 min {background-color="#f5f5f5"}
+
+**Reconstruyan su defensa de precio** con tres escenarios estructurales:
+
+| | Bajo | Central | Alto |
+|---|---|---|---|
+| **Precio año 12** | | | |
+| **Lógica de oferta** | | | |
+| **Lógica de demanda** | | | |
+| **Probabilidad subjetiva** | | | |
+
+::: {.callout-important}
+**Regla:** el escenario bajo debe ser un mundo en el que **su proyecto pierde dinero**. Si no lo es, súbanle la exigencia hasta que lo sea.
+
+Y declaren: **¿a qué precio su proyecto deja de tener sentido?**
+:::
+
+---
+
+## Tribunal · 20 min
+
+::: {style="font-size:1.25em;"}
+Dos equipos defienden su escenario central.
+
+El *discussant* tiene una sola tarea:
+
+::: {style="color:#000066; font-weight:700;"}
+encontrar el supuesto que el equipo no sabe que hizo.
+:::
+
+<br>
+
+Pistas para el *discussant*:
+
+- ¿El precio es real o nominal? ¿Y el resto del modelo?
+- ¿Quién es el productor marginal en ese escenario?
+- ¿El contrato de compra sobrevive al escenario bajo?
+- Si el precio sube, ¿qué hace la competencia?
+:::
+
+---
+
+## Para mañana 8:00 {background-color="#f5f5f5"}
+
+::: {.columns}
+::: {.column width="50%"}
+**Traer**
+
+- Los tres escenarios de precio, subidos
+- Su ficha de proyecto v1 corregida
+- **Una estimación gruesa** de cuánto cuesta establecer una hectárea
+:::
+
+::: {.column width="50%"}
+**Mañana construimos**
+
+El lado que nadie mira: **los costos.**
+
+Y el que hunde proyectos agrícolas: **el capital de trabajo.**
+:::
+:::
+
+<br>
+
+::: {style="text-align:center; font-size:1.4em; color:#000066; font-weight:700;"}
+Hoy defendieron el ingreso. Mañana descubren qué cuesta.
+:::

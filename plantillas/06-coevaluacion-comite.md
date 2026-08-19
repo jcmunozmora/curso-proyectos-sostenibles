@@ -1,0 +1,184 @@
+# El Comité de Inversión como órgano de co-evaluación
+
+**Sesión 5 · Investor Day** · MF7011
+
+---
+
+## Por qué el comité y no una encuesta
+
+La co-evaluación falla casi siempre por la misma razón: se le pide al estudiante que juzgue a un par **sin darle una posición desde la cual juzgar**. El resultado es cortesía mutua, reciprocidad o castigo.
+
+El comité de inversión resuelve eso estructuralmente:
+
+| Problema clásico de la co-evaluación | Cómo lo resuelve el comité |
+|---|---|
+| "No me siento con autoridad para calificar" | No calificas como estudiante: calificas **como banco, como fondo de impacto, como comunidad** |
+| Todos se ponen 5 mutuamente | El **presupuesto es escaso**. Aprobar todo es imposible por diseño |
+| Se califica simpatía, no calidad | La rúbrica es **criterial y desde tu rol**: el banco puntúa bancabilidad, no elegancia |
+| Represalias entre equipos | Las puntuaciones son **confidenciales**; sólo la asignación de presupuesto es pública |
+| Calificar es gratis | **La calidad de tu evaluación se califica** (R6). Evaluar mal cuesta nota |
+
+::: importante
+**El giro central:** no se evalúa "qué tan generoso o severo fuiste". Se evalúa **qué tan buen juicio tuviste**. Eso es lo único que hace honesta una co-evaluación.
+:::
+
+---
+
+## Las tres capas
+
+```
+CAPA 1 · CO-EVALUACIÓN DE PROYECTO        (inter-equipos)
+   Cada rol puntúa cada proyecto ajeno desde su lente.
+   → alimenta el 50% de R4 (Defensa)
+
+CAPA 2 · CO-EVALUACIÓN DE CONTRIBUCIÓN    (intra-equipo)
+   Cada integrante distribuye la contribución del equipo.
+   → ajusta la nota INDIVIDUAL dentro del equipo
+
+CAPA 3 · META-EVALUACIÓN                  (la califica el profesor)
+   ¿Qué tan bueno fue tu juicio como evaluador?
+   → es R6, el componente que sostiene las otras dos
+```
+
+---
+
+## Capa 1 · Tarjeta de co-evaluación de proyecto
+
+> Una tarjeta por cada proyecto **que no es el tuyo**. **No puedes evaluar tu propio proyecto.**
+> Confidencial: sólo la ve el profesor.
+
+**Evaluador:** `[su nombre]` · **Rol:** `[banco / fondo / comprador / público / comunidad / escéptico]`
+**Proyecto evaluado:** `[equipo]`
+
+| # | Criterio | 1 | 2 | 3 | 4 | 5 | Evidencia (obligatoria) |
+|---|---|---|---|---|---|---|---|
+| 1 | **Solidez del modelo** — los números resisten | ☐ | ☐ | ☐ | ☐ | ☐ | |
+| 2 | **Honestidad de los supuestos** — declararon lo frágil sin que se les preguntara | ☐ | ☐ | ☐ | ☐ | ☐ | |
+| 3 | **Adicionalidad del impacto** — línea base defendible | ☐ | ☐ | ☐ | ☐ | ☐ | |
+| 4 | **Bancabilidad desde MI rol** — ¿yo podría financiarlo? | ☐ | ☐ | ☐ | ☐ | ☐ | |
+| 5 | **Calidad de la respuesta** — respondieron o esquivaron | ☐ | ☐ | ☐ | ☐ | ☐ | |
+
+::: aviso
+**La columna Evidencia es obligatoria en los cinco criterios.** Una puntuación sin evidencia específica —celda, cifra o frase textual del pitch— **no se cuenta**, y baja tu nota de R6.
+
+Evidencia válida: *"Descontaron el FCA al WACC; lo vi en la hoja Criterios, celda B8."*
+Evidencia inválida: *"Buen modelo."* / *"Podría mejorar."*
+:::
+
+**Pregunta obligatoria de cierre:**
+
+> **El supuesto más frágil de este proyecto es** `____________`, **y si falla, el proyecto** `____________`.
+
+**Mi decisión desde mi rol:** ☐ Financio ☐ Financio condicionado a `____` ☐ No financio
+**Monto que asigno:** USD `______` (de mi límite de rol)
+
+---
+
+## Capa 2 · Co-evaluación de contribución intra-equipo
+
+> **Confidencial. Se entrega individualmente, no en grupo.**
+> Se recoge al final de la S5, antes del cierre.
+
+**Tu nombre:** `______` · **Tu equipo:** `______`
+
+**Distribuye 100 puntos entre TODOS los integrantes, incluyéndote.** Si el equipo contribuyó parejo, cada uno recibe 100/n.
+
+| Integrante | Puntos | Aporte concreto más importante |
+|---|---:|---|
+| | | |
+| | | |
+| | | |
+| | | |
+| **TOTAL** | **100** | |
+
+**Dos preguntas obligatorias:**
+
+1. ¿Qué hizo cada integrante que **tú no habrías podido hacer**?
+2. Si tuvieras que repetir el proyecto con este equipo, ¿qué cambiarías de la forma de trabajar?
+
+### Cómo se aplica
+
+```
+factor_individual = puntos_recibidos_promedio / (100 / n)
+
+nota_individual = nota_del_equipo × factor_individual   [acotado a 0,85 – 1,15]
+```
+
+::: nota
+**El acotamiento a ±15% es deliberado.** La co-evaluación de contribución corrige asimetrías reales, no reescribe la nota. Si un caso excede ese rango, es un problema de gestión de equipo que el profesor conversa con el equipo — no un problema aritmético.
+:::
+
+**Salvaguarda:** si un integrante se asigna a sí mismo más de 40% (con n≥3), o si asigna a otro menos de 10%, el profesor revisa el caso con el equipo antes de aplicar el factor.
+
+---
+
+## Capa 3 · R6 · Meta-evaluación · 10%
+
+**Esto es lo que hace funcionar todo lo demás.** La califica el profesor sobre 20 puntos.
+
+| Criterio | 5 | 3 | 1 |
+|---|---|---|---|
+| **Especificidad de la evidencia** | Cita celdas, cifras o frases textuales | Evidencia general pero verificable | "Buen trabajo" / sin evidencia |
+| **Fidelidad al rol** | Evaluó desde la lente de su rol de forma consistente | Mezcló su rol con opinión general | Ignoró el rol asignado |
+| **Discriminación** | Sus puntuaciones distinguen entre proyectos de calidad distinta | Alguna diferenciación | Puso lo mismo a todos |
+| **Detección** | Identificó al menos un problema real que otros no vieron | Identificó problemas conocidos | No identificó nada |
+| **Coherencia decisión-puntuación** | Su asignación de presupuesto es consistente con sus puntuaciones | Inconsistencia menor | Puntuó alto y no financió, sin explicar |
+
+**Bonificación:** +2 por cada error **estructural** detectado en un proyecto ajeno y confirmado por el profesor. Máximo +4.
+
+**Penalización:** poner 5 (o 1) a todos los proyectos sin evidencia diferenciada → **máximo 8/20**.
+
+---
+
+## Salvaguardas del sistema
+
+| Riesgo | Salvaguarda |
+|---|---|
+| **Colusión** entre equipos ("nos ponemos 5 mutuamente") | El presupuesto no alcanza. R6 castiga la no-discriminación. El profesor mantiene el 50% de R4. |
+| **Represalia** ("me criticaron, los hundo") | Puntuaciones confidenciales. Detección de valores atípicos (ver abajo). |
+| **Free-riding intra-equipo** | Capa 2, confidencial e individual. |
+| **Un evaluador severo o laxo sistemáticamente** | Se normaliza: se compara la media de cada evaluador contra la media del grupo. |
+| **Sesgo de amistad** | La evidencia obligatoria es el filtro: es difícil inventar una celda específica. |
+
+### Detección de valores atípicos
+
+Para cada proyecto se calcula la mediana de las puntuaciones recibidas. Una puntuación que se aparta **más de 1,5 puntos de la mediana** queda marcada, y el profesor:
+
+1. Lee la evidencia que la sustenta
+2. Si la evidencia es sólida → **se mantiene** (un evaluador que vio algo que otros no vieron merece R6 alto)
+3. Si la evidencia es débil o ausente → **se descarta** de la Capa 1 y baja R6
+
+::: importante
+Un valor atípico **bien sustentado no es un error: es el objetivo del ejercicio.** El escéptico financiero que encuentra el doble conteo que nadie más vio *debe* apartarse de la mediana.
+:::
+
+---
+
+## Cálculo final de R4 con co-evaluación
+
+```
+R4 = 0,50 × puntuación_del_profesor
+   + 0,50 × mediana_de_las_puntuaciones_del_comité (normalizada, sin atípicos descartados)
+```
+
+Se usa la **mediana**, no el promedio: es robusta a un evaluador extremo.
+
+**Umbral de validez:** si un proyecto recibe menos de 3 evaluaciones válidas (con evidencia), la Capa 1 no se aplica y R4 = 100% profesor. Se le informa al grupo.
+
+---
+
+## Ejercicio de calibración — 15 min, antes de las defensas
+
+**Sin esto, la co-evaluación no es válida.** Los evaluadores tienen que acordar qué significa un 3 y qué un 5 *antes* de puntuar.
+
+**Cómo se corre:**
+
+1. El profesor proyecta **el caso de calibración** (`07-caso-calibracion.md`) — un proyecto deliberadamente mediocre, con dos errores estructurales y un supuesto oculto.
+2. Cada estudiante puntúa **el criterio 1 (solidez del modelo)** en silencio, 3 minutos.
+3. Se levantan las manos por puntuación. **Casi siempre hay dispersión de 2 a 5.**
+4. Los extremos justifican. El grupo converge.
+5. El profesor fija el ancla: *"esto es un 2, y esta es la razón"*.
+
+::: nota
+La dispersión inicial **es el aprendizaje**. Que descubran que "solidez" significaba cosas distintas para cada uno es lo que hace que la evaluación posterior sea comparable.
+:::

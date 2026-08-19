@@ -1,0 +1,62 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "literatura/*.qmd"
+    - "slides/**/*.qmd"
+    - "!instructor/"
+    - "!00_Inputs/"
+
+website:
+  title: "Proyectos Sostenibles · MF7011"
+  description: "Formulación y Evaluación de Proyectos Sostenibles — Maestría en Finanzas Sostenibles y Cambio Climático, EAFIT"
+  navbar:
+    background: "#000066"
+    left:
+      - href: index.qmd
+        text: Inicio
+      - href: syllabus.qmd
+        text: Syllabus
+      - href: proyecto.qmd
+        text: Proyecto
+      - text: Sesiones
+        menu:
+          - text: "S1 · Vie — ¿Este proyecto es sostenible?"
+            href: slides/s01/s01-viernes.qmd
+          - text: "S1 · Sáb — La arquitectura del proyecto"
+            href: slides/s01/s01-sabado.qmd
+          - text: "---"
+          - text: "S2 · Vie — ¿A qué precio venderás en el año 12?"
+            href: slides/s02/s02-viernes.qmd
+          - text: "S2 · Sáb — Los números que nadie te da"
+            href: slides/s02/s02-sabado.qmd
+          - text: "---"
+          - text: "S3 · Vie — El denominador"
+            href: slides/s03/s03-viernes.qmd
+          - text: "S3 · Sáb — El flujo de caja y sus criterios"
+            href: slides/s03/s03-sabado.qmd
+          - text: "---"
+          - text: "S4 · Vie — El otro flujo de caja"
+            href: slides/s04/s04-viernes.qmd
+          - text: "S4 · Sáb — El flujo socioeconómico"
+            href: slides/s04/s04-sabado.qmd
+          - text: "---"
+          - text: "S5 · Investor Day"
+            href: slides/s05/s05-investor-day.qmd
+      - href: materiales.qmd
+        text: Materiales
+      - text: Literatura
+        menu:
+          - href: literatura/revision-literatura.qmd
+            text: Revisión de literatura
+          - href: literatura/auditoria-bibliografia.qmd
+            text: Auditoría de bibliografía
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+bibliography: literatura/referencias.bib

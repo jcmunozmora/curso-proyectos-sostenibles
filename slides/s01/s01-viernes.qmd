@@ -1,0 +1,439 @@
+---
+title: "¿Este proyecto es sostenible?"
+subtitle: "Sesión 1 · Tribunal · Viernes 21 de agosto"
+author: "Formulación y Evaluación de Proyectos Sostenibles · MF7011"
+format:
+  revealjs:
+    theme: [default, ../eafit.scss]
+    slide-number: c/t
+    incremental: false
+    transition: none
+    width: 1600
+    height: 900
+---
+
+## {background-color="#000066"}
+
+::: {style="text-align:center; padding-top:120px;"}
+[Tienen 500 hectáreas.]{style="font-size:2.2em; color:#ffffff; font-weight:700;"}
+
+[Alguien les ofrece USD 4,2 millones]{style="font-size:1.5em; color:#00A9E0;"}
+
+[para sembrar cacao.]{style="font-size:1.5em; color:#00A9E0;"}
+
+[**¿Aceptan?**]{style="font-size:2em; color:#ffffff;"}
+:::
+
+::: {.notes}
+MINUTO 0. Sin agenda, sin presentación personal, sin "bienvenidos al curso".
+Esta slide está proyectada cuando entran al salón.
+Dejar 60 segundos de silencio antes de hablar.
+:::
+
+---
+
+## Lo que saben {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**El proyecto**
+
+- 500 ha de potrero degradado
+- Cacao en sistema agroforestal
+- Horizonte: 15 años
+- Producción desde el año 4
+- Certificación orgánica desde el año 5
+
+**La inversión**
+
+- CapEx: USD 4,2 M
+- 60% deuda / 40% patrimonio
+:::
+
+::: {.column width="50%"}
+**El mercado**
+
+- Precio de cacao: **USD 10.400/t**
+- Rendimiento: 0,8 t/ha en madurez
+- Contrato con chocolatera europea
+- Prima orgánica: +12%
+
+**El resultado del modelo**
+
+- VPN: **+USD 10,7 M**
+- TIR: **26,2%**
+- Payback descontado: año 8
+:::
+:::
+
+::: {.callout-note}
+Tienen 25 minutos. Decidan en equipo: **invierten o no**. Una razón para sí, una para no, y la decisión.
+:::
+
+::: {.notes}
+MIN 5–15: presentar el caso. MIN 15–55: CONFRONTACIÓN.
+NO dar herramientas. NO explicar VPN. Que decidan con lo que traen.
+Circular. Escuchar qué preguntan. Anotar quién pide "¿de qué año son estos precios?"
+(Casi nadie lo pregunta — ese es el punto.)
+:::
+
+---
+
+## {background-color="#000066"}
+
+::: {style="text-align:center; padding-top:180px;"}
+[Ese modelo se construyó con precios de]{style="font-size:1.6em; color:#ffffff;"}
+
+[**diciembre de 2024**]{style="font-size:3em; color:#00A9E0; font-weight:700;"}
+:::
+
+::: {.notes}
+MIN 55. La revelación. Dejar que aterrice.
+:::
+
+---
+
+## El precio del cacao {.smaller}
+
+| Momento | Precio USD/t | vs. el modelo |
+|---|---:|---:|
+| Enero 2024 | ~4.200 | −60% |
+| **Récord dic-2024** | **12.931** | +24% |
+| **El modelo que acaban de evaluar** | **10.400** | — |
+| **Inicio 2026** | **~3.000–4.000** | **−65%** |
+| Mediados 2026 | repunte por inundaciones en Costa de Marfil y Ghana | |
+
+::: {.callout-important}
+El equipo que aprobó esta inversión en diciembre de 2024 **está en incumplimiento hoy.**
+:::
+
+---
+
+## El mismo modelo, precios reales {.smaller}
+
+| Precio USD/t | VPN USD | TIR | Momento |
+|---:|---:|---:|---|
+| 12.931 | +15.928.545 | 30,7% | récord dic-2024 |
+| **10.400** | **+10.707.667** | **26,2%** | ◄ el modelo que aprobaron |
+| 7.000 | +3.694.239 | 18,1% | medio 2025 |
+| 4.200 | **−2.081.525** | 7,3% | enero 2024 |
+| **3.500** | **−3.525.466** | **2,8%** | **inicio 2026** |
+| 3.000 | −4.556.853 | −1,7% | piso 2026 |
+
+::: {.callout-important}
+**Precio de equilibrio (VPN = 0): USD 5.209/t.**
+
+No cambió una sola fórmula. Cambió **un supuesto** — y el proyecto pasó de crear USD 10,7 M a destruir USD 3,5 M.
+:::
+
+---
+
+## {background-color="#000066"}
+
+::: {style="text-align:center; padding-top:200px;"}
+[Un VPN es una **opinión sobre el futuro**]{style="font-size:2.1em; color:#ffffff; font-weight:700;"}
+
+[disfrazada de número.]{style="font-size:2.1em; color:#00A9E0; font-weight:700;"}
+:::
+
+::: {.notes}
+Este es el mensaje central de todo el curso.
+Repetirlo textual: "un VPN es una opinión sobre el futuro disfrazada de número."
+Volveremos a esta frase en las 4 sesiones restantes.
+:::
+
+---
+
+## Lo que acaba de pasar {background-color="#f5f5f5"}
+
+::: {style="font-size:1.3em;"}
+No fallaron por no saber finanzas.
+
+Fallaron porque **aceptaron un número sin preguntar de dónde venía.**
+
+<br>
+
+Este curso tiene un solo objetivo real:
+
+::: {style="color:#000066; font-weight:700; font-size:1.2em;"}
+que nunca vuelvan a firmar un número que no puedan defender.
+:::
+:::
+
+---
+
+## Quién les está hablando {.smaller}
+
+**Juan Carlos Muñoz-Mora** — economía del desarrollo, evaluación de impacto de políticas públicas.
+
+::: {.columns}
+::: {.column width="50%"}
+**Mi terreno**
+
+- Evaluación de impacto
+- Costos y beneficios sociales
+- Externalidades y efectos intangibles
+- Tasa social de descuento
+- Trabajo de campo en SbN (FOLU Antioquia)
+
+→ **Unidad 3**
+:::
+
+::: {.column width="50%"}
+**El terreno de ustedes**
+
+- Matemáticas financieras
+- Inversión ASG
+- Modelación en Excel
+- Práctica bancaria y corporativa
+
+→ **Unidades 1 y 2**
+:::
+:::
+
+::: {.callout-note}
+Este curso está diseñado para que ustedes usen esa ventaja. No voy a fingir lo contrario.
+:::
+
+::: {.notes}
+Decirlo UNA vez, con seguridad, sin disculpas. No volver a mencionarlo en todo el curso.
+:::
+
+---
+
+## El problema real de este campo {background-color="#000066" style="color:white;"}
+
+::: {style="text-align:center; padding-top:100px; font-size:1.8em;"}
+Si les pido que me digan si una empresa es sostenible,
+
+y le preguntamos a **seis calificadoras profesionales**,
+
+<br>
+
+[¿qué tan de acuerdo estarán?]{style="color:#00A9E0;"}
+:::
+
+---
+
+## Aggregate Confusion {.smaller}
+
+**Berg, Kölbel & Rigobon (2022)** · *Review of Finance* · seis calificadoras ESG
+
+::: {.columns}
+::: {.column width="45%"}
+**Correlación entre calificadoras**
+
+| Tipo | Correlación |
+|---|---:|
+| Calificadoras **crediticias** | ~0,99 |
+| Calificadoras **ESG** | **0,38 – 0,71** |
+
+:::
+
+::: {.column width="55%"}
+**¿De dónde viene la divergencia?**
+
+| Fuente | Peso |
+|---|---:|
+| **Medición** — mismo atributo, distinto dato | **56%** |
+| **Alcance** — qué se incluye | 38% |
+| **Ponderación** — cómo se agrega | 6% |
+:::
+:::
+
+::: {.callout-warning}
+Y hay **efecto calificador**: la opinión general de la agencia sobre la firma contamina la medición de categorías específicas. El sesgo no es aleatorio.
+:::
+
+---
+
+## La consecuencia para su proyecto
+
+::: {style="font-size:1.4em;"}
+Si el argumento de sostenibilidad de su proyecto es
+
+> *"mejora nuestro score ESG"*
+
+la pregunta correcta es:
+
+::: {style="color:#000066; font-weight:700;"}
+¿el de quién?
+:::
+:::
+
+<br>
+
+::: {.callout-important}
+**Regla del curso:** ningún proyecto se defiende con un rating.
+
+Se defiende con **magnitudes físicas primarias**: tCO₂e, m³ de agua, hectáreas restauradas, ingreso de hogar.
+:::
+
+---
+
+## El marco alternativo: valor integrado {.smaller}
+
+**Schoenmaker & Schramade (2023)** · *Corporate Finance for Long-Term Value* · **acceso abierto**
+
+$$\textbf{IV} = \underbrace{FV}_{\text{financiero}} + \underbrace{SV}_{\text{social}} + \underbrace{EV}_{\text{ambiental}}$$
+
+::: {.columns}
+::: {.column width="50%"}
+**La promesa**
+
+La empresa no maximiza valor financiero: **optimiza valor integrado**.
+
+La sostenibilidad deja de ser un filtro externo y entra al cálculo.
+:::
+
+::: {.column width="50%"}
+**El problema**
+
+Para **sumar**, hay que convertir todo a la misma unidad.
+
+Esa tasa de conversión es una **decisión ética disfrazada de parámetro técnico**.
+:::
+:::
+
+::: {.callout-warning}
+Cuando alguien les muestre un IV, la pregunta es: *¿a qué precio están sustituyendo una tonelada de CO₂ por un peso de utilidad — y quién autorizó ese precio?*
+:::
+
+---
+
+## {background-color="#00A9E0"}
+
+::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
+PAUSA · 15 minutos
+:::
+
+::: {.notes}
+MIN 75–90. La pausa es real y es innegociable. Café.
+Volver EXACTAMENTE a los 15 minutos — esto establece la norma del curso.
+:::
+
+---
+
+## Por qué cacao, y por qué ahora {.smaller}
+
+**FOLU Colombia & Climate Focus (2023)** — Soluciones basadas en la Naturaleza en Colombia
+
+| | |
+|---|---:|
+| Inversión requerida para desbloquear el potencial de SbN | **USD 13.500 M** |
+| Inversión terrestre actual | < USD 300 M/año |
+| **Brecha** | **~50×** |
+| Potencial de mitigación a 2050 | **340 MtCO₂e/año** |
+| Protección forestal y conservación | **67%** del potencial total |
+| Participación del sector **privado** | **< 1%** |
+| Hallazgo del informe | *"Las SbN son rentables y competitivas"* |
+
+::: {.callout-note}
+Y la mayor oportunidad identificada: empresas del sector AFOLU que necesitan reducir su **Alcance 3** — el 30% del potencial de inversión.
+
+Su cliente potencial no es un filántropo. Es una chocolatera con una meta de emisiones que cumplir.
+:::
+
+---
+
+## Su proyecto {background-color="#000066" style="color:white;"}
+
+::: {style="font-size:1.25em;"}
+Cada equipo formula **su propia variante** de un proyecto de SbN en cadena productiva:
+
+- Territorio, escala y cultivo: **ustedes deciden**
+- Mezcla de ingresos: cacao, transitorios, maderables, carbono, biodiversidad
+- Estructura de financiación: **ustedes deciden**
+
+<br>
+
+Al final del curso lo defienden ante un comité de inversión
+
+que **tiene presupuesto limitado y va a rechazar proyectos.**
+:::
+
+---
+
+## Aplicación · 40 minutos {.smaller}
+
+**Produzcan la Ficha de Proyecto v0** — una página, en la plantilla compartida:
+
+::: {.columns}
+::: {.column width="50%"}
+1. **El problema** en una frase — sin la palabra "sostenible"
+2. **El territorio** y por qué ese
+3. **Quién es el dueño** del proyecto (¿asociación? ¿SPV? ¿empresa ancla?)
+4. **Las fuentes de ingreso** y cuándo empieza cada una
+:::
+
+::: {.column width="50%"}
+5. **Tres actores** que pueden hundir el proyecto
+6. **Cinco KPI físicos** — magnitudes, no ratings
+7. **El supuesto** que más los preocupa
+:::
+:::
+
+::: {.callout-important}
+Se sube al repositorio **antes de salir del salón.** Sin excepción.
+:::
+
+::: {.notes}
+MIN 90–130. Circular. NO resolver: preguntar.
+Preguntas útiles: "¿quién firma el contrato?" "¿de dónde sacaste ese número?"
+"¿qué pasa si eso no ocurre?"
+:::
+
+---
+
+## Tribunal · 20 minutos
+
+::: {style="font-size:1.3em;"}
+**Dos equipos** presentan su ficha — 5 minutos cada uno.
+
+**Su *discussant* asignado** tiene 5 minutos para hacer
+
+::: {style="color:#000066; font-weight:700;"}
+una pregunta que el equipo no pueda responder.
+:::
+
+<br>
+
+Encontrar el hueco es el objetivo. **La cortesía no puntúa.**
+:::
+
+::: {.notes}
+MIN 130–150. Asignar discussants por sorteo al inicio de esta slide.
+Rotan cada sesión.
+:::
+
+---
+
+## Para mañana 8:00 {background-color="#f5f5f5"}
+
+::: {.columns}
+::: {.column width="50%"}
+**Traer**
+
+- Portátil con Excel
+- La ficha de proyecto v0 subida
+- La pregunta que el *discussant* no les dejó responder
+:::
+
+::: {.column width="50%"}
+**Leer** (30 min máximo)
+
+- FOLU Colombia (2023) — resumen ejecutivo
+- Schoenmaker & Schramade cap. 1 (acceso abierto)
+:::
+:::
+
+<br>
+
+::: {style="text-align:center; font-size:1.5em; color:#000066; font-weight:700;"}
+Mañana construimos. Hoy decidimos.
+:::
+
+::: {.notes}
+MIN 170–180. TERMINAR A LAS 21:00 EN PUNTO.
+Esta promesa cumplida el primer día compra la asistencia del resto del curso.
+:::

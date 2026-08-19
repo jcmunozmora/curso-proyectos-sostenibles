@@ -1,0 +1,168 @@
+---
+title: "Auditoría Crítica de la Bibliografía Oficial"
+subtitle: "Programa MF7011 v01 (25/07/2024) — insumo para Comité de Programa"
+author: "Juan Carlos Muñoz-Mora"
+date: 2026-08-19
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+# Propósito y alcance
+
+El programa de asignatura vigente (**v01, 25/07/2024**, responsable Juan Carlos Gutiérrez Betancur) lista **22 referencias básicas obligatorias** y 5 complementarias. Este documento evalúa cada una y propone una bibliografía revisada.
+
+**No es una crítica al autor del programa.** Es el mantenimiento normal de un campo que se mueve rápido: entre julio de 2024 y agosto de 2026 entraron en vigor la Circular Externa 015 de 2025, se publicó la guía de precio sombra del carbono del Banco Mundial de 2024, y el precio del cacao —commodity central del proyecto ancla— se movió 70%.
+
+**Criterios de evaluación:**
+
+| Criterio | Pregunta |
+|---|---|
+| **Vigencia** | ¿Refleja el estado del campo en 2026? |
+| **Acceso** | ¿Pueden los estudiantes obtenerla sin costo o vía EAFIT? |
+| **Carga** | ¿Es realista para profesionales con 5 sesiones en 4 semanas? |
+| **Alineación** | ¿Sirve a un resultado de aprendizaje declarado? |
+| **Rigor** | ¿Es fuente primaria o secundaria comercial? |
+
+---
+
+# Veredicto por referencia
+
+## Mantener sin cambios
+
+| Referencia | Justificación |
+|---|---|
+| **Sapag Chain et al. (2014)**, *Preparación y Evaluación de Proyectos*, 6ª ed. | Estándar de facto en LatAm. Arquitectura de estudios, capital de trabajo y flujo proyecto/inversionista siguen siendo lo mejor en español. **Reposicionar**: de "el libro del curso" a "el modelo base que construimos y luego rompemos". |
+| **Boardman, Greenberg, Vining & Weimer (2018)**, *Cost–Benefit Analysis*, 5ª ed. | Referencia canónica de ACB. Sigue vigente. Usar sólo capítulos de precios sombra y descuento. **[PV — verificar si existe 6ª edición.]** |
+| **Welch (2021)**, "The Cost of Capital: If Not the CAPM, Then What?" | Acceso abierto, corto, provocador. **Es la mejor pieza de la lista actual.** Subir a obligatoria de la Sesión 3. |
+| **Welch & Cornell (2022)**, *Global Climate Change: The Pragmatist's Guide* | Acceso abierto, escéptico y bien argumentado. Antídoto contra el entusiasmo acrítico. |
+| **DNP (2023)**, Metodología General Ajustada | Norma viva de inversión pública colombiana. Imprescindible para el puente público-privado. |
+| **NYU Stern**, metodología ROSI™ | Método concreto y aplicable. Útil como plantilla del caso de negocio de sostenibilidad. |
+| **Hyndman & Athanasopoulos (2021)**, *Forecasting: Principles and Practice*, 3ª ed. | Acceso abierto, excelente. **Promover de complementaria a básica** — la Unidad 2 exige proyectar mercado y el programa no ofrece ninguna otra base metodológica para hacerlo. |
+
+## Reemplazar
+
+| Actual | Reemplazo propuesto | Razón |
+|---|---|---|
+| **Schoenmaker & Schramade (2019)**, *Principles of Sustainable Finance* | **Schoenmaker & Schramade (2023)**, *Corporate Finance for Long-Term Value*, Springer — **ACCESO ABIERTO** | Sucesor directo de los mismos autores. No se queda en principios: reescribe VPN, costo de capital, estructura de capital y valoración bajo el modelo de valor integrado. **Es gratuito.** Es el cambio individual de mayor impacto de esta auditoría. |
+| **Brigham & Houston (2022)**, *Fundamentals of Financial Management*, 16ª ed. | **Capítulos específicos** de Schoenmaker & Schramade (2023) + Welch (2021) | Brigham es un manual de pregrado de 800+ páginas, caro, y su tratamiento del costo de capital es exactamente lo que Welch —ya en la lista— refuta. Mantenerlo como referencia de consulta, no como lectura. |
+| **Maubossin & Rappaport (2021)**, *Expectations Investing* | Mover a complementaria | Libro valioso, pero es sobre **valoración de acciones en mercados públicos**, no sobre evaluación de proyectos. Su vínculo con los resultados de aprendizaje declarados es indirecto. La "infraestructura de las expectativas" del contenido de U1 se puede cubrir en 20 minutos de clase. |
+| **Enlace a video en Yahoo Search** (curso ACB energías renovables) | **CEPAL**, documento metodológico de ACB directamente | Un enlace a resultados de búsqueda de Yahoo no es una referencia citable y es probable que ya esté roto. **[PV — verificar]** |
+
+## Añadir (frontera y obligatoriedad regulatoria)
+
+Once adiciones, ordenadas por prioridad:
+
+### Prioridad 1 — imprescindibles
+
+| Referencia | Por qué |
+|---|---|
+| **Berg, Kölbel & Rigobon (2022)**, "Aggregate Confusion", *Review of Finance* 26(6):1315–1344 | El paper que define el problema de medición de todo el campo. Correlación ESG de 0,38–0,71 entre calificadoras. Sin esto, el curso enseña a construir sobre arena. |
+| **Banco Mundial (2024)**, *Guidance Note on Shadow Price of Carbon in Economic Analysis* | Estándar operativo vigente y obligatorio para el BIRF. Define el formato del entregable final del curso. |
+| **SFC**, **Circular Externa 015 de 2025** | Norma colombiana **vigente y obligatoria**. Convierte la debida diligencia ASG en condición de bancabilidad. No estaba porque no existía en julio de 2024. |
+| **Drupp, Freeman, Groom & Nesje**, "Discounting Disentangled" | Fuente primaria de la tasa social de descuento (197 expertos; mediana 2%). El programa exige enseñar "la tasa social de descuento" sin dar ninguna referencia para ella. **Es un vacío del programa actual.** |
+
+### Prioridad 2 — proyecto ancla
+
+| Referencia | Por qué |
+|---|---|
+| **FOLU Colombia & Climate Focus (2023)**, *SbN: escalando el financiamiento* | Datos colombianos de la brecha de financiamiento de SbN. Base cuantitativa del proyecto ancla. |
+| **Jayachandran et al. (2017)**, "Cash for Carbon", *Science* | Mejor evidencia causal de costo-efectividad de PSA (USD 0,46/tCO₂). |
+| **Terrasos / MinAmbiente**, marco de bancos de hábitat | Instrumento financiero colombiano real, con estructura de flujos enseñable. |
+| **NGFS**, *Guide to Climate Scenario Analysis* | Los tres escenarios de referencia. Estándar de facto. |
+
+### Prioridad 3 — profundidad
+
+| Referencia | Por qué |
+|---|---|
+| **IUCN (2020)**, Global Standard for Nature-based Solutions | Criterios de qué *es* una SbN. Defensa contra greenwashing del proyecto. |
+| **TNFD (2023)**, Recomendaciones | Marco de naturaleza; complemento directo del proyecto ancla. |
+| Literatura de integridad de créditos de biodiversidad (*Proc. R. Soc. B*, 2025) | Conmensurabilidad de la biodiversidad como problema abierto. |
+
+---
+
+# Problemas transversales del programa
+
+## Sobrecarga incompatible con el formato real
+
+**22 referencias básicas obligatorias** para **36 horas en 4 semanas**, con estudiantes que trabajan tiempo completo.
+
+Estimando conservadoramente 300 páginas por libro y 8 libros completos, la carga implícita supera las **2.400 páginas**. El propio programa fija la expectativa en *"2 horas de estudio individual extra-clase por cada 6 horas"* — es decir, **~12 horas de lectura para todo el semestre**.
+
+**La bibliografía declarada excede la carga declarada por un factor de aproximadamente 20.**
+
+::: {.callout-important}
+Esto no es pedantería: una bibliografía imposible enseña a los estudiantes que las lecturas asignadas son decorativas. Es la forma más eficiente de destruir la cultura de lectura previa que el propio programa dice necesitar ("se parte de la clase magistral antecedida de lecturas previas").
+:::
+
+**Propuesta**: **10 lecturas obligatorias en todo el curso** (2 por sesión), cada una con guía de lectura y una pregunta que se responde en clase. Todo lo demás pasa a "consulta" con indicación explícita de capítulos.
+
+## Vacíos temáticos
+
+Temas que el programa **exige enseñar** pero para los que **no ofrece bibliografía**:
+
+| Tema en el contenido | Bibliografía en el programa |
+|---|---|
+| **La Tasa Social de Descuento** (U3) | Ninguna específica |
+| **Medición de Efectos Intangibles** (U3) | Ninguna específica |
+| **Estimación y Proyección del Mercado** (U2) | Sólo Hyndman, y está como *complementaria* |
+| **Coaliciones para las Finanzas Sostenibles** (U1) | Ninguna |
+| **La Infraestructura de las Expectativas** (U1) | Maubossin, indirectamente |
+| **Enfoque de inversión adaptativa** (U1) | Ninguna |
+
+## Inconsistencias formales del documento
+
+| # | Problema | Corrección |
+|---|---|---|
+| 1 | §1 declara **32 horas semestrales**; §5 declara **36 horas** | **36 h** — confirmado por la programación oficial 2026-2 (4×8h presenciales + 1×4h virtual) |
+| 2 | Unidades suman 32 h (8+12+12), no 36 | Redistribuir: U1 = 10 h, U2 = 13 h, U3 = 13 h |
+| 3 | Referencia a "Circular 015" con fecha 2024 en materiales del programa | Es **Circular Externa 015 de *2025*** |
+| 4 | Enlace a búsqueda de Yahoo como referencia bibliográfica | Reemplazar por documento CEPAL directo |
+| 5 | "Maestría en Finanzas **Ssotenibles**" (§1) | Erratas de digitación |
+| 6 | "Schoenmaker, D. & Schramade, **D.**" | Es **W.** (Willem) Schramade |
+| 7 | "**Maubossin**, M." | Es **Mauboussin**, Michael J. |
+| 8 | Programación oficial 2026-2 tiene 3 fechas erradas | Ver `instructor/00-plan-de-registro.md` §Calendario |
+
+---
+
+# Bibliografía revisada propuesta
+
+## Básica obligatoria — 10 lecturas, una por bloque
+
+1. Berg, Kölbel & Rigobon (2022) — *Aggregate Confusion*
+2. FOLU Colombia & Climate Focus (2023) — resumen ejecutivo
+3. Schoenmaker & Schramade (2023) — caps. 1–2 y costo de capital **[OA]**
+4. Sapag Chain et al. (2014) — caps. de costos, inversiones y capital de trabajo
+5. Hyndman & Athanasopoulos (2021) — cap. 1 **[OA]**
+6. Welch (2021) — *If Not the CAPM, Then What?* **[OA]**
+7. Drupp, Freeman, Groom & Nesje — *Discounting Disentangled*
+8. Banco Mundial (2024) — *Guidance Note on Shadow Price of Carbon* **[OA]**
+9. Jayachandran et al. (2017) — *Cash for Carbon*, *Science*
+10. SFC — Circular Externa 015 de 2025 **[OA]**
+
+## Consulta — por unidad
+
+**U1**: Boardman et al. (2018) intro · IUCN (2020) · TNFD (2023) · Bril, Kell & Rasche (2021) · Mauboussin & Rappaport (2021)
+**U2**: Sapag completo · Hyndman completo **[OA]** · Brigham & Houston (2022) · datos de precios ICE/FAO
+**U3**: Boardman completo · Gollier (2018) · NGFS Guide **[OA]** · DNP MGA (2023) **[OA]** · NYU Stern ROSI **[OA]** · Welch & Cornell (2022) **[OA]** · Terrasos **[OA]**
+
+## Retiradas de obligatoria
+
+Glavas (2023) · Ramiah & Gregoriou (2016) · Massari et al. (2016) · Wendt (2023) · Asociación Los Andes de Cajamarca (2018) · enlace Yahoo
+
+**Razón común**: son handbooks o volúmenes editados de calidad heterogénea, sin capítulos asignados, sin acceso abierto, y sin vínculo directo con un resultado de aprendizaje declarado. Su presencia infla la lista sin agregar aprendizaje.
+
+---
+
+# Recomendación al Comité de Programa
+
+::: {.callout-note}
+## Resumen ejecutivo — 5 puntos
+
+1. **Adoptar Schoenmaker & Schramade (2023) como texto base** en reemplazo de la edición de 2019 y de Brigham. Es de los mismos autores, más reciente, mejor alineado y **de acceso abierto** — elimina una barrera de costo para los estudiantes.
+2. **Reducir de 22 a 10 las lecturas obligatorias.** La carga actual es ~20× la declarada por el propio programa.
+3. **Incorporar la Circular Externa 015 de 2025.** Es norma vigente que afecta directamente la bancabilidad de los proyectos que los estudiantes formulan. Su ausencia es un vacío de pertinencia profesional.
+4. **Cerrar el vacío de la tasa social de descuento.** El programa exige enseñarla sin dar una sola referencia. Drupp et al. lo resuelve.
+5. **Corregir las inconsistencias formales**, empezando por 32 vs. 36 horas y las fechas del calendario 2026-2.
+:::

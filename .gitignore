@@ -1,0 +1,52 @@
+# ── Datos identificables de estudiantes (Ley 1581/2012) ──
+# NUNCA versionar. Ver instructor/00-plan-de-registro.md §Datos
+Semestres/
+entregas/
+notas/
+*_notas.xlsx
+*_calificaciones.*
+
+# ── Render Quarto ──
+_site/
+_book/
+.quarto/
+*_files/
+/.luarc.json
+
+# ── Sistema ──
+.DS_Store
+Thumbs.db
+~$*
+
+# ── LaTeX ──
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# ── R / Python ──
+.Rproj.user
+.Rhistory
+.RData
+__pycache__/
+.venv/
+*.pyc
+
+# ── Biblioteca PDF (125 MB, acceso abierto, reconstruible) ──
+# Se regenera con: bash recursos/descargar-literatura.sh
+literatura/pdf/
+
+/.quarto/
+
+# ── MATERIAL DOCENTE — NO PUBLICAR EN REPO PÚBLICO ──
+# Contiene respuestas preparadas, errores a plantar y el reveal del
+# modelo-trampa de la S1. Si los estudiantes lo leen, el diseño se cae.
+# Se versiona aparte (repo privado) — ver README §Material docente.
+instructor/
+datos/modelo-trampa-s1.xlsx
+datos/analisis_*.py
+datos/construir_modelo_trampa.py
+datos/caso_calibracion.py

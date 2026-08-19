@@ -1,0 +1,339 @@
+---
+title: "Investor Day"
+subtitle: "Sesión 5 · Virtual · Viernes 18 de septiembre · 18:00–22:00"
+author: "Formulación y Evaluación de Proyectos Sostenibles · MF7011"
+format:
+  revealjs:
+    theme: [default, ../eafit.scss]
+    slide-number: c/t
+    transition: none
+    width: 1600
+    height: 900
+---
+
+## {background-color="#000066"}
+
+::: {style="text-align:center; padding-top:160px;"}
+[Hay **USD 12 millones** sobre la mesa.]{style="font-size:2em; color:#ffffff; font-weight:700;"}
+
+<br>
+
+[Hay **seis proyectos** que suman USD 26 millones.]{style="font-size:1.6em; color:#00A9E0;"}
+
+<br>
+
+[Alguien se va sin plata.]{style="font-size:1.7em; color:#ffffff;"}
+:::
+
+::: {.notes}
+MIN 0. Ajustar las cifras al número real de equipos.
+Regla: el presupuesto debe alcanzar para ~45% de lo solicitado. La escasez es el motor.
+:::
+
+---
+
+## Cómo funciona hoy {.smaller}
+
+| Bloque | Min | Qué pasa |
+|---|---:|---|
+| **Reglas y roles** | 0–15 | Cada estudiante recibe un rol y sus límites de presupuesto |
+| **Calibración** | 15–30 | Puntuamos juntos un proyecto de muestra. **Acordamos qué es un 3 y qué es un 5.** |
+| **Defensas** | 30–150 | Por equipo: **12 min de pitch + 12 min de interrogatorio** |
+| **Pausa** | 150–165 | |
+| **Co-evaluación** | 165–185 | Cada uno llena sus tarjetas. **En silencio, individual, confidencial.** |
+| **Comité de inversión** | 185–215 | Los roles deliberan y **asignan el presupuesto**. En público. |
+| **Cierre** | 215–240 | Las siete tensiones · qué se llevan · el puente |
+
+::: {.callout-important}
+Durante el pitch de otro equipo, **ustedes no son estudiantes: son su rol.** Un inversionista de impacto no hace preguntas de cortesía.
+:::
+
+---
+
+## Los roles {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**🏦 Banco comercial**
+Sujeto a la **Circular Externa 015 de 2025**. Debe hacer debida diligencia ambiental y social. Le importan garantías, servicio de deuda y categorización de riesgo.
+
+**🌱 Fondo de impacto**
+Acepta retorno por debajo de mercado a cambio de impacto **verificable**. Odia el greenwashing. Pregunta por adicionalidad.
+
+**🌍 Comprador corporativo (chocolatera)**
+Necesita reducir **Alcance 3**. Puede pagar prima o firmar *offtake* de largo plazo. Le importa trazabilidad y riesgo reputacional.
+:::
+
+::: {.column width="50%"}
+**🏛️ Entidad pública / DNP**
+Evalúa con **TSD de la Resolución 1092/2022**. Pregunta por qué este proyecto y no otro uso del recurso público.
+
+**👥 Representante de la comunidad**
+Vive en el territorio. Pregunta por tenencia de la tierra, empleo real, y qué pasa si el proyecto fracasa en el año 6.
+
+**📉 Escéptico financiero**
+No cree en nada. Busca el supuesto frágil, el doble conteo, la celda codificada a mano.
+:::
+:::
+
+---
+
+## Calibración · 15 minutos {background-color="#f5f5f5"}
+
+Antes de evaluar a nadie, tenemos que **acordar qué significa cada puntuación.**
+
+::: {style="font-size:1.15em;"}
+1. Proyecto de muestra en pantalla — **3 min**, puntúan sólo "solidez del modelo", de 1 a 5, en silencio
+2. Manos arriba por puntuación — **2 min**
+3. Los extremos justifican — **5 min**
+4. Fijamos el ancla — **5 min**
+:::
+
+::: {.callout-note}
+**Va a haber dispersión, y eso es el punto.** Que descubran que "solidez" significaba cosas distintas para cada uno es lo que hace comparables las evaluaciones de hoy.
+:::
+
+::: {.notes}
+MIN 15–30. Usar instructor/03-caso-calibracion.md — 'Aguacate Andino S.A.S.'
+NO revelar los cinco errores hasta el paso 4.
+El ancla es: esto es un 2. VPN presentado +10,7 M → corregido −0,7 M.
+:::
+
+---
+
+## Estructura del pitch · 12 minutos {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+| Min | Contenido |
+|---:|---|
+| 0–2 | **El problema** con magnitud. Sin la palabra "sostenible". |
+| 2–4 | La solución y **quién es el dueño** |
+| 4–7 | **Los números**: CapEx, flujo, VPN privado, VPN social, switching value |
+| 7–9 | **El riesgo** que más los preocupa y cómo lo mitigan |
+| 9–11 | **La pregunta**: cuánto piden, a quién y en qué instrumento |
+| 11–12 | Cierre |
+:::
+
+::: {.column width="50%"}
+**Reglas del pitch**
+
+- Máximo **8 diapositivas**
+- **Una** tabla de números en pantalla, no cinco
+- Empiezan con el problema, **no** con la agenda
+- Dicen el VPN negativo **si lo tienen** — el comité lo va a encontrar de todos modos
+- Terminan pidiendo algo **concreto**
+:::
+:::
+
+::: {.callout-warning}
+**Ocultar un número malo es la forma más rápida de perder el comité.** Presentarlo con su mitigación es la forma más rápida de ganarlo.
+:::
+
+---
+
+## Criterios de decisión del comité {.smaller}
+
+| Criterio | Peso | La pregunta |
+|---|---:|---|
+| **Solidez del modelo** | 30% | ¿Los números resisten? ¿Hay fuentes? ¿Hay errores de doble conteo? |
+| **Honestidad de los supuestos** | 25% | ¿Declararon lo frágil? ¿El escenario bajo es realmente bajo? |
+| **Adicionalidad del impacto** | 20% | ¿Esto pasaría de todos modos? ¿La línea base es defendible? |
+| **Bancabilidad** | 15% | ¿Alguien de esta mesa puede realmente financiarlo? |
+| **Calidad de la defensa** | 10% | ¿Respondieron o esquivaron? |
+
+::: {.callout-important}
+Noten que **"el VPN más alto" no es un criterio.** Un VPN alto construido sobre supuestos frágiles vale menos que un VPN modesto y robusto — y en el mundo real cuesta más caro.
+:::
+
+---
+
+## Las preguntas que el comité va a hacer {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**Sobre el modelo**
+
+- ¿Su flujo es real o nominal? ¿Y la tasa?
+- ¿Descontaron el FCA al $K_e$ o al WACC?
+- ¿Recuperan el capital de trabajo?
+- ¿Verificaron el patrón de signos antes de reportar la TIR?
+- Muéstrenme la celda de la que más dudan.
+:::
+
+::: {.column width="50%"}
+**Sobre el impacto**
+
+- ¿Cuál es su línea base y quién la validó?
+- Si el precio sube a USD 10.000, ¿siguen necesitando el subsidio?
+- ¿Qué pasa con el carbono si tumban el bosque en el año 20?
+- ¿Los productores son dueños o proveedores?
+- ¿Quién pierde con su proyecto?
+:::
+:::
+
+::: {.callout-note}
+Todas estas preguntas ya aparecieron en alguna auditoría cruzada del curso. **Ninguna es una emboscada.**
+:::
+
+---
+
+## Ustedes evalúan — y su evaluación se evalúa {background-color="#000066" style="color:white;"}
+
+::: {style="font-size:1.2em; padding-top:20px;"}
+La mitad de la nota de defensa de cada equipo **la ponen ustedes.**
+
+<br>
+
+Y la **calidad de su juicio como evaluadores vale el 15% del curso.**
+
+<br>
+
+::: {style="color:#00A9E0; font-weight:700;"}
+No se evalúa qué tan severos o generosos fueron.
+Se evalúa si tuvieron buen juicio.
+:::
+:::
+
+---
+
+## La tarjeta de co-evaluación {.smaller}
+
+Una tarjeta por cada proyecto **que no es el suyo**. No pueden evaluar el propio.
+
+| Criterio | 1–5 | Evidencia — **obligatoria** |
+|---|---|---|
+| Solidez del modelo | ☐ | |
+| Honestidad de los supuestos | ☐ | |
+| Adicionalidad del impacto | ☐ | |
+| **Bancabilidad desde MI rol** | ☐ | |
+| Calidad de la respuesta | ☐ | |
+
+**Y la pregunta de cierre:** *el supuesto más frágil de este proyecto es \_\_\_, y si falla, el proyecto \_\_\_*
+
+::: {.callout-warning}
+**Una puntuación sin evidencia específica no se cuenta** — y baja su nota de R5.
+
+✅ *"Descontaron el FCA al WACC; hoja Criterios, celda B8."*
+❌ *"Buen modelo."*
+:::
+
+---
+
+## Cómo se calcula, y las salvaguardas {.smaller}
+
+$$R4 = 0{,}50 \times \text{profesor} + 0{,}50 \times \underbrace{\text{mediana del comité}}_{\text{no el promedio}}$$
+
+::: {.columns}
+::: {.column width="52%"}
+**Por qué la mediana**
+Es robusta a un evaluador extremo. Un solo 1 o un solo 5 no mueve el resultado.
+
+**Valores atípicos**
+Una puntuación a más de 1,5 puntos de la mediana queda marcada. Si la evidencia es sólida, **se mantiene y puntúa alto en R5**. Si es débil, se descarta.
+:::
+
+::: {.column width="48%"}
+**Confidencialidad**
+Las puntuaciones sólo las ve el profesor. **La asignación de presupuesto sí es pública y razonada.**
+
+**Contribución intra-equipo**
+Aparte y confidencial: distribuyen 100 puntos entre los integrantes, incluyéndose. Modula la nota individual entre 0,85 y 1,15.
+:::
+:::
+
+::: {.callout-important}
+Apartarse de la mediana **porque vieron algo que nadie más vio es el objetivo del ejercicio**, no una desviación a corregir.
+:::
+
+---
+
+## {background-color="#00A9E0"}
+
+::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
+COMITÉ DE INVERSIÓN
+:::
+
+::: {.notes}
+MIN 185–215. El profesor NO participa en la deliberación. Modera el tiempo.
+Cada rol debe justificar su asignación en voz alta. Se vota. Se asigna.
+Debe quedar al menos un proyecto sin financiar.
+:::
+
+---
+
+## Cierre · las siete tensiones {.smaller}
+
+Volvemos a donde empezamos. Estas preguntas **no tienen respuesta consensuada** — y ahora ustedes tienen una posición sobre cada una.
+
+| | Tensión | Dónde la vivieron |
+|---|---|---|
+| **T1** | ¿El VPN puede absorber la sostenibilidad, o hay que reemplazarlo? | S1 · valor integrado |
+| **T2** | Si el precio de mercado y el sombra difieren, ¿cuál es el valor verdadero? | S4 · los dos flujos |
+| **T3** | ¿La sostenibilidad baja el costo de capital o sólo amplía el acceso? | S3 · greenium de −12 pb |
+| **T4** | Si el CAPM no funciona, ¿qué va en el denominador? | S3 · IC de la beta |
+| **T5** | ¿Los créditos de biodiversidad son un mercado o un imposible conceptual? | S4 · conmensurabilidad |
+| **T6** | ¿Quién paga la brecha entre VPN privado y social? | **Hoy** |
+| **T7** | ¿Medir el impacto lo mejora, o desplaza el esfuerzo a lo medible? | Todo el curso |
+
+---
+
+## Lo que se llevan {background-color="#000066" style="color:white;"}
+
+::: {style="font-size:1.3em; padding-top:20px;"}
+No se llevan un método. Los métodos cambian.
+
+Se llevan **tres reflejos**:
+
+<br>
+
+1. Frente a un número, preguntar **de dónde viene**
+2. Frente a una tasa, preguntar **de quién es la pregunta**
+3. Frente a un impacto, preguntar **cuál es la línea base**
+:::
+
+---
+
+## {background-color="#000066"}
+
+::: {style="text-align:center; padding-top:180px;"}
+[En la Sesión 1 aprobaron una inversión]{style="font-size:1.5em; color:#ffffff;"}
+
+[con un precio que no habían verificado.]{style="font-size:1.5em; color:#ffffff;"}
+
+<br>
+
+[Hoy interrogaron seis proyectos]{style="font-size:1.6em; color:#00A9E0;"}
+
+[y encontraron el supuesto frágil de cada uno.]{style="font-size:1.6em; color:#00A9E0; font-weight:700;"}
+:::
+
+---
+
+## El puente {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**Lo que queda abierto**
+
+La pregunta T6 —quién paga la brecha— **es la asignatura siguiente**:
+
+> *Instrumentos de financiación sostenible*
+
+Capital catalítico, garantías, bonos vinculados a sostenibilidad, blended finance, pago por resultados.
+:::
+
+::: {.column width="50%"}
+**Y más adelante**
+
+- *Mercados de carbono y finanzas de la biodiversidad* — el precio que hoy asumieron
+- *Medición y gestión del riesgo climático* — los escenarios NGFS en serio
+- *Evaluación de impacto de proyectos sociales* — si la línea base fue real
+:::
+:::
+
+<br>
+
+::: {style="text-align:center; font-size:1.4em; color:#000066; font-weight:700;"}
+Ustedes no estudiaron un caso de Harvard.<br>Construyeron uno.
+:::

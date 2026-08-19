@@ -1,0 +1,6 @@
+:root { --eafit-zafre:#000066; --eafit-cielo:#00A9E0; }
+h1,h2,h3 { color: var(--eafit-zafre); }
+h2 { border-bottom:2px solid var(--eafit-cielo); padding-bottom:.3rem; }
+a { color: var(--eafit-cielo); }
+table th { background: var(--eafit-zafre); color:#fff; }
+.navbar { border-bottom:3px solid var(--eafit-cielo); }

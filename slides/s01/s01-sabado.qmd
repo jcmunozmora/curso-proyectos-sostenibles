@@ -1,0 +1,327 @@
+---
+title: "La arquitectura del proyecto"
+subtitle: "Sesión 1 · Taller · Sábado 22 de agosto · 8:00–13:00"
+author: "Formulación y Evaluación de Proyectos Sostenibles · MF7011"
+format:
+  revealjs:
+    theme: [default, ../eafit.scss]
+    slide-number: c/t
+    transition: none
+    width: 1600
+    height: 900
+---
+
+## Recuperación · 20 min {.smaller}
+
+Individual (5 min), luego en equipo (10 min). **Sin nota.**
+
+1. ¿Cuál es la correlación entre calificadoras ESG, y cuál entre calificadoras crediticias?
+2. De la divergencia ESG, ¿qué fracción viene de **medición** y qué de **alcance**?
+3. ¿Cuál fue el precio de equilibrio del modelo de ayer, y qué significa?
+4. En $IV = FV + SV + EV$, ¿cuál es el supuesto oculto en el signo **+**?
+5. ¿Por qué su proyecto no puede defenderse con un rating?
+
+::: {.callout-note}
+Recuperar de memoria antes de volver a ver el material **es** el mecanismo de aprendizaje, no un chequeo de él. Por eso no tiene nota.
+:::
+
+::: {.notes}
+MIN 0–20. Primero individual en silencio. Luego equipo. Luego 3 min de plenaria
+sobre las dos que más fallaron. No corregir todas.
+:::
+
+---
+
+## Hoy construyen {background-color="#000066" style="color:white;"}
+
+::: {style="font-size:1.35em; padding-top:40px;"}
+Ayer decidieron. Hoy **construyen la arquitectura** de su proyecto.
+
+<br>
+
+Al salir de este salón cada equipo tiene:
+
+- Una **ficha de proyecto** completa
+- Un **mapa de actores** con poder e interés
+- Una **cadena de resultados** de insumo a impacto
+- **Cinco KPI físicos** medibles
+- Una **estructura de propiedad** definida
+:::
+
+---
+
+## Input 1 · El estudio de proyectos {.smaller}
+
+La secuencia de Sapag. No es burocracia: es una **disciplina de completitud**.
+
+| Estudio | La pregunta | Si lo saltas… |
+|---|---|---|
+| **Mercado** | ¿Alguien compra, a qué precio, cuánto tiempo? | Modelas ingresos que no existen |
+| **Técnico** | ¿Es físicamente posible, con qué tecnología? | Subestimas CapEx |
+| **Organizacional** | ¿Quién lo opera, con qué estructura? | Olvidas costos de administración |
+| **Legal** | ¿Qué permisos, qué régimen tributario? | Descubres el impuesto en el año 3 |
+| **Financiero** | ¿Cuánto vale? | — |
+
+::: {.callout-warning}
+El financiero va **al final**. El error clásico es abrir Excel primero: se termina con un modelo elegante de un proyecto imposible.
+:::
+
+---
+
+## Input 1 · Quién es dueño del proyecto {.smaller}
+
+Antes de proyectar un flujo hay que saber **de quién es ese flujo**.
+
+::: {.columns}
+::: {.column width="33%"}
+**Asociación de productores**
+
+- Tierra: de los socios
+- Decisión: asamblea
+- ⚠️ Difícil de financiar: sin garantías, gobernanza lenta
+:::
+
+::: {.column width="33%"}
+**SPV / vehículo de propósito específico**
+
+- Tierra: arrendada o en fiducia
+- Decisión: junta
+- ✅ Financiable
+- ⚠️ ¿Y los productores?
+:::
+
+::: {.column width="33%"}
+**Empresa ancla**
+
+- Tierra: contratos de compra
+- Decisión: corporativa
+- ✅ Alcance 3 resuelto
+- ⚠️ Captura del valor
+:::
+:::
+
+::: {.callout-important}
+Esta decisión determina **quién descuenta a qué tasa** — y por tanto el VPN. No es un detalle jurídico: es el primer supuesto financiero del modelo.
+:::
+
+---
+
+## Construcción 1 · 40 min {background-color="#f5f5f5"}
+
+**Ficha de Proyecto v1** — en la plantilla, sección A:
+
+::: {.columns}
+::: {.column width="50%"}
+1. Problema en una frase, **sin la palabra "sostenible"**
+2. Territorio y por qué ese
+3. Escala (hectáreas / unidades)
+4. **Estructura de propiedad** y su justificación
+:::
+
+::: {.column width="50%"}
+5. Fuentes de ingreso y **año de inicio de cada una**
+6. Los tres estudios que más les preocupan
+7. El permiso o requisito legal que podría hundirlos
+:::
+:::
+
+::: {.notes}
+MIN 40–80. Circular. Preguntas útiles: "¿quién firma?" "¿de dónde sale ese número?"
+"¿qué pasa si el permiso tarda 18 meses?"
+NO resolver — preguntar.
+:::
+
+---
+
+## Síntesis 1 · el error típico
+
+::: {style="font-size:1.25em;"}
+Casi todos escribieron el problema **como la ausencia de su solución**:
+
+> ~~"El problema es que no hay proyectos de cacao agroforestal en la región."~~
+
+Eso no es un problema. Es la solución, escrita en negativo.
+
+<br>
+
+::: {style="color:#000066; font-weight:700;"}
+"Los productores de cacao del municipio X obtienen rendimientos de 0,4 t/ha
+frente a 0,8 alcanzables, y pierden el 30% de la cosecha por beneficio deficiente."
+:::
+
+Eso es un problema: **tiene magnitud, tiene sujeto, y admite más de una solución.**
+:::
+
+---
+
+## {background-color="#00A9E0"}
+
+::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
+PAUSA · 20 minutos
+:::
+
+---
+
+## Input 2 · Actores: poder × interés {.smaller}
+
+::: {.columns}
+::: {.column width="55%"}
+```
+        ALTO PODER
+            │
+  MANTENER  │  GESTIONAR
+  SATISFECHO│  DE CERCA
+            │  ← aquí están
+   ─────────┼─────────  los que
+            │           hunden
+  MONITOREAR│  MANTENER  proyectos
+            │  INFORMADO
+            │
+        BAJO PODER
+   bajo interés → alto interés
+```
+:::
+
+::: {.column width="45%"}
+**Para su proyecto, mapeen al menos:**
+
+- Productores / propietarios de tierra
+- Autoridad ambiental regional (CAR)
+- Alcaldía / gobernación
+- Comprador ancla
+- Financiador
+- Comunidad no participante
+- **Quien pierde** con el proyecto
+:::
+:::
+
+::: {.callout-warning}
+El actor que más proyectos hunde es **el que pierde algo y nadie mapeó**. Búsquenlo explícitamente.
+:::
+
+---
+
+## Input 2 · Cadena de resultados {.smaller}
+
+$$\text{Insumos} \rightarrow \text{Actividades} \rightarrow \text{Productos} \rightarrow \text{Resultados} \rightarrow \text{Impacto}$$
+
+| Nivel | En el proyecto de cacao | ¿Quién controla? |
+|---|---|---|
+| **Insumos** | USD 4,2 M, asistencia técnica, material vegetal | Ustedes |
+| **Actividades** | Siembra, capacitación, montaje de beneficiadero | Ustedes |
+| **Productos** | 500 ha establecidas, 300 productores formados | Ustedes |
+| **Resultados** | Rendimiento sube de 0,4 a 0,8 t/ha; ingreso sube 60% | Parcialmente |
+| **Impacto** | 45.000 tCO₂e removidas; pobreza rural reducida | **No** |
+
+::: {.callout-important}
+**La línea de control es la línea de la honestidad.** Ustedes se comprometen con productos; *aspiran* a impactos. Confundirlos es la raíz del greenwashing — y de los contratos incumplidos.
+:::
+
+---
+
+## Construcción 2 · 40 min {background-color="#f5f5f5"}
+
+**Sección B de la ficha:**
+
+1. Mapa de actores en la matriz poder × interés — mínimo **7 actores**
+2. Identificar explícitamente **quién pierde**
+3. Cadena de resultados completa de insumos a impacto
+4. Trazar **la línea de control**: ¿hasta dónde se comprometen contractualmente?
+
+::: {.callout-note}
+Al final, cada equipo escribe **una frase de compromiso** en primera persona: *"Nos comprometemos a entregar ___, y aspiramos a contribuir a ___."*
+:::
+
+---
+
+## Input 3 · KPI que sí sirven {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**❌ No sirven**
+
+- "Score ESG de 78"
+- "Alineado con los ODS 8, 13 y 15"
+- "Impacto social positivo"
+- "Prácticas sostenibles"
+
+*Ninguno es verificable por un tercero ni entra a un flujo de caja.*
+:::
+
+::: {.column width="50%"}
+**✅ Sí sirven**
+
+- tCO₂e removidas/año, **verificadas** bajo metodología X
+- Rendimiento t/ha, medido en báscula
+- Ingreso neto por hogar, COP/año
+- Hectáreas bajo restauración, con polígono georreferenciado
+- % de cosecha perdida en beneficio
+:::
+:::
+
+**Los cuatro requisitos de un KPI del curso:** unidad física · fuente de verificación · frecuencia · **responsable con nombre**.
+
+---
+
+## Construcción 3 · 40 min {background-color="#f5f5f5"}
+
+**Sección C — cinco KPI, en formato completo:**
+
+| KPI | Unidad | Línea base | Meta año 5 | Fuente de verificación | Frecuencia | Responsable |
+|---|---|---|---|---|---|---|
+| | | | | | | |
+
+::: {.callout-important}
+Al menos **uno** debe ser ambiental y medible por un tercero independiente.
+Al menos **uno** debe ser de ingreso de hogar.
+:::
+
+Luego: **integren A + B + C** en la ficha final y súbanla.
+
+---
+
+## Auditoría cruzada · 20 min {background-color="#000066" style="color:white;"}
+
+::: {style="font-size:1.15em;"}
+Reciben la ficha de otro equipo y esta lista de chequeo:
+
+1. ¿El problema está escrito sin la palabra "sostenible"?
+2. ¿El problema tiene **magnitud numérica**?
+3. ¿Está claro **quién es dueño** del proyecto?
+4. ¿Cada fuente de ingreso tiene **año de inicio**?
+5. ¿Mapearon a **quien pierde**?
+6. ¿La línea de control separa productos de impactos?
+7. ¿Los 5 KPI tienen unidad física y fuente de verificación?
+8. ¿Hay algún KPI que sea en realidad un rating?
+
+<br>
+
+**Encontrar un problema real suma puntos a su equipo.**
+:::
+
+---
+
+## Para el viernes 28 {background-color="#f5f5f5"}
+
+::: {.columns}
+::: {.column width="50%"}
+**Traer**
+
+- Ficha de proyecto v1 subida ✅
+- Los hallazgos de la auditoría que recibieron, **corregidos**
+- Una estimación preliminar del precio de su producto
+:::
+
+::: {.column width="50%"}
+**Leer** (máx. 40 min)
+
+- Sapag — capítulos de costos y capital de trabajo
+- Hyndman & Athanasopoulos cap. 1 (acceso abierto)
+:::
+:::
+
+<br>
+
+::: {style="text-align:center; font-size:1.4em; color:#000066; font-weight:700;"}
+La próxima sesión: los números que nadie les va a dar.
+:::

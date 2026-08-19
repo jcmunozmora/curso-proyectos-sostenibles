@@ -1,0 +1,92 @@
+# Listas de Auditoría Cruzada
+
+> Se reparten en los últimos 20 minutos de cada sábado.
+> El equipo A recibe el modelo del equipo B y **esta lista cerrada**.
+> Encontrar un error real **suma puntos al equipo auditor**.
+
+**Formato de reporte** — una línea por hallazgo:
+
+```
+Ítem #__ | ¿Cumple? SÍ / NO / PARCIAL
+Evidencia: [celda, hoja o frase exacta]
+Qué corregir: [acción concreta]
+Gravedad: ESTRUCTURAL / MENOR
+```
+
+---
+
+## S1 · Ficha de proyecto
+
+| # | Verificar |
+|---|---|
+| 1 | ¿El problema está escrito **sin** la palabra "sostenible"? |
+| 2 | ¿El problema tiene **magnitud numérica**? |
+| 3 | ¿El problema es un problema, o es la solución escrita en negativo? |
+| 4 | ¿Está claro **quién es dueño** del proyecto, con justificación? |
+| 5 | ¿Cada fuente de ingreso tiene **año de inicio**? |
+| 6 | ¿Mapearon al menos 7 actores? |
+| 7 | ¿Identificaron explícitamente **quién pierde**? |
+| 8 | ¿La línea de control separa productos de impactos? |
+| 9 | ¿Los 5 KPI tienen **unidad física, fuente de verificación y responsable**? |
+| 10 | ¿Hay algún KPI que sea en realidad un **rating**? |
+
+---
+
+## S2 · Modelo de costos e inversiones
+
+| # | Verificar |
+|---|---|
+| 1 | ¿Toda celda numérica tiene su **unidad en el encabezado**? |
+| 2 | ¿Toda cifra externa tiene **fuente**? |
+| 3 | ¿El CapEx incluye **estudios previos, resiembra e imprevistos**? |
+| 4 | ¿El CapEx tiene **cronograma**, o está todo en el año 0? |
+| 5 | ¿Existe hoja de **capital de trabajo** por déficit acumulado máximo? |
+| 6 | ⚠ ¿Se **recupera** el capital de trabajo en el último año? |
+| 7 | ¿Están separados **costos fijos y variables**? |
+| 8 | ¿La **mano de obra familiar** está valorada explícitamente, aunque sea en cero? |
+| 9 | ¿El **tamaño** está justificado con un argumento, no con un supuesto? |
+| 10 | ⚠ ¿Hay alguna celda que mezcle **por hectárea** con **total**? |
+| 11 | ¿Los tres escenarios de precio tienen **lógica de oferta y demanda**, no sólo números? |
+| 12 | ¿El escenario bajo es un mundo en que el proyecto **pierde dinero**? |
+
+---
+
+## S3 · Flujo de caja y criterios
+
+| # | Verificar |
+|---|---|
+| 1 | ¿El **FCLD excluye completamente** la deuda? |
+| 2 | ⚠ ¿El **FCA se descuenta al Ke** y no al WACC? |
+| 3 | ¿El impuesto es **cero** —no negativo— en los años de pérdida? |
+| 4 | ¿El **escudo fiscal** se aplica sólo cuando hay renta gravable? |
+| 5 | ¿Se recupera el capital de trabajo en el último año? |
+| 6 | ⚠ ¿La tasa y el flujo están **ambos nominales o ambos reales**? |
+| 7 | ¿Se hizo la **conversión de moneda** del Ke (diferencial de inflación)? |
+| 8 | ¿Se reporta el WACC como **rango**, no como punto? |
+| 9 | ¿La **beta está justificada** con un argumento sobre comparables? |
+| 10 | ⚠ ¿Verificaron el **patrón de signos** antes de reportar la TIR? |
+| 11 | ¿Reportan **TIRM** además de TIR? |
+| 12 | ¿El **valor terminal** usa un *g* menor que el crecimiento de la economía? |
+| 13 | ¿El VPN del proyecto y el del accionista son **distintos**? (si son iguales, hay error) |
+| 14 | ¿Hay alguna celda **codificada a mano** que debería ser fórmula? |
+
+---
+
+## S4 · Flujo socioeconómico
+
+| # | Verificar |
+|---|---|
+| 1 | ¿Se **eliminaron los impuestos** del flujo social? |
+| 2 | ¿La prima de certificación se trató como **transferencia** — o se justificó lo contrario? |
+| 3 | ¿El **salario sombra** tiene factor explícito y fuente? |
+| 4 | ⚠ ¿La **línea base de carbono** está declarada y justificada? |
+| 5 | ¿La **adicionalidad** sobreviviría a un verificador independiente? |
+| 6 | ¿Hay una posición explícita sobre **permanencia**? |
+| 7 | ⚠ ¿El flujo social se descuenta a la **TSD** y no al WACC? |
+| 8 | ¿Usaron la TSD de la **Resolución 1092/2022** donde corresponde? |
+| 9 | ¿Está la tabla completa **sin / bajo / alto** carbono? |
+| 10 | ¿Calcularon el ***switching value*** y lo compararon con el rango del Banco Mundial? |
+| 11 | ⚠ ¿El riesgo climático entra **una sola vez** — flujo o tasa, no ambos? |
+| 12 | ¿Los tres escenarios NGFS son **realmente distintos**? |
+| 13 | ¿Hay alguna externalidad **contada dos veces** (p. ej. agua y biodiversidad solapadas)? |
+| 14 | ¿Existe la **frase de cierre** del switching value? |

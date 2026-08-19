@@ -1,0 +1,95 @@
+# Nota de Inversión — `[nombre del proyecto]`
+
+> Entregable final. **Máximo 4 páginas.** Formato de la industria, no de trabajo académico.
+> Se entrega el **miércoles 16 de septiembre**, antes del Investor Day.
+
+---
+
+## 1 · Resumen de decisión *(media página — se escribe al final)*
+
+| | |
+|---|---|
+| **Solicitud** | USD `___` en `[instrumento]` a `[plazo]` |
+| **Contraparte propuesta** | `[quién de la mesa]` |
+| **VPN privado** | USD `___` @ WACC `___%` |
+| **VPN social** | USD `___` @ TSD `___` |
+| **Switching value de carbono** | **USD `___`/tCO₂e** |
+| **Recomendación** | Financiar / financiar condicionado a `___` / no financiar |
+
+> **La frase:** "Este proyecto se justifica socialmente si el precio del carbono supera USD `___`/tCO₂e, valor que está `[dentro / fuera]` del rango de USD 50–100 recomendado por el Banco Mundial para 2030."
+
+---
+
+## 2 · El problema y la oportunidad *(media página)*
+
+Magnitud, territorio, por qué ahora. Sin adjetivos.
+
+---
+
+## 3 · Estructura del proyecto *(media página)*
+
+Propiedad, actores, fuentes de ingreso con año de inicio, cadena de resultados hasta la línea de control.
+
+---
+
+## 4 · Análisis financiero *(una página)*
+
+**4.1 Supuestos críticos** — los cinco que más mueven el resultado, con fuente.
+
+**4.2 Escenarios de precio**
+
+| | Bajo | Central | Alto |
+|---|---|---|---|
+| Precio | | | |
+| Lógica | | | |
+| VPN | | | |
+
+**4.3 Costo de capital** — con **rango**, no punto. Beta justificada.
+
+**4.4 Criterios**
+
+| VPN | TIR | **TIRM** | Payback desc. | Precio de equilibrio |
+|---|---|---|---|---|
+| | | | | |
+
+> Declarar el número de cambios de signo del flujo y si la TIR es confiable.
+
+---
+
+## 5 · Análisis socioeconómico *(media página)*
+
+**Protocolo Banco Mundial:**
+
+| Tasa | sin C | C bajo (50) | C alto (100) |
+|---|---|---|---|
+| TSD ambiental Colombia | | | |
+| Consenso experto 2% | | | |
+
+**Cuantificación del carbono:** línea base, adicionalidad, permanencia, verificación.
+
+**La brecha:** VPN social − VPN privado = USD `___`. **¿Quién la paga?**
+
+---
+
+## 6 · Riesgos *(media página)*
+
+| Riesgo | Prob. | Impacto | Mitigación | ¿Quién lo asume? |
+|---|---|---|---|---|
+| | | | | |
+
+**Escenarios NGFS:**
+
+| | Current Policies | Net Zero 2050 | Delayed Transition |
+|---|---|---|---|
+| VPN privado | | | |
+| ¿Se financia? | | | |
+
+---
+
+## 7 · Anexo obligatorio · Uso de IA
+
+| Herramienta | Para qué | Prompt (resumen) | Cómo se verificó |
+|---|---|---|---|
+| | | | |
+
+> Toda cifra obtenida con IA debe estar verificada contra fuente primaria. Una cifra sin fuente anula el entregable.

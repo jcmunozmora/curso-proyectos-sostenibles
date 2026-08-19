@@ -1,0 +1,5 @@
+# Perfil de publicación — lo usa GitHub Actions.
+# Elimina las notas del presentador antes de publicar.
+# Uso local para verificar qué se publicará:  quarto render --profile publico
+filters:
+  - filtros/sin-notas.lua

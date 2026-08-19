@@ -1,0 +1,290 @@
+---
+title: "Los números que nadie te da"
+subtitle: "Sesión 2 · Taller · Sábado 29 de agosto · 8:00–13:00"
+author: "Formulación y Evaluación de Proyectos Sostenibles · MF7011"
+format:
+  revealjs:
+    theme: [default, ../eafit.scss]
+    slide-number: c/t
+    transition: none
+    width: 1600
+    height: 900
+---
+
+## Recuperación · 20 min {.smaller}
+
+1. Nombren las tres formas honestas de proyectar un precio de commodity.
+2. ¿Por qué un precio alto de cacao **causa** su propia corrección? ¿En cuántos años?
+3. ¿Cuál es la prueba de que un escenario pesimista es realmente pesimista?
+4. Un precio real y un precio nominal en el mismo modelo: ¿por qué es un error?
+5. ¿Qué es el "productor marginal" y por qué determina el precio de largo plazo?
+
+::: {.notes}
+MIN 0–20. Individual 5, equipo 10, plenaria 5 sobre las dos que peor salieron.
+:::
+
+---
+
+## Hoy construyen {background-color="#000066" style="color:white;"}
+
+::: {style="font-size:1.3em; padding-top:30px;"}
+Al salir tienen un **modelo de costos e inversiones completo**:
+
+1. **CapEx** desagregado y con cronograma
+2. **OpEx** por año, con la curva de maduración
+3. **Capital de trabajo** por el método del déficit acumulado
+4. **Tamaño y localización** justificados
+5. La **estructura de costos** que determina su punto de equilibrio
+:::
+
+---
+
+## Input 1 · CapEx: lo que siempre se olvida {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**Lo que todos ponen**
+
+- Terreno / arriendo
+- Material vegetal
+- Siembra y establecimiento
+- Maquinaria
+:::
+
+::: {.column width="50%"}
+**Lo que casi nadie pone**
+
+- **Estudios previos** (suelos, topografía, licencias)
+- **Vivero** propio o compra en dos oleadas
+- **Infraestructura de beneficio** (fermentado, secado)
+- **Vías internas** y acceso
+- **Sistema de riego** — cada vez menos opcional
+- **Resiembra** por mortalidad (10–20% en año 1–2)
+- **Imprevistos** (5–10%)
+:::
+:::
+
+::: {.callout-warning}
+**La resiembra no es un imprevisto: es una certeza.** Si su modelo no la tiene, su CapEx está subestimado por diseño.
+:::
+
+---
+
+## Input 1 · El cronograma importa tanto como el monto {.smaller}
+
+Dos proyectos con el mismo CapEx total de USD 4,2 M:
+
+| Año | Proyecto A | Proyecto B |
+|---|---:|---:|
+| 0 | 4.200.000 | 1.890.000 |
+| 1 | — | 1.050.000 |
+| 2 | — | 756.000 |
+| 3 | — | 504.000 |
+| **VPN del CapEx al 12%** | **−4.200.000** | **−3.822.000** |
+
+::: {.callout-important}
+Mismo monto nominal. **Diferencia de USD 378.000 en valor presente**, sólo por el calendario.
+
+Un proyecto agroforestal por naturaleza se establece por etapas. **Modelarlo todo en el año 0 destruye valor que sí existe.**
+:::
+
+---
+
+## Construcción 1 · 40 min {background-color="#f5f5f5"}
+
+**Hoja `CapEx` de la plantilla:**
+
+| Rubro | Unidad | Cantidad | Costo unitario | Año 0 | Año 1 | Año 2 | Año 3 | Fuente |
+|---|---|---|---|---|---|---|---|---|
+
+::: {.callout-important}
+**La columna `Fuente` es obligatoria.** Cotización, publicación de Fedecacao/Agrosavia, entrevista, informe sectorial. Una celda sin fuente es una celda inventada.
+
+Mínimo **12 rubros**. Si tienen menos, algo olvidaron.
+:::
+
+::: {.notes}
+MIN 40–80. Circular. Pregunta clave: "¿de dónde salió ese número?"
+Segunda: "¿ese costo es por hectárea o total? ¿Está seguro?"
+:::
+
+---
+
+## Síntesis 1 · el error del año {background-color="#f5f5f5"}
+
+::: {style="font-size:1.25em;"}
+Tres equipos confundieron **costo por hectárea** con **costo total**.
+
+Un factor de error de **500×**.
+
+<br>
+
+::: {style="color:#000066; font-weight:700;"}
+La disciplina que lo evita: toda celda numérica lleva su unidad en el encabezado.
+:::
+
+`Costo establecimiento (USD/ha)` — no `Costo establecimiento`.
+:::
+
+::: {.callout-warning}
+Este error no es de principiantes. Es el error que hunde modelos profesionales, porque sobrevive a la revisión: el número **se ve** razonable.
+:::
+
+---
+
+## {background-color="#00A9E0"}
+
+::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
+PAUSA · 20 minutos
+:::
+
+---
+
+## Input 2 · Capital de trabajo — donde mueren estos proyectos {.smaller}
+
+El cacao **no produce hasta el año 4**. Durante cuatro años hay que pagar mano de obra, insumos y mantenimiento **sin un peso de ingreso**.
+
+Eso **no es CapEx** (no compra un activo) y **no es exactamente OpEx** (es pre-operativo).
+
+### Método del déficit acumulado máximo
+
+```
+1. Proyectar el flujo de caja OPERATIVO por año, desde el año 0
+2. Acumularlo
+3. El MÁXIMO DÉFICIT ACUMULADO = inversión en capital de trabajo
+4. Se dispone en el año 0
+5. ⚠️ SE RECUPERA en el último año del horizonte
+```
+
+::: {.callout-warning}
+**Olvidar el paso 5 subestima el VPN.** Es el error más frecuente de todos, porque el capital de trabajo "se siente" como un costo hundido. No lo es: es un activo que se libera al liquidar.
+:::
+
+---
+
+## Input 2 · Ejemplo numérico {.smaller}
+
+| Año | Ingreso | Costo operativo | Flujo operativo | **Acumulado** |
+|---|---:|---:|---:|---:|
+| 0 | 0 | −450.000 | −450.000 | −450.000 |
+| 1 | 0 | −550.000 | −550.000 | −1.000.000 |
+| 2 | 0 | −625.000 | −625.000 | −1.625.000 |
+| 3 | 0 | −700.000 | −700.000 | **−2.325.000** ← máximo |
+| 4 | 1.040.000 | −800.000 | +240.000 | −2.085.000 |
+| 5 | 2.620.000 | −875.000 | +1.745.000 | −340.000 |
+
+::: {.callout-important}
+**Capital de trabajo = USD 2.325.000.** Se dispone en el año 0 y **se recupera en el año 15**.
+
+Es **más de la mitad** del CapEx de este proyecto. Un modelo que lo ignora no está 10% errado: está estructuralmente mal.
+:::
+
+---
+
+## Construcción 2 · 40 min {background-color="#f5f5f5"}
+
+**Hoja `OpEx` + hoja `KTrabajo`:**
+
+1. OpEx por año, con **curva de maduración** (el costo sube con la producción)
+2. Separar **costo fijo** de **costo variable** — lo necesitan en S3 para el punto de equilibrio
+3. Mano de obra: ¿cuántos jornales/ha/año? ¿a qué precio? ¿es familiar o contratada?
+4. Flujo operativo acumulado → **identificar el déficit máximo**
+5. Registrar la **recuperación** en el último año
+
+::: {.callout-note}
+Si su mano de obra es familiar y la valoran en cero, escríbanlo explícitamente. En S4 vamos a discutir por qué ese cero es una decisión, no un dato.
+:::
+
+---
+
+## Input 3 · Tamaño y localización {.smaller}
+
+No son decisiones descriptivas. Son **variables de optimización** con consecuencias financieras.
+
+::: {.columns}
+::: {.column width="50%"}
+**Tamaño**
+
+- ¿Hay economías de escala en el beneficiadero?
+- ¿A partir de cuántas ha se justifica maquinaria propia?
+- ¿El comprador ancla exige un volumen mínimo?
+- ⚠️ Escala mayor = más capital de trabajo
+:::
+
+::: {.column width="50%"}
+**Localización**
+
+- Costo de transporte al punto de acopio
+- Disponibilidad de mano de obra
+- **Aptitud agroecológica** (rendimiento no es uniforme)
+- Riesgo climático diferencial
+- ⚠️ Tenencia de la tierra
+:::
+:::
+
+::: {.callout-important}
+**La pregunta que deben responder:** ¿por qué 500 ha y no 200 ni 2.000? Si la respuesta es "porque sí", su tamaño es un supuesto sin defensa — y es el supuesto que más mueve el VPN después del precio.
+:::
+
+---
+
+## Construcción 3 · 40 min {background-color="#f5f5f5"}
+
+**Integración + análisis de estructura de costos:**
+
+1. Integrar CapEx + OpEx + capital de trabajo en la hoja `Resumen`
+2. Calcular el **costo total por tonelada producida** en madurez
+3. Comparar con sus tres escenarios de precio:
+
+| | Precio | Costo/t | Margen |
+|---|---:|---:|---:|
+| Escenario bajo | | | |
+| Escenario central | | | |
+| Escenario alto | | | |
+
+::: {.callout-important}
+Si su costo por tonelada está **por encima** del escenario bajo, ya saben algo importante sobre su proyecto — y lo saben tres semanas antes de tener el flujo de caja.
+:::
+
+---
+
+## Auditoría cruzada · 20 min {background-color="#000066" style="color:white;"}
+
+::: {style="font-size:1.1em;"}
+1. ¿Toda celda numérica tiene **unidad en el encabezado**?
+2. ¿Toda cifra tiene **fuente**?
+3. ¿El CapEx incluye estudios previos, resiembra e imprevistos?
+4. ¿El CapEx tiene **cronograma** o está todo en el año 0?
+5. ¿Existe hoja de **capital de trabajo** por déficit acumulado?
+6. ¿Se **recupera** el capital de trabajo en el último año?
+7. ¿Están separados costos fijos y variables?
+8. ¿La mano de obra familiar está valorada explícitamente (aunque sea en cero)?
+9. ¿El tamaño está justificado con un argumento, no con un supuesto?
+10. ¿Hay alguna celda que mezcle **por hectárea** con **total**?
+:::
+
+---
+
+## Para el viernes 4 {background-color="#f5f5f5"}
+
+::: {.columns}
+::: {.column width="50%"}
+**Traer**
+
+- Modelo de costos e inversiones ✅
+- Hallazgos de la auditoría, **corregidos**
+:::
+
+::: {.column width="50%"}
+**Leer** (máx. 45 min)
+
+- Welch (2021), *If Not the CAPM, Then What?* — es corto
+- Drupp et al. — sólo la tabla de resultados y las conclusiones
+:::
+:::
+
+<br>
+
+::: {style="text-align:center; font-size:1.4em; color:#000066; font-weight:700;"}
+Ya tienen el numerador. La próxima sesión: el denominador — y por qué es más frágil de lo que creen.
+:::

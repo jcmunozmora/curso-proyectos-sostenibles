@@ -1,0 +1,261 @@
+---
+title: "El otro flujo de caja"
+subtitle: "Sesión 4 · Tribunal · Viernes 11 de septiembre"
+author: "Formulación y Evaluación de Proyectos Sostenibles · MF7011"
+format:
+  revealjs:
+    theme: [default, ../eafit.scss]
+    slide-number: c/t
+    transition: none
+    width: 1600
+    height: 900
+---
+
+## {background-color="#000066"}
+
+::: {style="text-align:center; padding-top:150px;"}
+[Su proyecto **destruye valor**.]{style="font-size:2.2em; color:#ffffff; font-weight:700;"}
+
+<br>
+
+[VPN privado: **−USD 4,0 millones**]{style="font-size:1.5em; color:#00A9E0;"}
+
+<br>
+
+[¿Debería hacerse de todas formas?]{style="font-size:1.8em; color:#ffffff;"}
+:::
+
+::: {.notes}
+MIN 0–15. A USD 3.500/t — el precio real de 2026 — el proyecto es inviable para el dueño.
+Dejar la pregunta abierta. No responder.
+:::
+
+---
+
+## Confrontación · 40 min {background-color="#f5f5f5"}
+
+::: {style="font-size:1.15em;"}
+El proyecto no le sirve al inversionista. Pero:
+
+- Remueve carbono de la atmósfera
+- Emplea mano de obra rural donde hay subempleo
+- Regula agua para acueductos aguas abajo
+- Restaura suelo degradado
+- Sustituye un uso de la tierra con menor valor social
+
+<br>
+
+**Produzcan una posición de una página:**
+
+1. ¿Debería hacerse este proyecto? Sí o no, y por qué.
+2. Si sí, **¿quién debe pagar la diferencia?**
+3. ¿Cuánto vale lo que enumeramos arriba? **Pongan un número.**
+:::
+
+::: {.notes}
+MIN 15–55. Sin herramientas. El punto es que descubran que no saben CÓMO poner el número.
+Ese vacío es el input de hoy.
+:::
+
+---
+
+## Lo que descubrieron
+
+::: {style="font-size:1.35em;"}
+Todos saben que **hay** valor ahí.
+
+Ninguno sabe **cómo ponerle un número** de forma defendible.
+
+<br>
+
+::: {style="color:#000066; font-weight:700;"}
+Eso es exactamente lo que hace el análisis costo-beneficio,
+y lleva sesenta años haciéndolo.
+:::
+:::
+
+---
+
+## Input · Cuando el precio de mercado miente {.smaller}
+
+Un precio de mercado **no** refleja el valor social cuando hay externalidades, impuestos o subsidios, poder de mercado, desempleo involuntario, o bienes sin mercado.
+
+| Ítem del proyecto | Precio de mercado | **Precio sombra** |
+|---|---|---|
+| **Mano de obra rural** | Jornal pagado | Salario de reserva — **menor** si hay subempleo |
+| **Carbono removido** | 0 (nadie lo paga) | **Precio sombra del carbono** |
+| **Regulación hídrica** | 0 | Costo evitado de tratamiento o racionamiento |
+| **Prima orgánica** | +12% | **0** — es una transferencia, no valor nuevo |
+| **Impuestos** | Costo para la firma | **0** — transferencia al Estado |
+
+::: {.callout-important}
+## La regla que ordena todo
+**Las transferencias no son ni costos ni beneficios sociales.** Impuestos, subsidios y primas de mercado mueven dinero entre bolsillos dentro de la misma sociedad. En el flujo social se eliminan.
+
+Si en su flujo social el impuesto sigue apareciendo como costo, no hicieron un flujo social: hicieron el privado con otro nombre.
+:::
+
+---
+
+## Input · El protocolo del Banco Mundial {.smaller}
+
+*2024 Guidance Note on Shadow Price of Carbon in Economic Analysis* — es compromiso corporativo del BIRF para todo financiamiento de proyectos.
+
+::: {.callout-note}
+## Lo que exige reportar
+1. VPN **sin** precio de carbono
+2. VPN con precio **bajo**
+3. VPN con precio **alto**
+4. El ***switching value***: el precio de carbono al que el VPN cruza cero
+:::
+
+**Referencia de la High-Level Commission on Carbon Prices:**
+USD **40–80**/tCO₂ a 2020 · USD **50–100**/tCO₂ a 2030
+
+::: {.callout-important}
+Este es **el formato de su entregable final**. No aprenden *sobre* el estándar: entregan en el estándar.
+:::
+
+---
+
+## {background-color="#00A9E0"}
+
+::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
+PAUSA · 15 minutos
+:::
+
+---
+
+## Input · La tasa social de descuento {.smaller}
+
+$$r = \delta + \eta \cdot g$$
+
+::: {.columns}
+::: {.column width="50%"}
+**Escuela Ramsey** — preferencia social intertemporal
+
+Drupp, Freeman, Groom & Nesje — encuesta a **197 expertos**:
+
+- Media **2,25%** · mediana **2,0%**
+- >75% acepta 2% libre de riesgo
+- Los doctorados recientes recomiendan tasas **más bajas**
+:::
+
+::: {.column width="50%"}
+**Escuela Harberger** — costo de oportunidad del capital
+
+Es la ruta que sigue **Colombia**.
+
+Pregunta distinta: no *"¿cuánto valoramos el futuro?"* sino *"¿qué rendimiento deja de obtener la economía?"*
+:::
+:::
+
+::: {.callout-warning}
+No son dos estimaciones del mismo parámetro. **Son dos parámetros distintos que responden preguntas distintas.** Por eso difieren tanto — y por eso el debate no se resuelve con más datos.
+:::
+
+---
+
+## Input · Colombia ya usa tasas decrecientes {.smaller}
+
+**Resolución 1092 de 2022 del DNP** — obligatoria para evaluación de inversión pública:
+
+| Ámbito | TSD (términos **reales**) |
+|---|---:|
+| Sector público **en general** | **9,0% EA** |
+| Proyectos **ambientales**, años 0–5 | **9,5%** |
+| Proyectos **ambientales**, años 6–25 | **6,4%** |
+| Proyectos **ambientales**, años 26+ | **3,5%** |
+
+Justificación textual del DNP: *usar tasas sociales de descuento altas, que asignan mayor valor al uso presente que al futuro, **genera incentivos en contra de la conservación ambiental** y de la disponibilidad de recursos naturales para generaciones futuras.*
+
+::: {.callout-important}
+Colombia descuenta el **futuro lejano** casi como los expertos internacionales (3,5% vs. 2%), y el **futuro cercano** como un banco (9,5%). Esa asimetría es una decisión de política, no un tecnicismo.
+:::
+
+---
+
+## Input · Por qué la tasa lo es todo {.smaller}
+
+**USD 1.000.000 en el año 30 vale hoy:**
+
+| Quién descuenta | Tasa | Valor presente |
+|---|---|---:|
+| El inversionista privado | WACC 10,8% | **USD 46.111** |
+| El DNP | TSD ambiental decreciente | **USD 154.666** |
+| El consenso internacional | 2,0% | **USD 552.071** |
+
+::: {.callout-important}
+Un factor de **12×** entre el primero y el último. Sobre el mismo peso, del mismo año, del mismo proyecto.
+
+**Ninguno está haciendo trampa.** Le están preguntando cosas distintas al mismo flujo.
+:::
+
+---
+
+## Aplicación · 40 min {background-color="#f5f5f5"}
+
+**Tomen posición, por escrito, sobre las tres preguntas:**
+
+1. **¿Qué tasa usarían** para evaluar socialmente su proyecto, y por qué? Elijan una de las cuatro y **defiéndanla** contra las otras tres.
+
+2. **¿Cuánto vale una tonelada de CO₂** removida por su proyecto? ¿Y quién decide eso?
+
+3. Si el VPN social es positivo y el privado negativo, **¿quién paga la brecha?**
+   - Estado, vía subsidio o pago por servicios ambientales
+   - Comprador, vía prima de precio en contrato de largo plazo
+   - Donante, vía capital catalítico en estructura mixta
+   - Nadie — y el proyecto no se hace
+
+::: {.callout-note}
+No hay respuesta correcta. Hay respuestas **defendibles** y respuestas que no lo son.
+:::
+
+---
+
+## Tribunal · 20 min
+
+::: {style="font-size:1.2em;"}
+El *discussant* de hoy tiene un papel distinto: **es el escéptico fiscal.**
+
+Su trabajo es preguntar:
+
+- Si el Estado paga la brecha, ¿de qué otro programa sale esa plata?
+- ¿Por qué ESTE proyecto y no un hospital?
+- Si el proyecto necesita subsidio permanente, ¿es un proyecto o es un programa social?
+- ¿Qué pasa si el precio del cacao vuelve a USD 10.000? ¿Devuelven el subsidio?
+:::
+
+::: {.callout-warning}
+Esa última pregunta es real y casi nadie la responde bien. **El diseño del instrumento debe ser simétrico**, o el Estado asume todo el riesgo a la baja y ninguno del alza.
+:::
+
+---
+
+## Para mañana 8:00 {background-color="#f5f5f5"}
+
+::: {.columns}
+::: {.column width="50%"}
+**Traer**
+
+- Su posición escrita sobre las 3 preguntas
+- El flujo de caja privado de S3, corregido
+- Portátil cargado
+:::
+
+::: {.column width="50%"}
+**Mañana**
+
+Construimos el flujo socioeconómico completo,
+
+con precios sombra, protocolo del Banco Mundial
+
+y escenarios climáticos NGFS.
+:::
+:::
+
+<br>
+
+::: {style="text-align:center; font-size:1.35em; color:#000066; font-weight:700;"}
+Hoy tomaron una posición. Mañana la convierten en número.
+:::

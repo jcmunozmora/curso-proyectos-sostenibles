@@ -1,0 +1,479 @@
+---
+title: "Revisión de Literatura"
+subtitle: "Formulación y Evaluación de Proyectos Sostenibles · MF7011"
+author: "Juan Carlos Muñoz-Mora · Maestría en Finanzas Sostenibles y Cambio Climático, EAFIT"
+date: 2026-08-19
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+bibliography: referencias.bib
+---
+
+::: {.callout-important}
+## Convención de verificación
+
+- **[V]** — verificado contra fuente citada en agosto de 2026.
+- **[PV]** — por verificar. Se declara siempre; nunca se convierte en afirmación.
+
+Ninguna cifra de este documento se usa en clase sin su etiqueta.
+:::
+
+# Cómo usar este documento
+
+Este no es un anexo bibliográfico. Es **el documento de estudio del profesor** y la fuente de la que salen las slides, los talleres y las lecturas obligatorias.
+
+Está escrito para alguien que domina evaluación de impacto y economía del desarrollo, y que necesita construir comando sobre finanzas corporativas aplicadas a proyectos. Por eso la profundidad es **asimétrica a propósito**:
+
+| Núcleo | Tu posición de partida | Profundidad aquí |
+|---|---|---|
+| §3 Evaluación de proyectos (canon) | Media | Alta — es el andamiaje de las 3 unidades |
+| §4 Finanzas sostenibles / valor integrado | **Baja** | **Máxima** — aquí está tu gap real |
+| §5 Costo de capital y descuento | **Baja en lo privado**, alta en lo social | **Máxima en WACC/CAPM**, media en TSD |
+| §6 Riesgo climático en valoración | Baja | Alta |
+| §7 Economía del clima y ACB | **Alta — es tu terreno** | Media — sólo actualización de frontera |
+| §8 Finanzas de la naturaleza | Media | Alta — es el proyecto ancla |
+| §9 Estándares y regulación | Baja | Media — operativa, no teórica |
+
+---
+
+# El mapa: tres literaturas que no se hablan
+
+El error de diseño más común en este curso —en cualquier universidad— es enseñarlo como si fuera **un** campo. No lo es. Son tres tradiciones con supuestos incompatibles, y el valor pedagógico está justamente en la fricción.
+
+```
+┌──────────────────────────────┐
+│ (A) EVALUACIÓN DE PROYECTOS  │  Sapag Chain, Brigham & Houston
+│     Tradición: ingeniería    │  Pregunta: ¿es rentable para el dueño?
+│     económica / finanzas     │  Herramienta: flujo de caja privado, VPN, TIR
+│     corporativas             │  Supuesto: precios de mercado = valor
+└──────────────────────────────┘
+              ⚡ tensión 1: ¿de quién es el flujo de caja?
+┌──────────────────────────────┐
+│ (B) ANÁLISIS COSTO-BENEFICIO │  Boardman et al., Drèze & Stern
+│     Tradición: economía del  │  Pregunta: ¿mejora el bienestar social?
+│     bienestar / política     │  Herramienta: precios sombra, TSD, externalidades
+│     pública                  │  Supuesto: precios de mercado MIENTEN
+└──────────────────────────────┘
+              ⚡ tensión 2: ¿quién paga la brecha?
+┌──────────────────────────────┐
+│ (C) FINANZAS SOSTENIBLES     │  Schoenmaker & Schramade, Serafeim
+│     Tradición: finanzas      │  Pregunta: ¿cómo internalizo lo social/ambiental
+│     corporativas post-2015   │           DENTRO de la decisión de inversión?
+│     Herramienta: valor integrado, ESG, riesgo climático
+│     Supuesto: la frontera A/B es artificial y costosa
+└──────────────────────────────┘
+```
+
+**La tesis pedagógica del curso**: (C) es un intento —incompleto y disputado— de resolver la tensión entre (A) y (B) *sin* pasar por el Estado. El curso no vende esa síntesis como resuelta. La pone a prueba con un proyecto real.
+
+::: {.callout-tip}
+## El número que organiza todo el semestre
+
+El mismo proyecto de cacao agroforestal tiene **VPN privado negativo** al WACC de mercado (~13–15% en COP) y **VPN social positivo** a la tasa social de descuento (~2–3% real, [@drupp2018] [V]) con carbono valorado al precio sombra del Banco Mundial ([@wb2024spc] [V]).
+
+Esa brecha no es un error de cálculo. **Es el objeto de estudio del campo entero.** Y la pregunta "¿quién paga la diferencia?" es literalmente la asignatura siguiente del plan de estudios (*Instrumentos de financiación sostenible*).
+:::
+
+---
+
+# Núcleo 1 — El canon de evaluación de proyectos y su fecha de vencimiento
+
+## 1.1 Qué sigue vigente
+
+**Sapag Chain, Sapag Chain & Sapag (2014)** [@sapag2014] es el estándar de facto en América Latina y no hay que botarlo. Lo que sigue siendo sólido:
+
+- La **arquitectura de estudios** (mercado → técnico → organizacional → legal → financiero) como disciplina de completitud. Los estudiantes que saltan directo al Excel producen modelos que no sobreviven la primera pregunta.
+- El tratamiento del **capital de trabajo** y del **cronograma de inversiones**. Sigue siendo de lo mejor escrito en español.
+- La distinción **flujo del proyecto vs. flujo del inversionista**. Central, y mal entendida por la mayoría de los estudiantes.
+- **Valores de desecho** (contable, comercial, económico). El método económico —valor de un flujo perpetuo— es el correcto y casi nadie lo usa.
+
+## 1.2 Qué ya no sirve (y hay que decirlo en clase)
+
+Cuatro problemas estructurales, no cosméticos:
+
+**(a) Es determinista en un mundo que no lo es.** El tratamiento de riesgo se reduce a sensibilidad univariada y, marginalmente, a Monte Carlo. Para un proyecto con exposición climática, la sensibilidad univariada es **activamente engañosa**: mueve una variable a la vez cuando la correlación entre variables *es* el riesgo.
+
+**(b) No tiene externalidades en el flujo de caja.** La evaluación "social" aparece como capítulo aparte, no como una columna del modelo. Eso reproduce exactamente la separación que el campo está tratando de cerrar.
+
+**(c) El costo de capital es CAPM sin discusión.** Ver §5 — el propio Welch [@welch2021], que está en la bibliografía oficial del programa, argumenta que el CAPM no debería usarse así.
+
+**(d) No hay horizonte climático.** Un proyecto agroforestal a 30 años evaluado con supuestos de rendimiento estacionarios es un error de modelación, no de conservadurismo.
+
+::: {.callout-note}
+## Movida de curso
+No reemplazar Sapag. **Usarlo como el "modelo base" que los estudiantes construyen en la Unidad 2 — y luego romperlo en la Unidad 3.** El canon es el andamio; la crítica es el aprendizaje.
+:::
+
+## 1.3 El reemplazo real
+
+**Schoenmaker & Schramade (2023), *Corporate Finance for Long-Term Value*** [@schoenmaker2023] — Springer, **acceso abierto y gratuito**. Este es el hallazgo más importante de esta revisión.
+
+Es el sucesor directo de *Principles of Sustainable Finance* (2019), que sí está en la bibliografía oficial, pero es **mucho más útil para este curso** porque no se queda en principios: reescribe las herramientas.
+
+| Capítulo | Qué reemplaza | Por qué importa aquí |
+|---|---|---|
+| VPN con valor integrado | Sapag cap. VPN | Introduce **IV = FV + SV + EV** dentro del cálculo |
+| Costo de capital | Brigham cap. WACC | WACC ajustado por riesgo de sostenibilidad |
+| Valoración de empresa | — | Valor terminal bajo transición |
+| Estructura de capital | Brigham | Deuda vinculada a sostenibilidad |
+| Decisiones de inversión | Sapag | Criterios multi-valor |
+
+**Su aporte conceptual central** es el *modelo integrado*: la firma optimiza **valor integrado (IV)** = valor financiero (FV) + valor social (SV) + valor ambiental (EV), en vez de maximizar sólo FV.
+
+**Y su debilidad —que hay que enseñar—**: la agregación IV = FV + SV + EV **requiere monetizar SV y EV**, lo que reintroduce todos los problemas de valoración de la tradición (B) que el modelo dice superar. No hay almuerzo gratis. Los autores lo reconocen; la mayoría de sus usuarios no.
+
+---
+
+# Núcleo 2 — Finanzas sostenibles: de ESG-como-filtro a valor integrado
+
+## 2.1 La crisis de medición (esto va en la Sesión 1)
+
+**Berg, Kölbel & Rigobon (2022), "Aggregate Confusion"** [@berg2022], *Review of Finance* — el paper más importante que un estudiante de este programa puede leer, y probablemente el más incómodo.
+
+Hallazgo [V]: la correlación promedio por pares entre seis calificadoras ESG mayores (KLD, Sustainalytics, Moody's/Vigeo-Eiris, S&P Global/RobecoSAM, Refinitiv/Asset4, MSCI) va de **0,38 a 0,71**.
+
+Descomposición de la divergencia [V]:
+
+| Fuente | Contribución |
+|---|---|
+| **Medición** (mismo atributo, distinto dato) | **56%** |
+| **Alcance** (qué atributos se incluyen) | 38% |
+| **Ponderación** (cómo se agregan) | 6% |
+
+Compárese: las calificadoras crediticias correlacionan ~0,99.
+
+**Por qué es devastador para el curso**: si un estudiante propone "nuestro proyecto mejora el score ESG", la pregunta correcta es *"¿el de quién?"*. Y detectan además un **efecto calificador**: la opinión global de la agencia sobre una firma contamina la medición de categorías específicas. Es decir, el sesgo no es aleatorio.
+
+**Implicación de diseño**: el proyecto del curso **no puede** apoyarse en un rating ESG. Debe apoyarse en indicadores físicos primarios (tCO₂e, m³ de agua, ha restauradas, ingresos de hogar) — que es exactamente lo que sabes hacer.
+
+## 2.2 ¿Baja el ESG el costo de capital? La respuesta honesta es "menos de lo que te dijeron"
+
+La promesa comercial del campo es que la sostenibilidad abarata el capital. La evidencia en 2026 es **mucho más débil de lo que era la narrativa en 2021**.
+
+**El *greenium* se está desvaneciendo** [V]: la prima verde promedio ronda **−12,4 pb**, mayor en emisión primaria (~−21,4 pb) que en secundario (~−10,4 pb) [@greenbond2025]. En varios mercados se ha comprimido hacia cero.
+
+**Lectura crítica para clase**: −12 pb sobre un WACC de 13% es una reducción de **menos del 1% relativo**. No es el driver de valor. Si el caso de inversión de un proyecto sostenible depende del greenium, **el caso de inversión no existe**.
+
+::: {.callout-warning}
+## Trampa argumentativa frecuente
+"Financiamiento verde → menor costo de capital → mayor VPN" es una cadena causal que la evidencia sostiene débilmente. El valor real de la etiqueta verde suele estar en **acceso** (nuevos inversionistas, plazos más largos, garantías) más que en **precio**. Esa distinción es un objetivo de aprendizaje explícito de la Unidad 3.
+:::
+
+## 2.3 Contabilidad de impacto: la promesa y su límite
+
+La agenda de *impact-weighted accounts* (Serafeim y colaboradores, Harvard) intentó traducir impacto a unidades monetarias comparables en el estado de resultados. Es la aspiración más ambiciosa del campo y la que más se cita en pitch decks.
+
+**Estado en 2026 [PV — verificar el estado institucional actual de la iniciativa antes de afirmarlo en clase]**: la agenda persiste metodológicamente, pero la ambición de un estándar universal comparable se ha moderado frente a las dificultades de valoración que documenta la tradición ACB desde los años 70.
+
+**Cómo enseñarlo**: no como técnica a aplicar, sino como **caso de estudio sobre los límites de la conmensuración**. Es el puente natural hacia §7.
+
+---
+
+# Núcleo 3 — Costo de capital: donde el curso se juega la credibilidad técnica
+
+::: {.callout-important}
+Este es **tu núcleo de mayor gap y el de mayor riesgo docente**. Un estudiante de la Maestría en Finanzas viene de *Matemáticas financieras* e *Inversión ASG*: va a detectar imprecisión aquí antes que en ninguna otra parte. La guía de estudio (`instructor/02-guia-estudio-profesor.md`) desarrolla esto paso a paso.
+:::
+
+## 3.1 El problema del CAPM — y la munición que ya está en tu bibliografía
+
+**Welch (2021), "The Cost of Capital: If Not the CAPM, Then What?"** [@welch2021] ya figura en la bibliografía oficial del programa. Vale la pena notar la ironía: **el programa recomienda simultáneamente enseñar CAPM (vía Brigham) y leer al autor que argumenta que no funciona.** Esa contradicción es un regalo pedagógico, no un problema — es el debate en vivo.
+
+Argumento central: la beta estimada tiene un error estándar tan alto, y la relación empírica entre beta y retornos es tan débil, que el CAPM aporta poca información sobre el costo de capital de un proyecto específico. La recomendación práctica va hacia **tasas de descuento por clase de activo con juicio explícito**, no hacia una beta espuriamente precisa.
+
+**Para un proyecto agroforestal en Colombia esto es agudo:**
+
+1. No hay comparables públicos con beta observable. La "beta del sector" es una ficción.
+2. La prima de riesgo país (Damodaran) [PV — verificar el valor vigente para Colombia en la fecha de clase] se suma de forma *ad hoc*, sin teoría que la respalde.
+3. El riesgo dominante del proyecto es **idiosincrático y físico** (clima, plaga, precio de commodity) — exactamente el riesgo que el CAPM dice que *no* debe remunerarse por ser diversificable.
+
+**Movida pedagógica de alto valor**: hacer que los equipos calculen el WACC "por el libro", y luego pedirles el **intervalo de confianza de su beta**. Cuando descubren que su VPN cambia de signo dentro de ese intervalo, aprenden más sobre costo de capital que en tres clases magistrales.
+
+## 3.2 La tasa social de descuento (tu terreno — úsalo)
+
+**Drupp, Freeman, Groom & Nesje**, "Discounting Disentangled" [@drupp2018] — encuesta a 197 expertos [V]:
+
+- TSD de largo plazo recomendada: **media 2,25%, mediana 2,0%** [V]
+- Más de tres cuartas partes aceptan una TSD libre de riesgo de 2% como razonable [V]
+- Descomposición vía regla de Ramsey: preferencia temporal pura, elasticidad de utilidad marginal, crecimiento del consumo per cápita
+- Los doctorados más recientes recomiendan tasas **más bajas** que las cohortes anteriores [V]
+
+**El contraste que hace la clase**: WACC privado ~13–15% nominal en COP vs. TSD ~2–3% real. Descontando 30 años, el factor de descuento del año 30 difiere en **más de un orden de magnitud**. El mismo proyecto es basura o es excelente según de qué lado de la mesa estés sentado.
+
+Aquí conviene traer **tasas de descuento decrecientes** (Weitzman, Gollier — Gollier ya está en la bibliografía [@gollier2018]): bajo incertidumbre sobre la tasa futura, la tasa de certeza-equivalente **declina con el horizonte**.
+
+### Colombia ya lo hace — y esto es el mejor material del curso
+
+**Resolución 1092 de 2022 del DNP** [@dnp1092] [V] adopta la Tasa Social de Descuento como parámetro obligatorio en evaluación de proyectos de inversión pública:
+
+| Ámbito | TSD (términos **reales**) |
+|---|---|
+| Proyectos del sector público **en general** | **9,0% EA** |
+| Proyectos **ambientales**, horizonte 0–5 años | **9,5%** |
+| Proyectos **ambientales**, horizonte 6–25 años | **6,4%** |
+| Proyectos **ambientales**, horizonte 26+ años | **3,5%** |
+
+La justificación técnica del DNP es explícitamente de diseño de política: *usar tasas sociales de descuento altas, que asignan mayor valor al uso y consumo presente que al futuro, **genera incentivos en contra de la conservación ambiental** y de la disponibilidad de recursos naturales para generaciones futuras.*
+
+::: {.callout-important}
+## El mejor ejercicio del curso sale de aquí
+
+Un proyecto de cacao agroforestal a 15 años tiene, **simultáneamente y todas defendibles, cuatro tasas de descuento**:
+
+| Tasa | Valor | Quién la usa | Con qué lógica |
+|---|---|---|---|
+| **WACC privado** | ~13–15% nominal COP | El inversionista | Costo de oportunidad del capital |
+| **TSD ambiental Colombia, años 0–5** | 9,5% real | El DNP | Harberger — costo de oportunidad social |
+| **TSD ambiental Colombia, años 6–25** | 6,4% real | El DNP | Decreciente por horizonte |
+| **Consenso internacional de expertos** | ~2,0–2,25% real | Drupp et al. | Ramsey — preferencia social intertemporal |
+
+**Ninguna está mal.** Responden a preguntas distintas y provienen de dos metodologías rivales (costo de oportunidad vs. preferencia intertemporal). Que los estudiantes calculen el VPN social de su proyecto con las cuatro, y luego defiendan cuál usarían ante un comité, es el ejercicio de mayor densidad conceptual de toda la asignatura.
+
+Y hay una asimetría que vale la pena señalar: la tasa colombiana de largo plazo (3,5%) se acerca al consenso internacional, pero la de corto plazo (9,5%) lo cuadruplica. **Colombia descuenta el futuro lejano casi como los expertos, y el futuro cercano como un banco.**
+:::
+
+## 3.3 Precio sombra del carbono
+
+**Banco Mundial, *2024 Guidance Note on Shadow Price of Carbon in Economic Analysis*** [@wb2024spc] [V]:
+
+- Uso del precio sombra del carbono es **compromiso corporativo** para todo financiamiento de proyectos de inversión del BIRF [V]
+- El análisis económico debe presentarse con valores **alto y bajo** de precio sombra, y reportar el **switching value** cuando sea relevante [V]
+- Cuando hay alternativas, presentar el VPN de todas **sin, con precio bajo y con precio alto** [V]
+- Referencia de la High-Level Commission on Carbon Prices: **USD 40–80/tCO₂ a 2020 y USD 50–100/tCO₂ a 2030** [V]
+
+::: {.callout-tip}
+## Esto es un entregable, no una lectura
+El protocolo del Banco Mundial —VPN sin carbono / carbono bajo / carbono alto + switching value— **es exactamente el formato del entregable final del curso**. Los estudiantes no aprenden *sobre* el estándar: entregan en el estándar.
+:::
+
+---
+
+# Núcleo 4 — Riesgo climático dentro de la valoración
+
+## 4.1 La operación concreta
+
+El aporte práctico más limpio de la literatura reciente es que el riesgo climático **no es un ajuste al final**: entra por tres puertas distintas del modelo [@ngfs_guide] [V]:
+
+| Puerta | Qué se ajusta | Ejemplo en el proyecto ancla |
+|---|---|---|
+| **Ingresos** | Rendimiento físico, precio, demanda | Rendimiento de cacao bajo estrés hídrico; precio bajo transición |
+| **CapEx / OpEx** | Cronograma de mantenimiento y reposición | Riego suplementario; resiembra por mortalidad |
+| **Tasa de descuento** *o* ajuste explícito de flujos | Perfil de riesgo | ⚠️ **Nunca las dos** — doble conteo |
+
+::: {.callout-warning}
+## El error #1 que cometerán tus estudiantes
+Ajustar el flujo de caja hacia abajo por riesgo climático **y** subir la tasa de descuento por riesgo climático. Eso cuenta el mismo riesgo dos veces. La regla: **riesgo específico → ajuste de flujos; riesgo sistemático → tasa.** Vale la pena ponerlo en una slide y volver a ella tres veces.
+:::
+
+## 4.2 Escenarios NGFS
+
+Tres escenarios de referencia [@ngfs_guide] [V]:
+
+- **Baseline / Current Policies** — las NDC se cumplen y hasta mejoran levemente, pero no alcanzan una trayectoria consistente con 2 °C
+- **Net Zero 2050** — política agresiva, favorece renovables y modelos bajos en carbono
+- **Delayed Transition** — la intervención se pospone y detona una **revaluación desordenada y súbita** de activos
+
+**Uso en el curso**: cada equipo corre su flujo bajo los tres. No como ejercicio de cumplimiento, sino porque **el ranking entre alternativas puede invertirse entre escenarios** — y ese es el hallazgo que hace memorable la sesión.
+
+---
+
+# Núcleo 5 — Finanzas de la naturaleza: la literatura del proyecto ancla
+
+## 5.1 La escala del problema (y del negocio)
+
+**FOLU Colombia & Climate Focus (2023)**, *SbN: escalando el financiamiento público y privado* [@folu2023] [V]:
+
+| Indicador | Valor |
+|---|---|
+| Inversión requerida | **USD 13.500 millones** |
+| Inversión terrestre actual en SbN | < USD 300 millones/año |
+| Brecha | **~50×** |
+| Potencial de mitigación a 2050 | **340 MtCO₂e/año** |
+| Tipos de SbN analizadas | 18 |
+| Protección forestal y conservación | **67%** del potencial 2020–2050 |
+| Aporte público actual | 51% (~0,1% del PIB 2019) |
+| Aporte privado | **< 1%** del total |
+| Hallazgo central | *"Las SbN son rentables y competitivas"* |
+| Oportunidad principal | Empresas AFOLU que necesitan reducir Alcance 3: **30%** del potencial de inversión |
+
+::: {.callout-note}
+Este informe conecta con tu propio trabajo en **FOLU Antioquia**. Es una ventaja competitiva del curso que ningún otro profesor de la Maestría puede replicar: puedes traer el contexto de primera mano, no de un PDF.
+:::
+
+**Contraste global** [@unep_sfn] [V]: el financiamiento global sigue favoreciendo la destrucción de ecosistemas sobre su protección en una razón de **30:1**.
+
+## 5.2 ¿Funcionan los pagos por servicios ambientales? Evidencia causal
+
+Aquí tu ventaja comparativa es total — es literatura de evaluación de impacto.
+
+**Jayachandran et al. (2017), "Cash for Carbon", *Science*** [@jayachandran2017] [V] — ECA en Uganda, 121 aldeas (60 tratadas, 2 años):
+
+| Resultado | Valor |
+|---|---|
+| Deforestación en tratamiento | 4% del bosque |
+| Deforestación en control | 9% |
+| CO₂ diferido | ~3.000 t por aldea |
+| **Costo por tonelada** | **USD 0,46** |
+| Relación beneficio/costo | **> 2×** |
+
+**Por qué es el mejor paper para la Unidad 3**: la mayoría de las políticas ambientales tienen un valor de CO₂ evitado **menor** que su costo. Esta no. Y el hallazgo sobrevive incluso al supuesto conservador de que la tala se reanuda al terminar los pagos.
+
+**Diseño de contrato > monto del pago** [@wiik2024] [V]: un ECA en México encontró que exigir inscribir **toda** la propiedad (en vez de permitir escoger parcelas) redujo la deforestación en **41%** y **cuadruplicó** la costo-efectividad. La selección adversa —inscribir el bosque que no ibas a tumbar— es la falla principal del PSA tradicional.
+
+::: {.callout-tip}
+## El taller que sale de aquí
+"Diseña el contrato de PSA de tu proyecto para que la adicionalidad no dependa de la buena fe del beneficiario." Es un problema de diseño de mecanismos, es divertido, y es exactamente lo que la industria no sabe hacer.
+:::
+
+## 5.3 Créditos de biodiversidad: mercado naciente, integridad en disputa
+
+Frente al carbono, este mercado es **diminuto y frágil**: valor 2025 ~USD 0,09 mil millones, proyección 2026 ~USD 0,1 mil millones [@factmr2026] [PV — proyecciones de consultoras comerciales; usar sólo como orden de magnitud, nunca como base de un flujo de caja].
+
+**Literatura de integridad** [@royal2025] [V]: el problema central es que la biodiversidad **no es conmensurable como el carbono**. Una tonelada de CO₂ es fungible; una hectárea de bosque seco tropical no es sustituto de una hectárea de páramo. Toda métrica agregada de biodiversidad esconde una decisión ética sobre qué es sustituible.
+
+Riesgos heredados del mercado voluntario de carbono: **doble conteo, sobre-emisión de créditos, comercio especulativo** [V].
+
+**Caso colombiano — Terrasos y los bancos de hábitat** [@terrasos] [V]:
+
+- Primer banco de hábitat de Latinoamérica; instrumento reconocido por MinAmbiente
+- Pago **por resultados** a 30 años, estructurado como financiamiento de infraestructura
+- Los desembolsos ocurren **cuando la autoridad ambiental verifica** la efectividad de las acciones
+- Precio negociado bilateralmente → **elimina la volatilidad e intermediación** del mercado de carbono
+- Un crédito voluntario de biodiversidad financia conservación de **10 m² por 30 años**
+
+**Por qué es oro para el curso**: es un instrumento financiero real, colombiano, con estructura de flujos comprensible, que resuelve el problema de *timing* (pagar por resultado, no por promesa) y que los estudiantes pueden meter en su modelo como línea de ingreso con perfil de riesgo distinto al del cacao.
+
+## 5.4 Cacao agroforestal: los números del proyecto ancla
+
+**Evidencia de rentabilidad** [@mdpi2022cacao] [V] — sistemas cacao-melina en el suroccidente colombiano:
+
+| Sistema | VPN | TIR | B/C |
+|---|---|---|---|
+| Agroforestal (mejor arreglo) | 1.446,45 | **42%** | 1,67 |
+| Cacao tradicional | 651,65 | **13%** | 1,02 |
+
+::: {.callout-warning}
+## Enseña este estudio como objeto de crítica, no como dato
+Tres problemas que los estudiantes deben detectar (y que son el taller de la Sesión 3):
+
+1. **Las unidades del VPN no son interpretables** tal como se reportan. Un VPN de "1.446,45 pesos colombianos" para una hectárea de cacao es implausible por varios órdenes de magnitud — probablemente son miles o millones de COP, o USD. **Antes de usar cualquier cifra de un paper, verifica la unidad.** [PV — verificar unidad exacta contra el artículo original]
+2. **TIR de 42% con B/C de 1,67** merece escepticismo: es alto para agricultura tropical. ¿A qué precio de cacao? ¿Con qué horizonte? ¿Incluye mano de obra familiar a precio de mercado?
+3. **Sesgo de supervivencia**: los ensayos de investigación tienen asistencia técnica que un productor real no tiene.
+
+Que los estudiantes descubran esto es más valioso que cualquier cifra correcta que yo les entregue.
+:::
+
+**Carbono almacenado** [@springer2025cacao] [V]: sistemas cacao-agroforestales en la Amazonía colombiana almacenan **33,0–42,0 Mg C ha⁻¹** en biomasa aérea y necromasa — comparable a monocultivo, pero con co-beneficios de biodiversidad.
+
+**Sensibilidad al precio** [@mdpi2026cacao] [V]: la rentabilidad es **muy sensible a la combinación precio-costo**, particularmente bajo precios bajos y costos altos.
+
+## 5.5 El regalo de 2024–2026: el ciclo del cacao
+
+Este es el mejor material didáctico disponible sobre riesgo de mercado, y es de esta semana.
+
+| Momento | Precio |
+|---|---|
+| Récord dic-2024 | **USD 12.931/t** [V] |
+| Inicio 2026 | ~USD 3.000–4.000/t (**−70%**) [V] |
+| Mediados 2026 | Repunte por inundaciones en Costa de Marfil y Ghana [V] |
+
+Excedente global proyectado: 247.000 t (2025/26) y 149.000 t (2026/27) [@stonex] [PV — proyección de casa comercial].
+
+::: {.callout-important}
+## La actividad de apertura del curso
+Entregar a los equipos un modelo financiero de cacao **construido con precios de diciembre de 2024**, sin decirles la fecha. Que lo evalúen y decidan invertir. Luego revelar la serie de precios 2025–2026.
+
+En diez minutos aprenden lo que un semestre de clases magistrales sobre riesgo no logra: **un VPN es una opinión sobre el futuro disfrazada de número.**
+:::
+
+---
+
+# Núcleo 6 — Estándares, regulación y el terreno colombiano
+
+Esta sección es **operativa**: es lo que los estudiantes van a encontrar en su trabajo el lunes siguiente.
+
+## 6.1 Colombia — lo que es obligatorio hoy
+
+**Circular Externa 015 de 2025, Superintendencia Financiera de Colombia** [@sfc015] [V]:
+
+- Añade el **Capítulo XXXIII** a la Circular Básica Contable y Financiera
+- Las entidades vigiladas deben identificar y gestionar riesgos **ambientales, sociales y climáticos**
+- Para crédito: filtros de *screening*, categorización por nivel de riesgo (alto/medio/bajo), debida diligencia en créditos de alto riesgo, reportes semestrales a la alta dirección
+- **Plazos**: 6 meses para el plan de implementación ante la SFC; **18 meses** para cumplimiento pleno
+- Aplica principios de proporcionalidad y relevancia
+
+::: {.callout-note}
+## Corrección importante al material del programa
+Es **Circular Externa 015 de *2025***, no de 2024. Circula la fecha errada. Tu propia Escuela ya ofrece un programa de educación ejecutiva sobre esta norma ("De la Normativa a la Acción"), lo que la vuelve doblemente relevante: es el puente comercial del programa.
+:::
+
+**Implicación directa para el proyecto**: si el proyecto de un equipo busca crédito bancario en Colombia, **el banco está obligado por norma a hacerle debida diligencia ambiental y social**. Eso convierte un requisito "de sostenibilidad" en un **requisito de bancabilidad**. Ese giro —de virtud a condición de acceso— es un objetivo de aprendizaje de la Unidad 1.
+
+**Taxonomía Verde de Colombia** [@taxonomia] [V]: sistema de clasificación de actividades y activos que contribuyen a objetivos ambientales del país. Instruida vía Circular Externa 005 de 2022. Existe una "caja de herramientas" de implementación publicada por la SFC.
+
+**MGA — Metodología General Ajustada, DNP (2023)** [@dnp2023] [V]: es la metodología obligatoria para inversión pública en Colombia. Relevante aunque el proyecto sea privado: define cómo el Estado valora un proyecto, y por tanto **qué necesita ver un proyecto que aspire a cofinanciación pública o a blended finance**.
+
+## 6.2 Estándares internacionales de reporte
+
+| Estándar | Estado | Relevancia para el curso |
+|---|---|---|
+| **ISSB / IFRS S1–S2** | Vigente desde 2024 [PV — verificar estado de adopción en Colombia] | Define qué información climática es *material* para el inversionista |
+| **TNFD** | Recomendaciones publicadas 2023 [V] | Marco de naturaleza — directamente aplicable al proyecto ancla |
+| **CSRD / ESRS (UE)** | En simplificación vía paquete Ómnibus [PV — situación cambiante en 2025–2026] | Afecta a exportadores colombianos hacia la UE |
+| **SBTi** | Estándar Corporate Net-Zero en revisión [PV] | Define qué cuenta como reducción de Alcance 3 |
+| **IUCN Global Standard for NbS** | 2020 [V] | Criterios de qué *es* una SbN — evita greenwashing del proyecto ancla |
+
+::: {.callout-warning}
+El terreno regulatorio se mueve más rápido que cualquier syllabus. **No memorizar normas: enseñar a leerlas.** La competencia transferible es "dado un estándar nuevo, ¿qué línea de mi modelo financiero cambia?"
+:::
+
+---
+
+# Las siete tensiones vivas
+
+Estas son las preguntas **sin respuesta consensuada**. Son el material del formato seminario, porque no tienen respuesta correcta que el profesor deba defender — lo que reduce drásticamente tu exposición como no-especialista y aumenta la calidad de la discusión.
+
+**T1 · ¿El VPN puede absorber la sostenibilidad, o necesita ser reemplazado?**
+Schoenmaker dice que sí (valor integrado). Los críticos dicen que monetizar lo inconmensurable destruye la información. → Sesión 1.
+
+**T2 · Si el precio de mercado y el precio sombra difieren, ¿cuál es el "verdadero" valor del proyecto?**
+La tradición A dice el de mercado. La B dice el sombra. La C intenta un híbrido que ninguna de las dos acepta. → Sesión 4.
+
+**T3 · ¿La sostenibilidad reduce el costo de capital o solo amplía el acceso?**
+La evidencia del greenium favorece "acceso, no precio". La industria sigue vendiendo "precio". → Sesión 3.
+
+**T4 · Si el CAPM no funciona, ¿qué se pone en el denominador?**
+Welch no da un reemplazo limpio. En la práctica: juicio explícito y documentado > falsa precisión. → Sesión 3.
+
+**T5 · ¿Los créditos de biodiversidad son un mercado o una categoría conceptualmente imposible?**
+La conmensurabilidad de la biodiversidad es un problema ontológico, no técnico. → Sesión 4.
+
+**T6 · ¿Quién paga la brecha entre VPN privado y VPN social?**
+Estado (subsidio), comprador (prima), donante (capital catalítico) o nadie (el proyecto no se hace). → Sesión 5.
+
+**T7 · ¿Medir impacto lo mejora, o solo desplaza el esfuerzo hacia lo medible?**
+La crítica de Goodhart aplicada a ESG. Tu terreno. → Sesión 5.
+
+---
+
+# Mapa lectura → sesión
+
+Regla del curso: **máximo 2 lecturas obligatorias por sesión**, porque son profesionales que trabajan y las sesiones son viernes en la noche. Todo lo demás es opcional y está marcado como tal.
+
+| Sesión | Obligatorias (≤2) | Complementarias | Tensión que abre |
+|---|---|---|---|
+| **S1** · Formulación | Berg et al. (2022) §1–3 y conclusiones · FOLU Colombia (2023) resumen ejecutivo | Schoenmaker & Schramade caps. 1–2 (OA) | T1 |
+| **S2** · Magnitudes | Sapag caps. de costos y capital de trabajo · Serie de precios del cacao 2023–2026 (dato, no lectura) | Hyndman & Athanasopoulos cap. 1 (OA) | — |
+| **S3** · Costo de capital | Welch (2021) MBR · Drupp et al. (2018) resumen y tabla de resultados | Schoenmaker & Schramade cap. costo de capital (OA) | T3, T4 |
+| **S4** · Evaluación social | Banco Mundial (2024) Guidance Note SPC · Jayachandran et al. (2017) *Science* | Boardman et al. caps. de precios sombra | T2, T5 |
+| **S5** · Cierre (virtual) | — (defensa) | Circular Externa 015/2025 SFC | T6, T7 |
+
+**Acceso abierto** (sin costo, sin biblioteca): Schoenmaker & Schramade (2023); Hyndman & Athanasopoulos (2021); Welch (2021); documentos del Banco Mundial, FOLU, SFC, DNP, NGFS e IUCN. Cerrado: Berg et al. (2022), Jayachandran et al. (2017), Drupp et al. (2018) — todos accesibles vía EZproxy EAFIT; los tres tienen versión *working paper* pública (LSE Grantham, NBER, SSRN).
+
+---
+
+# Auditoría de la bibliografía oficial
+
+Ver documento separado: [`auditoria-bibliografia.qmd`](auditoria-bibliografia.qmd).

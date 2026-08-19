@@ -1,0 +1,109 @@
+---
+title: "Syllabus"
+subtitle: "Formulación y Evaluación de Proyectos Sostenibles · MF7011 · 2026-2"
+bibliography: literatura/referencias.bib
+---
+
+## Identificación
+
+| | |
+|---|---|
+| **Asignatura** | Formulación y Evaluación de Proyectos Sostenibles |
+| **Código** | MF7011 · Clase 6283 |
+| **Programa** | Maestría en Finanzas Sostenibles y Cambio Climático · Especialización en Finanzas Sostenibles |
+| **Escuela** | Finanzas, Economía & Gobierno |
+| **Créditos** | 3 · **36 horas** |
+| **Prerrequisitos** | Matemáticas financieras · Inversión ASG |
+| **Aula** | 19-712 · Medellín |
+| **Profesor** | Juan Carlos Muñoz-Mora |
+
+## Qué van a hacer
+
+Formular y evaluar **un proyecto real de inversión sostenible**, de principio a fin, en equipo — y defenderlo ante un comité de inversión que tiene presupuesto limitado y va a rechazar proyectos.
+
+No es un ejercicio. El entregable final es una **nota de inversión** en el formato que usa la industria.
+
+## Resultados de aprendizaje
+
+Al terminar, cada estudiante será capaz de:
+
+1. **Formular** un proyecto de inversión sostenible con estructura de propiedad, cadena de resultados y KPI físicos verificables.
+2. **Proyectar** magnitudes económicas bajo incertidumbre, con escenarios explícitos en vez de puntos únicos.
+3. **Construir** el flujo de caja del proyecto y el del inversionista, y saber cuál corresponde a cada pregunta.
+4. **Estimar** el costo de capital de forma defendible, declarando su incertidumbre en vez de esconderla.
+5. **Evaluar** con VPN, TIR, TIR Modificada, payback y CAE, sabiendo cuándo cada uno miente.
+6. **Construir** el flujo socioeconómico con precios sombra, tasa social de descuento y precio sombra del carbono.
+7. **Decidir** entre alternativas integrando factores financieros, ambientales, sociales y de gobierno — y defender la decisión ante un contradictor.
+
+## Calendario
+
+| # | Fecha | Horario | Tema |
+|---|---|---|---|
+| **S1** | Vie 21 + Sáb 22 ago | V 18–21 · S 8–13 | ¿Qué es un proyecto sostenible y quién decide que lo es? |
+| **S2** | Vie 28 + Sáb 29 ago | V 18–21 · S 8–13 | Los números que nadie te da |
+| **S3** | Vie 4 + Sáb 5 sep | V 18–21 · S 8–13 | El denominador |
+| **S4** | Vie 11 + Sáb 12 sep | V 18–21 · S 8–13 | El otro flujo de caja |
+| **S5** | Vie 18 sep · **virtual** | 18–22 | Investor Day |
+
+## Cómo funciona cada sesión
+
+**Viernes — El Tribunal (3 h).** Se decide, se debate, se defiende. Portátiles cerrados la primera hora. Se enfrentan al problema *antes* de tener la herramienta.
+
+**Sábado — El Taller (5 h).** Se construye. Ciclos de 20 min de input, 40 de producción, 15 de síntesis. **Todo lo que se produce se sube antes de salir del salón.**
+
+Los últimos 20 minutos de cada sábado son **auditoría cruzada**: cada equipo revisa el modelo de otro con una lista de chequeo. Encontrar un error real suma puntos.
+
+## Lecturas
+
+**Dos por sesión, máximo.** Son profesionales que trabajan; una bibliografía imposible enseña que las lecturas son decorativas.
+
+| Sesión | Obligatorias |
+|---|---|
+| **S1** | Berg, Kölbel & Rigobon (2022) §1–3 y conclusiones [@berg2022] · FOLU Colombia (2023) resumen ejecutivo [@folu2023] |
+| **S2** | Sapag Chain — costos y capital de trabajo [@sapag2014] · serie de precios del cacao 2023–2026 |
+| **S3** | Welch (2021) [@welch2021] · Drupp et al. — resultados [@drupp2018] |
+| **S4** | Banco Mundial (2024) Guidance Note [@wb2024spc] · Jayachandran et al. (2017) [@jayachandran2017] |
+| **S5** | Circular Externa 015 de 2025 SFC [@sfc015] |
+
+**Texto base — acceso abierto y gratuito:** Schoenmaker & Schramade (2023), *Corporate Finance for Long-Term Value*, Springer [@schoenmaker2023].
+
+Ver la [revisión de literatura](literatura/revision-literatura.qmd) para el mapa completo del campo.
+
+## Evaluación
+
+Escala 0.0–5.0. `nota = total/100 × 5.0`
+
+| Componente | Peso | Quién califica |
+|---|---:|---|
+| Artefactos de sesión | 25% | Profesor |
+| Auditorías cruzadas | 15% | Profesor |
+| Modelo financiero final | 25% | Profesor |
+| Defensa · Investor Day | 20% | **Profesor 50% + Comité de pares 50%** |
+| **Calidad como evaluador** | **15%** | Profesor |
+
+**Modulador individual:** la co-evaluación de contribución dentro del equipo aplica un factor de **0,85 a 1,15** sobre los componentes de equipo. Nadie recibe la nota de un trabajo que no hizo.
+
+### Ustedes evalúan, y su evaluación se evalúa
+
+En el **Investor Day** cada estudiante recibe un rol —banco, fondo de impacto, comprador corporativo, entidad pública, comunidad, escéptico financiero— y **puntúa los proyectos ajenos desde esa lente**. Esas puntuaciones valen la mitad de la nota de defensa.
+
+Y la **calidad de su juicio como evaluador vale el 15% del curso**. No se evalúa qué tan severos o generosos fueron: se evalúa si su evidencia era específica, si discriminaron entre proyectos distintos, y si detectaron algo que nadie más vio.
+
+Toda puntuación exige **evidencia específica** — una celda, una cifra, una frase textual. Una puntuación sin evidencia no se cuenta.
+
+**Sin exámenes.** En un curso de 4 semanas, un parcial consume el 22% del tiempo total para medir lo que la auditoría cruzada mide mejor y cada semana.
+
+**Todo lo evaluado se produce en clase**, salvo el modelo final. Es una decisión de equidad: la carga extra-clase se reparte muy desigualmente entre quienes tienen hijos, viajan o cambian de trabajo a mitad de curso.
+
+## Uso de inteligencia artificial
+
+**Se espera que la usen.** Con dos reglas no negociables:
+
+1. **Documentan el prompt** en un anexo del entregable.
+2. **Verifican cada cifra contra fuente primaria.** La IA es excelente encontrando estructura y poco confiable con números específicos.
+
+Un número inventado en su modelo es responsabilidad del equipo, no de la herramienta. Presentar una cifra sin fuente verificable es la única falta que anula un entregable.
+
+## Datos y privacidad
+
+Los trabajos de los estudiantes son datos personales bajo la **Ley 1581 de 2012**. No se publican sin consentimiento escrito. Cualquier reutilización como ejemplo de clase se hace anonimizada.

@@ -1,0 +1,288 @@
+---
+title: "El flujo socioeconómico"
+subtitle: "Sesión 4 · Taller · Sábado 12 de septiembre · 8:00–13:00"
+author: "Formulación y Evaluación de Proyectos Sostenibles · MF7011"
+format:
+  revealjs:
+    theme: [default, ../eafit.scss]
+    slide-number: c/t
+    transition: none
+    width: 1600
+    height: 900
+---
+
+## Recuperación · 20 min {.smaller}
+
+1. ¿Por qué los impuestos **no** son un costo social?
+2. ¿Cuál es la TSD que Colombia exige para un proyecto ambiental de 15 años?
+3. ¿Qué es un *switching value* y por qué el Banco Mundial lo exige?
+4. Salario sombra rural: ¿mayor o menor que el jornal de mercado? ¿Por qué?
+5. La prima orgánica del 12%: ¿entra o no entra al flujo social? ¿Por qué?
+
+::: {.notes}
+MIN 0–20. La 5 es la trampa: es una transferencia del consumidor europeo al productor.
+Hay un argumento para incluirla (mejora el bienestar del productor) y uno para excluirla
+(no crea valor nuevo). Que discutan — no hay respuesta única.
+:::
+
+---
+
+## Hoy construyen {background-color="#000066" style="color:white;"}
+
+::: {style="font-size:1.3em; padding-top:30px;"}
+1. El **flujo socioeconómico** con precios sombra
+2. La **cuantificación del carbono** de su proyecto
+3. La tabla del **protocolo del Banco Mundial** — sin / bajo / alto
+4. El ***switching value*** de carbono
+5. Los tres **escenarios climáticos NGFS**
+:::
+
+---
+
+## Input 1 · Del flujo privado al social {.smaller}
+
+```
+  FLUJO DE CAJA PRIVADO
+  ─────────────────────────────────────────────
+− Eliminar TRANSFERENCIAS      impuestos, subsidios, prima de mercado
+± Ajustar por PRECIOS SOMBRA   mano de obra, divisa, insumos subsidiados
++ Sumar EXTERNALIDADES         carbono, agua, biodiversidad, salud
++ Sumar EFECTOS INDIRECTOS     empleo inducido, encadenamientos
+  ─────────────────────────────────────────────
+= FLUJO SOCIOECONÓMICO
+  descontado a la TASA SOCIAL DE DESCUENTO
+```
+
+::: {.callout-warning}
+**El error más común:** sumar los beneficios sociales al flujo privado y descontar todo al WACC.
+
+Eso no es un flujo social — es un flujo privado con propaganda. **Son dos flujos separados, con dos tasas distintas, que responden dos preguntas distintas.**
+:::
+
+---
+
+## Input 1 · Cuantificar el carbono de este proyecto {.smaller}
+
+| Paso | Valor | Fuente |
+|---|---:|---|
+| Stock de C en SAF de cacao maduro | 35 Mg C/ha | Agroforestry Systems 2025 (rango 33–42) **[V]** |
+| Stock de C en línea base (potrero degradado) | 8 Mg C/ha | **[PV — verificar]** |
+| Adicionalidad neta | 27 Mg C/ha | |
+| Conversión C → CO₂ (× 44/12) | **99 tCO₂e/ha** | |
+| × 500 ha | **49.500 tCO₂e** | |
+
+::: {.callout-important}
+## Los tres requisitos de un crédito que alguien compre
+1. **Adicionalidad** — no habría ocurrido sin el proyecto
+2. **Permanencia** — ¿qué pasa si tumban el bosque en el año 20?
+3. **Verificación** — un tercero independiente lo certifica
+
+La **línea base es la decisión más contestada** de toda la contabilidad de carbono. Si asumen un potrero muy degradado, su adicionalidad crece. Es donde ocurre la mayor parte del greenwashing del sector.
+:::
+
+---
+
+## Construcción 1 · 40 min {background-color="#f5f5f5"}
+
+**Hoja `FlujoSocial`:**
+
+1. Copien el FCLD y **eliminen impuestos** (transferencia)
+2. **Eliminen la prima orgánica** — o justifiquen por escrito por qué la mantienen
+3. Apliquen **salario sombra** a la mano de obra: ¿qué fracción del OpEx es mano de obra y cuál es su factor?
+4. Cuantifiquen su **carbono** con línea base explícita y curva de acumulación
+5. Valoren **una externalidad más** (agua, biodiversidad, salud) con fuente
+
+::: {.callout-note}
+Cada supuesto va en una celda **etiquetada y editable**, nunca dentro de una fórmula. En 20 minutos van a tener que cambiarlos todos.
+:::
+
+---
+
+## Síntesis 1 · sus supuestos son la mitad del resultado {background-color="#f5f5f5"}
+
+::: {style="font-size:1.2em;"}
+En este taller, **cada equipo eligió**:
+
+- Una línea base de carbono
+- Un factor de salario sombra
+- Un valor para el agua
+- Si la prima orgánica entra o no
+
+<br>
+
+::: {style="color:#000066; font-weight:700;"}
+Ninguna de esas cuatro decisiones es un dato. Las cuatro son juicios.
+:::
+
+Y entre el equipo más conservador y el más optimista de esta sala,
+el VPN social difiere en **más del doble**.
+:::
+
+---
+
+## {background-color="#00A9E0"}
+
+::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
+PAUSA · 20 minutos
+:::
+
+---
+
+## Input 2 · La tabla que lo dice todo {.smaller}
+
+**Proyecto de cacao a USD 3.500/t — el precio real de 2026:**
+
+| | sin carbono | C = 50 | C = 100 |
+|---|---:|---:|---:|
+| **VPN privado** @ WACC 10,8% | **−4.035.984** | — | — |
+| VPN social · TSD ambiental Colombia | −2.057.263 | −626.106 | **+805.051** |
+| VPN social · TSD general 9,0% | −2.424.296 | −1.033.451 | **+357.394** |
+| VPN social · consenso experto 2,0% | **+260.006** | +2.412.262 | +4.564.518 |
+
+**Switching value** (precio de carbono que lleva el VPN social a cero):
+
+| TSD ambiental Colombia | **USD 72/tCO₂e** |
+|---|---|
+| TSD general 9,0% | USD 87/tCO₂e |
+| Consenso experto 2,0% | positivo sin carbono |
+
+::: {.callout-important}
+**USD 72/tCO₂e cae justo dentro de la banda de USD 50–100 que recomienda el propio Banco Mundial para 2030.**
+
+Este proyecto se justifica socialmente **si y sólo si** uno cree que el carbono debe valer la mitad superior de esa banda. Toda la decisión cabe en esa frase.
+:::
+
+---
+
+## Input 2 · Y la elección de tasa, sola, cambia el signo {.smaller}
+
+::: {style="font-size:1.25em;"}
+**Sin ningún precio de carbono:**
+
+- A la tasa colombiana → VPN social **−2,06 M**
+- Al consenso internacional de expertos → VPN social **+0,26 M**
+
+<br>
+
+::: {style="color:#000066; font-weight:700;"}
+Mismo proyecto. Mismos flujos. Misma metodología.
+Cambia un parámetro que ningún dato puede resolver.
+:::
+:::
+
+::: {.callout-warning}
+Cuando alguien les presente un VPN social sin declarar su tasa **y su justificación**, no les presentó un resultado. Les presentó una preferencia.
+:::
+
+---
+
+## Construcción 2 · 40 min {background-color="#f5f5f5"}
+
+**Construyan su tabla de protocolo Banco Mundial:**
+
+| | sin C | C bajo (50) | C alto (100) |
+|---|---|---|---|
+| VPN social @ TSD ambiental Colombia | | | |
+| VPN social @ 9,0% | | | |
+| VPN social @ 2,0% | | | |
+
+Y calculen su **switching value** con `Buscar objetivo` o bisección manual.
+
+::: {.callout-important}
+Escriban la **frase de cierre** de su análisis:
+
+> *"Este proyecto se justifica socialmente si el precio del carbono supera USD ___/tCO₂e, valor que está [dentro / fuera] del rango recomendado por el Banco Mundial."*
+
+Esa frase es la más comunicable de todo el curso. **Va en la primera página de su nota de inversión.**
+:::
+
+---
+
+## Input 3 · Riesgo climático: tres puertas, nunca dos {.smaller}
+
+| Puerta | Qué se ajusta | En este proyecto |
+|---|---|---|
+| **Ingresos** | Rendimiento físico, precio, demanda | Rendimiento bajo estrés hídrico; precio bajo transición |
+| **CapEx / OpEx** | Mantenimiento, reposición | Riego suplementario; resiembra por mortalidad |
+| **Tasa** *o* ajuste explícito de flujos | Perfil de riesgo | ⚠️ **una sola de las dos** |
+
+::: {.callout-warning}
+## El error #1 de esta sesión
+Bajar el flujo por riesgo climático **y** subir la tasa por riesgo climático. Es el mismo riesgo contado dos veces.
+
+**Riesgo específico → numerador. Riesgo sistemático → denominador.**
+:::
+
+**Escenarios NGFS de referencia:**
+
+- **Current Policies** — las NDC se cumplen pero no alcanzan una trayectoria de 2 °C
+- **Net Zero 2050** — política agresiva; favorece modelos bajos en carbono
+- **Delayed Transition** — la acción se pospone y detona una **revaluación desordenada y súbita**
+
+---
+
+## Construcción 3 · 40 min {background-color="#f5f5f5"}
+
+**Corran su modelo bajo los tres escenarios NGFS.** Para cada uno definan:
+
+| | Current Policies | Net Zero 2050 | Delayed Transition |
+|---|---|---|---|
+| Precio del cacao | | | |
+| Rendimiento físico | | | |
+| Precio del carbono | | | |
+| CapEx de adaptación | | | |
+| **VPN privado** | | | |
+| **VPN social** | | | |
+
+::: {.callout-important}
+**Lo que buscamos:** ¿el ranking entre sus alternativas se **invierte** entre escenarios? Si su proyecto gana en los tres, probablemente no construyeron escenarios de verdad — construyeron tres versiones del mismo.
+:::
+
+---
+
+## Auditoría cruzada · 20 min {background-color="#000066" style="color:white;"}
+
+::: {style="font-size:1.05em;"}
+1. ¿Se eliminaron los **impuestos** del flujo social?
+2. ¿Se trató la prima orgánica como transferencia — o se justificó lo contrario?
+3. ¿El salario sombra tiene **factor explícito y fuente**?
+4. ¿La **línea base** de carbono está declarada y justificada?
+5. ¿La adicionalidad es defendible ante un verificador?
+6. ¿El flujo social se descuenta a la **TSD** y no al WACC?
+7. ¿Está la tabla completa **sin / bajo / alto**?
+8. ¿Calcularon el ***switching value***?
+9. ¿El riesgo climático entra **una sola vez** (flujo o tasa, no ambos)?
+10. ¿Los tres escenarios NGFS son **realmente distintos**?
+11. ¿Hay alguna externalidad contada **dos veces** (p. ej. agua y biodiversidad solapadas)?
+:::
+
+---
+
+## Para el viernes 18 · Investor Day {background-color="#f5f5f5"}
+
+::: {.columns}
+::: {.column width="50%"}
+**Entregar antes del miércoles 16**
+
+- Modelo financiero completo
+- **Nota de inversión**, 4 páginas
+:::
+
+::: {.column width="50%"}
+**El viernes**
+
+- Pitch de 12 min
+- Interrogatorio de 12 min
+- Comité de inversión con **presupuesto limitado**
+:::
+:::
+
+<br>
+
+::: {.callout-important}
+El comité **va a rechazar proyectos**. No alcanza el presupuesto para todos. Preparen no sólo por qué el suyo es bueno, sino **por qué es mejor que el del equipo de al lado.**
+:::
+
+::: {style="text-align:center; font-size:1.3em; color:#000066; font-weight:700; margin-top:20px;"}
+Ya tienen los números. Falta la decisión.
+:::
