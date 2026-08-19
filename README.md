@@ -4,6 +4,8 @@ Curso de la **Maestría en Finanzas Sostenibles y Cambio Climático** y la **Esp
 
 **36 horas · 5 encuentros · 4 semanas · Medellín, aula 19-712 · 2026-2**
 
+🌐 **Sitio del curso:** <https://jcmunozmora.github.io/curso-proyectos-sostenibles/>
+
 ---
 
 ## El diseño en una frase
@@ -11,6 +13,37 @@ Curso de la **Maestría en Finanzas Sostenibles y Cambio Climático** y la **Esp
 Los estudiantes formulan y evalúan **un proyecto real de inversión sostenible** —cacao agroforestal con ingresos de naturaleza— y lo defienden ante un comité de inversión con presupuesto limitado que va a rechazar proyectos.
 
 **Viernes = El Tribunal** (decidir, debatir, defender). **Sábado = El Taller** (construir). Ritmo **20/40/15**: ninguna exposición supera 20 minutos. Proporción 27% profesor / 73% estudiante.
+
+## Co-evaluación
+
+El **Comité de Inversión** de la Sesión 5 es el órgano de co-evaluación. Cada estudiante recibe un rol —banco bajo Circular 015, fondo de impacto, comprador corporativo, entidad pública, comunidad, escéptico financiero— y puntúa los proyectos ajenos **desde esa lente**, con evidencia específica obligatoria.
+
+| Vía | Peso |
+|---|---|
+| El comité puntúa las defensas | 50% de R4 (= 10% del curso) |
+| **Calidad del juicio como evaluador (R5)** | **15% del curso** |
+| Contribución intra-equipo | modulador 0,85–1,15 |
+
+**El giro que la hace honesta:** no se evalúa qué tan severo o generoso fue cada quien, sino **qué tan buen juicio tuvo**. Salvaguardas: presupuesto escaso por diseño, mediana en vez de promedio, evidencia obligatoria, detección de valores atípicos, ejercicio de calibración previo. Detalle en [`plantillas/06-coevaluacion-comite.md`](plantillas/06-coevaluacion-comite.md).
+
+## ⚠ Material docente: fuera de este repo a propósito
+
+Este repositorio es **público**. Estas rutas están en `.gitignore` porque contienen los *reveals*, las respuestas preparadas y los errores plantados — si un estudiante los lee, el diseño del curso se cae:
+
+```
+instructor/                        guías, planes de sesión, caso de calibración
+datos/modelo-trampa-s1.xlsx        el detonante de la S1
+datos/construir_modelo_trampa.py
+datos/caso_calibracion.py          los 5 errores plantados y el ancla
+datos/analisis_*.py
+```
+
+Además, el build público aplica [`filtros/sin-notas.lua`](filtros/sin-notas.lua), que **elimina las notas del presentador** de las slides publicadas. El workflow falla si alguna se filtra.
+
+- **Render local (con notas, para clase):** `quarto render`
+- **Render público (sin notas, lo que corre CI):** `quarto render --profile publico`
+
+**Recomendación:** versionar `instructor/` en un repositorio privado aparte. Hoy sólo existe localmente y no tiene respaldo.
 
 ---
 
