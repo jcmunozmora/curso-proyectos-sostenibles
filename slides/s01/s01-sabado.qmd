@@ -12,7 +12,7 @@ format:
     include-after-body: ../cronometro.html
 ---
 
-## Recuperación · 20 min {.smaller data-cron="1200" data-cron-label="recuperación"}
+## Recuperación · 20 min {data-cron="1200" data-cron-label="recuperación"}
 
 Individual (5 min), luego en equipo (10 min). **Sin nota.**
 
@@ -69,7 +69,7 @@ Al salir de este salón cada equipo tiene:
 
 ---
 
-## Input 1 · El estudio de proyectos {.smaller}
+## Input 1 · El estudio de proyectos
 
 La secuencia de Sapag. No es burocracia: es una **disciplina de completitud**.
 
@@ -87,7 +87,7 @@ El financiero va **al final**. El error clásico es abrir Excel primero: se term
 
 ---
 
-## Input 1 · Quién es dueño del proyecto {.smaller}
+## Input 1 · Quién es dueño del proyecto
 
 Antes de proyectar un flujo hay que saber **de quién es ese flujo**.
 
@@ -181,7 +181,7 @@ PAUSA · 20 minutos
 
 ---
 
-## Input 2 · Actores: poder × interés {.smaller}
+## Input 2 · Actores: poder × interés
 
 ::: {.columns}
 ::: {.column width="55%"}
@@ -220,7 +220,7 @@ El actor que más proyectos hunde es **el que pierde algo y nadie mapeó**. Bús
 
 ---
 
-## Input 2 · Cadena de resultados {.smaller}
+## Input 2 · Cadena de resultados
 
 $$\text{Insumos} \rightarrow \text{Actividades} \rightarrow \text{Productos} \rightarrow \text{Resultados} \rightarrow \text{Impacto}$$
 
@@ -261,7 +261,7 @@ PAUSA · 15 minutos
 
 ---
 
-## Input 3 · KPI que sí sirven {.smaller}
+## Input 3 · KPI que sí sirven
 
 ::: {.columns}
 ::: {.column width="50%"}

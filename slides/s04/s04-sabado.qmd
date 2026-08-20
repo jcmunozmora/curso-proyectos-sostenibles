@@ -12,7 +12,7 @@ format:
     include-after-body: ../cronometro.html
 ---
 
-## Recuperación · 20 min {.smaller data-cron="1200" data-cron-label="recuperación"}
+## Recuperación · 20 min {data-cron="1200" data-cron-label="recuperación"}
 
 1. ¿Por qué los impuestos **no** son un costo social?
 2. ¿Cuál es la TSD que Colombia exige para un proyecto ambiental de 15 años?
@@ -58,7 +58,7 @@ Hay un argumento para incluirla (mejora el bienestar del productor) y uno para e
 
 ---
 
-## Input 1 · Del flujo privado al social {.smaller}
+## Input 1 · Del flujo privado al social
 
 ```
   FLUJO DE CAJA PRIVADO
@@ -80,7 +80,7 @@ Eso no es un flujo social — es un flujo privado con propaganda. **Son dos fluj
 
 ---
 
-## Input 1 · Cuantificar el carbono de este proyecto {.smaller}
+## Input 1 · Cuantificar el carbono de este proyecto
 
 | Paso | Valor | Fuente |
 |---|---:|---|
@@ -173,7 +173,7 @@ Este proyecto se justifica socialmente **si y sólo si** uno cree que el carbono
 
 ---
 
-## Input 2 · Y la elección de tasa, sola, cambia el signo {.smaller}
+## Input 2 · Y la elección de tasa, sola, cambia el signo
 
 ::: {style="font-size:1.25em;"}
 **Sin ningún precio de carbono:**
@@ -225,7 +225,7 @@ PAUSA · 15 minutos
 
 ---
 
-## Input 3 · Riesgo climático: tres puertas, nunca dos {.smaller}
+## Input 3 · Riesgo climático: tres puertas, nunca dos
 
 | Puerta | Qué se ajusta | En este proyecto |
 |---|---|---|

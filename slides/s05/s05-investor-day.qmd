@@ -51,7 +51,7 @@ Durante el pitch de otro equipo, **ustedes no son estudiantes: son su rol.** Un 
 
 ---
 
-## Los roles {.smaller}
+## Los roles
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -133,7 +133,7 @@ El ancla es: esto es un 2. VPN presentado +10,7 M → corregido −0,7 M.
 
 ---
 
-## Criterios de decisión del comité {.smaller}
+## Criterios de decisión del comité
 
 | Criterio | Peso | La pregunta |
 |---|---:|---|
@@ -149,7 +149,7 @@ Noten que **"el VPN más alto" no es un criterio.** Un VPN alto construido sobre
 
 ---
 
-## Las preguntas que el comité va a hacer {.smaller data-cron="720" data-cron-label="interrogatorio"}
+## Las preguntas que el comité va a hacer {data-cron="720" data-cron-label="interrogatorio"}
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -198,7 +198,7 @@ Se evalúa si tuvieron buen juicio.
 
 ---
 
-## La tarjeta de co-evaluación {.smaller data-cron="1200" data-cron-label="co-evaluación"}
+## La tarjeta de co-evaluación {data-cron="1200" data-cron-label="co-evaluación"}
 
 Una tarjeta por cada proyecto **que no es el suyo**. No pueden evaluar el propio.
 
@@ -221,7 +221,7 @@ Una tarjeta por cada proyecto **que no es el suyo**. No pueden evaluar el propio
 
 ---
 
-## Cómo se calcula, y las salvaguardas {.smaller}
+## Cómo se calcula, y las salvaguardas
 
 $$R4 = 0{,}50 \times \text{profesor} + 0{,}50 \times \underbrace{\text{mediana del comité}}_{\text{no el promedio}}$$
 
@@ -311,7 +311,7 @@ Se llevan **tres reflejos**:
 
 ---
 
-## El puente {.smaller}
+## El puente
 
 ::: {.columns}
 ::: {.column width="50%"}

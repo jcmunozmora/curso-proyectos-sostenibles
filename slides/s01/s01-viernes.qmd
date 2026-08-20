@@ -51,7 +51,7 @@ Dejar 60 segundos de silencio antes de hablar.
 
 ---
 
-## Lo que saben {.smaller data-cron="2400" data-cron-label="confrontación"}
+## Lo que saben {data-cron="2400" data-cron-label="confrontación"}
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -112,7 +112,7 @@ MIN 55. La revelación. Dejar que aterrice.
 
 ---
 
-## El precio del cacao {.smaller}
+## El precio del cacao
 
 | Momento | Precio USD/t | vs. el modelo |
 |---|---:|---:|
@@ -128,7 +128,7 @@ El equipo que aprobó esta inversión en diciembre de 2024 **está en incumplimi
 
 ---
 
-## El mismo modelo, precios reales {.smaller}
+## El mismo modelo, precios reales
 
 | Precio USD/t | VPN USD | TIR | Momento |
 |---:|---:|---:|---|
@@ -181,7 +181,7 @@ que nunca vuelvan a firmar un número que no puedan defender.
 
 ---
 
-## Quién les está hablando {.smaller}
+## Quién les está hablando
 
 **Juan Carlos Muñoz-Mora** — economía del desarrollo, evaluación de impacto de políticas públicas.
 
@@ -234,7 +234,7 @@ y le preguntamos a **seis calificadoras profesionales**,
 
 ---
 
-## Aggregate Confusion {.smaller}
+## Aggregate Confusion
 
 **Berg, Kölbel & Rigobon (2022)** · *Review of Finance* · seis calificadoras ESG
 
@@ -290,7 +290,7 @@ Se defiende con **magnitudes físicas primarias**: tCO₂e, m³ de agua, hectár
 
 ---
 
-## El marco alternativo: valor integrado {.smaller}
+## El marco alternativo: valor integrado
 
 **Schoenmaker & Schramade (2023)** · *Corporate Finance for Long-Term Value* · **acceso abierto**
 
@@ -333,7 +333,7 @@ Volver EXACTAMENTE a los 15 minutos — esto establece la norma del curso.
 
 ---
 
-## Por qué cacao, y por qué ahora {.smaller}
+## Por qué cacao, y por qué ahora
 
 **FOLU Colombia & Climate Focus (2023)** — Soluciones basadas en la Naturaleza en Colombia
 
@@ -353,7 +353,7 @@ Y la mayor oportunidad identificada: empresas del sector AFOLU que necesitan red
 Su cliente potencial no es un filántropo. Es una chocolatera con una meta de emisiones que cumplir.
 :::
 
-## Teoría · Qué es exactamente "materialidad" {.smaller}
+## Teoría · Qué es exactamente "materialidad"
 
 La palabra que más se usa mal en sostenibilidad. Tiene **dos definiciones incompatibles**, y hay que saber cuál está usando cada quien:
 
@@ -454,7 +454,7 @@ que **tiene presupuesto limitado y va a rechazar proyectos.**
 
 ---
 
-## Aplicación · 40 minutos {.smaller data-cron="2400" data-cron-label="aplicación"}
+## Aplicación · 40 minutos {data-cron="2400" data-cron-label="aplicación"}
 
 **Produzcan la Ficha de Proyecto v0** — una página, en la plantilla compartida:
 
@@ -483,7 +483,7 @@ Preguntas útiles: "¿quién firma el contrato?" "¿de dónde sacaste ese númer
 "¿qué pasa si eso no ocurre?"
 :::
 
-## Las reglas del Tribunal {.smaller}
+## Las reglas del Tribunal
 
 Este curso funciona como un **seminario de investigación**. Esa tradición tiene un problema medido, y nosotros vamos a corregirlo desde el primer día.
 

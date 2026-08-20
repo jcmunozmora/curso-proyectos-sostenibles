@@ -12,7 +12,7 @@ format:
     include-after-body: ../cronometro.html
 ---
 
-## Recuperación · 20 min {.smaller data-cron="1200" data-cron-label="recuperación"}
+## Recuperación · 20 min {data-cron="1200" data-cron-label="recuperación"}
 
 1. Nombren las tres formas honestas de proyectar un precio de commodity.
 2. ¿Por qué un precio alto de cacao **causa** su propia corrección? ¿En cuántos años?
@@ -58,7 +58,7 @@ Al salir tienen un **modelo de costos e inversiones completo**:
 
 ---
 
-## Input 1 · CapEx: lo que siempre se olvida {.smaller}
+## Input 1 · CapEx: lo que siempre se olvida
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -89,7 +89,7 @@ Al salir tienen un **modelo de costos e inversiones completo**:
 
 ---
 
-## Input 1 · El cronograma importa tanto como el monto {.smaller}
+## Input 1 · El cronograma importa tanto como el monto
 
 Dos proyectos con el mismo CapEx total de USD 4,2 M:
 
@@ -159,7 +159,7 @@ PAUSA · 20 minutos
 
 ---
 
-## Input 2 · Capital de trabajo — donde mueren estos proyectos {.smaller}
+## Input 2 · Capital de trabajo — donde mueren estos proyectos
 
 El cacao **no produce hasta el año 4**. Durante cuatro años hay que pagar mano de obra, insumos y mantenimiento **sin un peso de ingreso**.
 
@@ -181,7 +181,7 @@ Eso **no es CapEx** (no compra un activo) y **no es exactamente OpEx** (es pre-o
 
 ---
 
-## Input 2 · Ejemplo numérico {.smaller}
+## Input 2 · Ejemplo numérico
 
 | Año | Ingreso | Costo operativo | Flujo operativo | **Acumulado** |
 |---|---:|---:|---:|---:|
@@ -224,7 +224,7 @@ PAUSA · 15 minutos
 
 ---
 
-## Input 3 · Tamaño y localización {.smaller}
+## Input 3 · Tamaño y localización
 
 No son decisiones descriptivas. Son **variables de optimización** con consecuencias financieras.
 

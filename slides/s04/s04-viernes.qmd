@@ -92,7 +92,7 @@ y lleva sesenta años haciéndolo.
 
 ---
 
-## Input · Cuando el precio de mercado miente {.smaller}
+## Input · Cuando el precio de mercado miente
 
 Un precio de mercado **no** refleja el valor social cuando hay externalidades, impuestos o subsidios, poder de mercado, desempleo involuntario, o bienes sin mercado.
 
@@ -113,7 +113,7 @@ Si en su flujo social el impuesto sigue apareciendo como costo, no hicieron un f
 
 ---
 
-## Input · El protocolo del Banco Mundial {.smaller}
+## Input · El protocolo del Banco Mundial
 
 *2024 Guidance Note on Shadow Price of Carbon in Economic Analysis* — es compromiso corporativo del BIRF para todo financiamiento de proyectos.
 
@@ -142,7 +142,7 @@ PAUSA · 15 minutos
 
 ---
 
-## Input · La tasa social de descuento {.smaller}
+## Input · La tasa social de descuento
 
 $$r = \delta + \eta \cdot g$$
 
@@ -207,7 +207,7 @@ Eso está **exactamente** en el rango de la encuesta a 197 expertos (media 2,25%
 
 ---
 
-## Teoría · Las dos escuelas no discrepan, preguntan cosas distintas {.smaller}
+## Teoría · Las dos escuelas no discrepan, preguntan cosas distintas
 
 | | **Ramsey** | **Harberger** |
 |---|---|---|
@@ -225,7 +225,7 @@ Lo que **sí** se les exige a ustedes es **declarar cuál usan y por qué**, y m
 
 ---
 
-## Teoría · Qué autoriza a sumar beneficios de gente distinta {.smaller}
+## Teoría · Qué autoriza a sumar beneficios de gente distinta
 
 El ACB descansa en un criterio explícito, y conviene decirlo en voz alta:
 
@@ -258,7 +258,7 @@ Por eso un proyecto con VPN social positivo puede, simultáneamente, **empeorar 
 
 ---
 
-## Input · Colombia ya usa tasas decrecientes {.smaller}
+## Input · Colombia ya usa tasas decrecientes
 
 **Resolución 1092 de 2022 del DNP** — obligatoria para evaluación de inversión pública:
 
@@ -277,7 +277,7 @@ Colombia descuenta el **futuro lejano** casi como los expertos internacionales (
 
 ---
 
-## Input · Por qué la tasa lo es todo {.smaller}
+## Input · Por qué la tasa lo es todo
 
 **USD 1.000.000 en el año 30 vale hoy:**
 

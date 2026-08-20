@@ -12,7 +12,7 @@ format:
     include-after-body: ../cronometro.html
 ---
 
-## Recuperación · 20 min {.smaller data-cron="1200" data-cron-label="recuperación"}
+## Recuperación · 20 min {data-cron="1200" data-cron-label="recuperación"}
 
 1. Escriban la fórmula del $K_e$ y digan qué representa cada término.
 2. ¿Por qué hay que convertir un $K_e$ construido en USD antes de usarlo con flujos en COP?
@@ -56,7 +56,7 @@ MIN 0–20. La 4 es la que más fallan. Es el concepto del día.
 
 ---
 
-## Input 1 · Dos flujos, dos preguntas {.smaller}
+## Input 1 · Dos flujos, dos preguntas
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -108,7 +108,7 @@ Descontar el **FCA** al **WACC**. Cuenta el beneficio de la deuda dos veces: en 
 
 ---
 
-## Construcción 1 · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="construcción 1"}
+## Construcción 1 · 40 min {.smaller background-color="#f5f5f5" data-cron="2400" data-cron-label="construcción 1"}
 
 **Hoja `FCLD` de la plantilla:**
 
@@ -152,7 +152,7 @@ PAUSA · 20 minutos
 
 ---
 
-## Input 2 · Por qué la TIR miente {.smaller}
+## Input 2 · Por qué la TIR miente
 
 Tres problemas, en orden de **frecuencia real**, no de dramatismo:
 
@@ -188,7 +188,7 @@ Con más de un cambio de signo, puede haber varias TIR reales, o ninguna.
 
 ---
 
-## Input 2 · El caso real de este proyecto {.smaller}
+## Input 2 · El caso real de este proyecto
 
 Flujo del cacao a USD 7.000/t, con una **obligación de restauración al cierre** en el año 15:
 
@@ -232,7 +232,7 @@ $$TIRM = \left(\frac{\sum_t FC_t^{+}(1+r_{\text{reinv}})^{\,n-t}}{\left|\sum_t F
 
 ---
 
-## Teoría · Por qué la TIR puede no existir {.smaller}
+## Teoría · Por qué la TIR puede no existir
 
 El VPN es un **polinomio de grado $n$** en $\frac{1}{1+r}$. La TIR es una **raíz** de ese polinomio.
 
@@ -274,7 +274,7 @@ Si $\sum FC_t < 0$, un número **par** — que puede ser **cero**.
 
 ---
 
-## Input 2 · TIR Modificada {.smaller}
+## Input 2 · TIR Modificada
 
 Hace **explícitos** los dos supuestos que la TIR esconde:
 
@@ -328,7 +328,7 @@ PAUSA · 15 minutos
 
 ---
 
-## Input 3 · Punto de equilibrio y apalancamiento {.smaller}
+## Input 3 · Punto de equilibrio y apalancamiento
 
 ::: {.columns}
 ::: {.column width="50%"}

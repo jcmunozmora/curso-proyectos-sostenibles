@@ -13,6 +13,9 @@ _book/
 *_files/
 /.luarc.json
 
+# ── Paquete de interactiva (D2L) — build regenerable, ver interactiva/README.md ──
+interactiva/build/
+
 # ── Sistema ──
 .DS_Store
 Thumbs.db

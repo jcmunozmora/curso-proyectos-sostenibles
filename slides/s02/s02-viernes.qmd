@@ -29,7 +29,7 @@ MIN 0–15. Proyectada cuando entran. Silencio.
 Luego: "Ábranme su ficha de proyecto. ¿Cuántos escribieron un precio? ¿De dónde salió?"
 :::
 
-## El plan de esta noche {.smaller background-color="#f5f5f5"}
+## El plan de esta noche {background-color="#f5f5f5"}
 
 | | Bloque | Min |
 |---|---|---:|
@@ -76,7 +76,7 @@ Circular y anotar: ¿cuántos usan promedio histórico? ¿cuántos usan el spot?
 
 ---
 
-## Lo que casi todos hicieron {.smaller}
+## Lo que casi todos hicieron
 
 | Estrategia | Cuántos equipos | El problema |
 |---|---|---|
@@ -91,7 +91,7 @@ Ninguna de las cuatro está mal por el número. Están mal porque **ninguna decl
 
 ---
 
-## Input · Tres formas honestas de proyectar un precio {.smaller}
+## Input · Tres formas honestas de proyectar un precio
 
 ::: {.columns}
 ::: {.column width="33%"}
@@ -131,7 +131,7 @@ Las tres son legítimas. **La cuarta —un número sin justificación— no lo e
 
 ---
 
-## Input · El ciclo del cacao como caso {.smaller}
+## Input · El ciclo del cacao como caso
 
 | Año | Precio USD/t | Qué pasó |
 |---|---:|---|
@@ -198,7 +198,7 @@ El cacao tiene oferta **muy inelástica a corto plazo** (el árbol tarda 4 años
 
 ---
 
-## Teoría · El cacao no fue una anomalía. Fue el modelo funcionando {.smaller}
+## Teoría · El cacao no fue una anomalía. Fue el modelo funcionando
 
 ```
   2023  déficit por enfermedad y clima en África Occidental
@@ -229,7 +229,7 @@ Su proyecto se siembra hoy y produce en el año 4. El precio que verán en el a�
 
 ---
 
-## Teoría · Qué sí contiene información sobre el futuro {.smaller}
+## Teoría · Qué sí contiene información sobre el futuro
 
 | Fuente | Qué sabe | Horizonte útil |
 |---|---|---|
@@ -247,7 +247,7 @@ Eso sí es dato público. Y casi nadie lo mira.
 
 ---
 
-## Input · El sesgo de optimismo no es un defecto moral {.smaller}
+## Input · El sesgo de optimismo no es un defecto moral
 
 Es un patrón sistemático y medido en evaluación de proyectos:
 

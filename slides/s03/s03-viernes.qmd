@@ -82,7 +82,7 @@ Anotar quién distingue real/nominal — casi nadie. Ese es el gancho de la sín
 
 ---
 
-## Input · Cómo se construye un Ke {.smaller}
+## Input · Cómo se construye un Ke
 
 $$K_e = R_f + \beta \cdot ERP_{\text{mercado maduro}} + \text{prima país}$$
 
@@ -104,7 +104,7 @@ Esta tabla cambia cada seis meses. **Nunca la citen de memoria ni de un apunte d
 
 ---
 
-## Input · El WACC de este proyecto {.smaller}
+## Input · El WACC de este proyecto
 
 ::: {.columns}
 ::: {.column width="48%"}
@@ -182,7 +182,7 @@ Error de **19 puntos básicos**. Pequeño aquí, grande con inflaciones altas �
 
 ---
 
-## Teoría · Qué dice, y qué no dice, el CAPM {.smaller}
+## Teoría · Qué dice, y qué no dice, el CAPM
 
 $$E[R_i] = R_f + \beta_i \big(E[R_m] - R_f\big), \qquad \beta_i = \frac{\mathrm{Cov}(R_i, R_m)}{\mathrm{Var}(R_m)}$$
 
@@ -216,7 +216,7 @@ Se hace porque funciona en la práctica, no porque el modelo lo respalde. Está 
 
 ---
 
-## Input · Ahora el intervalo de confianza de la beta {.smaller}
+## Input · Ahora el intervalo de confianza de la beta
 
 Una beta estimada con 5 años de datos mensuales tiene un error estándar tal que el **IC 95% típicamente abarca ±0,5**.
 
@@ -244,7 +244,7 @@ PAUSA · 15 minutos
 
 ---
 
-## Input · Welch: si no el CAPM, ¿entonces qué? {.smaller}
+## Input · Welch: si no el CAPM, ¿entonces qué?
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -278,7 +278,7 @@ El riesgo sistemático va en el **denominador**.
 
 ---
 
-## Input · ¿Y el financiamiento verde no abarata todo esto? {.smaller}
+## Input · ¿Y el financiamiento verde no abarata todo esto?
 
 La promesa comercial del campo dice que sí. La evidencia de 2026 es mucho más tibia.
 
