@@ -31,7 +31,7 @@ PALETA = {
 FUENTE = "'Inter', 'Helvetica Neue', Arial, sans-serif"
 
 # La ÚNICA variable del mantenimiento semanal: qué módulo destaca en "Esta semana".
-# Índice 1-based sobre MODULOS. Hoy (2026-08-20): S1 empieza mañana → apunta a M1.
+# Índice 1-based sobre MODULOS. Al 2026-08-21: está en curso S1 → apunta a M1.
 SEMANA_ACTUAL = 2  # 1=M0 orientación · 2=M1/S1 · 3=M2/S2 · 4=M3/S3 · 5=M4/S4 · 6=M5/S5
 
 # Formato D2L del curso (Content clásico vs New Content Experience/Lessons):
@@ -47,6 +47,9 @@ ICONOS = {
     "plantilla":   "📋",
     "comite":      "💰",
     "rol":         "🎭",
+    "bibliografia": "📚",
+    "asignacion":  "📝",
+    "podcast":     "🎧",
 }
 
 MODULOS = [
@@ -128,6 +131,150 @@ MODULOS = [
         ],
     },
 ]
+
+# Bibliografía visible dentro de cada módulo. Los enlaces apuntan a la revisión
+# pública y a su sección temática; las referencias completas viven en
+# literatura/referencias.bib.
+## Nota de corrección: Quarto genera los IDs de encabezado con tilde (p.ej.
+## "núcleo-2-...", no "nucleo-2-..."). Verificado contra el HTML renderizado en
+## _site/literatura/revision-literatura.html — usar SIEMPRE el id con tilde o el
+## anchor no hace scroll a la sección (falla silenciosa, no da 404).
+BIBLIOGRAFIA_POR_MODULO = {
+    "m00": ("📚 Bibliografía y fuentes del curso", "/literatura/revision-literatura.html"),
+    "m01": ("📚 Bibliografía S1 · sostenibilidad, ESG y valor integrado", "/literatura/revision-literatura.html#núcleo-2-finanzas-sostenibles-de-esg-como-filtro-a-valor-integrado"),
+    "m02": ("📚 Bibliografía S2 · costos, commodities y pronósticos", "/literatura/revision-literatura.html#núcleo-5-finanzas-de-la-naturaleza-la-literatura-del-proyecto-ancla"),
+    "m03": ("📚 Bibliografía S3 · costo de capital y evaluación", "/literatura/revision-literatura.html#núcleo-3-costo-de-capital-donde-el-curso-se-juega-la-credibilidad-técnica"),
+    "m04": ("📚 Bibliografía S4 · tasa social, carbono y naturaleza", "/literatura/revision-literatura.html#núcleo-3-costo-de-capital-donde-el-curso-se-juega-la-credibilidad-técnica"),
+    "m05": ("📚 Bibliografía S5 · regulación y decisión de inversión", "/literatura/revision-literatura.html#núcleo-6-estándares-regulación-y-el-terreno-colombiano"),
+}
+
+for modulo in MODULOS:
+    titulo, enlace = BIBLIOGRAFIA_POR_MODULO[modulo["id"]]
+    modulo["topicos"].append({
+        "id": f'{modulo["id"]}-bibliografia',
+        "titulo": titulo,
+        "tipo": "bibliografia",
+        "link": enlace,
+    })
+
+# Podcast recomendado — título confirmado por el profesor (2026-08-22): "Proyectos
+# sostenibles". No se inventa relación temática con una sesión específica más allá
+# de lo que el profesor indicó; se coloca en la sección general de lecturas (m00).
+PODCAST = {
+    "id": "m00-podcast",
+    "titulo": "🎧 Podcast — Proyectos sostenibles",
+    "descripcion": "Podcast recomendado por el profesor: Proyectos sostenibles.",
+    "spotify_embed_src": "https://open.spotify.com/embed/show/2ODsXwvb3RzO6yXDcf20pd?utm_source=generator",
+    "spotify_show_url": "https://open.spotify.com/show/2ODsXwvb3RzO6yXDcf20pd",
+}
+MODULOS_POR_ID_TMP = {m["id"]: m for m in MODULOS}
+MODULOS_POR_ID_TMP["m00"]["topicos"].append({
+    "id": PODCAST["id"],
+    "titulo": PODCAST["titulo"],
+    "tipo": "podcast",
+    "link": PODCAST["spotify_show_url"],  # URL absoluta — url() en generar.py la respeta tal cual
+})
+
+# Especificación de evaluación. Los objetos nativos de Assignment/Rubric y
+# Gradebook se configuran en la UI de Brightspace o mediante un export nativo
+# del tenant; esta lista es la fuente única para nombres, fechas, instrucciones,
+# rúbrica y peso.
+ASIGNACIONES = [
+    {
+        "id": "a01-ficha-proyecto", "modulo": "m01", "nombre": "S1 · Ficha de proyecto",
+        "fecha": "2026-08-22", "categoria": "R1 · Artefactos de sesión", "peso": 5.0,
+        "rubrica": "R1", "equipo": True, "instrucciones": "Completen la ficha de proyecto con problema, actores, cadena de resultados y cinco KPI primarios. Suban un único PDF por equipo antes de salir del taller.",
+        "entrega": "/plantillas/01-ficha-de-proyecto.html",
+    },
+    {
+        "id": "a02-auditoria-s1", "modulo": "m01", "nombre": "S1 · Auditoría cruzada",
+        "fecha": "2026-08-22", "categoria": "R2 · Auditorías cruzadas", "peso": 3.75,
+        "rubrica": "R2", "equipo": True, "instrucciones": "Auditen el trabajo de otro equipo usando la lista de chequeo. Cada hallazgo debe citar una cifra, celda, frase o supuesto concreto; entreguen la lista diligenciada.",
+        "entrega": "/plantillas/05-listas-auditoria-cruzada.html",
+    },
+    {
+        "id": "a03-artefacto-s2", "modulo": "m02", "nombre": "S2 · Costos, CapEx y capital de trabajo",
+        "fecha": "2026-08-29", "categoria": "R1 · Artefactos de sesión", "peso": 5.0,
+        "rubrica": "R1", "equipo": True, "instrucciones": "Actualicen el modelo con cronograma de CapEx, costos operativos y déficit acumulado máximo de capital de trabajo. Justifiquen cada supuesto con fuente o rango.",
+        "entrega": "/plantillas/modelo-financiero-PLANTILLA.xlsx",
+    },
+    {
+        "id": "a04-auditoria-s2", "modulo": "m02", "nombre": "S2 · Auditoría cruzada",
+        "fecha": "2026-08-29", "categoria": "R2 · Auditorías cruzadas", "peso": 3.75,
+        "rubrica": "R2", "equipo": True, "instrucciones": "Revisen el modelo de otro equipo: cronograma, costos, capital de trabajo y trazabilidad de fuentes. Reporten al menos un hallazgo verificable.",
+        "entrega": "/plantillas/05-listas-auditoria-cruzada.html",
+    },
+    {
+        "id": "a05-artefacto-s3", "modulo": "m03", "nombre": "S3 · Flujo de caja y criterios",
+        "fecha": "2026-09-05", "categoria": "R1 · Artefactos de sesión", "peso": 5.0,
+        "rubrica": "R1", "equipo": True, "instrucciones": "Entreguen el flujo del proyecto y del inversionista, VPN, TIR, TIR modificada, punto de equilibrio y sensibilidad. Expliquen qué criterio guía la decisión.",
+        "entrega": "/plantillas/modelo-financiero-PLANTILLA.xlsx",
+    },
+    {
+        "id": "a06-auditoria-s3", "modulo": "m03", "nombre": "S3 · Auditoría cruzada",
+        "fecha": "2026-09-05", "categoria": "R2 · Auditorías cruzadas", "peso": 3.75,
+        "rubrica": "R2", "equipo": True, "instrucciones": "Auditen flujos, tasa, moneda, VPN y TIR de otro equipo. Señalen cualquier incoherencia entre la tasa usada y la pregunta que el modelo pretende responder.",
+        "entrega": "/plantillas/05-listas-auditoria-cruzada.html",
+    },
+    {
+        "id": "a07-artefacto-s4", "modulo": "m04", "nombre": "S4 · Flujo socioeconómico",
+        "fecha": "2026-09-12", "categoria": "R1 · Artefactos de sesión", "peso": 5.0,
+        "rubrica": "R1", "equipo": True, "instrucciones": "Construyan el flujo socioeconómico con precio sombra del carbono, tasa social de descuento, externalidades y switching value. Expongan los supuestos que cambian el signo del VPN.",
+        "entrega": "/plantillas/modelo-financiero-PLANTILLA.xlsx",
+    },
+    {
+        "id": "a08-auditoria-s4", "modulo": "m04", "nombre": "S4 · Auditoría cruzada",
+        "fecha": "2026-09-12", "categoria": "R2 · Auditorías cruzadas", "peso": 3.75,
+        "rubrica": "R2", "equipo": True, "instrucciones": "Auditen la separación entre flujo privado y social, la tasa aplicada y la evidencia de carbono/naturaleza. La evidencia específica es obligatoria.",
+        "entrega": "/plantillas/05-listas-auditoria-cruzada.html",
+    },
+    {
+        "id": "a09-modelo-final", "modulo": "m05", "nombre": "Modelo financiero final",
+        "fecha": "2026-09-16", "categoria": "R3 · Modelo financiero final", "peso": 25.0,
+        "rubrica": "R3", "equipo": True, "instrucciones": "Suban el modelo financiero completo, con supuestos trazables, flujos privado y social, VPN, criterios, sensibilidad, riesgos y control de versiones. Un número sin fuente verificable anula el entregable.",
+        "entrega": "/plantillas/modelo-financiero-PLANTILLA.xlsx",
+    },
+    {
+        # R1 exige "cinco entregas, una por sesión" (plantillas/04-rubricas.qmd
+        # §R1, 25% = 5 × 5%). S1–S4 ya tienen su artefacto (a01/a03/a05/a07);
+        # la Nota de inversión es el artefacto escrito de S5 — no un apoyo de
+        # peso 0 bajo R4 (eso dejaba R1 en 20% y el curso en 95% en vez de 100%).
+        "id": "a10-nota-inversion", "modulo": "m05", "nombre": "S5 · Nota de inversión",
+        "fecha": "2026-09-16", "categoria": "R1 · Artefactos de sesión", "peso": 5.0,
+        "rubrica": "R1", "equipo": True, "instrucciones": "Suban la nota de inversión de máximo cuatro páginas. Debe contener decisión, estructura, análisis financiero y socioeconómico, riesgos, fuentes y anexo de uso de IA.",
+        "entrega": "/plantillas/02-nota-de-inversion.html",
+    },
+    {
+        "id": "a11-defensa", "modulo": "m05", "nombre": "S5 · Defensa Investor Day",
+        "fecha": "2026-09-18", "categoria": "R4 · Defensa · Investor Day", "peso": 20.0,
+        "rubrica": "R4", "equipo": True, "instrucciones": "Defiendan el proyecto ante el comité en doce minutos y respondan el interrogatorio. El comité dispone de presupuesto limitado y debe justificar sus decisiones con evidencia.",
+        "entrega": "/slides/s05/s05-investor-day.html",
+    },
+    {
+        "id": "a12-coevaluacion", "modulo": "m05", "nombre": "S5 · Coevaluación del comité",
+        "fecha": "2026-09-18", "categoria": "R5 · Calidad como evaluador", "peso": 15.0,
+        "rubrica": "R5", "equipo": False, "instrucciones": "Entreguen individualmente las tarjetas de evaluación de los proyectos asignados. Distribuyan el presupuesto disponible y justifiquen cada puntuación con evidencia específica desde su rol.",
+        "entrega": "/plantillas/06-coevaluacion-comite.html",
+    },
+]
+
+CATEGORIAS_CALIFICACIONES = [
+    ("R1 · Artefactos de sesión", 25.0),
+    ("R2 · Auditorías cruzadas", 15.0),
+    ("R3 · Modelo financiero final", 25.0),
+    ("R4 · Defensa · Investor Day", 20.0),
+    ("R5 · Calidad como evaluador", 15.0),
+]
+
+for asignacion in ASIGNACIONES:
+    modulo = next(m for m in MODULOS if m["id"] == asignacion["modulo"])
+    modulo["topicos"].append({
+        "id": asignacion["id"],
+        "titulo": f'📝 Asignación · {asignacion["nombre"]}',
+        "tipo": "asignacion",
+        "link": asignacion["entrega"],
+        "entrega": date.fromisoformat(asignacion["fecha"]),
+    })
 
 # Badges — anclados a artefactos REALES del plan de registro (nunca inventados).
 BADGES = [

@@ -6,6 +6,7 @@ Uso:
     python3 generar.py            # todo
     python3 generar.py homepage   # solo el widget de homepage
     python3 generar.py paquete    # solo el .zip de contenido
+    python3 generar.py evaluacion # solo el .zip de calificaciones (d2lgrades + d2ldropbox nativos)
     python3 generar.py docs       # solo badges / release-conditions / agentes / manual
 
 NUNCA editar la salida en build/ a mano: se sobreescribe en la siguiente corrida.
@@ -17,12 +18,15 @@ reconcilia una segunda importación — la duplica.
 import sys
 import zipfile
 import html
+import shutil
+from datetime import date, timedelta
 from pathlib import Path
 from xml.sax.saxutils import escape
 
 from datos import (
     CURSO, PALETA, FUENTE, MODULOS, SEMANA_ACTUAL, ICONOS,
     CONTENT_EXPERIENCE, BADGES, RELEASE_CONDITIONS, INTELLIGENT_AGENTS,
+    ASIGNACIONES, CATEGORIAS_CALIFICACIONES, PODCAST,
 )
 
 OUT = Path(__file__).parent / "build"
@@ -31,11 +35,15 @@ SITIO = CURSO["sitio"].rstrip("/")
 
 
 def url(path: str) -> str:
+    # Recursos externos (p.ej. Spotify) ya son URL absoluta — no anteponer el sitio.
+    if path.startswith("http://") or path.startswith("https://"):
+        return path
     return f"{SITIO}{path}"
 
 
 TOPICOS_POR_ID = {t["id"]: t for m in MODULOS for t in m["topicos"]}
 MODULOS_POR_ID = {m["id"]: m for m in MODULOS}
+ASIGNACIONES_POR_ID = {a["id"]: a for a in ASIGNACIONES}
 
 
 # ------------------------------------------------------------- 1. HOMEPAGE
@@ -130,6 +138,75 @@ VISOR = """<!DOCTYPE html>
 </body>
 </html>"""
 
+# Tópico "podcast" — reproduce el iframe de Spotify tal como lo entregó el
+# profesor (mismos atributos `allow`, sin los cuales el reproductor pierde
+# autoplay/fullscreen/picture-in-picture). Se sube como archivo, igual que los
+# demás visores, así que el <style> sobrevive el sanitizador.
+PODCAST_VISOR = """<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>{titulo_plano}</title>
+<style>
+  html, body {{ margin:0; padding:0; font-family:{fuente}; background:{fondo}; }}
+  .barra {{ background:{primario}; color:#fff; padding:.7rem 1.2rem; font-weight:600; }}
+  .contenedor {{ max-width:660px; margin:0 auto; padding:1.5rem 1.2rem; box-sizing:border-box; }}
+  .nota {{ font-size:.9rem; color:{texto}; }}
+  .nota a {{ color:{primario}; }}
+</style>
+</head>
+<body>
+  <div class="barra">{titulo}</div>
+  <div class="contenedor">
+    <p class="nota">{descripcion}</p>
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="{embed_src}"
+      width="100%" height="352" frameborder="0" allowfullscreen
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"></iframe>
+    <p class="nota">¿No carga? <a href="{show_url}" target="_blank" rel="noopener">Abre el podcast directamente en Spotify</a>.</p>
+  </div>
+</body>
+</html>"""
+
+
+# Tópico "asignación" — el "material de apoyo" de una ASIGNACIONES a veces es
+# un .xlsx (modelo-financiero-PLANTILLA.xlsx): un iframe sobre un binario no
+# renderiza nada útil (algunos navegadores lo descargan, otros lo dejan en
+# blanco). En vez de un visor, esta plantilla muestra fecha/categoría/peso/
+# rúbrica/instrucciones (ya en ASIGNACIONES, fuente única) y un enlace directo
+# — "Abrir" si el material es una página del sitio, "Descargar" si es binario.
+ASIGNACION_VISOR = """<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>{titulo_plano}</title>
+<style>
+  body {{ margin:0; padding:0; font-family:{fuente}; background:{fondo}; color:{texto}; }}
+  .barra {{ background:{primario}; color:#fff; padding:.9rem 1.2rem; font-weight:600; }}
+  .contenedor {{ max-width:720px; margin:0 auto; padding:1.5rem 1.2rem; box-sizing:border-box; }}
+  .ficha {{ display:grid; grid-template-columns:auto 1fr; gap:.3rem 1rem; font-size:.92rem; margin-bottom:1.2rem; }}
+  .ficha dt {{ font-weight:600; color:{primario}; }}
+  .ficha dd {{ margin:0; }}
+  .instrucciones {{ background:#fff; border-left:5px solid {acento}; padding:1rem 1.2rem; border-radius:8px; line-height:1.6; white-space:pre-wrap; }}
+  .boton {{ display:inline-block; margin-top:1.2rem; background:{primario}; color:#fff; text-decoration:none; padding:.6rem 1.2rem; border-radius:6px; font-weight:600; }}
+</style>
+</head>
+<body>
+  <div class="barra">{titulo}</div>
+  <div class="contenedor">
+    <dl class="ficha">
+      <dt>Fecha de entrega</dt><dd>{fecha}</dd>
+      <dt>Categoría</dt><dd>{categoria}</dd>
+      <dt>Peso en el curso</dt><dd>{peso}%</dd>
+      <dt>Modalidad</dt><dd>{modalidad}</dd>
+      <dt>Rúbrica</dt><dd>{rubrica}</dd>
+    </dl>
+    <div class="instrucciones">{instrucciones}</div>
+    <a class="boton" href="{destino}" target="_blank" rel="noopener">{etiqueta_boton}</a>
+  </div>
+</body>
+</html>"""
+
 
 def escribir_visores(base: Path) -> dict:
     (base / "topicos").mkdir(parents=True, exist_ok=True)
@@ -137,17 +214,49 @@ def escribir_visores(base: Path) -> dict:
     for m in MODULOS:
         for t in m["topicos"]:
             rel = f"topicos/{t['id']}.html"
-            (base / rel).write_text(
-                VISOR.format(
+            if t["tipo"] == "podcast":
+                contenido = PODCAST_VISOR.format(
+                    titulo=html.escape(t["titulo"]),
+                    titulo_plano=html.escape(t["titulo"], quote=True),
+                    descripcion=html.escape(PODCAST["descripcion"]),
+                    embed_src=PODCAST["spotify_embed_src"],
+                    show_url=PODCAST["spotify_show_url"],
+                    primario=PALETA["primario"],
+                    texto=PALETA["texto"],
+                    fondo=PALETA["fondo"],
+                    fuente=FUENTE,
+                )
+            elif t["tipo"] == "asignacion":
+                a = ASIGNACIONES_POR_ID[t["id"]]
+                destino = url(a["entrega"])
+                es_pagina = a["entrega"].endswith(".html")
+                contenido = ASIGNACION_VISOR.format(
+                    titulo=html.escape(t["titulo"]),
+                    titulo_plano=html.escape(t["titulo"], quote=True),
+                    fecha=a["fecha"],
+                    categoria=html.escape(a["categoria"]),
+                    peso=f'{a["peso"]:.2f}',
+                    modalidad="Entrega grupal" if a["equipo"] else "Entrega individual",
+                    rubrica=html.escape(a["rubrica"]),
+                    instrucciones=html.escape(a["instrucciones"]),
+                    destino=destino,
+                    etiqueta_boton="📄 Abrir plantilla" if es_pagina else "⬇️ Descargar plantilla",
+                    primario=PALETA["primario"],
+                    acento=PALETA["acento"],
+                    texto=PALETA["texto"],
+                    fondo=PALETA["fondo"],
+                    fuente=FUENTE,
+                )
+            else:
+                contenido = VISOR.format(
                     titulo=html.escape(t["titulo"]),
                     titulo_plano=html.escape(t["titulo"], quote=True),
                     destino=url(t["link"]),
                     primario=PALETA["primario"],
                     texto=PALETA["texto"],
                     fuente=FUENTE,
-                ),
-                encoding="utf-8",
-            )
+                )
+            (base / rel).write_text(contenido, encoding="utf-8")
             rutas[t["id"]] = rel
     return rutas
 
@@ -220,6 +329,10 @@ def manifest(rutas: dict, ou: str = "000000") -> str:
 # ------------------------------------------------------------- 4. EMPAQUETAR
 def paquete():
     stage = OUT / "pkg"
+    # El staging es completamente regenerable. Limpiarlo evita que un módulo
+    # o tópico eliminado de datos.py sobreviva accidentalmente en el ZIP.
+    if stage.exists():
+        shutil.rmtree(stage)
     stage.mkdir(parents=True, exist_ok=True)
     rutas = escribir_visores(stage)
     (stage / "imsmanifest.xml").write_text(manifest(rutas), encoding="utf-8")
@@ -232,7 +345,154 @@ def paquete():
     print(f"   Formato Content/Lessons del tenant: {CONTENT_EXPERIENCE} — el manifest es el mismo; solo cambia el rótulo (Módulos vs Unidades).")
     print("⛔ GATE: importar primero en un SANDBOX. Importar dos veces DUPLICA todo.")
     print("⚠️  Publicar el sitio ANTES de importar, o los visores quedan en blanco (404 en el iframe).")
-    print("   Rúbricas, libro de notas y cover NO están en este zip — ver interactiva/README.md.")
+    print("   Calificaciones y asignaciones nativas van en un zip aparte (ver paquete_evaluacion()). Rúbricas y cover siguen como spec en build/*.md.")
+
+
+# --------------------------------------------- 4b. EVALUACIÓN (d2lgrades + d2ldropbox)
+# Verificado contra un export NATIVO real del tenant de EAFIT (2026-08-22, curso
+# "Semin. de Invest. Aplicada") — no contra documentación oficial de D2L (no la
+# publica). De ese export: el esquema institucional "Escala 0 a 5" tiene
+# identifier="347"; item.category_id enlaza con category.identifier (no con
+# category.id); item.resource_code enlaza con dropbox.folder.grade_item — así
+# es como un buzón de entrega queda ligado a su casilla del libro de notas.
+ESCALA_0_A_5_IDENTIFIER = "347"
+
+
+def _id_categoria(nombre_categoria: str) -> int:
+    idx = [c for c, _ in CATEGORIAS_CALIFICACIONES].index(nombre_categoria)
+    return 100_001 + idx
+
+
+def _id_item(asignacion_id: str) -> int:
+    return 200_001 + [a["id"] for a in ASIGNACIONES].index(asignacion_id)
+
+
+def _resource_code(asignacion_id: str) -> str:
+    return f"mf7011-{asignacion_id}"
+
+
+def _fin_de_dia_utc(fecha_iso: str) -> str:
+    # El export real de EAFIT guarda "23:59:59 hora Bogotá" como
+    # "04:59:59 del día siguiente" en UTC (Bogotá = UTC-5). Se replica ese
+    # mismo corrimiento para que la fecha mostrada en Brightspace sea la
+    # correcta. Verificar en sandbox si el tenant cambia de convención.
+    siguiente = date.fromisoformat(fecha_iso) + timedelta(days=1)
+    return f"{siguiente.isoformat()}T04:59:59"
+
+
+def grades_xml() -> str:
+    categorias_xml = []
+    for nombre, peso in CATEGORIAS_CALIFICACIONES:
+        cid = _id_categoria(nombre)
+        codigo_corto = nombre.split(" · ")[0].lower()
+        categorias_xml.append(
+            f'<category id="{cid}" identifier="{cid}" resource_code="{_resource_code("cat-" + codigo_corto)}">'
+            f"<name>{escape(nombre)}</name><short_name>{escape(nombre.split(' · ')[0])}</short_name>"
+            f"<sort_order>{cid}</sort_order><show_average>false</show_average>"
+            f'<show_distribution>false</show_distribution><description text_type="text/html"><text/></description>'
+            f"<is_active>true</is_active><scoring><weight>{peso:g}</weight>"
+            f"<can_exceed_weight>false</can_exceed_weight><WeightDistributionType>0</WeightDistributionType>"
+            f"<is_auto_pointed>false</is_auto_pointed><high_non_bonus_drop>0</high_non_bonus_drop>"
+            f"<low_non_bonus_drop>0</low_non_bonus_drop><max_item_points>100</max_item_points>"
+            f"<exclude_from_final_grade_calc>false</exclude_from_final_grade_calc></scoring></category>"
+        )
+    items_xml = []
+    for a in ASIGNACIONES:
+        cat_peso = dict(CATEGORIAS_CALIFICACIONES)[a["categoria"]]
+        max_grade = round(100 * a["peso"] / cat_peso)
+        items_xml.append(
+            f'<item id="{_id_item(a["id"])}" identifier="{_id_item(a["id"])}" dates_in_calendar="false" '
+            f'resource_code="{_resource_code(a["id"])}"><category_id>{_id_categoria(a["categoria"])}</category_id>'
+            f"<name>{escape(a['nombre'])}</name><short_name/><sort_order>{_id_item(a['id'])}</sort_order>"
+            f'<show_average>false</show_average><show_distribution>false</show_distribution>'
+            f'<description text_type="text/html"><text/></description><type_id>1</type_id><is_active>true</is_active>'
+            f"<scoring><can_exceed_weight>false</can_exceed_weight><out_of>5</out_of><is_bonus>false</is_bonus>"
+            f"<max_grade>{max_grade}</max_grade><exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>"
+            f"<is_milestone_grade>false</is_milestone_grade></scoring></item>"
+        )
+    return (
+        '<grades xmlns:d2l_2p0="http://desire2learn.com/xsd/d2lcp_v2p0">'
+        f'<schemes default_scheme_identifier="{ESCALA_0_A_5_IDENTIFIER}">'
+        f'<scheme identifier="{ESCALA_0_A_5_IDENTIFIER}" name="Escala 0 a 5" short_name="Escala 0 a 5" '
+        'is_valid="true" is_org_scheme="true" /></schemes>'
+        '<configuration><calculation_options auto_update_final_grade="1" grading_system="1" '
+        'include_empty_grades_in_final="0" release_adjusted_grade="0" auto_release_final_grade="1" />'
+        '<org_unit_display_options decimals_displayed="1" show_points="1" show_colour="1" show_symbol="1" '
+        'show_weighted="0" decimals_displayed_my_grades="1" max_characters="50" show_final_grade_calc="1" />'
+        "</configuration>"
+        f"<categories>{''.join(categorias_xml)}</categories>"
+        f"<items>{''.join(items_xml)}</items></grades>"
+    )
+
+
+def dropbox_xml() -> str:
+    folders = []
+    for i, a in enumerate(ASIGNACIONES, start=1):
+        instrucciones_html = f"<p>{html.escape(a['instrucciones'])}</p>"
+        folders.append(
+            f'<folder name="{escape(a["nombre"])}" id="{300_000 + i}" submission_type="0" '
+            f'completion_type="0" allowable_file_type="0" folder_type="2" sort_order="{i}" '
+            f'out_of="5.000000000" grade_item="{_resource_code(a["id"])}" folder_is_retricted="false" '
+            f'files_per_submission="0" submissions="2" ai_human_origin="0" '
+            f'resource_code="{_resource_code("db-" + a["id"])}" is_hidden="false" is_anonymous="false">'
+            f'<instructions text_type="text/html"><text>{instrucciones_html}</text></instructions>'
+            f"<date_due>{_fin_de_dia_utc(a['fecha'])}</date_due>"
+            f"</folder>"
+        )
+    return (
+        '<dropbox xmlns:d2l_2p0="http://desire2learn.com/xsd/d2lcp_v2p0">'
+        f"{''.join(folders)}</dropbox>"
+    )
+
+
+def manifest_evaluacion() -> str:
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="D2L_000000_evaluacion"
+  xmlns:d2l_2p0="http://desire2learn.com/xsd/d2lcp_v2p0"
+  xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1"
+  xmlns="http://www.imsglobal.org/xsd/imscp_v1p1">
+  <metadata>
+    <imsmd:lom><imsmd:general>
+      <imsmd:title><imsmd:langstring xml:lang="es-mx">{escape(CURSO["nombre"])} — Evaluación</imsmd:langstring></imsmd:title>
+      <imsmd:language>es-mx</imsmd:language>
+    </imsmd:general></imsmd:lom>
+  </metadata>
+  <organizations default="d2l_orgs">
+    <organization identifier="d2l_org">
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="res_grades" type="webcontent" d2l_2p0:material_type="d2lgrades" d2l_2p0:link_target="" href="grades_d2l.xml" title="">
+      <file href="grades_d2l.xml" />
+    </resource>
+    <resource identifier="res_dropbox" type="webcontent" d2l_2p0:material_type="d2ldropbox" d2l_2p0:link_target="" href="dropbox_d2l.xml" title="">
+      <file href="dropbox_d2l.xml" />
+    </resource>
+  </resources>
+</manifest>
+"""
+
+
+def paquete_evaluacion():
+    # Separado del zip de contenido a propósito ("separar por riesgo"): si
+    # este falla al importar, el contenido ya importado no se ve afectado.
+    # Grades y Dropbox SÍ van juntos entre sí — el cruce grade_item↔resource_code
+    # se resuelve en una sola pasada de importación, como en el export real.
+    stage = OUT / "pkg_evaluacion"
+    if stage.exists():
+        shutil.rmtree(stage)
+    stage.mkdir(parents=True, exist_ok=True)
+    (stage / "grades_d2l.xml").write_text(grades_xml(), encoding="utf-8")
+    (stage / "dropbox_d2l.xml").write_text(dropbox_xml(), encoding="utf-8")
+    (stage / "imsmanifest.xml").write_text(manifest_evaluacion(), encoding="utf-8")
+    zpath = OUT / f"{CURSO['semestre']}_evaluacion.zip"
+    with zipfile.ZipFile(zpath, "w", zipfile.ZIP_DEFLATED) as z:
+        for f in sorted(stage.rglob("*")):
+            if f.is_file():
+                z.write(f, f.relative_to(stage))
+    print(f"✅ {zpath} — {len(ASIGNACIONES)} buzones de entrega + libro de notas (5 categorías, cero datos de estudiantes)")
+    print("⛔ GATE: importar primero en un SANDBOX — el cruce grade_item/resource_code no se verificó contra un D2L en vivo, solo contra un export real.")
+    print("   Después de importar: crear los Equipos (no empaquetable) y asociar cada buzón marcado 'equipo' a su grupo — ver build/assignments.md.")
 
 
 # --------------------------------------------------- 5. DOCS (specs de UI)
@@ -284,6 +544,80 @@ def doc_intelligent_agents() -> str:
     return "\n".join(partes)
 
 
+def doc_asignaciones() -> str:
+    partes = [
+        "# Asignaciones — MF7011\n",
+        "> Los 12 buzones (Dropbox) y el libro de notas (5 categorías, 12 ítems) ya "
+        "vienen como objetos NATIVOS en `build/{semestre}_evaluacion.zip` — no hay "
+        "que crearlos a mano. Esta tabla es la referencia de lo que ese zip trae, "
+        "más lo que el zip NO puede traer.\n".format(semestre=CURSO["semestre"]),
+        "\n**Paso manual obligatorio después de importar:** Groups/Equipos no es "
+        "empaquetable (ver `mambrino-interactiva_assets/d2l-package.md`). Crear los "
+        "equipos reales del curso en Brightspace y luego, en cada buzón marcado "
+        "'entrega grupal' abajo, asociarlo al grupo correspondiente — si no, "
+        "cada estudiante entrega por separado.\n",
+        "\n**Reglas generales:** las entregas de equipo deben tener una sola entrega por grupo; la coevaluación es individual; toda cifra debe tener fuente verificable.\n",
+    ]
+    for a in ASIGNACIONES:
+        partes.append(
+            f"## {a['nombre']}\n\n"
+            f"- **ID:** `{a['id']}`\n"
+            f"- **Fecha de entrega:** {a['fecha']}\n"
+            f"- **Categoría:** {a['categoria']}\n"
+            f"- **Peso:** {a['peso']:.2f}% del curso\n"
+            f"- **Rúbrica:** `{a['rubrica']}` · {'entrega grupal' if a['equipo'] else 'entrega individual'}\n"
+            f"- **Material de apoyo:** `{a['entrega']}`\n\n"
+            f"**Instrucciones para pegar en Brightspace**\n\n{a['instrucciones']}\n"
+        )
+    return "\n".join(partes)
+
+
+def doc_rubricas() -> str:
+    return """# Rúbricas — configuración en Brightspace
+
+La fuente académica completa es `plantillas/04-rubricas.qmd`. En Brightspace crear cinco rúbricas con escala de 0 a 5 y asociarlas a las asignaciones indicadas en `assignments.md`.
+
+| Rúbrica | Asignaciones | Escala | Nota clave |
+|---|---|---:|---|
+| R1 · Artefactos de sesión | a01, a03, a05, a07, a10 | 0–5 | Cinco entregas (una por sesión, S1–S5), 25% total; máximo 12/20 si se entrega fuera del salón salvo ausencia justificada. |
+| R2 · Auditorías cruzadas | a02, a04, a06, a08 | 0–5 | Evalúa la calidad del hallazgo y su evidencia, no la calidad del modelo auditado. |
+| R3 · Modelo financiero final | a09 | 0–5 | Supuestos, flujos, criterios, sensibilidad, riesgos y trazabilidad. |
+| R4 · Defensa · Investor Day | a11 | 0–5 | La defensa combina 50% profesor y 50% mediana de evaluaciones válidas del comité. |
+| R5 · Calidad como evaluador | a12 | 0–5 | Evidencia específica, discriminación entre proyectos, coherencia con el presupuesto y rol asignado. |
+
+**Importante:** R4 y R5 incorporan cálculos externos al motor estándar de rúbricas: mediana del comité, umbral de tres evaluaciones válidas y modulador individual 0,85–1,15. Esos resultados deben cargarse como nota final por el profesor.
+"""
+
+
+def doc_gradebook() -> str:
+    filas = [
+        "# Libreta de calificaciones — MF7011\n",
+        "Configurar la libreta en modo **ponderado**. Las categorías suman 100% y cada asignación usa su peso directamente sobre el curso. La escala de entrada recomendada es 0–5; Brightspace debe mostrar también el porcentaje.\n",
+        "| Categoría | Peso | Ítems |\n|---|---:|---|",
+    ]
+    for categoria, peso in CATEGORIAS_CALIFICACIONES:
+        items = ", ".join(a["nombre"] for a in ASIGNACIONES if a["categoria"] == categoria)
+        filas.append(f"| {categoria} | {peso:.2f}% | {items} |")
+    filas.extend([
+        "\n## Ítems y pesos\n",
+        "| ID | Ítem | Categoría | Peso curso | Entrega | Tipo |\n|---|---|---|---:|---|---|",
+    ])
+    for a in ASIGNACIONES:
+        filas.append(
+            f"| `{a['id']}` | {a['nombre']} | {a['categoria']} | {a['peso']:.2f}% | {a['fecha']} | {'Grupo' if a['equipo'] else 'Individual'} |"
+        )
+    filas.extend([
+        "\n## Fórmula final",
+        "",
+        "`Nota final = Σ (nota del ítem en escala 0–5 × peso del ítem) / 5`.",
+        "",
+        "La nota de `a10-nota-inversion` es un artefacto de apoyo y tiene peso 0%; la calificación de R4 entra en `a11-defensa`. La nota de comité se registra en R4/R5 después de aplicar las salvaguardas descritas en `plantillas/06-coevaluacion-comite.qmd`.",
+        "",
+        "> No importar calificaciones de estudiantes desde este repositorio. Crear los ítems vacíos primero y cargar resultados únicamente desde Brightspace, respetando la Ley 1581/2012.",
+    ])
+    return "\n".join(filas) + "\n"
+
+
 def doc_manual_mantenimiento() -> str:
     return f"""# Manual de mantenimiento — paquete de interactiva MF7011
 
@@ -329,8 +663,11 @@ def docs():
     (OUT / "badges.md").write_text(doc_badges(), encoding="utf-8")
     (OUT / "release-conditions.md").write_text(doc_release_conditions(), encoding="utf-8")
     (OUT / "intelligent-agents.md").write_text(doc_intelligent_agents(), encoding="utf-8")
+    (OUT / "assignments.md").write_text(doc_asignaciones(), encoding="utf-8")
+    (OUT / "rubrics.md").write_text(doc_rubricas(), encoding="utf-8")
+    (OUT / "gradebook.md").write_text(doc_gradebook(), encoding="utf-8")
     (OUT / "manual-mantenimiento.md").write_text(doc_manual_mantenimiento(), encoding="utf-8")
-    print(f"✅ {OUT}/badges.md, release-conditions.md, intelligent-agents.md, manual-mantenimiento.md")
+    print(f"✅ {OUT}/badges.md, release-conditions.md, intelligent-agents.md, assignments.md, rubrics.md, gradebook.md, manual-mantenimiento.md")
 
 
 # --------------------------------------------------------------- VALIDAR
@@ -345,6 +682,20 @@ def validar():
         assert mod_id in MODULOS_POR_ID, f"release condition apunta a módulo inexistente: {mod_id}"
         if req_id:
             assert req_id in TOPICOS_POR_ID, f"release condition apunta a tópico inexistente: {req_id}"
+    # Los pesos de ASIGNACIONES deben sumar exactamente el peso de su categoría,
+    # y las categorías deben sumar 100% del curso. Detecta en segundos lo que
+    # a mano se descubre semanas después (ver a10-nota-inversion, jul-2026).
+    from collections import defaultdict
+    sumas = defaultdict(float)
+    for a in ASIGNACIONES:
+        sumas[a["categoria"]] += a["peso"]
+    for categoria, peso in CATEGORIAS_CALIFICACIONES:
+        assert abs(sumas[categoria] - peso) < 1e-6, (
+            f"{categoria}: las asignaciones suman {sumas[categoria]}%, "
+            f"la categoría declara {peso}%"
+        )
+    total = sum(peso for _, peso in CATEGORIAS_CALIFICACIONES)
+    assert abs(total - 100.0) < 1e-6, f"las categorías suman {total}%, no 100%"
 
 
 if __name__ == "__main__":
@@ -355,5 +706,7 @@ if __name__ == "__main__":
         print(f"✅ {OUT/'homepage_widget.html'} — pegar como Custom Widget (solo estilos inline)")
     if cmd in ("todo", "paquete"):
         paquete()
+    if cmd in ("todo", "evaluacion"):
+        paquete_evaluacion()
     if cmd in ("todo", "docs"):
         docs()

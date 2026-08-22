@@ -9,8 +9,10 @@ mano: se sobreescriben en cada corrida de `generar.py`.
 - **Nivel de control asumido:** Import/Export + widgets HTML (el profesor confirmó
   tener este nivel). Si resulta ser menor, los templates de tópico siguen sirviendo
   como HTML embebible; el `.zip` de importación requiere este nivel.
-- **Alcance:** paquete completo — homepage, 6 módulos (orientación + S1–S5), 15
-  tópicos, badges, release conditions, intelligent agents y el `.zip` de contenido.
+- **Alcance:** paquete completo — homepage, 6 módulos (orientación + S1–S5), 34
+  tópicos (tribunal/taller, plantillas, bibliografía por módulo, un podcast
+  recomendado, 12 asignaciones), badges, release conditions, intelligent
+  agents, especificación de asignaciones/rúbricas/libreta y el `.zip` de contenido.
 - **Content clásico vs. New Content Experience (Lessons):** **POR-VERIFICAR** — el
   profesor no confirmó cuál usa el tenant de EAFIT. El manifest es idéntico en
   ambos casos (ver `mambrino-interactiva_assets/d2l-package.md` §"Unidades vs
@@ -23,6 +25,82 @@ mano: se sobreescriben en cada corrida de `generar.py`.
   del widget de homepage — con un iframe al sitio vivo y un enlace de respaldo
   ("Pantalla completa") para el caso de que el framing falle o el estudiante
   prefiera navegar el deck sin el chrome de D2L.
+- **Sección de lecturas + podcast.** Cada módulo lleva un tópico de bibliografía
+  que enlaza a `literatura/revision-literatura.html` (con anchor a su núcleo
+  temático) y el módulo de orientación (`m00`) lleva además el podcast
+  **"Proyectos sostenibles"** embebido en Spotify, con el iframe exacto que
+  entregó el profesor (mismos atributos `allow`, para no perder
+  autoplay/fullscreen/picture-in-picture). Título confirmado por el profesor
+  (2026-08-22) en `datos.py` (`PODCAST`).
+
+## Calificaciones y asignaciones nativas — verificadas contra un export real (2026-08-22)
+
+Hasta la versión anterior, `assignments.md`/`rubrics.md`/`gradebook.md` eran solo
+**especificación en texto** para transcribir a mano — no había evidencia empírica
+del esquema exacto de `d2lgrades`/`d2ldropbox` para arriesgarse a fabricar el XML.
+
+Esa evidencia ya existe: el profesor entregó un **export nativo real de su propio
+tenant EAFIT** (curso "Semin. de Invest. Aplicada", ago-2026). De ahí se verificó:
+
+- El esquema institucional **"Escala 0 a 5" tiene `identifier="347"`** — se usa
+  literalmente ese valor en `grades_d2l.xml`, no un placeholder.
+- La estructura real de `<grades>` (schemes/configuration/categories/items) y de
+  `<dropbox>` (folder con instructions/date_due/grade_item).
+- **El mecanismo de enlace real**: `item.category_id` ↔ `category.identifier`
+  (dentro de `grades_d2l.xml`); `dropbox.folder.grade_item` ↔ `item.resource_code`
+  (entre `dropbox_d2l.xml` y `grades_d2l.xml`). Sin este hallazgo, un buzón de
+  entrega quedaría sin conectar a su casilla del libro de notas.
+- `d2ldropbox` y `d2lgrades` **sí son `material_type` reales** que este tenant
+  acepta — confirmado por el propio `imsmanifest.xml` del export.
+
+Con esa base, `generar.py` ahora emite **`build/{semestre}_evaluacion.zip`**:
+12 buzones de entrega (Dropbox) nativos + el libro de notas completo (5
+categorías R1–R5, 12 ítems, pesos derivados de `ASIGNACIONES` — cero datos de
+estudiantes) — ya no solo el `.md`. Va en un **zip separado** del contenido
+("separar por riesgo"): si falla al importar, no afecta los módulos ya
+importados. Grades y Dropbox sí van **juntos** entre sí, porque el cruce
+`grade_item`/`resource_code` se resuelve en una sola pasada de importación,
+igual que en el export real.
+
+**Lo que sigue sin verificar empíricamente** (aun con el export real de referencia):
+- El comportamiento exacto de `category_id`/`identifier` en una importación a un
+  curso **nuevo** (el export que se revisó es de un curso ya existente, no una
+  importación fresca) — de ahí que el gate de sandbox sea aún más estricto aquí.
+- El significado exacto de `max_item_points` en el modo de distribución manual
+  (`WeightDistributionType=0`) — se replicó el valor observado sin poder
+  confirmar si el importador lo usa.
+- La hora exacta de corte (`04:59:59` UTC = 23:59:59 Bogotá) — replicada del
+  export real; verificar que el tenant no cambió de convención.
+
+**Paso manual que el paquete no puede evitar:** Groups/Equipos no es
+empaquetable (ninguna evidencia de un `material_type` para ello). Después de
+importar, crear los equipos reales en Brightspace y asociar cada buzón marcado
+"entrega grupal" (11 de 12) a su grupo — si no, cada estudiante entrega solo.
+
+**Asignaciones — el visor ya no rompe con archivos binarios.** El tópico de
+cada asignación en el zip de *contenido* dejó de ser un iframe genérico (que
+mostraba en blanco o forzaba una descarga rota cuando el material de apoyo era
+`modelo-financiero-PLANTILLA.xlsx`). Ahora es una ficha con fecha, categoría,
+peso, rúbrica e instrucciones — con un botón "Abrir" (páginas del sitio) o
+"Descargar" (binarios) según corresponda.
+
+## Correcciones aplicadas sobre el estado heredado (2026-08-22)
+
+Dos errores encontrados al verificar `datos.py`/`generar.py` antes de entregar:
+
+- **Anchors de bibliografía rotos.** Apuntaban a `#nucleo-N-...`, pero Quarto
+  genera los IDs con tilde (`#núcleo-N-...`) — verificado contra
+  `_site/literatura/revision-literatura.html`. El enlace cargaba la página
+  pero no hacía scroll a la sección (falla silenciosa). Corregido en las 6
+  entradas de `BIBLIOGRAFIA_POR_MODULO`.
+- **R1 sumaba 20% en vez de 25%.** `plantillas/04-rubricas.qmd` exige "cinco
+  entregas, una por sesión" para R1, pero `ASIGNACIONES` solo tenía 4
+  (S1–S4) — el total del curso daba 95%, no 100%. Se reclasificó
+  `a10-nota-inversion` (S5) de "R4, peso 0%" a "R1, peso 5%": es el artefacto
+  escrito de S5, igual que la ficha/modelo/flujo de las otras sesiones. `R4`
+  sigue en 20% con solo `a11-defensa`. `validar()` ahora suma pesos por
+  categoría y el total del curso, para que este error no pueda reaparecer
+  en silencio.
 
 ## Cómo correr
 
@@ -31,11 +109,13 @@ cd interactiva
 python3 generar.py            # todo: homepage + paquete + docs
 python3 generar.py homepage   # solo build/homepage_widget.html
 python3 generar.py paquete    # solo build/2026-2_contenido.zip
-python3 generar.py docs       # solo badges.md / release-conditions.md / intelligent-agents.md / manual-mantenimiento.md
+python3 generar.py evaluacion # solo build/2026-2_evaluacion.zip (buzones + libro de notas nativos)
+python3 generar.py docs       # solo badges.md / release-conditions.md / intelligent-agents.md / assignments.md / rubrics.md / gradebook.md / manual-mantenimiento.md
 ```
 
 `validar()` corre siempre primero (ids únicos, sitio https, fechas coherentes,
-release conditions bien referenciadas). Si falla, no se genera nada.
+release conditions bien referenciadas, pesos de asignaciones cuadrando con cada
+categoría y con el 100% del curso). Si falla, no se genera nada.
 
 ## ⛔ Orden obligatorio antes de tocar el curso real
 
@@ -55,20 +135,23 @@ release conditions bien referenciadas). Si falla, no se genera nada.
 | Pieza | Archivo | Estado |
 |---|---|---|
 | Homepage (hero + "Esta semana") | `build/homepage_widget.html` | Listo — pegar como Custom Widget |
-| 6 módulos / 15 tópicos-visor | `build/2026-2_contenido.zip` | Listo — probar en sandbox |
+| 6 módulos / 34 tópicos-visor (incl. bibliografía y podcast) | `build/2026-2_contenido.zip` | Listo — probar en sandbox |
+| **12 buzones de entrega (Dropbox) nativos** | `build/2026-2_evaluacion.zip` | Listo — probar en sandbox (aparte del contenido) |
+| **Libro de notas nativo** (5 categorías, 12 ítems, 0 datos de estudiantes) | `build/2026-2_evaluacion.zip` | Listo — mismo zip que los buzones |
 | Badges (3, anclados a artefactos reales) | `build/badges.md` | Spec para configurar en Awards |
 | Release conditions (cadena Tribunal→Taller) | `build/release-conditions.md` | Spec para configurar en Release Conditions |
 | Intelligent agents (2, ligados a hitos reales) | `build/intelligent-agents.md` | Spec para configurar en Intelligent Agents |
 | Manual de mantenimiento | `build/manual-mantenimiento.md` | Listo |
+| Asignaciones — referencia legible de lo que trae el zip | `build/assignments.md` | Listo — ya no hay que transcribirlo a mano |
+| Rúbricas R1–R5 (contenido de las celdas) | `build/rubrics.md` | Spec — crear en Rubrics y asociar a cada buzón |
 
 ## Qué NO incluye (y por qué)
 
-- **Rúbricas** (`d2lrubrics`) — `plantillas/04-rubricas.qmd` existe pero no se
-  confirmó como cerrado con `/mambrino-assessment`. Empaquetar rúbricas sin esa
-  confirmación arriesga transcribir umbrales que luego cambian.
-- **Libro de notas** (`d2lgrades`) — se entrega en un **zip separado** cuando el
-  esquema de categorías/pesos esté confirmado (separar por riesgo: si ese zip
-  falla al importar, no se lleva el contenido).
+- **Objetos nativos de rúbricas** (`d2lrubrics`) — sí hay evidencia real del
+  esquema (ver export de referencia), pero escribir las 5 rúbricas completas
+  (criterios, niveles, texto de cada celda) es un trabajo aparte; por ahora
+  sigue como especificación en `build/rubrics.md`. Candidato claro para la
+  próxima iteración, ya con el esquema verificado.
 - **Cover del curso** (`d2lcourseimage`) — falta el PNG (~2400×960).
 - **Homepage/navbar/tema del curso** — D2L no los expone en el `.zip` de
   importación de un curso (son nivel admin/plantilla). Este repo entrega el HTML

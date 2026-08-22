@@ -306,6 +306,17 @@ Bajar el flujo por riesgo climático **y** subir la tasa por riesgo climático. 
 
 <br>
 
+::: {.columns}
+::: {.column width="50%"}
+**Leer** (máx. 30 min)
+
+- Circular Externa 015 de 2025, SFC — la norma bajo la que actúa el banco del comité
+- Schoenmaker & Schramade — cap. Decisiones de inversión (acceso abierto)
+:::
+:::
+
+<br>
+
 ::: {.callout-important}
 El comité **va a rechazar proyectos**. No alcanza el presupuesto para todos. Preparen no sólo por qué el suyo es bueno, sino **por qué es mejor que el del equipo de al lado.**
 :::

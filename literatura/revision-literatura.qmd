@@ -468,9 +468,146 @@ Regla del curso: **máximo 2 lecturas obligatorias por sesión**, porque son pro
 | **S2** · Magnitudes | Sapag caps. de costos y capital de trabajo · Serie de precios del cacao 2023–2026 (dato, no lectura) | Hyndman & Athanasopoulos cap. 1 (OA) | — |
 | **S3** · Costo de capital | Welch (2021) MBR · Drupp et al. (2018) resumen y tabla de resultados | Schoenmaker & Schramade cap. costo de capital (OA) | T3, T4 |
 | **S4** · Evaluación social | Banco Mundial (2024) Guidance Note SPC · Jayachandran et al. (2017) *Science* | Boardman et al. caps. de precios sombra | T2, T5 |
-| **S5** · Cierre (virtual) | — (defensa) | Circular Externa 015/2025 SFC | T6, T7 |
+| **S5** · Cierre (virtual) | Circular Externa 015/2025 SFC · Schoenmaker & Schramade cap. Decisiones de inversión (OA) | — | T6, T7 |
 
 **Acceso abierto** (sin costo, sin biblioteca): Schoenmaker & Schramade (2023); Hyndman & Athanasopoulos (2021); Welch (2021); documentos del Banco Mundial, FOLU, SFC, DNP, NGFS e IUCN. Cerrado: Berg et al. (2022), Jayachandran et al. (2017), Drupp et al. (2018) — todos accesibles vía EZproxy EAFIT; los tres tienen versión *working paper* pública (LSE Grantham, NBER, SSRN).
+
+---
+
+# Prompts para NotebookLM — generar el podcast de cada lectura
+
+**Cómo usarlos:** crear un notebook nuevo en NotebookLM, subir únicamente la fuente de esa lectura (el PDF o la URL — no mezclar varias lecturas en un mismo notebook, o el audio diluye el foco), generar el **Audio Overview** y, antes de generarlo, pegar el prompt correspondiente en **Personalizar** (customize). Cada prompt está anclado a lo que ya está escrito en la sección del núcleo correspondiente — no es un resumen genérico, es el ángulo crítico específico que se usa en clase.
+
+## S1 · Formulación
+
+```
+Genera un Audio Overview para estudiantes de posgrado en finanzas sostenibles
+(EAFIT, MF7011), con buen dominio de finanzas corporativas pero poco
+entrenamiento en medición de sostenibilidad. Dedica el episodio a: (1) el
+hallazgo de que la correlación promedio entre seis calificadoras ESG mayores
+va de 0,38 a 0,71 —compárese con ~0,99 entre calificadoras crediticias—; (2)
+la descomposición de esa divergencia (56% medición, 38% alcance, 6%
+ponderación); (3) el "efecto calificador": la opinión global de una agencia
+sobre una firma contamina su medición de categorías específicas. Cierra el
+episodio con la pregunta sin responder: si un proyecto dice "mejoramos el
+score ESG", ¿el de quién? — la vamos a debatir en la Sesión 1.
+```
+*(Berg, Kölbel & Rigobon, 2022, "Aggregate Confusion")*
+
+```
+Genera un Audio Overview para estudiantes de posgrado en finanzas sostenibles
+que van a formular un proyecto real de inversión en soluciones basadas en la
+naturaleza en Colombia. Dedica el episodio a los datos duros del resumen
+ejecutivo: la inversión requerida (USD 13.500 millones) frente a la inversión
+privada actual (<1% del total), la brecha ~50x, y la oportunidad en empresas
+que necesitan reducir emisiones de Alcance 3. Cierra conectando estos números
+con un proyecto de cacao agroforestal como caso concreto de SbN que compite
+por ese financiamiento.
+```
+*(FOLU Colombia & Climate Focus, 2023, resumen ejecutivo)*
+
+## S2 · Magnitudes
+
+```
+Genera un Audio Overview para estudiantes de posgrado que van a construir,
+esta semana, el modelo financiero de un proyecto agroforestal de cacao que no
+genera ingresos hasta el año 4. Dedica el episodio a los capítulos de costos
+y capital de trabajo: el tratamiento de capital de trabajo y cronograma de
+inversiones, y la distinción entre flujo del proyecto y flujo del
+inversionista. Enmárcalo explícitamente como "el modelo base que vamos a
+construir esta semana y a romper la semana siguiente" — no como la última
+palabra en evaluación de proyectos.
+```
+*(Sapag Chain, Sapag Chain & Sapag, 2014 — capítulos de costos y capital de trabajo)*
+
+## S3 · Costo de capital
+
+```
+Genera un Audio Overview para estudiantes de posgrado en finanzas que acaban
+de tomar un curso de Matemáticas Financieras donde aprendieron CAPM sin
+cuestionarlo. Dedica el episodio al argumento central: el error estándar de
+la beta estimada es tan alto, y la relación empírica entre beta y retornos
+tan débil, que el CAPM aporta poca información sobre el costo de capital de
+un proyecto específico — sobre todo uno sin comparables públicos con beta
+observable, como un proyecto agroforestal. Presenta la recomendación práctica
+(tasas por clase de activo con juicio explícito documentado, no una beta
+espuriamente precisa) como una postura debatible, no como un veredicto final.
+Cierra plantando la pregunta: si no es el CAPM, ¿qué se pone en el
+denominador? — la vamos a debatir en la Sesión 3.
+```
+*(Welch, 2021, "The Cost of Capital: If Not the CAPM, Then What?")*
+
+```
+Genera un Audio Overview para estudiantes que van a calcular, en la misma
+sesión, el VPN social de un proyecto con cuatro tasas de descuento distintas
+y todas defendibles. Dedica el episodio a los resultados de la encuesta a 197
+expertos: tasa social de descuento de largo plazo con media 2,25% y mediana
+2,0%; más de tres cuartas partes acepta 2% como razonable; los doctorados más
+recientes recomiendan tasas más bajas que las cohortes anteriores. Explica
+brevemente la lógica de tasas decrecientes con el horizonte bajo
+incertidumbre. Cierra contrastando esa tasa (~2-3% real) con un WACC privado
+típico de 13-15% nominal en pesos colombianos, sin resolver cuál es "la
+correcta".
+```
+*(Drupp, Freeman, Groom & Nesje, "Discounting Disentangled" — resumen y tabla de resultados)*
+
+## S4 · Evaluación social
+
+```
+Genera un Audio Overview dirigido a estudiantes que van a entregar, como
+artefacto de esta sesión, un VPN social calculado exactamente con este
+protocolo. Dedica el episodio a las reglas operativas del Banco Mundial: el
+uso del precio sombra del carbono es compromiso corporativo del BIRF para
+todo financiamiento de proyectos; el análisis debe presentarse con valores
+alto y bajo de precio sombra y reportar el switching value cuando sea
+relevante; cuando hay alternativas, presentar el VPN sin carbono, con
+carbono bajo y con carbono alto. Sé explícito en que esto no es teoría de
+fondo: es el formato exacto del entregable final del curso.
+```
+*(Banco Mundial, 2024, Guidance Note on Shadow Price of Carbon)*
+
+```
+Genera un Audio Overview para estudiantes que van a diseñar el contrato de
+pago por servicios ambientales de su propio proyecto. Dedica el episodio al
+experimento aleatorizado en Uganda (121 aldeas, 60 tratadas): deforestación
+4% en tratamiento vs. 9% en control, costo de USD 0,46 por tonelada de CO2,
+relación beneficio-costo mayor a 2x — y a por qué esto es inusual (la mayoría
+de las políticas ambientales cuestan más de lo que evitan). Menciona también,
+si el documento lo permite, que el diseño del contrato importa más que el
+monto del pago: exigir inscribir toda la propiedad, no solo parcelas, reduce
+drásticamente la selección adversa. Cierra con la pregunta de diseño: ¿cómo
+evitar que la adicionalidad dependa de la buena fe del beneficiario?
+```
+*(Jayachandran et al., 2017, "Cash for Carbon", Science)*
+
+## S5 · Investor Day (virtual)
+
+```
+Genera un Audio Overview para un estudiante que va a actuar como gerente de
+riesgo de crédito de un banco colombiano en una simulación de comité de
+inversión. Dedica el episodio a lo operativo: el nuevo Capítulo XXXIII de la
+Circular Básica Contable y Financiera, la obligación de categorizar el
+riesgo ambiental, social y climático de cada operación (alto/medio/bajo), la
+debida diligencia reforzada en las de riesgo alto, y los plazos (6 meses
+para el plan de implementación, 18 para cumplimiento pleno). Cierra
+enmarcando el giro central: esto convierte un requisito "de sostenibilidad"
+en una condición de acceso al crédito, no en un gesto voluntario.
+```
+*(Superintendencia Financiera de Colombia, Circular Externa 015 de 2025)*
+
+```
+Genera un Audio Overview para estudiantes que van a defender, esta semana,
+la decisión de invertir o no en su proyecto ante un comité con presupuesto
+limitado. Dedica el episodio al capítulo de decisiones de inversión bajo
+criterios multi-valor: el modelo de valor integrado (IV = valor financiero +
+valor social + valor ambiental) como alternativa a maximizar solo valor
+financiero, y su debilidad reconocida por los propios autores — que agregar
+IV exige monetizar valor social y ambiental, lo que reintroduce los mismos
+problemas de valoración que el modelo dice superar. Cierra sin resolverlo,
+planteando la pregunta: si alguien tiene que pagar la brecha entre el VPN
+privado y el VPN social del proyecto, ¿quién debería ser?
+```
+*(Schoenmaker & Schramade, 2023, cap. Decisiones de inversión)*
 
 ---
 

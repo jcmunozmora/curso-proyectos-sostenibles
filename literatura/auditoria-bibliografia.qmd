@@ -39,7 +39,7 @@ El programa de asignatura vigente (**v01, 25/07/2024**, responsable Juan Carlos 
 | **Welch & Cornell (2022)**, *Global Climate Change: The Pragmatist's Guide* | Acceso abierto, escéptico y bien argumentado. Antídoto contra el entusiasmo acrítico. |
 | **DNP (2023)**, Metodología General Ajustada | Norma viva de inversión pública colombiana. Imprescindible para el puente público-privado. |
 | **NYU Stern**, metodología ROSI™ | Método concreto y aplicable. Útil como plantilla del caso de negocio de sostenibilidad. |
-| **Hyndman & Athanasopoulos (2021)**, *Forecasting: Principles and Practice*, 3ª ed. | Acceso abierto, excelente. **Promover de complementaria a básica** — la Unidad 2 exige proyectar mercado y el programa no ofrece ninguna otra base metodológica para hacerlo. |
+| **Hyndman & Athanasopoulos (2021)**, *Forecasting: Principles and Practice*, 3ª ed. | Acceso abierto, excelente. Recomendación original: **promover de complementaria a básica** — la Unidad 2 exige proyectar mercado y el programa no ofrece ninguna otra base metodológica para hacerlo. **[No adoptada, 2026-08-22]**: S2 ya tiene sus dos obligatorias completas (Sapag + serie de precios del cacao); promoverla habría violado la regla de "máximo 2 lecturas obligatorias por sesión". Permanece como complementaria de S2. |
 
 ## Reemplazar
 
@@ -128,18 +128,17 @@ Temas que el programa **exige enseñar** pero para los que **no ofrece bibliogra
 
 # Bibliografía revisada propuesta
 
-## Básica obligatoria — 10 lecturas, una por bloque
+## Básica obligatoria — 10 lecturas, dos por sesión
 
-1. Berg, Kölbel & Rigobon (2022) — *Aggregate Confusion*
-2. FOLU Colombia & Climate Focus (2023) — resumen ejecutivo
-3. Schoenmaker & Schramade (2023) — caps. 1–2 y costo de capital **[OA]**
-4. Sapag Chain et al. (2014) — caps. de costos, inversiones y capital de trabajo
-5. Hyndman & Athanasopoulos (2021) — cap. 1 **[OA]**
-6. Welch (2021) — *If Not the CAPM, Then What?* **[OA]**
-7. Drupp, Freeman, Groom & Nesje — *Discounting Disentangled*
-8. Banco Mundial (2024) — *Guidance Note on Shadow Price of Carbon* **[OA]**
-9. Jayachandran et al. (2017) — *Cash for Carbon*, *Science*
-10. SFC — Circular Externa 015 de 2025 **[OA]**
+| Sesión | Obligatoria 1 | Obligatoria 2 |
+|---|---|---|
+| **S1** | Berg, Kölbel & Rigobon (2022) — *Aggregate Confusion* | FOLU Colombia & Climate Focus (2023) — resumen ejecutivo |
+| **S2** | Sapag Chain et al. (2014) — costos y capital de trabajo | Serie de precios del cacao 2023–2026 (dato revelado en clase, no lectura previa) |
+| **S3** | Welch (2021) — *If Not the CAPM, Then What?* **[OA]** | Drupp, Freeman, Groom & Nesje — *Discounting Disentangled* |
+| **S4** | Banco Mundial (2024) — *Guidance Note on Shadow Price of Carbon* **[OA]** | Jayachandran et al. (2017) — *Cash for Carbon*, *Science* |
+| **S5** | SFC — Circular Externa 015 de 2025 **[OA]** | Schoenmaker & Schramade (2023) — cap. Decisiones de inversión **[OA]** |
+
+**Nota (2026-08-22):** esta tabla reemplaza la lista plana original de 10 ítems, que numeraba a Schoenmaker & Schramade y a Hyndman & Athanasopoulos como obligatorias sin asignarles sesión — un conteo que en la práctica nunca cerró 2×5. En la implementación final del syllabus, Schoenmaker se adoptó como **texto base** completo (acceso abierto) con capítulos específicos repartidos entre complementaria (S1, S3) y obligatoria (S5, recién asignado); Hyndman **no** se promovió a básica (ver nota en la tabla "Mantener sin cambios" arriba) y sigue como complementaria de S2.
 
 ## Consulta — por unidad
 
