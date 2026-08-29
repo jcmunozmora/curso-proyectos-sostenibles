@@ -29,17 +29,20 @@ MIN 0–20. Individual 5, equipo 10, plenaria 5 sobre las dos que peor salieron.
 | | Bloque | Min |
 |---|---|---:|
 | **8:00** | Recuperación | 20 |
-| 8:20 | CapEx · lo que siempre se olvida · el cronograma | 20 |
-| 8:40 | **Construcción 1** · hoja CapEx | **40** |
-| 9:20 | Síntesis · el error de las unidades | 15 |
-| **9:35** | **Pausa** | 20 |
-| 9:55 | **Capital de trabajo** · déficit acumulado máximo | 20 |
+| 8:20 | **Ejercicio en vivo** · el precio de hoy | 15 |
+| 8:35 | Vocabulario + CapEx: lo que siempre se olvida · el cronograma | 15 |
+| 8:50 | **Construcción 1** · hoja CapEx | **40** |
+| 9:30 | Síntesis · el error de las unidades | 15 |
+| **9:45** | **Pausa** | 15 |
+| 10:00 | **Capital de trabajo** · déficit acumulado máximo | 15 |
 | 10:15 | **Construcción 2** · OpEx y capital de trabajo | **40** |
-| 10:55 | Síntesis | 15 |
-| **11:10** | **Pausa** | 15 |
-| 11:25 | Tamaño y localización como optimización | 20 |
-| 11:45 | **Construcción 3** · costo por tonelada vs. precio | **40** |
+| 10:55 | Síntesis · la recuperación que se les olvida | 15 |
+| **11:10** | **Pausa** | 10 |
+| 11:20 | Tamaño y localización como optimización | 15 |
+| 11:35 | **Construcción 3** · costo por tonelada vs. precio | **40** |
+| 12:15 | Discusión · costos de un proyecto sostenible | 10 |
 | 12:25 | Auditoría cruzada | 20 |
+| 12:45 | Cierre · para el viernes | 15 |
 | **13:00** | **Fin** | |
 
 ---
@@ -54,6 +57,73 @@ Al salir tienen un **modelo de costos e inversiones completo**:
 3. **Capital de trabajo** por el método del déficit acumulado
 4. **Tamaño y localización** justificados
 5. La **estructura de costos** que determina su punto de equilibrio
+:::
+
+---
+
+## Ejercicio en vivo · 15 min {background-color="#f5f5f5" data-cron="900" data-cron-label="ejercicio en vivo"}
+
+Con el precio de cacao de **hoy** — un solo número real, no un ejemplo de libro — cada pareja aplica en vivo las tres formas honestas de proyectar que vieron el viernes.
+
+::: {.callout-note}
+No es un ejercicio de precisión — es un ejercicio de **método bajo presión de tiempo**. El número de hoy va a estar obsoleto en dos semanas; el método, no.
+:::
+
+::: {.notes}
+MIN 20–35. Ver las dos slides siguientes para el paso a paso (preparación del profesor) y la plantilla de documentación (lo que llenan los estudiantes).
+:::
+
+---
+
+## Ejercicio en vivo · cómo se hace {.smaller background-color="#f5f5f5"}
+
+**Antes de clase (5 min, en casa):** buscar el precio de liquidación (*settlement*) del contrato de futuros de cacao más próximo a vencer — ticker **CC**, ICE Futures U.S. — y el precio del contrato a 18–24 meses. Si no hay forma de consultarlo, usar el último precio reportado por la **ICCO** (*International Cocoa Organization*, precio diario/mensual) y anotar la fecha exacta.
+
+**En clase, con las parejas ya formadas:**
+
+| Paso | Qué hacen | Min |
+|---|---|:-:|
+| 1 · Anclar el número | El profesor proyecta el precio de hoy: fecha, fuente, cifra (USD/t). Nadie más lo busca — todos parten del mismo dato. | 2 |
+| 2 · Reversión a la media | Recuerdan el costo marginal del productor marginal (Costa de Marfil, visto el viernes). ¿El precio de hoy está muy por encima o por debajo? ¿hacia dónde "debería" converger? | 2 |
+| 3 · Curva de futuros | Comparan el contrato más próximo con el de 18–24 meses. Si el lejano **cuesta más** → *contango* (no hay pánico de escasez inmediata). Si **cuesta menos** → *backwardation* (el mercado anticipa alivio de oferta). | 2 |
+| 4 · Escenario estructural | Con el precio de hoy como "central", construyen "bajo" (un mundo donde **el proyecto pierde dinero**) y "alto" — cada uno con su propia lógica de oferta y demanda, no un porcentaje inventado. | 2 |
+| 5 · Documentar | Llenan la plantilla de la próxima slide. | 2 |
+
+::: {.callout-important}
+Si internet falla en el salón: usar el último precio reportado y decir la fecha exacta en voz alta. **Nunca inventar un número** — es la misma regla que rige el resto del curso.
+:::
+
+---
+
+## Ejercicio en vivo · cómo se documenta {.smaller background-color="#f5f5f5"}
+
+Cada pareja llena esto y lo guarda — lo van a necesitar en Construcción 3 para comparar contra su costo por tonelada.
+
+| Campo | Qué escriben |
+|---|---|
+| Fecha y hora de consulta | |
+| Fuente exacta (ticker / proveedor) | |
+| Precio de hoy (USD/tonelada) | |
+| Método 1 — costo marginal estimado y de dónde salió | |
+| Método 2 — ¿contango o backwardation? Precio del contrato lejano | |
+| Método 3 — precio bajo / central / alto, con su lógica de oferta-demanda | |
+
+::: {.callout-note}
+Si usaron IA para buscar o interpretar el dato, **documenten el prompt** — es la misma regla de todo el curso: la IA es buena encontrando estructura, mala con números específicos.
+:::
+
+---
+
+## Vocabulario · antes de construir {.smaller background-color="#f5f5f5"}
+
+| Término | Qué es | Fórmula / lógica | En este proyecto |
+|---|---|---|---|
+| **CapEx** (*Capital Expenditures* · gasto de capital) | Plata que compra un **activo de larga duración** — sigue generando valor por varios años, no se consume en un solo período | Se **capitaliza** (va al balance) y se **deprecia** sobre su vida útil | Terreno, siembra, vivero, infraestructura de beneficio, maquinaria |
+| **OpEx** (*Operating Expenses* · gasto operativo) | Plata que se **gasta por completo** en el período en que se incurre, para operar el día a día | $\text{OpEx} = \text{Costo fijo} + \text{Costo variable}$ — entra directo al estado de resultados, no se deprecia | Mano de obra, insumos, mantenimiento, transporte anual |
+| **Capital de trabajo** | La plata que hay que tener disponible **antes de que el proyecto se pague solo**, para cubrir el bache entre gastar y cobrar | Fórmula contable clásica: $\text{Activo corriente} - \text{Pasivo corriente}$. En evaluación de proyectos se usa el método del **déficit acumulado máximo** (Input 2, en un momento) | ≈ USD 2,3M en el ejemplo de la próxima sección — más de la mitad del CapEx |
+
+::: {.callout-warning}
+**OpEx no es "capital".** Es un flujo que se gasta y desaparece cada año. El capital de trabajo sí es una inversión — se recupera al final del horizonte. Confundir los dos es, después de mezclar por-hectárea con total, el error de vocabulario más caro del curso.
 :::
 
 ---
@@ -99,10 +169,10 @@ Dos proyectos con el mismo CapEx total de USD 4,2 M:
 | 1 | — | 1.050.000 |
 | 2 | — | 756.000 |
 | 3 | — | 504.000 |
-| **VPN del CapEx al 12%** | **−4.200.000** | **−3.822.000** |
+| **VPN del CapEx al 12%** | **−4.200.000** | **−3.789.000** |
 
 ::: {.callout-important}
-Mismo monto nominal. **Diferencia de USD 378.000 en valor presente**, sólo por el calendario.
+Mismo monto nominal. **Diferencia de USD 411.000 en valor presente**, sólo por el calendario.
 
 Un proyecto agroforestal por naturaleza se establece por etapas. **Modelarlo todo en el año 0 destruye valor que sí existe.**
 :::
@@ -151,10 +221,10 @@ Este error no es de principiantes. Es el error que hunde modelos profesionales, 
 
 ---
 
-## {background-color="#00A9E0" data-cron="1200" data-cron-label="pausa"}
+## {background-color="#00A9E0" data-cron="900" data-cron-label="pausa"}
 
 ::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
-PAUSA · 20 minutos
+PAUSA · 15 minutos
 :::
 
 ---
@@ -216,10 +286,24 @@ Si su mano de obra es familiar y la valoran en cero, escríbanlo explícitamente
 
 ---
 
-## {background-color="#00A9E0" data-cron="900" data-cron-label="pausa"}
+## Síntesis · la recuperación que se les olvida {background-color="#f5f5f5" data-cron="900" data-cron-label="síntesis"}
+
+Patrón más común en este ejercicio: casi todos calculan bien el **déficit máximo** — y se les olvida el paso 5.
+
+::: {style="font-size:1.25em;"}
+Si su hoja de capital de trabajo termina en el año del déficit máximo y no vuelve a aparecer, **su VPN está subestimado**.
+:::
+
+::: {.callout-warning}
+Pregúntense ahora mismo: ¿en qué año de su modelo aparece el capital de trabajo como un flujo **positivo**? Si la respuesta es "en ninguno", va a la lista de correcciones antes de Construcción 3.
+:::
+
+---
+
+## {background-color="#00A9E0" data-cron="600" data-cron-label="pausa"}
 
 ::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
-PAUSA · 15 minutos
+PAUSA · 10 minutos
 :::
 
 ---
@@ -271,6 +355,22 @@ No son decisiones descriptivas. Son **variables de optimización** con consecuen
 
 ::: {.callout-important}
 Si su costo por tonelada está **por encima** del escenario bajo, ya saben algo importante sobre su proyecto — y lo saben tres semanas antes de tener el flujo de caja.
+:::
+
+---
+
+## Discusión · 10 min · ¿por qué estos costos y no los de cualquier proyecto? {background-color="#f5f5f5" data-cron="600" data-cron-label="discusión"}
+
+Sapag (su lectura de esta semana) da la teoría de costos general — diferenciales, sepultados, costo-volumen-utilidad. Necesaria, pero no dice nada de por qué un proyecto **sostenible** tiene una estructura de costos distinta a uno convencional.
+
+| | Proyecto convencional | Proyecto sostenible |
+|---|---|---|
+| **CapEx** | Terreno + siembra + maquinaria | + estudios de suelo/biodiversidad, riego eficiente, certificación inicial |
+| **OpEx** | Insumos al precio de mercado | + prima de mano de obra justa, monitoreo y verificación, renovación de certificación |
+| **Capital de trabajo** | El bache hasta la primera cosecha | Suele ser **más largo** — un sistema agroforestal madura más lento que un monocultivo intensivo |
+
+::: {.callout-important}
+Ninguna de las tres es "gastar de más". Es el precio de **internalizar** externalidades que un proyecto convencional deja fuera del estado de resultados — el mismo concepto de Schoenmaker & Schramade que leyeron en S1. La pregunta de un comité de inversión no es *"¿por qué cuesta más?"*: es **"¿ese costo compra un riesgo que el convencional simplemente no está pagando?"**
 :::
 
 ---

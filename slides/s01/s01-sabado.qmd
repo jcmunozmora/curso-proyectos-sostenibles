@@ -342,8 +342,8 @@ Reciben la ficha de otro equipo y esta lista de chequeo:
 ::: {.column width="50%"}
 **Leer** (máx. 40 min)
 
-- Sapag — capítulos de costos y capital de trabajo
-- Hyndman & Athanasopoulos cap. 1 (acceso abierto)
+- Sapag Chain — cap. 6, estimación de costos
+- Hyndman & Athanasopoulos — cap. 1, *Getting started* (acceso abierto)
 :::
 :::
 

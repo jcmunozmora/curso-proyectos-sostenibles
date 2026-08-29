@@ -33,6 +33,26 @@
 | `CEPAL_acb-energias-renovables.pdf` | ACB · energías renovables |
 | `PwC-CFA_caso-climatico-proyectos-mitigacion.pdf` | Caso climático de proyectos |
 
+## Lecturas curadas por sesión (`literatura/readings/`)
+
+Extractos cortos (1 capítulo, PDF liviano) para lectura obligatoria/complementaria de una sesión puntual — distinto de `literatura/pdf/` (biblioteca completa de consulta, gitignored). **Sí se versiona en git.**
+
+**Convención de nombres:** `SSx_Descripción.pdf` — `SS` = sesión de destino (`01`…`05`), `x` = letra de orden de llegada (`a`, `b`, …). La letra no indica obligatoria vs. complementaria; eso se declara en el syllabus.
+
+| Archivo | Referencia | Sesión | Tipo |
+|---|---|---|---|
+| `01a_Schoenmaker_Schramade_Cap1.pdf` | Schoenmaker & Schramade (2023), cap. 1 [@schoenmaker2023] | S1 | Complementaria |
+| `01b_Berg-etal_2022.pdf` | Berg, Kölbel & Rigobon (2022) [@berg2022] | S1 | Obligatoria |
+| `01c_Schoenmaker_Schramade_Cap2.pdf` | Schoenmaker & Schramade (2023), cap. 2 [@schoenmaker2023] | S1 | Complementaria |
+| `01d_FOLU2023_SbN-Colombia-ES.pdf` | FOLU Colombia (2023) [@folu2023] | S1 | Obligatoria |
+| `02a_Forecasting.pdf` | Hyndman & Athanasopoulos, cap. 1 *Getting started* [@hyndman2021] | S2 | Obligatoria |
+| `02b_Sapag_Cap6_Costos.pdf` | Sapag Chain, cap. 6 *Estimación de costos* [@sapag2014] | S2 | Obligatoria |
+| `03a_Schoenmaker_Schramade_Cap4.pdf` | Schoenmaker & Schramade (2023), cap. 4 *Discount Rates and Scarcity of Capital* [@schoenmaker2023] | S3 | Complementaria |
+
+⚠️ **Corregido 2026-08-23:** los tres archivos llegaron con prefijo `03a/03b/03c`. Se verificó el contenido de cada uno (`pdftotext` + inspección de secciones) y dos de los tres eran material de **S2** mal etiquetado — se renombraron a `02a`/`02b`. Sólo el capítulo de tasas de descuento (`Schoenmaker Cap. 4`) es efectivamente de S3; quedó como `03a`, coherente con la nota del syllabus de que capítulos de Schoenmaker "aparecen como lectura complementaria en S1 y S3".
+
+⚠️ `02b_Sapag_Cap6_Costos.pdf` cubre **costos** en profundidad (12 subsecciones) pero **no** desarrolla capital de trabajo — el capítulo solo lo menciona de paso al cierre, remitiendo a un capítulo posterior del libro que no se incluyó aquí. El método de **déficit acumulado máximo** que usan los slides de S2-sábado se enseña ahí directamente, sin respaldo de lectura dedicado — es una decisión pedagógica válida, no un vacío a ocultar.
+
 ## ⚠ Pendientes de obtención manual
 
 | Referencia | Por qué falló | Ruta |
@@ -43,8 +63,7 @@
 | **Carta Circular 067 de 2025** | Plan de implementación de la CE 015 | superfinanciera.gov.co |
 | Papers de cacao (MDPI ×3) | Cloudflare bloquea descarga automatizada | Abrir en navegador: `mdpi.com/2071-1050/14/15/9447` |
 | *Proc. R. Soc. B* créditos de biodiversidad | Bloqueo | PMC12364579 en navegador |
-| **Sapag Chain (2014)** · **Boardman (2018)** · **Brigham (2022)** | Libros comerciales | Biblioteca EAFIT |
-| **Hyndman & Athanasopoulos** | Libro web | Leer en `otexts.com/fpp3` |
+| **Boardman (2018)** · **Brigham (2022)** | Libros comerciales | Biblioteca EAFIT |
 
 ## Verificaciones hechas al bajar
 

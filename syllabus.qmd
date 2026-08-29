@@ -60,7 +60,7 @@ Los últimos 20 minutos de cada sábado son **auditoría cruzada**: cada equipo 
 | Sesión | Obligatorias |
 |---|---|
 | **S1** | Berg, Kölbel & Rigobon (2022) §1–3 y conclusiones [@berg2022] · FOLU Colombia (2023) resumen ejecutivo [@folu2023] |
-| **S2** | Sapag Chain — costos y capital de trabajo [@sapag2014] · serie de precios del cacao 2023–2026 |
+| **S2** | Sapag Chain — cap. 6, estimación de costos [@sapag2014] · Hyndman & Athanasopoulos — cap. 1, *Getting started* [@hyndman2021] |
 | **S3** | Welch (2021) [@welch2021] · Drupp et al. — resultados [@drupp2018] |
 | **S4** | Banco Mundial (2024) Guidance Note [@wb2024spc] · Jayachandran et al. (2017) [@jayachandran2017] |
 | **S5** | Circular Externa 015 de 2025 SFC [@sfc015] · Schoenmaker & Schramade (2023) — cap. Decisiones de inversión [@schoenmaker2023] |

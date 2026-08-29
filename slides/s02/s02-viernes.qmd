@@ -42,6 +42,7 @@ Luego: "Ábranme su ficha de proyecto. ¿Cuántos escribieron un precio? ¿De d�
 | 19:45 | Sesgo de optimismo | 10 |
 | 19:55 | **Aplicación** · tres escenarios estructurales | **40** |
 | 20:35 | Tribunal | 20 |
+| 20:55 | Cierre · para mañana | 5 |
 | **21:00** | **Fin** | |
 
 ---
@@ -185,15 +186,15 @@ Un precio alto en $t$ genera **sobreoferta** en $t+k$, que genera precio bajo, q
 :::
 
 ::: {.callout-important}
-**Y la elasticidad decide si converge o explota.**
+**Y la elasticidad decide si converge o explota.** *(razón de pendientes, en valor absoluto)*
 
 | Condición | Comportamiento |
 |---|---|
-| $\left\|\frac{\text{pendiente } S}{\text{pendiente } D}\right\| < 1$ | oscila y **converge** |
+| $\dfrac{\text{pendiente } S}{\text{pendiente } D} < 1$ | oscila y **converge** |
 | $= 1$ | oscila **para siempre** |
 | $> 1$ | oscila y **diverge** |
 
-El cacao tiene oferta **muy inelástica a corto plazo** (el árbol tarda 4 años) y demanda **inelástica** (el chocolate no tiene sustituto). Ese es el peor par posible.
+El cacao combina demanda **inelástica** (sin sustituto) con una oferta que no puede reaccionar **este año** —el árbol tarda 4 años— pero que sí reaccionó con fuerza en el rezago: el precio récord de 2024 disparó una siembra masiva. Cuando ambos lados son poco sensibles al precio en el corto plazo, un desajuste pequeño de cantidad exige un movimiento de precio enorme para despejar el mercado — de ahí el salto de USD 2.400 a USD 12.931. Y si esa respuesta de siembra sigue siendo tan fuerte, el cociente de pendientes queda cerca de 1 o por encima: el ciclo no se amortigua, se repite.
 :::
 
 ---
@@ -273,6 +274,22 @@ Es un patrón sistemático y medido en evaluación de proyectos:
 ::: {.callout-warning}
 ## La prueba del sesgo
 Si su escenario "pesimista" todavía tiene VPN positivo, **no construyeron un escenario pesimista**. Construyeron tres versiones del optimista.
+:::
+
+---
+
+## Herramientas de IA para esta aplicación {.smaller background-color="#f5f5f5"}
+
+| Para qué | Prompt |
+|---|---|
+| **Costo marginal** | "Busca el costo de producir una tonelada de cacao en Costa de Marfil en 2025–26, desagregado en mano de obra / insumos / transporte. Cita fuente primaria; marca `[sin verificar]` si no la encuentras." |
+| **Tres escenarios** | "Constrúyeme tres escenarios de precio del cacao a 12 años (bajo/central/alto), cada uno con su propia lógica de oferta y de demanda explícita — no un número sin justificación." |
+| **Contradictor** | "Actúa como el *discussant* de un comité de inversión. Aquí está nuestra defensa de precio: [pegar]. Encuentra el supuesto que no declaramos." |
+| **Curva de futuros** | "Explícame la curva de futuros de cacao (ICE) a 18–24 meses: qué sí y qué no me dice sobre el precio en el año 12." |
+| **Real vs. nominal** | "Revisa este modelo y dime si alguna celda mezcla precio real con precio nominal." |
+
+::: {.callout-warning}
+**Documentan el prompt** en su defensa escrita. **Verifican cada cifra** que la IA les dé — es buena encontrando estructura, mala con números específicos.
 :::
 
 ---
