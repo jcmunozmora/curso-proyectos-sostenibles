@@ -26,7 +26,7 @@ from xml.sax.saxutils import escape
 from datos import (
     CURSO, PALETA, FUENTE, MODULOS, SEMANA_ACTUAL, ICONOS,
     CONTENT_EXPERIENCE, BADGES, RELEASE_CONDITIONS, INTELLIGENT_AGENTS,
-    ASIGNACIONES, CATEGORIAS_CALIFICACIONES, PODCAST,
+    ASIGNACIONES, CATEGORIAS_CALIFICACIONES, PODCAST, LECTURAS,
 )
 
 OUT = Path(__file__).parent / "build"
@@ -659,7 +659,46 @@ Fuente única de verdad: `/eafit-style`. Nunca inventar un hex distinto aquí.
 """
 
 
+def doc_lecturas() -> str:
+    repo = Path(__file__).parent.parent
+    partes = [
+        "# Lecturas — subida manual a Interactiva (D2L) — MF7011\n",
+        "> **Los PDF de lecturas NO van dentro del zip de contenido** (regla del asset "
+        "`d2l-package`: cero material con copyright de terceros en el paquete — el LMS "
+        "cerrado es el canal correcto para los fragmentos con derechos). Se suben a mano, "
+        "módulo por módulo: **Content → [módulo] → Upload/Create → Upload Files**, y se "
+        "arrastra cada lectura ARRIBA del tópico Tribunal, en el orden de la tabla. "
+        "Pegar la columna 'Descripción' como descripción del tópico en D2L.\n",
+        "> Fuente única de los PDF: `literatura/readings/` (verificados por contenido — "
+        "ver `literatura/README.md`). Esta guía se genera de `datos.py`; no editarla a mano.\n",
+    ]
+    for m in MODULOS:
+        del_modulo = [l for l in LECTURAS if l["modulo"] == m["id"]]
+        if not del_modulo:
+            continue
+        partes.append(f"\n## {m['titulo']}\n")
+        partes.append("| # | Archivo (repo) | Título del tópico en D2L | Tipo | Descripción |")
+        partes.append("|---|---|---|---|---|")
+        for i, l in enumerate(del_modulo, 1):
+            existe = "" if (repo / l["archivo"]).exists() else " ⚠️ **NO EXISTE**"
+            partes.append(
+                f"| {i} | `{l['archivo']}`{existe} | {l['titulo']} | "
+                f"{l['tipo'].capitalize()} | {l['nota']} |"
+            )
+    partes.append(
+        "\n## Pendientes (sin PDF en `readings/` todavía)\n\n"
+        "- **m04 / S4:** Banco Mundial (2024) *Guidance Note on Shadow Price of Carbon* · "
+        "Jayachandran et al. (2017) — ver `literatura/README.md` §Pendientes.\n"
+        "- **m05 / S5:** Circular Externa 015 de 2025 (SFC) completa · Schoenmaker & "
+        "Schramade cap. Decisiones de inversión.\n\n"
+        "Cuando lleguen: pasan el gate de `/mambrino-lit`, entran a `literatura/readings/` "
+        "con prefijo `04x`/`05x`, se agregan a `LECTURAS` en `datos.py` y se regenera esta guía.\n"
+    )
+    return "\n".join(partes) + "\n"
+
+
 def docs():
+    (OUT / "lecturas.md").write_text(doc_lecturas(), encoding="utf-8")
     (OUT / "badges.md").write_text(doc_badges(), encoding="utf-8")
     (OUT / "release-conditions.md").write_text(doc_release_conditions(), encoding="utf-8")
     (OUT / "intelligent-agents.md").write_text(doc_intelligent_agents(), encoding="utf-8")
@@ -667,7 +706,7 @@ def docs():
     (OUT / "rubrics.md").write_text(doc_rubricas(), encoding="utf-8")
     (OUT / "gradebook.md").write_text(doc_gradebook(), encoding="utf-8")
     (OUT / "manual-mantenimiento.md").write_text(doc_manual_mantenimiento(), encoding="utf-8")
-    print(f"✅ {OUT}/badges.md, release-conditions.md, intelligent-agents.md, assignments.md, rubrics.md, gradebook.md, manual-mantenimiento.md")
+    print(f"✅ {OUT}/lecturas.md, badges.md, release-conditions.md, intelligent-agents.md, assignments.md, rubrics.md, gradebook.md, manual-mantenimiento.md")
 
 
 # --------------------------------------------------------------- VALIDAR
@@ -696,6 +735,12 @@ def validar():
         )
     total = sum(peso for _, peso in CATEGORIAS_CALIFICACIONES)
     assert abs(total - 100.0) < 1e-6, f"las categorías suman {total}%, no 100%"
+    # Lecturas: módulo existente, archivo presente en el repo, tipo válido.
+    repo = Path(__file__).parent.parent
+    for l in LECTURAS:
+        assert l["modulo"] in MODULOS_POR_ID, f"lectura apunta a módulo inexistente: {l['modulo']}"
+        assert l["tipo"] in ("obligatoria", "complementaria"), f"tipo inválido en lectura: {l}"
+        assert (repo / l["archivo"]).exists(), f"lectura sin PDF en el repo: {l['archivo']}"
 
 
 if __name__ == "__main__":

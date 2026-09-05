@@ -165,9 +165,66 @@ La promesa comercial del campo es que la sostenibilidad abarata el capital. La e
 
 La agenda de *impact-weighted accounts* (Serafeim y colaboradores, Harvard) intentó traducir impacto a unidades monetarias comparables en el estado de resultados. Es la aspiración más ambiciosa del campo y la que más se cita en pitch decks.
 
-**Estado en 2026 [PV — verificar el estado institucional actual de la iniciativa antes de afirmarlo en clase]**: la agenda persiste metodológicamente, pero la ambición de un estándar universal comparable se ha moderado frente a las dificultades de valoración que documenta la tradición ACB desde los años 70.
+**Estado en 2026 [V 2026-08-31]**: la agenda no murió — **se institucionalizó**. El proyecto de Harvard continuó en una fundación dedicada, la **International Foundation for Valuing Impacts (IFVI**, 2022), que en alianza con la **Value Balancing Alliance** (el club corporativo que fundaron BASF, SAP y otros en 2019) publica una metodología conjunta con proceso formal de estándar: *General Methodology 1* (feb-2024) [@ifvi2024], metodologías ambientales interinas (contaminación del aire, uso y conversión de suelo, residuos, contaminación del agua), una **base pública de ~100.000 factores de valor** (Global Value Factor Database), comité técnico independiente, borradores de exposición y comentario público. Lo que **sí** sigue siendo cierto: la ambición de un estándar universal comparable se ha moderado frente a las dificultades de valoración que documenta la tradición ACB desde los años 70 — el due process es señal de madurez, no prueba de que la conmensuración funcione.
 
-**Cómo enseñarlo**: no como técnica a aplicar, sino como **caso de estudio sobre los límites de la conmensuración**. Es el puente natural hacia §7.
+**Cómo enseñarlo**: no como técnica a aplicar, sino como **caso de estudio sobre los límites de la conmensuración**. Es el puente natural hacia §7. Y desde 2026-2, con material nuevo: la lista de casos verificados de §2.4.
+
+## 2.4 Nivel de investigación — el valor integrado en la práctica: buenas prácticas y casos verificados
+
+::: {.callout-note}
+## Qué es este nivel
+
+El curso tiene dos niveles de lectura (obligatorias ≤2 por sesión, complementarias). Esta sección abre un **tercer nivel — investigación**: opcional, para el equipo que quiera responder la pregunta que un comité de inversión real siempre hace: *"¿quién más en el mundo hace esto, y qué número reporta?"*. Todo lo listado pasó el gate de verificación (URL probada + contenido inspeccionado, 2026-08-31); ninguna entrada es de oídas.
+:::
+
+### Las buenas prácticas que estos casos tienen en común
+
+1. **Monetizan con factores públicos y metodología abierta.** Kering liberó su metodología y sus datasets; Impact Institute publica su marco; IFVI publica los ~100.000 factores. Un número de impacto con factor de valor secreto no es evidencia — es marketing.
+2. **Reportan lo negativo junto a lo positivo.** ABN AMRO publica el daño que causa (su IP&L tiene filas en rojo). Un "caso de éxito" que solo suma beneficios es la versión corporativa del sesgo de optimismo de S2.
+3. **Separan medición de valoración.** Primero la cantidad física (tCO₂e, m³, horas), después el factor monetario. Exactamente la regla del curso: KPI físicos primarios y precios sombra declarados por aparte.
+4. **Declaran la vigencia de los datos** — o deberían. El estudio del cacao usa datos de 2014 y lo dice; quien lo cite en 2026 sin decirlo comete la falta que la rúbrica castiga.
+5. **El valor integrado complementa el estado financiero, no lo reemplaza.** Nadie paga nómina con valor social. BASF publica ambos, lado a lado, desde 2013.
+6. ⚠️ **No confundir *reporte* integrado con *valor* integrado.** Un informe anual "integrado" (estilo IIRC) junta narrativas; el valor integrado **monetiza** impactos y los suma o resta. Muchas empresas colombianas hacen lo primero; casi ninguna lo segundo. Esa brecha es una oportunidad de tesis, no un defecto del curso.
+
+### Los casos, verificados — con sus números reales
+
+| Caso | Qué hizo | El dato real que enseña | Acceso |
+|---|---|---|---|
+| **BASF · Value-to-Society** (desde 2013) | Primera multinacional en monetizar impactos económicos, sociales y ambientales de toda su cadena, año tras año | Una década de series publicadas — y la lección incómoda: **al migrar a la metodología VBA en 2020, sus propias series dejaron de ser comparables**. La estandarización tiene precio. ⚠️ basf.com se reorganizó y la página de resultados da 404 (2026-08-31): sus cifras en € no se citan aquí sin reverificar | [@basf2018vts] método v2.0 [V, copia inspeccionada] |
+| **Kering · EP&L** (desde 2011) | Monetiza 6 categorías ambientales (GEI, agua, contaminación de agua y aire, residuos, uso de suelo) de toda la cadena de lujo | Su marca PUMA publicó el **primer EP&L de la historia**: huella ambiental 2010 valorada en **≈ £124 M (~€145 M)** [V]. El EP&L de grupo rondó **€516 M en 2020** [PV — confirmar contra el informe EP&L de kering.com antes de citar]. Metodología y datasets **abiertos** | [@kering_epl] [V] |
+| **ABN AMRO · Impact Statements** (desde 2018) | **Primer banco del mundo** con un Integrated P&L en su informe anual, con metodología abierta del Impact Institute | IP&L 2018: **43 renglones**; creación total de valor estimada en **€7,5–21 mil millones** — clientes €5–10 mm, empleados €0,5–1 mm, inversionistas y sociedad €1–5 mm cada uno [V]. **Publicado en rangos, no en puntos** — la misma disciplina que este curso exige con el WACC | [@schramade2020abn] [V] — case study de **Schramade, coautor del texto base** |
+| **Safaricom × KPMG · True Value** (2016) | Monetizó externalidades socioeconómicas y ambientales del operador móvil keniano (M-Pesa incluido) | "Valor verdadero" **KES 413,8 mil millones ≈ 10,9× la utilidad neta** de FY2016 [V] — y la advertencia: el estudio lo pagó Safaricom. Casi ningún *true value* encargado por el interesado da negativo | [@kpmg2016safaricom] [V] |
+| **Inditex · valoración integrada** (2021) | El caso guiado de los autores del texto base: IV = FV + SV + EV calculado paso a paso para una empresa real | Tabla 11.18, en € mil millones: **FV 79 · SV +283 y −137 · EV −183 → IV = 42** — el valor integrado es **la mitad** del financiero, sostenido por el valor social positivo (consumer surplus, empleo) contra unos negativos E y S enormes en términos absolutos [V, verificado contra el capítulo] | **Cap. 11 del texto base** [@schoenmaker2023], acceso abierto |
+| **True Price × IDH · cacao de Côte d'Ivoire** (2016, datos 2014) | Precio "verdadero" del kilo de cacao: mercado + costos externos sociales y ambientales monetizados | Farm gate **€1,35/kg** vs. precio verdadero **≈ €7,1/kg**; 92% de los costos externos en cultivo y **84% de esos son sociales** — el problema del cacao no es (solo) ambiental [V] | [@trueprice2016cocoa] [V] — espejo ICI; el original de trueprice.org murió |
+| **UNEP · TEEBAgriFood, cacao en Ghana** | Aplica el marco de 4 capitales (producido, natural, humano, social) a la cadena del cacao agroforestal | La honestidad metodológica: monetiza lo monetizable y deja la biodiversidad en **índices de diversidad** — no fuerza todo a moneda | [@teebagrifood_ghana] [V] |
+
+### Y los casos que sí son proyectos — inversión real, lado *ex ante*
+
+Los de arriba miden **empresas** que ya operan. Estos tres estructuraron **proyectos de inversión** — vehículos, deuda y equity, ingresos por créditos — con documentación pública verificada. Son lo más cerca que va a estar el Corredor del Cacao de un espejo real:
+
+| Proyecto | La estructura | El dato verificado | Habla con |
+|---|---|---|---|
+| **RioSierra (fondo Urapi × Ecotierra), Sierra Nevada de Santa Marta** — *el espejo directo del proyecto ancla* | Fondo Urapi: **USD 50 M** (deuda + equity), totalmente invertido; **primera inversión del LDN Fund** (Mirova); financia cooperativas de productores con créditos de carbono VCS como flujo adicional | **Café, cacao y miel** en la zona de amortiguación de la Sierra Nevada; métricas 2024 del fondo: 9.341 familias, 41.000 ha de bosque bajo conservación, 2.059 empleos [@urapi_ldn] [V] | S2–S3: así se ve un agroforestal colombiano financiado de verdad — estructura de capital incluida |
+| **Banco de Hábitat El Globo (Terrasos), Támesis — suroeste antioqueño** | **≈304 ha** de bosque de niebla, ex hacienda ganadera, convertida en el **primer banco de hábitat del país que emite créditos voluntarios de biodiversidad** (tebus, desde 2024); registro en Regen Network, verificación KPMG; unidad Tebu desarrollada con BID Lab y Fundación Santo Domingo | Un flujo de ingresos que hace diez años no existía: vender unidades de biodiversidad con obligaciones de conservación a 30 años [@terrasos_elglobo] [V] | S1: ¿quién certifica qué cuenta como sostenible? · S3: ¿qué tasa de descuento merece un flujo así de nuevo? |
+| **Herencia Colombia · Project Finance for Permanence** | Un **cierre único condicionado** (*single closing*) que amarra gobierno, filantropía y multilaterales de una vez — nadie desembolsa hasta que todos firman | **USD 245 M a 10 años** (jun-2022) para asegurar **32 M ha**; la propuesta GCF FP203 (WWF Colombia) es ingeniería financiera pública y legible [@heco2022] [V] | S4–S5: *blended finance* y permanencia — la pregunta que el comité siempre hace |
+
+Y el cuarto caso ya está en el syllabus: **Jayachandran et al. (2017)** [@jayachandran2017] — el experimento aleatorizado de pagos por conservación en Uganda, lectura obligatoria de S4. De toda esta página, es el único caso con **contrafactual creíble**: los demás reportan lo que pasó, no lo que habría pasado sin el proyecto.
+
+::: {.callout-warning}
+## Las tres advertencias antes de citar cualquiera de estos casos
+
+1. **Los casos corporativos son reporte *ex post*** — miden lo que ya pasó; el curso evalúa *ex ante*, y el puente entre ambos es el flujo socioeconómico de S4 (precios sombra sobre flujos proyectados). Los tres proyectos de la segunda tabla sí son *ex ante* — pero lo que publican es el **cierre financiero**, casi nunca el modelo completo con supuestos: no confundan un comunicado de prensa con un flujo de caja.
+2. **Sesgo de autopublicación**: los casos "exitosos" los publica el interesado. No existe el informe *Value-to-Society* de la empresa a la que le dio negativo.
+3. **La divergencia de Berg et al. (§2.1) reaparece aquí con otro disfraz**: mismo impacto físico, distinto factor de valor → distinto número. Por eso la práctica #3 (separar cantidad física de factor monetario, y citar la fuente del factor) no es cortesía metodológica — es lo que hace auditable el resultado.
+:::
+
+::: {.callout-important}
+## La movida de curso (opcional, nivel investigación)
+
+Cada equipo que quiera subir la apuesta elige **un** caso de la tabla, extrae **una** práctica monetizable y la aplica a su proyecto: una fila nueva en el flujo socioeconómico de S4 (p. ej., el costo social del trabajo con los factores del cacao de True Price) **o** una sección "Valor integrado" en la Nota de Inversión de S5 (con el cap. 11 de Inditex como plantilla). Condición única, no negociable: **declarar el factor de valor usado, su fuente y su año** — la regla #4 de arriba.
+
+En el Investor Day, el equipo que pueda decir *"esto mismo lo reporta BASF así, y nuestro factor sale de la base de IFVI"* tiene una respuesta que el resto no tiene. Y mejor aún la del que pueda comparar su estructura: *"Urapi financió café, cacao y miel en la Sierra Nevada con USD 50 M de deuda y equity más créditos VCS — nuestro SPV se diferencia en esto."*
+:::
 
 ---
 
@@ -471,6 +528,8 @@ Regla del curso: **máximo 2 lecturas obligatorias por sesión**, porque son pro
 | **S5** · Cierre (virtual) | Circular Externa 015/2025 SFC · Schoenmaker & Schramade cap. Decisiones de inversión (OA) | — | T6, T7 |
 
 **Acceso abierto** (sin costo, sin biblioteca): Schoenmaker & Schramade (2023); Hyndman & Athanasopoulos (2021); Welch (2021); documentos del Banco Mundial, FOLU, SFC, DNP, NGFS e IUCN. Cerrado: Berg et al. (2022), Jayachandran et al. (2017), Drupp et al. (2018) — todos accesibles vía EZproxy EAFIT; los tres tienen versión *working paper* pública (LSE Grantham, NBER, SSRN).
+
+**Tercer nivel — investigación (opcional, transversal a S4–S5):** los casos verificados de valor integrado en la práctica están en **§2.4** — empresas (BASF, Kering, ABN AMRO, Safaricom, Inditex — cap. 11 del texto base, True Price del cacao, TEEBAgriFood) **y proyectos de inversión reales** (RioSierra/Urapi en la Sierra Nevada — café, cacao y miel; el Banco de Hábitat El Globo en Támesis; Herencia Colombia). Todo de acceso abierto. Es el material para el equipo que quiera llegar al Investor Day con la respuesta a *"¿quién más hace esto?"*.
 
 ---
 

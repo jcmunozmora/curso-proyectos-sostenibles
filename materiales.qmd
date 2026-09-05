@@ -35,6 +35,7 @@ title: "Materiales"
 
 - [Revisión de literatura](literatura/revision-literatura.qmd) — el mapa del campo
 - [Auditoría de bibliografía](literatura/auditoria-bibliografia.qmd)
+- **PDFs de las lecturas de cada sesión:** en Interactiva, dentro del módulo de la sesión (no se publican en este sitio por derechos de autor)
 
 **Texto base, acceso abierto:** Schoenmaker & Schramade (2023), *Corporate Finance for Long-Term Value*, Springer.
 

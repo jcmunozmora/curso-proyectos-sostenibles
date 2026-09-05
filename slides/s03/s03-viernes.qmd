@@ -82,6 +82,25 @@ Anotar quién distingue real/nominal — casi nadie. Ese es el gancho de la sín
 
 ---
 
+## Vocabulario · antes de construir la tasa {.smaller background-color="#f5f5f5"}
+
+| Término | Qué es | Fórmula / lógica | En este proyecto |
+|---|---|---|---|
+| **$R_f$** (tasa libre de riesgo) | Lo que paga hoy el activo más seguro en esa moneda — el **piso** de cualquier rendimiento exigido | Referencia en USD: Tesoro americano a 10 años | 4,20% |
+| **ERP** (*equity risk premium* · prima de riesgo de mercado) | Lo **adicional** que exige un inversionista por estar en acciones y no en el activo seguro | $E[R_m] - R_f$, estimada por Damodaran para un mercado maduro | 4,23% |
+| **$\beta$** (beta) | Cuánto se mueve el rendimiento de este negocio cuando se mueve el mercado entero — 1 = igual que el mercado | $\beta = \mathrm{Cov}(R_i, R_m)/\mathrm{Var}(R_m)$ — se estima con comparables públicos | 0,85 — **elegida, no estimada**: no hay comparables |
+| **Prima de riesgo país** | Compensación extra por invertir en Colombia y no en un mercado maduro | Spread de incumplimiento soberano, ajustado | 2,85% (Baa3) |
+| **$K_e$** (costo del patrimonio · *cost of equity*) | El rendimiento mínimo que hace que al **accionista** le valga la pena poner su plata aquí y no en otra parte | $K_e = R_f + \beta \cdot ERP + \text{prima país}$ | 10,65% USD → 13,34% COP |
+| **$K_d$** (costo de la deuda) | La tasa a la que el banco **realmente** les presta — la cotizada, no la que quisieran | Después de impuestos: $K_d(1-t)$, por el escudo fiscal | 14,0% COP nominal |
+| **Escudo fiscal** (*tax shield*) | Los intereses se deducen del impuesto: el Estado "paga" una parte del costo de la deuda | El $(1-t)$ — **solo existe si hay utilidad gravable** | $t = 35\%$ · ojo: años 0–4 sin renta |
+| **WACC** (*weighted average cost of capital*) | El costo de **cada peso** que financia el proyecto, mezclando accionista y banco según su participación | $WACC = \tfrac{E}{V}K_e + \tfrac{D}{V}K_d(1-t)$ | 10,80% COP |
+
+::: {.callout-note}
+**Punto básico (pb):** una centésima de punto porcentual — 100 pb = 1%. Esta noche el *greenium* se mide en pb: tengan la escala presente para dimensionarlo.
+:::
+
+---
+
 ## Input · Cómo se construye un Ke
 
 $$K_e = R_f + \beta \cdot ERP_{\text{mercado maduro}} + \text{prima país}$$
@@ -112,7 +131,7 @@ Esta tabla cambia cada seis meses. **Nunca la citen de memoria ni de un apunte d
 
 | | |
 |---|---:|
-| $R_f$ (Tesoro USA 10a) | 4,20% |
+| $R_f$ (Tesoro USA 10a) | 4,20% *(ene-2026 · hoy: 4,78%)* |
 | $\beta$ (estimación puntual) | 0,85 |
 | Inflación COL / USA | 5,0% / 2,5% |
 | $K_d$ (COP nominal) | 14,0% |
@@ -278,6 +297,40 @@ El riesgo sistemático va en el **denominador**.
 
 ---
 
+## La otra lectura · Drupp et al.: 197 expertos, una pregunta {.smaller}
+
+Encuestaron a **197 expertos** en descuento de largo plazo — la gente que escribe los papers sobre qué tasa usar:
+
+::: {.columns}
+::: {.column width="55%"}
+| Resultado | Valor |
+|---|---:|
+| Tasa recomendada — media | 2,27% |
+| Tasa recomendada — mediana | 2,0% |
+| **Rango completo de respuestas** | **0% a 10%** |
+| Cómodos con una tasa de 1–3% | \>90% |
+:::
+
+::: {.column width="45%"}
+::: {.callout-important}
+**Ni los expertos se ponen de acuerdo en un punto** — pero sí en un rango.
+
+Exactamente lo que les pedimos hoy con el WACC: **el punto se elige, el rango se defiende.**
+:::
+:::
+:::
+
+::: {.callout-note}
+Esa encuesta es sobre la tasa **social** de descuento — la del país, no la del inversionista. La retomamos la próxima semana, cuando el mismo proyecto se evalúe con el otro flujo de caja. Por ahora quédense con el método: **desagregar la tasa en sus componentes y declarar el desacuerdo, en vez de esconderlo.**
+:::
+
+::: {.notes}
+2 min. Conectar con la lectura asignada: leyeron la tabla de resultados y las conclusiones.
+La pregunta puente: "si 197 expertos dan de 0 a 10%, ¿qué le da derecho a su Excel de reportar 10,80% sin rango?"
+:::
+
+---
+
 ## Input · ¿Y el financiamiento verde no abarata todo esto?
 
 La promesa comercial del campo dice que sí. La evidencia de 2026 es mucho más tibia.
@@ -296,6 +349,22 @@ Si el caso de inversión de su proyecto depende del greenium, **no tienen caso d
 
 ::: {.callout-note}
 El valor real de la etiqueta verde está en **acceso** — plazos más largos, garantías, inversionistas nuevos, cumplimiento de la Circular 015 del banco — **no en precio**. Esa distinción es un objetivo de aprendizaje del curso.
+:::
+
+---
+
+## Herramientas de IA para esta aplicación {.smaller background-color="#f5f5f5"}
+
+| Para qué | Prompt |
+|---|---|
+| **Damodaran vigente** | "Abre la tabla de *country risk premium* de Damodaran (pages.stern.nyu.edu/~adamodar). Dame la fecha de última actualización, el CRP de Colombia y el ERP de mercado maduro. Cita la URL exacta; marca `[sin verificar]` si no puedes abrirla." |
+| **Beta por comparables** | "Lista empresas listadas en bolsa con negocio parecido a un agroforestal de cacao (plantaciones, agro tropical). Para cada una: beta apalancada, D/E, país — y por qué sí o no sirve como comparable de un SPV en Colombia." |
+| **Des/re-apalancar** | "Explícame paso a paso cómo desapalancar la beta de un comparable y reapalancarla a una estructura 60% deuda / 40% equity con t = 35%. Muestra la fórmula de Hamada con mis números: [pegar]." |
+| **Conversión de moneda** | "Verifica esta conversión de $K_e$ de USD a COP con diferencial de inflación: [números]. ¿Multipliqué o sumé? ¿Cuál es el error en pb si sumo?" |
+| **Contradictor** | "Actúa como el analista de riesgo del banco. Aquí está nuestra defensa del WACC: [pegar]. Haz las tres preguntas más incómodas — incluida la del escudo fiscal en años sin renta." |
+
+::: {.callout-warning}
+**Documentan el prompt** en su defensa escrita. **Verifican cada cifra** que la IA les dé contra la fuente primaria — para eso bajaron Damodaran ustedes mismos. La IA es buena encontrando estructura, mala con números específicos.
 :::
 
 ---
@@ -331,6 +400,23 @@ Dos equipos defienden su WACC. El *discussant* pregunta:
 
 ::: {.callout-warning}
 El escudo fiscal en años sin renta es el error escondido más frecuente. **Si nadie lo pregunta, lo pregunto yo.**
+:::
+
+---
+
+## ¿De dónde sale cada fórmula? {.smaller background-color="#f5f5f5"}
+
+✅ está en una lectura asignada · 📖 texto base OA, capítulo **no** asignado · 🧑‍🏫 se enseña en clase, sin lectura de respaldo — brecha **declarada**, no escondida
+
+| Fórmula de esta noche | ¿En las lecturas? | Fuente exacta |
+|---|---|---|
+| **CAPM** · $E[R_i] = R_f + \beta(E[R_m]-R_f)$, $\beta = \mathrm{Cov}/\mathrm{Var}$ | ✅ Welch la presenta — y la demuele | Welch (2021), lectura `03b` (*primer* + Figura A) · formalización completa: texto base §12.4 (OA) |
+| **$K_e$ con prima país** · $R_f + \beta \cdot ERP + \text{prima país}$ | ⚠️ En **ninguna** lectura como fórmula: es práctica de mercado | Método y datos: tabla de Damodaran (la que bajan en vivo) · Welch, lectura `03b`, explica por qué es un parche sin teoría |
+| **WACC** · $\tfrac{E}{V}K_e + \tfrac{D}{V}K_d(1-t)$ | 📖 Capítulo no asignado | Texto base §13.1.3 *Weighted Average Cost of Capital* (OA) |
+| **Fisher / conversión de moneda** · $(1+i_{COP}) = (1+i_{USD})\tfrac{1+\pi_{COP}}{1+\pi_{USD}}$ | 🧑‍🏫 Solo clase | Estándar de finanzas internacionales; la derivación completa quedó en la slide de Teoría |
+
+::: {.callout-note}
+Que una fórmula no esté en las lecturas **no es un descuido**: las dos lecturas de hoy no enseñan la mecánica — discuten **si estas fórmulas merecen la confianza que se les tiene** (Welch) y **qué tan poco acuerdo hay incluso entre expertos sobre la tasa** (Drupp). La mecánica viene de los textos de referencia; el **criterio** viene de las lecturas. Por eso son las lecturas.
 :::
 
 ---

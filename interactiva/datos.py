@@ -32,7 +32,8 @@ FUENTE = "'Inter', 'Helvetica Neue', Arial, sans-serif"
 
 # La ÚNICA variable del mantenimiento semanal: qué módulo destaca en "Esta semana".
 # Índice 1-based sobre MODULOS. Al 2026-08-21: está en curso S1 → apunta a M1.
-SEMANA_ACTUAL = 2  # 1=M0 orientación · 2=M1/S1 · 3=M2/S2 · 4=M3/S3 · 5=M4/S4 · 6=M5/S5
+SEMANA_ACTUAL = 4  # 1=M0 orientación · 2=M1/S1 · 3=M2/S2 · 4=M3/S3 · 5=M4/S4 · 6=M5/S5
+# Al 2026-08-31: semana de S3 "El denominador" (vie 4 + sáb 5 sep) → apunta a M3.
 
 # Formato D2L del curso (Content clásico vs New Content Experience/Lessons):
 # POR-VERIFICAR — el profesor no confirmó cuál usa el tenant de EAFIT.
@@ -156,6 +157,52 @@ for modulo in MODULOS:
         "tipo": "bibliografia",
         "link": enlace,
     })
+
+# Lecturas curadas por sesión — PDFs en literatura/readings/ (verificados; ver
+# literatura/README.md). Los PDF NO van dentro del .zip del paquete de contenido
+# (regla del asset d2l-package: cero material con copyright de terceros en el
+# paquete; el LMS cerrado es el canal correcto). Se suben A MANO en D2L:
+# Content → módulo → Upload/Create → Upload Files. generar.py deriva de ESTA
+# lista la guía de subida (build/lecturas.md) — no duplicar esta info en otro lado.
+# S4 y S5 aún no tienen PDF en readings/ (ver literatura/README.md §Pendientes).
+LECTURAS = [
+    {"modulo": "m01", "archivo": "literatura/readings/01b_Berg-etal_2022.pdf",
+     "titulo": "📖 Berg, Kölbel & Rigobon (2022) — Aggregate Confusion",
+     "tipo": "obligatoria",
+     "nota": "Leer §1–3 y las conclusiones: por qué las calificaciones ESG de un mismo emisor divergen entre agencias."},
+    {"modulo": "m01", "archivo": "literatura/readings/01d_FOLU2023_SbN-Colombia-ES.pdf",
+     "titulo": "📖 FOLU Colombia (2023) — Soluciones basadas en la Naturaleza",
+     "tipo": "obligatoria",
+     "nota": "Leer el resumen ejecutivo: el contexto colombiano de financiamiento de SbN en el que vive el proyecto ancla."},
+    {"modulo": "m01", "archivo": "literatura/readings/01a_Schoenmaker_Schramade_Cap1.pdf",
+     "titulo": "⭐ Schoenmaker & Schramade (2023) — cap. 1",
+     "tipo": "complementaria",
+     "nota": "Opcional: el marco de valor integrado (V = FV + SV + EV) del texto base del curso."},
+    {"modulo": "m01", "archivo": "literatura/readings/01c_Schoenmaker_Schramade_Cap2.pdf",
+     "titulo": "⭐ Schoenmaker & Schramade (2023) — cap. 2",
+     "tipo": "complementaria",
+     "nota": "Opcional: profundiza el marco del cap. 1."},
+    {"modulo": "m02", "archivo": "literatura/readings/02a_Forecasting.pdf",
+     "titulo": "📖 Hyndman & Athanasopoulos (2021) — Getting started",
+     "tipo": "obligatoria",
+     "nota": "Qué hace pronosticable un fenómeno y qué decidir ANTES de pronosticar. No cubre commodities — eso lo pone la clase."},
+    {"modulo": "m02", "archivo": "literatura/readings/02b_Sapag_Cap6_Costos.pdf",
+     "titulo": "📖 Sapag Chain (2014) — cap. 6, Estimación de costos",
+     "tipo": "obligatoria",
+     "nota": "Costos diferenciales, sepultados y costo-volumen-utilidad. No desarrolla capital de trabajo — ese método lo enseña la clase."},
+    {"modulo": "m03", "archivo": "literatura/readings/03b_Welch_2021.pdf",
+     "titulo": "📖 Welch (2021) — If Not the CAPM, Then What?",
+     "tipo": "obligatoria",
+     "nota": "Completo — es corto (8 pp.). La demolición del CAPM y las diez sugerencias situacionales. Base del Tribunal del viernes."},
+    {"modulo": "m03", "archivo": "literatura/readings/03c_Drupp-etal_Resultados.pdf",
+     "titulo": "📖 Drupp et al. (2018) — Discounting Disentangled · resultados",
+     "tipo": "obligatoria",
+     "nota": "Solo la tabla de resultados y las conclusiones (el extracto ya viene recortado): 197 expertos, mediana 2%, rango 0–10%."},
+    {"modulo": "m03", "archivo": "literatura/readings/03a_Schoenmaker_Schramade_Cap4.pdf",
+     "titulo": "⭐ Schoenmaker & Schramade (2023) — cap. 4, Discount Rates",
+     "tipo": "complementaria",
+     "nota": "Opcional: el marco que reconcilia tasa financiera, tasa social y descuento integrado."},
+]
 
 # Podcast recomendado — título confirmado por el profesor (2026-08-22): "Proyectos
 # sostenibles". No se inventa relación temática con una sesión específica más allá

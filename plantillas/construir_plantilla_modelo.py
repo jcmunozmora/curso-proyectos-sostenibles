@@ -106,22 +106,32 @@ sup = [
  ("Precio sombra del carbono · ALTO", 100, "USD/tCO2e", "Banco Mundial 2024", ""),
 ]
 r = 5
+F = {}   # fila de cada parámetro, por nombre — las fórmulas derivadas se construyen desde aquí
 for nom,val,uni,fte,nota in sup:
     if val is None:
         c = ws.cell(r,1,nom); c.fill = C; c.font = B
         for j in range(2,6): ws.cell(r,j).fill = C
     else:
-        ws.cell(r,1,nom)
+        ws.cell(r,1,nom); F[nom] = r
         cv = ws.cell(r,2,val); cv.fill = AM; cv.border = BOX
         if isinstance(val,float) and val < 1: cv.number_format = '0.00%' if 'fracción' in uni or 'EA' in uni else '0.00'
         ws.cell(r,3,uni); ws.cell(r,4,fte).fill = AM; ws.cell(r,5,nota)
     r += 1
-# Derivados
+# Derivados — referencias por NOMBRE de parámetro (corrige el desfase de filas detectado el 31-ago-2026:
+# Ke en COP apuntaba a la beta y WACC a las filas de OpEx).
+def B(nombre): return "B{}".format(F[nombre])
 ws.cell(r+1,1,"— DERIVADOS (no tocar) —").fill = C; ws.cell(r+1,1).font = B
-der = [("Ke en USD","=B24+B27*B25+B26"),
-       ("Ke en COP","=(1+B{})*(1+B29)/(1+B30)-1".format(r+2)),
-       ("WACC en COP","=(1-B17)*B{}+B17*B18*(1-B19)".format(r+3)),
-       ("Adicionalidad de carbono","=(B37-B38)*44/12*B6"),]
+KE_USD, KE_COP = r+2, r+3
+der = [("Ke en USD",  "={rf}+{beta}*{erp}+{crp}".format(
+            rf=B("Rf — tasa libre de riesgo"), beta=B("Beta"),
+            erp=B("ERP de mercado maduro"), crp=B("Prima de riesgo país Colombia"))),
+       ("Ke en COP",  "=(1+B{ke})*(1+{pic})/(1+{piu})-1".format(
+            ke=KE_USD, pic=B("Inflación Colombia"), piu=B("Inflación Estados Unidos"))),
+       ("WACC en COP","=(1-{wd})*B{ke}+{wd}*{kd}*(1-{t})".format(
+            wd=B("Deuda / (Deuda + Patrimonio)"), ke=KE_COP,
+            kd=B("Kd — costo de la deuda"), t=B("Tasa impositiva"))),
+       ("Adicionalidad de carbono","=({con}-{base})*44/12*{ha}".format(
+            con=B("Stock de C — con proyecto"), base=B("Stock de C — línea base"), ha=B("Escala"))),]
 for k,(nom,f) in enumerate(der, r+2):
     ws.cell(k,1,nom).font = B
     c = ws.cell(k,2,f); c.fill = GR; c.font = Font(bold=True,color="000066"); c.number_format='0.00%'
@@ -214,7 +224,9 @@ crit = [("VPN del proyecto @ WACC","","=VNA(WACC; F1:F15)+F0","Crea o destruye v
         ("GAF","","","Sensibilidad financiera",""),
         ("Cambios de signo del flujo","","","¿TIR confiable?","⚠ si >1, declararlo")]
 for i,(a,b_,c_,d_,e_) in enumerate(crit,5):
-    ws.cell(i,1,a).font=B; ws.cell(i,2).fill=GR; ws.cell(i,3,c_); ws.cell(i,4,d_); ws.cell(i,5,e_)
+    ws.cell(i,1,a).font=B; ws.cell(i,2).fill=GR
+    cf = ws.cell(i,3,c_); cf.data_type = "s"   # texto guía, NO fórmula (antes se evaluaba y daba #NAME?)
+    ws.cell(i,4,d_); ws.cell(i,5,e_)
     for j in range(1,6): ws.cell(i,j).border=BOX
 for j,w in enumerate([34,18,30,30,26],1): ws.column_dimensions[col(j)].width=w
 

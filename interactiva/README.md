@@ -25,6 +25,13 @@ mano: se sobreescriben en cada corrida de `generar.py`.
   del widget de homepage — con un iframe al sitio vivo y un enlace de respaldo
   ("Pantalla completa") para el caso de que el framing falle o el estudiante
   prefiera navegar el deck sin el chrome de D2L.
+- **Lecturas PDF = subida manual, nunca en el zip** (2026-08-31). Los PDF de
+  `literatura/readings/` tienen copyright de terceros (Sapag, Berg, Welch…):
+  la regla del asset `d2l-package` es cero material con copyright dentro del
+  paquete — el canal correcto es el LMS cerrado, subiendo cada PDF a mano en su
+  módulo. La fuente de verdad es `LECTURAS` en `datos.py`; `generar.py` emite
+  **`build/lecturas.md`** con la guía de subida (archivo → módulo → título →
+  descripción) y valida que cada PDF exista en el repo.
 - **Sección de lecturas + podcast.** Cada módulo lleva un tópico de bibliografía
   que enlaza a `literatura/revision-literatura.html` (con anchor a su núcleo
   temático) y el módulo de orientación (`m00`) lleva además el podcast

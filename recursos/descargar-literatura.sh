@@ -33,6 +33,10 @@ get "NBER_climate-change-long-run-discount-rates.pdf" "https://www.nber.org/syst
 get "CEPAL_acb-energias-renovables.pdf" "https://www.cepal.org/sites/default/files/courses/files/kr_1_acb_energias_renovables.pdf" &
 get "PwC-CFA_caso-climatico-proyectos-mitigacion.pdf" "https://www.pwc.com/co/es/cfa/docs/cfa-aspectos-clave-para-la-formulacion-del-caso-climatico-de-proyectos-de-mitigacion.pdf" &
 get "SFC_circular-externa-015-2025.pdf" "https://www.andi.com.co/Uploads/Circular%20Externa%20015%20de%202025%20%E2%80%93%20Superintendencia%20Financiera%20de%20Colombia_638955674337026234.pdf" &
+# ── Valor integrado en la práctica (§2.4 de la revisión de literatura) ──
+# El original de trueprice.org murió (404, verificado 2026-08-31); espejo estable de la Cocoa Initiative.
+get "TruePrice-IDH2016_true-price-cocoa-CIV.pdf" "https://www.cocoainitiative.org/sites/default/files/resources/TP-Cocoa.pdf" &
+get "IFVI-VBA2024_general-methodology-1.pdf" "https://ifvi.org/wp-content/uploads/2024/02/IFVI_VBA_General-Methodology-1_Letter.pdf" &
 wait
 echo "── Welch & Cornell (19 capítulos) ──"
 for ch in 00-frontmatter 00-preface 01-humanity 02-energy 03-humemits 04-tempscience \

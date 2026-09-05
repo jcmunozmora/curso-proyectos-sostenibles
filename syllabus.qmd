@@ -67,6 +67,8 @@ Los últimos 20 minutos de cada sábado son **auditoría cruzada**: cada equipo 
 
 **Texto base — acceso abierto y gratuito:** Schoenmaker & Schramade (2023), *Corporate Finance for Long-Term Value*, Springer [@schoenmaker2023]. Distintos capítulos aparecen como lectura complementaria en S1 y S3, y como obligatoria en S5 (Decisiones de inversión).
 
+**Nivel de investigación (opcional).** Para el equipo que quiera ir más lejos: la [revisión de literatura, §2.4](literatura/revision-literatura.qmd) tiene una lista **verificada, con cifras reales**, de casos de valor integrado en la práctica — empresas (BASF, Kering, ABN AMRO, Safaricom, Inditex — cap. 11 del texto base — y el precio verdadero del cacao de Côte d'Ivoire) y **proyectos de inversión reales en Colombia**: RioSierra/Urapi (café, cacao y miel en la Sierra Nevada, USD 50 M), el Banco de Hábitat El Globo (Támesis) y Herencia Colombia (USD 245 M). Todo de acceso abierto, con una ruta concreta para aplicar **una** práctica al proyecto propio (S4 o Nota de Inversión de S5). No es exigible; sí distingue en el Investor Day.
+
 Ver la [revisión de literatura](literatura/revision-literatura.qmd) para el mapa completo del campo.
 
 ## Evaluación

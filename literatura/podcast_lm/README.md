@@ -19,8 +19,8 @@ Un prompt semanal solo se escribe cuando **todas** las lecturas obligatorias de 
 |---|---|---|---|
 | [S1](S1.md) | "¿Qué es un proyecto sostenible y quién decide que lo es?" | Schoenmaker cap. 1 y 2 · Berg et al. (2022) · FOLU Colombia (2023) | ✅ Completo |
 | [S2](S2.md) | "Los números que nadie te da" | Hyndman & Athanasopoulos cap. 1 · Sapag Chain cap. 6 | ✅ Completo |
-| [S3](S3.md) | "El denominador" | Schoenmaker cap. 4 | ⚠️ Parcial — faltan Welch (2021) y Drupp et al. en `readings/` |
+| [S3](S3.md) | "El denominador" | Welch (2021) · Drupp et al. (extracto resultados) · Schoenmaker cap. 4 | ✅ Completo (2026-08-31) |
 | S4 | "El otro flujo de caja" | WB (2024) shadow price · Jayachandran et al. (2017) | ⏳ Sin PDFs en `readings/` todavía |
 | S5 | Investor Day | Circular Externa 015 · Schoenmaker cap. Decisiones de inversión | ⏳ Sin PDFs en `readings/` todavía |
 
-Cuando lleguen los PDF de S3 (completar), S4 y S5, primero pasan por `/mambrino-lit` (verificación de contenido + nombre correcto en `literatura/readings/`) y solo después se escribe o completa el prompt aquí.
+Cuando lleguen los PDF de S4 y S5, primero pasan por `/mambrino-lit` (verificación de contenido + nombre correcto en `literatura/readings/`) y solo después se escribe o completa el prompt aquí.

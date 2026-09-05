@@ -40,6 +40,7 @@ MIN 0–20. La 4 es la que más fallan. Es el concepto del día.
 | 11:25 | Punto de equilibrio · GAO · GAF | 20 |
 | 11:45 | **Construcción 3** · FCA y amortización | **40** |
 | 12:25 | Auditoría cruzada | 20 |
+| 12:45 | **Entrega** · todo subido antes de salir | 15 |
 | **13:00** | **Fin** | |
 
 ---
@@ -52,6 +53,25 @@ MIN 0–20. La 4 es la que más fallan. Es el concepto del día.
 3. **VPN, TIR, TIR Modificada, payback descontado, CAE**
 4. El **punto de equilibrio** y los grados de apalancamiento
 5. La respuesta a: *¿este proyecto crea valor?*
+:::
+
+---
+
+## Vocabulario · antes de construir {.smaller background-color="#f5f5f5"}
+
+| Término | Qué es | Fórmula / lógica | En este proyecto |
+|---|---|---|---|
+| **EBIT** (*earnings before interest and taxes* · utilidad operativa) | Lo que gana la **operación** antes de intereses e impuestos — mide el negocio, no cómo se financió | Ingresos − costos operativos − depreciación | Negativo en los años 0–4 |
+| **Depreciación** | Gasto **contable** que reparte el CapEx en su vida útil. No es plata que sale de la caja | Se resta para calcular el impuesto… y se **suma de vuelta** al flujo | La de siembra, vivero e infraestructura |
+| **FCLD** (flujo de caja libre del proyecto · *free cash flow to the firm*) | La plata que el proyecto genera para **todos** los que pusieron capital — banco y accionista juntos | EBIT − impuestos + depreciación − CapEx − ΔKT | Se descuenta al **WACC** |
+| **FCA** (flujo de caja del accionista · *free cash flow to equity*) | La plata que queda **solo para el accionista**, después de servir la deuda | FCLD + desembolso − intereses(1−t) − amortización | Se descuenta al **$K_e$** |
+| **Payback descontado** | Cuántos años tarda el proyecto en devolver la inversión, contando el valor del tiempo | Primer año en que el acumulado **descontado** cruza cero | Exposición temporal al riesgo |
+| **CAE** (costo anual equivalente) | Convierte un VPN en una "cuota anual" constante — permite comparar proyectos de **vidas distintas** | `=PAGO(tasa; n; −VPN)` | ¿15 años de cacao o 20 de otra cosa? |
+| **Índice de rentabilidad** | Valor creado **por peso invertido** — ordena proyectos cuando la plata no alcanza para todos | $VPN / I_0$ | El comité de S5 tiene presupuesto limitado |
+| **GAO / GAF** (grados de apalancamiento operativo / financiero) | Cuánto se **amplifica** un golpe en ventas hasta la utilidad (GAO) y de ahí hasta el accionista (GAF) | $\tfrac{\%\Delta EBIT}{\%\Delta Ventas}$ · $\tfrac{\%\Delta UPA}{\%\Delta EBIT}$ | GAO alto por naturaleza + 60% de deuda |
+
+::: {.callout-warning}
+**FCLD y FCA no son dos versiones del mismo número — son respuestas a dos preguntas distintas.** VPN, TIR y TIRM se definen en su momento; vienen de Matemáticas financieras, pero hoy los vamos a romper.
 :::
 
 ---
@@ -340,7 +360,7 @@ En toneladas y en hectáreas. ¿Cuánto tienen que producir para no perder?
 
 **Punto de equilibrio de precio**
 
-¿A qué precio $p^*$ el proyecto deja de crear valor? — Ya lo calcularon: **USD 5.209/t**
+¿A qué precio $p^*$ el proyecto deja de crear valor? — Ya lo calcularon en S1: **USD 5.209/t** al 12%. Con el WACC de anoche (10,80%): **USD 4.890/t**. Dos puntos de tasa mueven el precio de equilibrio USD 319/t.
 :::
 
 ::: {.column width="50%"}
@@ -380,18 +400,44 @@ El VPN del proyecto y el del accionista **no** tienen que coincidir. Si el suyo 
 
 ## Auditoría cruzada · 20 min {background-color="#000066" style="color:white;" data-cron="1200" data-cron-label="auditoría"}
 
-::: {style="font-size:1.05em;"}
+::: {style="font-size:0.95em;"}
 1. ¿El FCLD **excluye** completamente la deuda?
 2. ¿El FCA se descuenta al $K_e$ y **no** al WACC?
 3. ¿El impuesto es **cero** —no negativo— en los años de pérdida?
 4. ¿El escudo fiscal se aplica sólo cuando hay renta gravable?
 5. ¿Se **recupera** el capital de trabajo en el último año?
 6. ¿La tasa y el flujo están ambos en **nominal** o ambos en **real**?
-7. ¿Se reporta el WACC como **rango**, no como punto?
-8. ¿Verificaron el patrón de **signos** antes de reportar la TIR?
-9. ¿Reportan **TIRM** además de TIR?
-10. ¿El valor terminal usa un $g$ menor que el crecimiento de la economía?
-11. ¿Hay alguna celda **codificada a mano** que debería ser fórmula?
+7. ¿Se hizo la **conversión de moneda** del $K_e$ (diferencial de inflación)?
+8. ¿Se reporta el WACC como **rango**, no como punto?
+9. ¿La **beta está justificada** con un argumento sobre comparables?
+10. ¿Verificaron el patrón de **signos** antes de reportar la TIR?
+11. ¿Reportan **TIRM** además de TIR?
+12. ¿El valor terminal usa un $g$ menor que el crecimiento de la economía?
+13. ¿El VPN del proyecto y el del accionista son **distintos**? (iguales = error)
+14. ¿Hay alguna celda **codificada a mano** que debería ser fórmula?
+:::
+
+---
+
+## ¿De dónde sale cada fórmula? {.smaller background-color="#f5f5f5"}
+
+✅ está en una lectura asignada · 🏛 texto de referencia en biblioteca · 🧑‍🏫 se enseña en clase, sin lectura de respaldo — brecha **declarada**, no escondida
+
+| Fórmula de hoy | ¿En las lecturas? | Fuente exacta |
+|---|---|---|
+| **FCLD y FCA** (construcción de los dos flujos) | 🏛 | Sapag, caps. 14–15 (6ª ed., biblioteca) — la lectura `02b` fue solo el cap. 6 |
+| **TIR** · $\sum FC_t/(1+TIR)^t = 0$ | 🏛 + ✅ | Definición: Sapag cap. 15 · la crítica — *"eviten VPN/TIR si hay comparables"* — Welch, lectura `03b`, sugerencia #1 |
+| **Supuesto de reinversión** (el álgebra) | 🧑‍🏫 | Derivación de clase — hace explícito lo que Sapag y Welch afirman sin demostrar |
+| **Regla de los signos de Descartes** | 🧑‍🏫 | Matemática clásica (1637); no está en las lecturas |
+| **TIRM** | 🧑‍🏫 | **No está en Sapag 6ª ed. ni en las lecturas** — referencia estándar: Brigham & Ehrhardt (biblioteca EAFIT) |
+| **Payback descontado** | 🏛 | Sapag cap. 15 — lo llama *periodo de recuperación* |
+| **CAE** · `=PAGO(tasa; n; −VPN)` | 🏛 | Sapag cap. 15 |
+| **Índice de rentabilidad** · $VPN/I_0$ | 🏛 | Sapag cap. 15 — lo llama **IVAN** |
+| **Punto de equilibrio** · $Q^* = CF/(p-cv)$ | ✅ **Ya la leyeron** | Lectura `02b` — Sapag cap. 6, §6.10 *análisis costo-volumen-utilidad* |
+| **GAO / GAF** | 🧑‍🏫 | No están en Sapag 6ª ed. — referencia estándar: Brigham & Ehrhardt (biblioteca) |
+
+::: {.callout-note}
+Dos brechas honestas: **TIRM** y **GAO/GAF** no tienen lectura de respaldo en este curso — se enseñan en clase porque el proyecto los necesita (flujo no convencional + 60% de deuda). Quien quiera la fuente completa: Brigham & Ehrhardt, *Financial Management*, biblioteca EAFIT.
 :::
 
 ---
