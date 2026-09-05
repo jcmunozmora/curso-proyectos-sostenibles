@@ -57,6 +57,45 @@ MIN 0–20. La 4 es la que más fallan. Es el concepto del día.
 
 ---
 
+## La idea de hoy · una fórmula, dos flujos, cinco lecturas {background-color="#f5f5f5"}
+
+$$VPN = \sum_{t=0}^{n} \frac{FC_t}{(1+r)^t}$$
+
+Ayer construyeron el **denominador** ($r$ = WACC 10,80 %, con rango). Hoy construyen el **numerador** ($FC_t$) y lo leen con cinco criterios.
+
+::: {.columns}
+::: {.column width="50%"}
+**Dos flujos, dos preguntas, dos tasas**
+
+| Flujo | Pregunta | Tasa |
+|---|---|---|
+| **FCLD** | ¿Es buena la **idea**? | WACC 10,80 % |
+| **FCA** | ¿Le sirve al **dueño**? | $K_e$ 13,34 % |
+:::
+
+::: {.column width="50%"}
+**Cinco lecturas del mismo flujo**
+
+| Criterio | Responde |
+|---|---|
+| **VPN** | ¿Cuánto sobra por encima de la vara? |
+| **TIR** | ¿A qué tasa se empata? |
+| **TIRM** | Lo mismo, sin el supuesto escondido |
+| **Payback** | ¿Cuándo recupero la plata? |
+| **CAE · IR** | ¿Cómo lo comparo con otro proyecto? |
+:::
+:::
+
+::: {.callout-important}
+Todo lo de hoy es **una sola fórmula leída de distintas maneras**. Cuando un criterio contradice al VPN, gana el VPN: mide creación de valor en pesos, y se paga con pesos.
+:::
+
+::: {.notes}
+2 min. Es el mapa del día: colgar cada bloque de esta slide. "Ayer la tasa, hoy el flujo."
+:::
+
+---
+
 ## Vocabulario · antes de construir {.smaller background-color="#f5f5f5"}
 
 | Término | Qué es | Fórmula / lógica | En este proyecto |
@@ -128,6 +167,66 @@ Descontar el **FCA** al **WACC**. Cuenta el beneficio de la deuda dos veces: en 
 
 ---
 
+## Teoría · El FCLD término a término {.smaller}
+
+Caso base: 500 ha · 5.000 USD/t (+12 % de prima desde el año 5) · depreciación lineal 4,2 M / 10 años · $t$ = 35 %
+
+| Línea | Qué es | Por qué entra así | Año 2 | Año 7 |
+|---|---|---|---:|---:|
+| **Ingresos** | Producción × precio | La plata que entra | 0 | 2.240.000 |
+| **− OpEx** | Costo del año, fijo + variable | Se gasta y desaparece | 625.000 | 950.000 |
+| **− Depreciación** | Reparto contable del CapEx | **No es caja**: se resta solo para calcular el impuesto | 420.000 | 420.000 |
+| **= EBIT** | Utilidad operativa | Mide el negocio, no la financiación | **−1.045.000** | **870.000** |
+| **− Impuestos** | $\max(0, EBIT) \times t$ | Cero en pérdida, **no negativo** | 0 | 304.500 |
+| **+ Depreciación** | La misma de arriba | Se devuelve: nunca salió de la caja | +420.000 | +420.000 |
+| **− CapEx** | Inversión del año (cronograma de S2) | Cuando se paga, no cuando se deprecia | 756.000 | 0 |
+| **− ΔKT** | Inversión en año 0 · **recuperación en año 15** | El capital de trabajo se presta al proyecto, no se regala | 0 | 0 |
+| **+ VT** | Valor terminal, solo en el año 15 | Lo que vale el proyecto después del horizonte | 0 | 0 |
+| **= FCLD** | Plata para **todos** los que pusieron capital | Sin deuda: se descuenta al **WACC** | **−1.381.000** | **985.500** |
+
+::: {.callout-warning}
+La fórmula arrastrada en el año 2 le **paga** al proyecto 365.750 de impuesto negativo. Cinco años de pérdida inflan el VPN en más de un millón. Es el error 1 de la síntesis.
+:::
+
+::: {.notes}
+3 min. No leer la tabla: señalar las tres líneas peligrosas (impuestos, depreciación de vuelta, ΔKT). Los números del año 2 y 7 son de control para circular.
+:::
+
+---
+
+## Input 1 · Valor terminal: el 25 % del VPN que nadie discute {.smaller}
+
+$$VT_n = \frac{FC_n \,(1+g)}{k - g}$$
+
+| Término | Qué es | En este proyecto |
+|---|---|---|
+| $FC_n$ | Flujo **normalizado** del último año: ingresos − OpEx en madurez, sin CapEx ni ΔKT | 2.240.000 − 950.000 = **1,29 M** |
+| $g$ | Crecimiento nominal del flujo **para siempre** | 2 % (defendible) |
+| $k$ | La tasa del flujo: WACC para el FCLD | 10,80 % |
+| $k - g$ | El denominador de una perpetuidad: cuanto más se acerque $g$ a $k$, más explota el VT | 8,8 puntos |
+
+::: {.columns}
+::: {.column width="50%"}
+| Supuesto | VT en el año 15 | Descontado a hoy |
+|---|---:|---:|
+| Perpetuidad, $g$ = 2 % | 14,95 M | **3,2 M** |
+| Perpetuidad, $g$ = 5 % | 23,35 M | 5,0 M |
+| Anualidad 10 años (modelo-trampa S1) | 7,66 M | 1,6 M |
+:::
+
+::: {.column width="50%"}
+**La regla:** $g$ nunca por encima del crecimiento nominal de largo plazo de la economía. Un $g$ de 5 % real dice que el cacao crece más rápido que Colombia, para siempre.
+
+Sapag (cap. 13, §13.2) da tres métodos: **contable** (nunca para decidir), **comercial** (si hay mercado del activo) y **económico** (esta fórmula).
+:::
+:::
+
+::: {.callout-important}
+3,2 M sobre un VPN de 12,9 M: **una cuarta parte del valor viene de una celda con dos supuestos.** Merece una frase de justificación en el entregable. Ítem 12 de la auditoría.
+:::
+
+---
+
 ## Construcción 1 · 40 min {.smaller background-color="#f5f5f5" data-cron="2400" data-cron-label="construcción 1"}
 
 **Hoja `FCLD` de la plantilla:**
@@ -168,6 +267,44 @@ Dos de los tres errores inflan el VPN. **No es casualidad.** El sesgo de optimis
 
 ::: {style="text-align:center; padding-top:200px; font-size:2.5em; color:#000066; font-weight:700;"}
 PAUSA · 20 minutos
+:::
+
+---
+
+## Teoría · El VPN término a término {.smaller}
+
+$$VPN = \sum_{t=0}^{n} \frac{FC_t}{(1+r)^t} \qquad\qquad \text{en Excel: } \texttt{=VNA(r; F1:F15) + F0}$$
+
+| Término | Qué es | En este proyecto |
+|---|---|---|
+| $FC_t$ | El flujo del año $t$: el numerador que construyeron hoy | FCLD, o FCA |
+| $r$ | La tasa: el denominador de ayer | WACC 10,80 % (FCLD) · $K_e$ 13,34 % (FCA) |
+| $(1+r)^t$ | Cuánto habría crecido un peso de hoy hasta el año $t$ | $1{,}108^{15} = 4{,}66$ |
+| $1/(1+r)^t$ | **Factor de descuento**: cuánto vale hoy un peso del año $t$ | año 1: 0,90 · año 5: 0,60 · año 10: 0,36 · año 15: 0,21 |
+| $\sum$ | Sumar todos los años, ya traídos a hoy | año 0 sin descontar |
+
+::: {.columns}
+::: {.column width="50%"}
+**Cómo se lee el número**
+
+VPN > 0: el proyecto paga la vara (banco + accionista) **y sobra**.
+VPN = 0: paga exactamente lo exigido. No es "ganar cero": es ganar el 10,80 %.
+VPN < 0: destruye valor aunque tenga utilidad contable.
+
+A 7.000 USD/t y 10,80 %: **+4,93 M**. A 3.500: −3,25 M.
+:::
+
+::: {.column width="50%"}
+**La trampa de Excel**
+
+`VNA` empieza a descontar **en el período 1**. Si meten el año 0 dentro del rango, todo se desplaza un año y el VPN sale ~10 % más bajo.
+
+Correcto: `=VNA(r; F1:F15) + F0`.
+:::
+:::
+
+::: {.notes}
+3 min. Casi todos "saben" el VPN de Matemáticas financieras y casi nadie sabe leerlo: insistir en "VPN = 0 no es cero ganancia". El factor 0,21 del año 15 explica por qué el cacao tarda tanto.
 :::
 
 ---
@@ -294,7 +431,7 @@ Si $\sum FC_t < 0$, un número **par** — que puede ser **cero**.
 
 ---
 
-## Input 2 · TIR Modificada
+## Input 2 · TIR Modificada {.smaller}
 
 Hace **explícitos** los dos supuestos que la TIR esconde:
 
@@ -302,20 +439,37 @@ $$TIRM = \left(\frac{VF(\text{flujos} +, \text{ a tasa de reinversión})}{VP(\te
 
 En Excel: `=TIRM(rango; tasa_financiación; tasa_reinversión)`
 
-::: {.columns}
-::: {.column width="50%"}
-**Tasa de financiación**
-A la que consiguen dinero para cubrir los flujos negativos → su **$K_d$**
-:::
+**Tasa de financiación:** a la que consiguen dinero para los flujos negativos → su **$K_d$** · **Tasa de reinversión:** a la que realmente colocan los excedentes → su **WACC**, o menos
 
-::: {.column width="50%"}
-**Tasa de reinversión**
-A la que realmente pueden colocar los excedentes → su **WACC**, o menos
-:::
-:::
+**Término a término, con un flujo de bolsillo** (−100, +60, +60 · $r_{fin}$ 10 % · $r_{reinv}$ 8 %):
+
+| Término | Qué es | Cálculo |
+|---|---|---|
+| $VF^{+}$ | Los flujos positivos, **capitalizados** a la tasa de reinversión hasta el año $n$ | $60 \times 1{,}08 + 60 = 124{,}8$ |
+| $VP^{-}$ | Los flujos negativos, **descontados** a la tasa de financiación hasta hoy | $100$ |
+| $n$ | Años del horizonte | 2 |
+| **TIRM** | $(VF^{+}/VP^{-})^{1/n} - 1$ | $(1{,}248)^{1/2} - 1 = \mathbf{11{,}71\%}$ · la TIR era **13,07 %** |
 
 ::: {.callout-important}
-La TIRM **siempre es única** y siempre existe. Y da un número más bajo que la TIR — que es precisamente por lo que a nadie le gusta reportarla.
+La TIRM **siempre es única** y siempre existe. Y da un número más bajo que la TIR — que es precisamente por lo que a nadie le gusta reportarla. Ojo: es honesta, no objetiva. Depende de las dos tasas que ustedes le den.
+:::
+
+---
+
+## Teoría · Los otros tres criterios, término a término {.smaller}
+
+| Criterio | Fórmula | Término a término | En este proyecto (10.400 USD/t, 10,80 %) | Para qué sirve |
+|---|---|---|---|---|
+| **Payback descontado** | primer $t$ con $\sum_{s \le t} \dfrac{FC_s}{(1+r)^s} \ge 0$ | Una fila con cada flujo descontado; otra con el acumulado; el año en que cruza cero, interpolando | acumulado −1,23 M al cierre del año 7, +0,40 M al año 8 → **7,8 años** | **Exposición temporal**, no valor. Ignora todo lo que pasa después. Sirve para negociar plazos con el banco |
+| **CAE** (costo anual equivalente) | $CAE = VPN \cdot \dfrac{r}{1 - (1+r)^{-n}}$ · `=PAGO(r; n; −VPN)` | Convierte el VPN en una cuota **anual constante** durante $n$ años; el signo negativo es la convención de `PAGO` | 12,88 M × 0,108 / 0,785 = **1,77 M por año** | Comparar proyectos de **vidas distintas**: 15 años de cacao contra 20 de otra cosa. Gana la cuota mayor, no el VPN mayor |
+| **IR** (índice de rentabilidad) | $IR = \dfrac{VPN}{I_0}$ | Valor creado **por peso invertido** | 12,88 M / 4,2 M = **3,07** | Ordenar proyectos cuando la plata **no alcanza para todos** (el comité de S5). Sapag usa la razón beneficio-costo, $VP(\text{beneficios})/VP(\text{costos})$, umbral 1: es la misma idea desplazada en uno |
+
+::: {.callout-note}
+Ninguno de los tres decide por sí solo. El VPN decide; estos tres **califican** la decisión: cuándo, a qué ritmo anual y con qué eficiencia por peso.
+:::
+
+::: {.notes}
+2 min. Referencia para Construcción 2. Insistir en el signo de PAGO y en la interpolación del payback.
 :::
 
 ---
@@ -356,7 +510,9 @@ PAUSA · 15 minutos
 
 $$Q^* = \frac{CF}{p - cv}$$
 
-En toneladas y en hectáreas. ¿Cuánto tienen que producir para no perder?
+$CF$ costos fijos del año · $p$ precio por tonelada · $cv$ costo variable por tonelada · $p - cv$ **margen de contribución**
+
+En madurez, con 60 % del OpEx fijo: $570.000 / (5.600 - 950) =$ **123 t ≈ 153 ha** de 500. Es equilibrio de **caja operativa**: sin depreciación ni costo del capital. Por eso se ve cómodo y engaña.
 
 **Punto de equilibrio de precio**
 
@@ -380,6 +536,68 @@ Deuda alta → GAF alto
 
 ::: {.callout-important}
 **GAO × GAF = apalancamiento total.** Un proyecto agroforestal tiene GAO alto por naturaleza (el mantenimiento no baja si la cosecha falla). Sumarle deuda al 60% multiplica esa fragilidad. **Esa es la conversación con el banco.**
+:::
+
+---
+
+## Teoría · GAO y GAF término a término {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+$$GAO = \frac{\%\Delta EBIT}{\%\Delta \text{Ventas}} = \frac{\text{Ventas} - CV}{EBIT} = \frac{\text{Margen de contribución}}{EBIT}$$
+
+$$GAF = \frac{\%\Delta \text{Utilidad neta}}{\%\Delta EBIT} = \frac{EBIT}{EBIT - \text{Intereses}}$$
+
+**Por qué son cocientes de niveles:** en el punto de operación, un 1 % de ventas es un 1 % del margen de contribución; ese cambio cae entero sobre el EBIT (los fijos no se mueven) y luego, entero, sobre lo que queda después de intereses.
+:::
+
+::: {.column width="50%"}
+**Año 6** (rendimiento 65 %, la deuda todavía pesa)
+
+| | |
+|---|---:|
+| Ventas (0,65 × 500 × 5.600) | 1.820.000 |
+| − Costos variables (40 % del OpEx) | 370.000 |
+| = Margen de contribución | 1.450.000 |
+| − Costos fijos − depreciación | 555.000 + 420.000 |
+| = EBIT | 475.000 |
+| − Intereses (saldo 945.000 × 14 %) | 132.300 |
+| **GAO** = 1.450.000 / 475.000 | **3,05** |
+| **GAF** = 475.000 / 342.700 | **1,39** |
+| **Total** = GAO × GAF | **4,23** |
+:::
+:::
+
+::: {.callout-important}
+**Una caída de 10 % en ventas es −30 % en EBIT y −42 % en lo que le queda al accionista.** Esa es la conversación con el banco: no si el proyecto es rentable, sino cuánto aguanta.
+:::
+
+---
+
+## Teoría · El FCA término a término {.smaller}
+
+Deuda: 60 % del CapEx = **2,52 M** · $K_d$ 14 % · 8 años con cuotas de capital iguales (315.000)
+
+| Línea | Qué es | Por qué entra así | Año 0 | Año 1 | Año 8 |
+|---|---|---|---:|---:|---:|
+| **FCLD** | El flujo del proyecto, ya construido | Punto de partida | −2.340.000 | −1.600.000 | 985.500 |
+| **+ Desembolso** | La plata que presta el banco | Entra al accionista, que pone menos | +2.520.000 | 0 | 0 |
+| **− Intereses × (1 − t)** | Saldo inicial × 14 %, neto del escudo | El escudo **solo si hay renta gravable**; en años 0–4, el interés completo | 0 | 352.800 (neto: 229.320) | 44.100 |
+| **− Amortización** | La cuota de capital | Devolver lo prestado | 0 | 315.000 | 315.000 |
+| **= FCA** | Lo que queda **solo para el accionista** | Se descuenta al **$K_e$ 13,34 %**, no al WACC | | | |
+
+| Tabla de amortización | Saldo inicial | Intereses | Amortización | Saldo final |
+|---|---:|---:|---:|---:|
+| Año 1 | 2.520.000 | 352.800 | 315.000 | 2.205.000 |
+| Año 2 | 2.205.000 | 308.700 | 315.000 | 1.890.000 |
+| Año 8 | 315.000 | 44.100 | 315.000 | 0 |
+
+::: {.callout-warning}
+Si el VPN del FCA les da **casi igual** al del FCLD, descontaron los dos a la misma tasa. Al $K_e$ correcto, el accionista de "Aguacate Andino" pasaba de +10,8 M a **−1,67 M**.
+:::
+
+::: {.notes}
+3 min. Los FCLD de los años 0 y 1 son del caso base a 5.000 USD/t (CapEx 45 % y 25 %, OpEx 900 y 1.100 por ha, sin ingresos). Lo importante es la columna "por qué entra así".
 :::
 
 ---
@@ -423,21 +641,23 @@ El VPN del proyecto y el del accionista **no** tienen que coincidir. Si el suyo 
 
 ✅ está en una lectura asignada · 🏛 texto de referencia en biblioteca · 🧑‍🏫 se enseña en clase, sin lectura de respaldo — brecha **declarada**, no escondida
 
-| Fórmula de hoy | ¿En las lecturas? | Fuente exacta |
+| Fórmula de hoy | ¿En las lecturas? | Fuente exacta (Sapag, 6ª ed., biblioteca; la lectura `02b` fue solo el cap. 6) |
 |---|---|---|
-| **FCLD y FCA** (construcción de los dos flujos) | 🏛 | Sapag, caps. 14–15 (6ª ed., biblioteca) — la lectura `02b` fue solo el cap. 6 |
-| **TIR** · $\sum FC_t/(1+TIR)^t = 0$ | 🏛 + ✅ | Definición: Sapag cap. 15 · la crítica — *"eviten VPN/TIR si hay comparables"* — Welch, lectura `03b`, sugerencia #1 |
-| **Supuesto de reinversión** (el álgebra) | 🧑‍🏫 | Derivación de clase — hace explícito lo que Sapag y Welch afirman sin demostrar |
-| **Regla de los signos de Descartes** | 🧑‍🏫 | Matemática clásica (1637); no está en las lecturas |
-| **TIRM** | 🧑‍🏫 | **No está en Sapag 6ª ed. ni en las lecturas** — referencia estándar: Brigham & Ehrhardt (biblioteca EAFIT) |
-| **Payback descontado** | 🏛 | Sapag cap. 15 — lo llama *periodo de recuperación* |
-| **CAE** · `=PAGO(tasa; n; −VPN)` | 🏛 | Sapag cap. 15 |
-| **Índice de rentabilidad** · $VPN/I_0$ | 🏛 | Sapag cap. 15 — lo llama **IVAN** |
-| **Punto de equilibrio** · $Q^* = CF/(p-cv)$ | ✅ **Ya la leyeron** | Lectura `02b` — Sapag cap. 6, §6.10 *análisis costo-volumen-utilidad* |
-| **GAO / GAF** | 🧑‍🏫 | No están en Sapag 6ª ed. — referencia estándar: Brigham & Ehrhardt (biblioteca) |
+| **FCLD** (estructura del flujo) | 🏛 | Sapag cap. 14, §14.3 *Estructura de un flujo de caja*, p. 228 |
+| **FCA** (flujo del inversionista) | 🏛 | Sapag cap. 14, §14.4 *Flujo de caja del inversionista*, p. 232 |
+| **Valor terminal** · $FC_n(1+g)/(k-g)$ | 🏛 | Sapag cap. 13, §13.2 *Valor de desecho*: contable, comercial, económico, p. 214 |
+| **VPN** · $\sum FC_t/(1+r)^t$ | 🏛 | Sapag cap. 15, §15.2, p. 252 · matemáticas financieras §15.1 |
+| **TIR** · $\sum FC_t/(1+TIR)^t = 0$ | 🏛 + ✅ | Sapag §15.3, p. 253 y §15.4 *TIR versus VAN*, p. 255 · la crítica: Welch, lectura `03b` |
+| **Supuesto de reinversión** (el álgebra) · **Descartes** | 🧑‍🏫 | Derivación de clase · matemática clásica (1637) |
+| **TIRM** | 🧑‍🏫 | **No está en Sapag** — ojo: su §15.5 *"TIR ajustada"* es otra cosa (la TIR con el ahorro tributario de la deuda) · referencia: Brigham & Ehrhardt |
+| **Payback descontado** | 🏛 | Sapag §15.6 *El periodo de recuperación o payback*, p. 259 |
+| **CAE** · `=PAGO(tasa; n; −VPN)` | 🏛 | Sapag §15.9 *El criterio de la anualidad equivalente*, p. 262 |
+| **Índice de rentabilidad** · $VPN/I_0$ | 🏛 | Sapag §15.8 *Razón beneficio costo (RBC)*, p. 262 — misma idea, umbral 1 en vez de 0 |
+| **Punto de equilibrio** · $Q^* = CF/(p-cv)$ | ✅ **Ya la leyeron** | Lectura `02b` — Sapag cap. 6, §6.10 *análisis costo-volumen-utilidad*, p. 98 |
+| **GAO / GAF** | 🧑‍🏫 | Sapag solo lo pide como ejercicio (cap. 6, p. 105) — referencia estándar: Brigham & Ehrhardt |
 
 ::: {.callout-note}
-Dos brechas honestas: **TIRM** y **GAO/GAF** no tienen lectura de respaldo en este curso — se enseñan en clase porque el proyecto los necesita (flujo no convencional + 60% de deuda). Quien quiera la fuente completa: Brigham & Ehrhardt, *Financial Management*, biblioteca EAFIT.
+Dos brechas honestas: **TIRM** y **GAO/GAF** no tienen lectura de respaldo en este curso — se enseñan en clase porque el proyecto los necesita (flujo no convencional + 60% de deuda). Quien quiera la fuente completa: Brigham & Ehrhardt, *Financial Management*, biblioteca EAFIT. Para todo lo demás: Sapag caps. 14 y 15, pp. 225–270, en una tarde.
 :::
 
 ---
