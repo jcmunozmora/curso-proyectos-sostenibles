@@ -34,6 +34,7 @@
 | `PwC-CFA_caso-climatico-proyectos-mitigacion.pdf` | Caso climático de proyectos |
 | `TruePrice-IDH2016_true-price-cocoa-CIV.pdf` | True Price × IDH (2016) · precio verdadero del cacao CIV — §2.4 de la revisión (espejo ICI; el original de trueprice.org da 404) |
 | `IFVI-VBA2024_general-methodology-1.pdf` | IFVI × VBA (2024) · metodología de contabilidad de impacto — §2.4 de la revisión |
+| `Sapag-proyectos-6ta-edicion.pdf` | Sapag Chain (2014), *Preparación y evaluación de proyectos*, 6ª ed. — McGraw-Hill, **no OA**. **Cap. 16 *Costo de capital*** (extracto = lectura `03d`) es la referencia de fórmulas de S3-viernes (verificado 2026-09-05 con `pdftotext`): §16.2 ec. 16.2 WACC · §16.3 ec. 16.3 $K_d(1-t)$ · §16.4 ec. 16.4–16.5 CAPM y beta, ec. 16.6–16.7 beta apalancada/desapalancada, ajuste por riesgo país · §16.6 WACC vs CAPM. Caps. 14–15 respaldan FCLD/FCA y criterios en S3-sábado; cap. 6 es la lectura `02b` |
 
 ## Lecturas curadas por sesión (`literatura/readings/`)
 
@@ -52,6 +53,7 @@ Extractos cortos (1 capítulo, PDF liviano) para lectura obligatoria/complementa
 | `03a_Schoenmaker_Schramade_Cap4.pdf` | Schoenmaker & Schramade (2023), cap. 4 *Discount Rates and Scarcity of Capital* [@schoenmaker2023] | S3 | Complementaria |
 | `03b_Welch_2021.pdf` | Welch (2021), *The Cost of Capital: If Not the CAPM, Then What?*, MBR 1(1), 187–194 [@welch2021] | S3 | Obligatoria |
 | `03c_Drupp-etal_Resultados.pdf` | Drupp et al., *Discounting Disentangled* — extracto: abstract + §3 *Survey Results* (Tablas 1–3) + §6 *Conclusion* del WP Grantham 172 [@drupp2018] | S3 | Obligatoria |
+| `03d_Sapag_Cap16_Costo_Capital.pdf` | Sapag Chain, cap. 16 *Costo de capital* completo (pp. 273–298, 26 pp.) [@sapag2014] — referencia de fórmulas de S3-viernes; verificado por contenido 2026-09-05 (`pdftotext`: §16.1–16.6, ec. 16.1–16.11) | S3 | Complementaria |
 
 ⚠️ **Corregido 2026-08-23:** los tres archivos llegaron con prefijo `03a/03b/03c`. Se verificó el contenido de cada uno (`pdftotext` + inspección de secciones) y dos de los tres eran material de **S2** mal etiquetado — se renombraron a `02a`/`02b`. Sólo el capítulo de tasas de descuento (`Schoenmaker Cap. 4`) es efectivamente de S3; quedó como `03a`, coherente con la nota del syllabus de que capítulos de Schoenmaker "aparecen como lectura complementaria en S1 y S3".
 

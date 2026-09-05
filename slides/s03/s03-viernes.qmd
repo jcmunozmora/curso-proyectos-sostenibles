@@ -39,7 +39,7 @@ Que lo descubran. El punto es que el denominador importa tanto como el numerador
 |---|---|---:|
 | **18:00** | Dos VPN del mismo proyecto, signos opuestos | 15 |
 | 18:15 | **Confrontación** · *"¿por qué 14% y no 9%?"* | **40** |
-| 18:55 | Cómo se construye un $K_e$ · el WACC de este proyecto | 20 |
+| 18:55 | Qué tasa buscamos · cómo se construye un $K_e$ · el WACC · ¿cuál usar? | 20 |
 | **19:15** | **Pausa** | 15 |
 | 19:30 | El intervalo de confianza de la beta | 10 |
 | 19:40 | Welch · si no el CAPM, ¿entonces qué? | 10 |
@@ -82,6 +82,59 @@ Anotar quién distingue real/nominal — casi nadie. Ese es el gancho de la sín
 
 ---
 
+## Teoría · Qué estamos estimando esta noche
+
+::: {style="text-align:center; font-size:1.45em; color:#000066; font-weight:700; margin:.2em 0 .1em;"}
+Tasa de descuento = **costo de oportunidad del capital**
+:::
+
+::: {style="text-align:center; font-size:1.05em; margin-bottom:.7em;"}
+El **mejor rendimiento** que ese capital obtendría en otra inversión **de riesgo y condiciones similares** — en el mercado o en otro proyecto. Nadie lo factura: es lo que el capital **deja de ganar** por estar aquí.
+:::
+
+::: {.columns}
+::: {.column width="31%"}
+::: {style="background:#000066; color:#ffffff; border-radius:8px; padding:.7em .9em; text-align:center; min-height:6.2em;"}
+**Accionista**<br/>patrimonio · *equity* · $E$
+
+pone **40%** del capital<br/>y exige $K_e$
+:::
+:::
+
+::: {.column width="31%"}
+::: {style="background:#00A9E0; color:#000066; border-radius:8px; padding:.7em .9em; text-align:center; min-height:6.2em;"}
+**Banco**<br/>deuda · *debt* · $D$
+
+presta **60%** del capital<br/>y cobra $K_d$
+:::
+:::
+
+::: {.column width="38%"}
+::: {style="background:#f5f5f5; border:3px solid #000066; border-radius:8px; padding:.7em .9em; text-align:center; min-height:6.2em;"}
+**Proyecto** · $V = E + D$
+
+la tasa es el **promedio** de lo que exige cada uno,<br/>**ponderado por cuánto pone cada uno**
+:::
+:::
+:::
+
+::: {.callout-important}
+## La composición decide la tasa
+$D/V$ es el **nivel de endeudamiento**: qué fracción del capital es deuda — aquí, **60%**. Cambien la mezcla y **cambia la tasa**, aunque el proyecto sea el mismo. Por eso lo que van a defender esta noche no es un número: es **cuánto exige cada fuente** y **en qué proporción entra cada una**.
+:::
+
+::: {.notes}
+MIN 55–58. Este es el ancla conceptual de todo el bloque: antes de una sola fórmula.
+Tres ideas, en este orden: (1) la tasa no es un costo contable, es un costo de oportunidad
+— lo que el capital ganaría en la mejor alternativa de riesgo comparable (texto base §4.2,
+lectura 03a); (2) el capital viene de dos bolsillos con exigencias distintas; (3) por eso la
+tasa del proyecto depende de la mezcla, D/V. Preguntar: "si el banco pone el 80% en vez del
+60%, ¿la tasa sube o baja?" — casi todos dicen "baja". Guardar esa respuesta para la slide
+"¿CAPM o WACC?".
+:::
+
+---
+
 ## Vocabulario · antes de construir la tasa {.smaller background-color="#f5f5f5"}
 
 | Término | Qué es | Fórmula / lógica | En este proyecto |
@@ -119,6 +172,46 @@ Contexto regional: México 2,46% · **Colombia 2,85%** · Brasil 3,24%
 
 ::: {.callout-note}
 Esta tabla cambia cada seis meses. **Nunca la citen de memoria ni de un apunte de clase: descárguenla el día que la usen.**
+:::
+
+---
+
+## Concepto · El WACC, pieza por pieza {.smaller}
+
+> **Definición.** El WACC es el **costo promedio de cada peso que financia el proyecto**: lo que exige el accionista y lo que cuesta la deuda del banco después de impuestos, cada uno **ponderado por la fracción del capital que aporta**.
+
+::: {style="font-size:1.55em; text-align:center; margin:.15em 0 .1em;"}
+$$WACC \;=\; \color{#000066}{\tfrac{E}{V}\cdot K_e} \;+\; \color{#00A9E0}{\tfrac{D}{V}\cdot K_d\,(1-t)}$$
+:::
+
+::: {style="text-align:center; font-size:.95em; margin-bottom:.4em;"}
+[**lo que pone y exige el accionista**]{style="color:#000066;"} &nbsp;·&nbsp; [**lo que presta y cobra el banco, neto de impuestos**]{style="color:#00A9E0;"}
+:::
+
+| Pieza | Qué es | De dónde sale | En este proyecto |
+|---|---|---|---:|
+| $E/V$ · peso del patrimonio | Fracción del capital que pone el **accionista** | Estructura de financiación: $1 - D/V$ | 40% |
+| $K_e$ · costo del patrimonio | Rendimiento mínimo que exige el accionista por **su** riesgo | CAPM + prima país, convertido a COP | 13,34% |
+| $D/V$ · peso de la deuda | Fracción del capital que presta el **banco** — el **nivel de endeudamiento** | Estructura de financiación | 60% |
+| $K_d(1-t)$ · costo neto de la deuda | Lo que cuesta la deuda **después** del escudo fiscal | Tasa cotizada por el banco × $(1-t)$ | 14,0% × 0,65 = **9,10%** |
+
+::: {.columns}
+::: {.column width="58%"}
+**Léanlo como una frase:** *el 40% del capital cuesta 13,34% y el 60% cuesta 9,10% después de impuestos; en promedio, cada peso cuesta 10,80%.*
+:::
+
+::: {.column width="42%"}
+**Lo que el WACC NO es:** la tasa del accionista (esa es $K_e$) · la tasa del banco (esa es $K_d$) · "la tasa del sector".
+:::
+:::
+
+::: {.notes}
+MIN 62–65. Recorrer la fórmula término a término con el dedo: dos pesos, dos costos.
+Los pesos suman 1 — si un equipo pone D/V = 60% y E/V = 50%, se rompió algo.
+El (1−t) es el escudo fiscal: solo existe si hay utilidad gravable — en este proyecto,
+años 0–4 sin renta. Guardarlo para el Tribunal. Respaldo: Sapag §16.3, ec. 16.3 — el beneficio
+tributario solo con utilidades contables, y va en la tasa o en los flujos, nunca en ambos.
+La frase en cursiva es la que tienen que poder decir sin mirar la slide.
 :::
 
 ---
@@ -197,6 +290,48 @@ Error de **19 puntos básicos**. Pequeño aquí, grande con inflaciones altas �
 
 ::: {.callout-warning}
 **La regla:** o todo nominal, o todo real. Un flujo real descontado a tasa nominal subestima el VPN en, aproximadamente, la inflación acumulada del horizonte.
+:::
+
+---
+
+## ¿CAPM o WACC? Depende de la deuda y del flujo {.smaller}
+
+El CAPM **no da la tasa del proyecto**: da $K_e$, la tasa **del accionista**. El WACC la mezcla con la deuda. Cuál usan depende del **nivel de apalancamiento** y del **flujo** que tengan enfrente.
+
+| Nivel de endeudamiento | Tasa del proyecto | Por qué |
+|---|---|---|
+| **$D = 0$** · 100% patrimonio | $WACC = K_e$ → **el CAPM basta** | Hay un solo dueño del capital: su costo de oportunidad es el del proyecto |
+| **$0 < D/V < 1$** · mezcla — aquí 60% | **FCLD → WACC** · **FCA → $K_e$** | La deuda entra **una sola vez**: en la tasa (WACC sobre el flujo *sin* deuda) o en el flujo (FCA, que ya restó intereses y amortización, al $K_e$) |
+| **Sube $D/V$** | $K_e$ **sube** · el WACC baja **solo por el escudo fiscal** | Más deuda = más riesgo para el accionista: la beta se **reapalanca**. La deuda no es "barata" porque 9,10% < 13,34% |
+
+::: {.columns}
+::: {.column width="58%"}
+**Cómo sube $K_e$ con la deuda** — beta apalancada (Hamada):
+
+$$\beta_L = \beta_U\left[1 + (1-t)\,\tfrac{D}{E}\right]$$
+
+Un comparable **sin deuda** con $\beta_U = 0{,}50$, reapalancado a 60/40 con $t = 35\%$:
+$\beta_L = 0{,}50\,[1 + 0{,}65 \times 1{,}5] = \mathbf{0{,}99}$ → $K_e$ en USD pasa de **9,2%** a **11,2%**.
+:::
+
+::: {.column width="42%"}
+::: {.callout-important}
+## La regla para mañana
+FCLD → **WACC**. FCA → **$K_e$**.
+
+Nunca FCA → WACC: contaría la deuda **dos veces**.
+:::
+:::
+:::
+
+::: {.notes}
+MIN 68–72. Volver a la pregunta de la slide de apertura del bloque: "si el banco pone el 80%,
+¿la tasa baja?". Respuesta: Ke sube (fila 3), el WACC baja solo por el (1−t). Sin impuestos
+no bajaría nada — Modigliani-Miller II (texto base cap. 15, ec. 15.12). La deuda parece barata
+porque se mira Kd aislado; el costo escondido es el Ke más alto que exige el accionista
+apalancado. El ejemplo de Hamada es el mismo que les pide el prompt de "Des/re-apalancar"
+de la slide de IA. Respaldo: Sapag §16.2, ec. 16.2 — con deuda cero el WACC se iguala al Ke
+(fila 1) — y ec. 16.6, que es Hamada tal cual. FCLD y FCA se construyen mañana: hoy solo la regla.
 :::
 
 ---
@@ -406,17 +541,21 @@ El escudo fiscal en años sin renta es el error escondido más frecuente. **Si n
 
 ## ¿De dónde sale cada fórmula? {.smaller background-color="#f5f5f5"}
 
-✅ está en una lectura asignada · 📖 texto base OA, capítulo **no** asignado · 🧑‍🏫 se enseña en clase, sin lectura de respaldo — brecha **declarada**, no escondida
+✅ lectura asignada · 📖 texto base OA, cap. **no** asignado · 🏛 **Sapag (2014) cap. 16 *Costo de capital*** — lectura `03d` · 🧑‍🏫 solo clase — brecha **declarada**
 
 | Fórmula de esta noche | ¿En las lecturas? | Fuente exacta |
 |---|---|---|
-| **CAPM** · $E[R_i] = R_f + \beta(E[R_m]-R_f)$, $\beta = \mathrm{Cov}/\mathrm{Var}$ | ✅ Welch la presenta — y la demuele | Welch (2021), lectura `03b` (*primer* + Figura A) · formalización completa: texto base §12.4 (OA) |
-| **$K_e$ con prima país** · $R_f + \beta \cdot ERP + \text{prima país}$ | ⚠️ En **ninguna** lectura como fórmula: es práctica de mercado | Método y datos: tabla de Damodaran (la que bajan en vivo) · Welch, lectura `03b`, explica por qué es un parche sin teoría |
-| **WACC** · $\tfrac{E}{V}K_e + \tfrac{D}{V}K_d(1-t)$ | 📖 Capítulo no asignado | Texto base §13.1.3 *Weighted Average Cost of Capital* (OA) |
-| **Fisher / conversión de moneda** · $(1+i_{COP}) = (1+i_{USD})\tfrac{1+\pi_{COP}}{1+\pi_{USD}}$ | 🧑‍🏫 Solo clase | Estándar de finanzas internacionales; la derivación completa quedó en la slide de Teoría |
+| **Costo de oportunidad del capital** (la definición de la tasa) | ✅ **Ya la leyeron** · 🏛 | Lectura `03a` — texto base §4.2 y Box 4.3 · Sapag §16.1.3 *El costo de oportunidad* |
+| **CAPM** · $E[R_i] = R_f + \beta(E[R_m]-R_f)$, $\beta = \mathrm{Cov}/\mathrm{Var}$ | ✅ · 📖 · 🏛 | Welch, lectura `03b` (la presenta — y la demuele) · texto base §12.4 · **Sapag §16.4, ec. 16.4 (CAPM) y 16.5 (beta)** |
+| **$K_e$ con prima país** · $R_f + \beta \cdot ERP + \text{prima país}$ | 🏛 como método · ✅ como crítica | **Sapag §16.1.5 y §16.4**: CAPM con parámetros de EE.UU. **más** el spread soberano · datos: Damodaran (en vivo) · Welch, `03b`: por qué es un parche sin teoría |
+| **$K_d(1-t)$** · costo efectivo de la deuda | 🏛 | **Sapag §16.3, ec. 16.3** — con las dos advertencias del Tribunal: beneficio tributario **solo con utilidades contables**, y **en la tasa o en los flujos, no en ambos** |
+| **WACC** · $\tfrac{E}{V}K_e + \tfrac{D}{V}K_d(1-t)$ | 📖 · 🏛 | Texto base §13.1.3 (ec. 13.5) · **Sapag §16.2, ec. 16.2** (pesos $D/A$ y $P/A$: $A$ = activos = $V$) y §16.6 |
+| **¿Qué tasa para qué flujo?** · $D=0 \Rightarrow WACC = K_e$ · FCLD → WACC · FCA → $K_e$ | 🏛 | **Sapag §16.2**, escenarios A–D: con deuda cero el WACC se iguala al $K_e$; el proyecto puro se descuenta a la tasa de los activos · flujos: caps. 14–15 (mañana) |
+| **Beta apalancada** · $\beta_L = \beta_U[1+(1-t)D/E]$ | 📖 · 🏛 | **Sapag §16.4, ec. 16.6 (apalancar) y 16.7 (desapalancar)** — la misma forma de Hamada · texto base §13.1.4 (ec. 13.7) y cap. 15 (ec. 15.12) |
+| **Fisher / conversión de moneda** · $(1+i_{COP}) = (1+i_{USD})\tfrac{1+\pi_{COP}}{1+\pi_{USD}}$ | 🧑‍🏫 Solo clase | Estándar de finanzas internacionales — no está en Sapag ni en el texto base; derivación en la slide de Teoría |
 
 ::: {.callout-note}
-Que una fórmula no esté en las lecturas **no es un descuido**: las dos lecturas de hoy no enseñan la mecánica — discuten **si estas fórmulas merecen la confianza que se les tiene** (Welch) y **qué tan poco acuerdo hay incluso entre expertos sobre la tasa** (Drupp). La mecánica viene de los textos de referencia; el **criterio** viene de las lecturas. Por eso son las lecturas.
+Que una fórmula no esté en las lecturas **no es un descuido**: Welch discute **si merecen la confianza que se les tiene** y Drupp **qué tan poco acuerdo hay entre expertos**. La mecánica está en el texto base (OA) y en **Sapag cap. 16** (lectura `03d`); el **criterio** viene de las lecturas.
 :::
 
 ---

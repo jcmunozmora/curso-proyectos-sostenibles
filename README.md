@@ -45,6 +45,26 @@ Además, el build público aplica [`filtros/sin-notas.lua`](filtros/sin-notas.lu
 
 **Recomendación:** versionar `instructor/` en un repositorio privado aparte. Hoy sólo existe localmente y no tiene respaldo.
 
+### El paquete del profesor — siempre en `instructor/pdf/`
+
+Todo lo que el profesor lleva al salón sale de **un solo comando** y queda **dentro del repo**, nunca en `~/Downloads`:
+
+```bash
+python3 recursos/exportar-profesor.py 3            # sesión 3 → instructor/pdf/S3/
+python3 recursos/exportar-profesor.py 3 --abrir    # y abre la carpeta
+```
+
+| Archivo en `instructor/pdf/S3/` | Qué es | Fuente |
+|---|---|---|
+| `S3_Viernes_slides.pdf` · `S3_Sabado_slides.pdf` | los slides tal como se proyectan, una página por slide (sin notas) | `slides/s03/*.qmd` → Chrome |
+| `S3_Viernes_Notas_por_slide.pdf` · `S3_Sabado_Notas_por_slide.pdf` | A4 horizontal: miniatura del slide + notas + rayas para anotar a mano | `::: {.notes}` del deck **+** `instructor/notas-slides/s3-<deck>.md` (guion extendido) **+** `s3-glosario.md` (opcional, primeras páginas) |
+| `S3_Plan_de_sesion.pdf` | plan minuto a minuto | `instructor/planes-sesion/s3.md` |
+| `S3_Guia_formulas.pdf` | guías de la sesión | `instructor/*-s3.md` |
+
+Opciones: `--sin-render` (reutiliza `_site/`), `--solo slides,notas,docs`, `--abrir`. El script avisa si un slide no cabe en pantalla (lo recorta, igual que al proyectar) y si una sección del guion ya no coincide con ningún título de slide. Requiere Quarto ≥ 1.7 (trae Typst), Google Chrome y `pip install playwright pymupdf`.
+
+**Dos capas de notas.** El `.qmd` lleva la mecánica breve en `::: {.notes}` (el `.qmd` es público en GitHub aunque el sitio las elimine); los reveals, respuestas preparadas y el guion largo van en `instructor/notas-slides/sN-<deck>.md`, una sección `## <título de la slide>` por slide con bloques `### Etiqueta`. Detalle del formato en `instructor/README.md`.
+
 ---
 
 ## Estructura del repositorio
@@ -59,11 +79,14 @@ Además, el build público aplica [`filtros/sin-notas.lua`](filtros/sin-notas.lu
 ├── slides/
 │   ├── s01/ … s05/                  ← 9 mazos RevealJS
 │   └── eafit.scss                   ← Azul Zafre #000066 / Azul Cielo #00A9E0
-├── instructor/                      ← EXCLUIDO del render
+├── instructor/                      ← EXCLUIDO del render y de git
 │   ├── 00-plan-de-registro.md       ← documento maestro
 │   ├── 01-diseno-pedagogico.md      ← el método y su evidencia
 │   ├── 02-guia-estudio-profesor.md  ← 10 conceptos + 8 preguntas preparadas
-│   └── planes-sesion/s1..s5.md      ← minuto a minuto
+│   ├── 03-caso-calibracion.md · 04-guia-formulas-s3.md
+│   ├── planes-sesion/s1..s5.md      ← minuto a minuto
+│   ├── notas-slides/sN-<deck>.md    ← guion extendido por slide (+ sN-glosario.md)
+│   └── pdf/SN/                      ← el paquete del profesor (salida de recursos/exportar-profesor.py)
 ├── plantillas/
 │   ├── modelo-financiero-PLANTILLA.xlsx  ← 10 hojas
 │   ├── 01-ficha-de-proyecto.md
@@ -76,7 +99,9 @@ Además, el build público aplica [`filtros/sin-notas.lua`](filtros/sin-notas.lu
 │   ├── construir_modelo_trampa.py
 │   ├── analisis_wacc_s3.py
 │   └── analisis_social_s4.py
-└── recursos/descargar-literatura.sh  ← reconstruye literatura/pdf/
+└── recursos/
+    ├── descargar-literatura.sh      ← reconstruye literatura/pdf/
+    └── exportar-profesor.py         ← paquete del profesor → instructor/pdf/SN/
 ```
 
 ## Reproducir
@@ -88,6 +113,7 @@ bash recursos/descargar-literatura.sh      # 40 PDFs de acceso abierto
 python3 datos/construir_modelo_trampa.py   # modelo-trampa S1
 python3 datos/analisis_wacc_s3.py          # costo de capital S3
 python3 datos/analisis_social_s4.py        # flujo socioeconómico S4
+python3 recursos/exportar-profesor.py 3    # paquete del profesor S3 → instructor/pdf/S3/
 ```
 
 **Todas las cifras de las slides salen de esos tres scripts.** Si se cambia un supuesto, se re-corre el script y se sincronizan las slides.

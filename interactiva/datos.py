@@ -202,6 +202,10 @@ LECTURAS = [
      "titulo": "⭐ Schoenmaker & Schramade (2023) — cap. 4, Discount Rates",
      "tipo": "complementaria",
      "nota": "Opcional: el marco que reconcilia tasa financiera, tasa social y descuento integrado."},
+    {"modulo": "m03", "archivo": "literatura/readings/03d_Sapag_Cap16_Costo_Capital.pdf",
+     "titulo": "⭐ Sapag Chain (2014) — cap. 16, Costo de capital",
+     "tipo": "complementaria",
+     "nota": "Referencia de fórmulas del viernes: CAPM (§16.4), Kd(1−t) (§16.3), WACC (§16.2), beta apalancada (ec. 16.6–16.7), ajuste por riesgo país. Es la mecánica; el criterio lo ponen Welch y Drupp."},
 ]
 
 # Podcast recomendado — título confirmado por el profesor (2026-08-22): "Proyectos
