@@ -9,6 +9,7 @@ title: "Materiales"
 | [Modelo financiero — PLANTILLA](plantillas/modelo-financiero-PLANTILLA.xlsx) | El libro de Excel del curso: 10 hojas, de Supuestos a Escenarios NGFS | S2–S4 |
 | [Ficha de proyecto](plantillas/01-ficha-de-proyecto.qmd) | Problema, propiedad, actores, cadena de resultados, KPI | S1 |
 | [Nota de inversión](plantillas/02-nota-de-inversion.qmd) | Entregable final, 4 páginas, formato de industria | S5 |
+| [Memoria del modelo](plantillas/07-memoria-del-modelo.qmd) | `MEMORIA.md`: supuestos con fuente y fecha, decisiones, registro de uso de IA, auditorías. Acompaña al Excel en cada entrega | S3–S5 |
 
 ## Reglas del modelo
 

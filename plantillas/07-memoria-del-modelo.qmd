@@ -1,0 +1,59 @@
+---
+title: "Memoria del modelo"
+subtitle: "MEMORIA.md · el archivo que acompaña al Excel en cada entrega"
+format:
+  html:
+    toc: true
+---
+
+> Copien la plantilla de abajo como `MEMORIA.md` en la carpeta del equipo. Se sube **con cada entrega** (S3, S4 y la nota de inversión), junto al Excel. Se escribe **en el salón, mientras se modela**: es la memoria del equipo, no un informe.
+
+## Por qué existe
+
+Un modelo financiero acumula decenas de decisiones pequeñas: qué beta, qué $g$, qué fracción del OpEx es fija, por qué el precio central es ese y no otro. Tres semanas después nadie recuerda por qué una celda dice lo que dice. Y con inteligencia artificial en el proceso hay una pregunta más que el comité va a hacer: **qué propuso la herramienta, qué verificaron y qué cambiaron**.
+
+La memoria responde las dos cosas. Es también el anexo de prompts que exige el [syllabus](../syllabus.qmd#uso-de-inteligencia-artificial), ampliado a las decisiones y a las auditorías.
+
+## Las cuatro reglas
+
+1. **La IA propone; la fuente primaria decide.** Toda cifra tiene uno de tres estados: `VERIFICADO` (contrastada con la fuente, con fecha), `[sin verificar]` (propuesta por la IA o por alguien, sin contraste todavía) o `ESTIMADO` (construida por el equipo con un método declarado). Una cifra `[sin verificar]` no entra a la hoja `Supuestos`.
+2. **Ningún prompt sin registro.** Fecha, herramienta, prompt, qué propuso, qué verificaron y contra qué, qué cambió.
+3. **Lo que la IA escribió en el Excel queda marcado**: un comentario en la celda o un color distinto, hasta que el equipo lo verifique.
+4. **La memoria se escribe en el salón.** Una memoria reconstruida la noche antes de la entrega se nota, y no sirve para lo que sirve.
+
+## Plantilla
+
+````markdown
+# MEMORIA DEL MODELO · Equipo __ · Proyecto __
+Última actualización: AAAA-MM-DD · Versión del Excel: __ · Responsable de esta versión: __
+
+## 1. Supuestos y fuentes
+| Supuesto | Valor | Unidad | Fuente (URL o documento) | Fecha de descarga | Estado |
+|---|---|---|---|---|---|
+| Precio central | 5.000 | USD/t | ICCO, boletín mensual | 2026-09-05 | VERIFICADO |
+| Beta | 0,85 | — | Comparables: [lista] · Damodaran, betas por industria | 2026-09-04 | ESTIMADO |
+| Prima de riesgo país | 2,85 % | fracción | Damodaran, country risk premium | 2026-09-04 | VERIFICADO |
+
+## 2. Decisiones de modelación
+| Decisión | Alternativas consideradas | Elegida | Por qué | Quién |
+|---|---|---|---|---|
+| Valor terminal | Perpetuidad g = 2 % · anualidad 10 años | Perpetuidad g = 2 % | g por debajo del crecimiento nominal de largo plazo | __ |
+| Escudo fiscal en años 0–4 | Aplicar (1 − t) siempre · solo con EBIT > 0 · compensar pérdidas | Solo con EBIT > 0 | No hay renta gravable hasta el año 5 | __ |
+
+## 3. Registro de uso de IA
+| Fecha | Herramienta | Para qué | Prompt (resumen o enlace) | Qué propuso | Qué verificamos y contra qué | Qué cambió |
+|---|---|---|---|---|---|---|
+| 2026-09-05 | __ | Auditar hoja FCLD | "Revisa fila por fila…" | Impuesto negativo en años 1–4 | Fórmula en FCLD!C9:F9 | MAX(0; EBIT) × t |
+
+## 4. Hallazgos de auditoría y correcciones
+| Sesión | Ítem de la lista | Hallazgo (hoja y celda) | Corrección | Estado |
+|---|---|---|---|---|
+| S3 | 13 | VPN proyecto ≈ VPN accionista | FCA descontado al Ke (Supuestos!B44) | Corregido |
+
+## 5. Pendientes para la próxima sesión
+- [ ] __
+````
+
+## Cómo se evalúa
+
+No se califica la extensión. Se mira si **cada cifra material tiene fuente y fecha** (criterio "Trazabilidad de cifras" de la [rúbrica R1](04-rubricas.qmd)), si los hallazgos de la auditoría anterior aparecen corregidos (criterio "Respuesta a la auditoría previa") y si el registro de IA permite reconstruir qué hizo la herramienta y qué hizo el equipo. En el Investor Day el comité puede pedirla.

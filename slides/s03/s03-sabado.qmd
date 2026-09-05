@@ -227,6 +227,25 @@ Sapag (cap. 13, §13.2) da tres métodos: **contable** (nunca para decidir), **c
 
 ---
 
+## Herramientas de IA para el flujo de caja {.smaller background-color="#f5f5f5"}
+
+Igual que anoche: la IA **revisa lo que ustedes construyeron**. No construye por ustedes.
+
+| Para qué | Prompt |
+|---|---|
+| **Auditar la hoja FCLD** | "Aquí están las fórmulas de mi hoja FCLD (pegadas con Ctrl + acento grave): [pegar]. Revisa fila por fila: ¿el impuesto es MAX(0; EBIT) × t? ¿La depreciación se resta y se suma de vuelta? ¿El CapEx sigue el cronograma y no la depreciación? ¿El capital de trabajo se recupera en el año 15? Marca cada hallazgo con la celda." |
+| **Tabla de amortización** | "Construye la tabla de amortización de una deuda de [monto] al [Kd] % EA a [n] años con cuotas de capital iguales: saldo inicial, interés, amortización, saldo final. Dame las **fórmulas de Excel para arrastrar**, no los números." |
+| **Patrón de signos y TIR** | "Este es mi flujo del año 0 al 15: [pegar]. ¿Cuántos cambios de signo tiene? ¿Cuál es la suma simple? ¿Puedo confiar en la TIR de Excel o debo reportar TIRM? Explícalo con la regla de Descartes." |
+| **Valor terminal** | "Con FC normalizado [x], WACC [k] y g de [2 %], calcula el valor terminal por perpetuidad y por anualidad de 10 años, y su valor presente. ¿Qué crecimiento nominal de largo plazo de Colombia justifica ese g? Cita la fuente y marca `[sin verificar]` si no la puedes abrir." |
+| **Auditor con la lista S3** | "Actúa como auditor. Aquí está la lista de 14 ítems de la auditoría S3 y mis hojas FCLD, FCA y Criterios: [pegar]. Para cada ítem: cumple / no cumple, la celda que lo prueba y qué corregir." |
+| **Explicar una celda** | "Explícame esta fórmula de Excel término a término, en palabras, como si no supiera finanzas: [pegar]. ¿Qué pasa si el EBIT es negativo?" |
+
+::: {.callout-warning}
+**La IA no toca la hoja `Supuestos`.** Cada cifra que proponga se marca `[sin verificar]` hasta contrastarla con fuente primaria. Y **cada prompt queda registrado** en la memoria del modelo (última slide del día).
+:::
+
+---
+
 ## Construcción 1 · 40 min {.smaller background-color="#f5f5f5" data-cron="2400" data-cron-label="construcción 1"}
 
 **Hoja `FCLD` de la plantilla:**
@@ -639,16 +658,15 @@ El VPN del proyecto y el del accionista **no** tienen que coincidir. Si el suyo 
 
 ## ¿De dónde sale cada fórmula? {.smaller background-color="#f5f5f5"}
 
-✅ está en una lectura asignada · 🏛 texto de referencia en biblioteca · 🧑‍🏫 se enseña en clase, sin lectura de respaldo — brecha **declarada**, no escondida
+✅ lectura asignada · 🏛 Sapag 6ª ed., biblioteca (la lectura `02b` fue solo el cap. 6) · 🧑‍🏫 solo clase, brecha **declarada**
 
-| Fórmula de hoy | ¿En las lecturas? | Fuente exacta (Sapag, 6ª ed., biblioteca; la lectura `02b` fue solo el cap. 6) |
+| Fórmula de hoy | ¿Dónde? | Fuente exacta |
 |---|---|---|
 | **FCLD** (estructura del flujo) | 🏛 | Sapag cap. 14, §14.3 *Estructura de un flujo de caja*, p. 228 |
 | **FCA** (flujo del inversionista) | 🏛 | Sapag cap. 14, §14.4 *Flujo de caja del inversionista*, p. 232 |
 | **Valor terminal** · $FC_n(1+g)/(k-g)$ | 🏛 | Sapag cap. 13, §13.2 *Valor de desecho*: contable, comercial, económico, p. 214 |
 | **VPN** · $\sum FC_t/(1+r)^t$ | 🏛 | Sapag cap. 15, §15.2, p. 252 · matemáticas financieras §15.1 |
 | **TIR** · $\sum FC_t/(1+TIR)^t = 0$ | 🏛 + ✅ | Sapag §15.3, p. 253 y §15.4 *TIR versus VAN*, p. 255 · la crítica: Welch, lectura `03b` |
-| **Supuesto de reinversión** (el álgebra) · **Descartes** | 🧑‍🏫 | Derivación de clase · matemática clásica (1637) |
 | **TIRM** | 🧑‍🏫 | **No está en Sapag** — ojo: su §15.5 *"TIR ajustada"* es otra cosa (la TIR con el ahorro tributario de la deuda) · referencia: Brigham & Ehrhardt |
 | **Payback descontado** | 🏛 | Sapag §15.6 *El periodo de recuperación o payback*, p. 259 |
 | **CAE** · `=PAGO(tasa; n; −VPN)` | 🏛 | Sapag §15.9 *El criterio de la anualidad equivalente*, p. 262 |
@@ -657,7 +675,38 @@ El VPN del proyecto y el del accionista **no** tienen que coincidir. Si el suyo 
 | **GAO / GAF** | 🧑‍🏫 | Sapag solo lo pide como ejercicio (cap. 6, p. 105) — referencia estándar: Brigham & Ehrhardt |
 
 ::: {.callout-note}
-Dos brechas honestas: **TIRM** y **GAO/GAF** no tienen lectura de respaldo en este curso — se enseñan en clase porque el proyecto los necesita (flujo no convencional + 60% de deuda). Quien quiera la fuente completa: Brigham & Ehrhardt, *Financial Management*, biblioteca EAFIT. Para todo lo demás: Sapag caps. 14 y 15, pp. 225–270, en una tarde.
+**TIRM**, **GAO/GAF**, el álgebra de reinversión y Descartes (1637) no tienen lectura de respaldo: se enseñan en clase porque el proyecto los necesita. Fuente completa: Brigham & Ehrhardt, biblioteca EAFIT. Todo lo demás: Sapag caps. 14–15, pp. 225–270.
+:::
+
+---
+
+## Gobernanza de IA · la memoria del modelo {.smaller background-color="#f5f5f5"}
+
+Un modelo que cambia cada sábado necesita una **memoria que no viva en la cabeza de nadie**. Cada equipo mantiene un archivo **`MEMORIA.md`** junto al Excel y lo sube con **cada entrega**: hoy, S4 y la nota de inversión.
+
+::: {.columns}
+::: {.column width="52%"}
+**Qué contiene** · plantilla: [Memoria del modelo](../../plantillas/07-memoria-del-modelo.html)
+
+1. **Supuestos y fuentes**, con fecha de descarga y estado: `VERIFICADO` · `[sin verificar]` · `ESTIMADO`
+2. **Decisiones de modelación**: qué eligieron y por qué (beta, $g$, estructura de deuda, escudo fiscal)
+3. **Registro de IA**: fecha · herramienta · prompt · qué propuso · qué verificaron y contra qué · qué cambió
+4. **Hallazgos de auditoría** y su corrección
+5. **Pendientes** para la próxima sesión
+:::
+
+::: {.column width="48%"}
+**Cuatro reglas**
+
+- La IA **propone**; la fuente primaria **decide**. Una cifra sin fuente es `[sin verificar]`.
+- Ningún prompt sin registro: es el anexo que exige el syllabus, ampliado.
+- Lo que la IA escribió en el Excel queda **marcado** (comentario en la celda).
+- La memoria se escribe **en el salón**, mientras modelan. No la noche antes de la entrega.
+:::
+:::
+
+::: {.callout-important}
+En el Investor Day el comité puede pedir la memoria. El equipo que sepa decir *"esta beta salió de estos comparables, este día; la IA propuso 1,3 y la bajamos a 0,9 por esta razón"* **gana la conversación**. Trazabilidad es el criterio 2 de la rúbrica R1.
 :::
 
 ---
