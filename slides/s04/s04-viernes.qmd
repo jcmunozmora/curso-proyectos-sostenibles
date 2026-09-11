@@ -46,6 +46,10 @@ Dejar la pregunta abierta. No responder.
 | 20:35 | Tribunal · hoy el *discussant* es escéptico fiscal | 20 |
 | **21:00** | **Fin** | |
 
+::: {.notes}
+1 min, sin detenerse. La pausa real está a las 19:15; si el Tribunal se alarga, se recorta el final, nunca la pausa.
+:::
+
 ---
 
 ## Confrontación · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="confrontación"}
@@ -90,6 +94,80 @@ y lleva sesenta años haciéndolo.
 :::
 :::
 
+::: {.notes}
+MIN 55. Transición corta: nombrar el vacío antes de llenarlo. No decir todavía "análisis costo-beneficio" en voz alta — dejar que la última línea lo entregue.
+:::
+
+---
+
+## Caso real · el mismo ejercicio, para el Banco Mundial {background-color="#f5f5f5"}
+
+**Programa de apoyo a pequeños productores para la compra de insumos agrícolas** — Banco Mundial, Colombia, 2022. Emergencia: el alza mundial de precios de fertilizantes golpeó a los pequeños productores.
+
+Este análisis lo hizo **su profesor**, con la misma estructura de esta noche:
+
+| | Pregunta | Nivel |
+|---|---|---|
+| **Análisis financiero** | ¿Le sirve al productor? | La finca, precios de mercado |
+| **Análisis económico** | ¿Le sirve al país? | Toda la población objetivo, precios sombra |
+
+$$NPV = \sum_{t=1}^{N} \frac{B_t - C_t}{(1+r)^t}$$
+
+::: {.callout-note}
+Misma fórmula, mismo criterio, mismo par de preguntas que van a usar mañana con "flujo privado" y "flujo socioeconómico". Es la metodología estándar del Banco Mundial y el FIDA (Gittinger, 1982; Belli et al., 2001; IFAD, 2015) — no es una convención del curso.
+:::
+
+::: {.notes}
+1 min. Autoridad, no anécdota: "esto no es un ejemplo de libro, es un informe real que entregué al Banco Mundial en 2022, con la misma estructura de esta noche." Ancla la autoridad de toda la sesión antes de entrar en la mecánica.
+:::
+
+---
+
+## Caso real · heterogeneidad entre trece cadenas {.smaller}
+
+Resultados del análisis financiero, línea base, por cadena de valor (fragmento):
+
+| Cadena | Ingreso, %Δ | VPN | TIR |
+|---|---:|---:|---:|
+| Plátano | +135% | 9,3 | 16% |
+| Arroz | +91% | 29,8 | 20% |
+| Ganado | +93% | 193,6 | 20% |
+| Maíz | +116% | 0,4 | **4%** |
+
+**Resultado agregado del programa:** TIR económica **15,2%** · VPN a 10 años y 5% de descuento: **93,2**
+
+::: {.callout-warning}
+No todas las cadenas se comportan igual. El maíz apenas supera el costo de oportunidad del capital — si el comité hubiera evaluado sólo el agregado, se habría perdido esa señal. **Por eso el ACB se corre cadena por cadena, no sólo a nivel de programa.**
+:::
+
+::: {.notes}
+1 min. Unidades tal como aparecen en el informe original — decir "en las unidades del informe" si preguntan por la escala, no inventarla. El punto pedagógico es el contraste 20% vs. 4%, no la cifra absoluta.
+:::
+
+---
+
+## Caso real · el precio sombra del carbono, ya aplicado {.smaller}
+
+$$NPV = \sum_{t=1}^{N} \frac{B_t - C_t - (SPC_t \times \text{emisiones}_t)}{(1+r)^t}$$
+
+| Parámetro | Valor usado (2022) | Fuente |
+|---|---|---|
+| Precio sombra del carbono | **USD 30/tCO₂e** | Banco Mundial, *Guidance Note* **2017** — la versión anterior a la de esta noche |
+| Tasa de descuento | **4,3%** | Tasa interbancaria, Banco de la República, últimos 5 años — cercana a la recomendada por el Banco Mundial (2015) |
+| Mitigación estimada | ~**−455.000 tCO₂e/año** (~−1,5 tCO₂e/ha/año) | Herramienta EX-ACT (FAO), IPCC nivel Tier 1 |
+
+::: {.callout-important}
+**Una quinta tasa defendible.** Ni el WACC privado, ni la TSD del DNP, ni el consenso internacional de expertos: un consultor del Banco Mundial en Colombia usó la tasa interbancaria, declarada y justificada. **La regla no cambia: cualquier tasa sirve si se declara y se defiende.**
+:::
+
+::: {.callout-warning}
+El precio del carbono subió: de USD 30/tCO₂e (nota de 2017) a USD 50–100/tCO₂e (nota de 2024, la de esta noche). La metodología es la misma — el número cambia, y hay que citar el año de la nota que se usa.
+:::
+
+::: {.notes}
+1 min. Este informe trae dos cifras de mitigación total que no coinciden entre el texto y su propia tabla — es un desajuste real del documento original. Si sale el tema: "hasta un informe del Banco Mundial necesita auditoría cruzada."
+:::
+
 ---
 
 ## Input · Cuando el precio de mercado miente
@@ -111,6 +189,36 @@ Un precio de mercado **no** refleja el valor social cuando hay externalidades, i
 Si en su flujo social el impuesto sigue apareciendo como costo, no hicieron un flujo social: hicieron el privado con otro nombre.
 :::
 
+::: {.notes}
+MIN 55–65. La fila que más discusión genera es la prima orgánica: parece "valor nuevo" porque alguien la paga, pero es una transferencia del consumidor europeo al productor, no una externalidad. Guardarla para el sábado (la trampa de la recuperación, pregunta 5).
+:::
+
+---
+
+## Teoría · La fórmula detrás de la tabla {.smaller}
+
+Toda la tabla anterior es un solo movimiento repetido: una **cantidad** en unidades físicas, multiplicada por un **precio sombra** en unidades monetarias.
+
+$$VF = Q \cdot SP$$
+
+| Término | Qué es | En este proyecto |
+|---|---|---|
+| $Q$ | La cantidad del bien, servicio o daño, en sus **propias unidades** | tCO₂e removidas · jornales · m³ de agua regulada |
+| $SP$ (*shadow price*) | Lo que la sociedad valora ese renglón cuando no hay precio de mercado, o el precio de mercado miente | Precio del carbono · salario de reserva · costo evitado de tratamiento |
+| $VF$ | El flujo de valor social o ambiental de ese renglón, en el año correspondiente | Entra al flujo socioeconómico exactamente como entraría un ingreso o un costo |
+
+Y todo el flujo se trae a valor presente con la misma fórmula del VPN que ya conocen — sólo cambia qué entra al numerador y qué tasa descuenta:
+
+$$VPN_{social} = \sum_{t=0}^{n} \frac{(B_t - C_t)_{social}}{(1+TSD)^t}$$
+
+::: {.callout-note}
+**No es una fórmula nueva.** Es la del viernes pasado, con dos cambios: el numerador excluye transferencias e incluye externalidades; el denominador usa la tasa social, no el WACC. Mañana la aplican fila por fila en la hoja `FlujoSocial`.
+:::
+
+::: {.notes}
+2 min. Puente entre la tabla cualitativa de arriba y la construcción de mañana. Cuantificar primero ($Q$), poner precio después ($SP$) — nunca al revés: es el error que más se ve en la Construcción 1 del sábado.
+:::
+
 ---
 
 ## Input · El protocolo del Banco Mundial
@@ -130,6 +238,10 @@ USD **40–80**/tCO₂ a 2020 · USD **50–100**/tCO₂ a 2030
 
 ::: {.callout-important}
 Este es **el formato de su entregable final**. No aprenden *sobre* el estándar: entregan en el estándar.
+:::
+
+::: {.notes}
+MIN 65–75. Repetir: esto no es teoría de examen, es el formato exacto de la Construcción 2 de mañana y de la Nota de Inversión de S5. Quien lo entienda hoy construye más rápido mañana.
 :::
 
 ---
@@ -170,6 +282,10 @@ Pregunta distinta: no *"¿cuánto valoramos el futuro?"* sino *"¿qué rendimien
 No son dos estimaciones del mismo parámetro. **Son dos parámetros distintos que responden preguntas distintas.** Por eso difieren tanto — y por eso el debate no se resuelve con más datos.
 :::
 
+::: {.notes}
+MIN 90–100. No resolver el debate Ramsey/Harberger esta noche — el punto es que son dos preguntas, no dos respuestas a la misma pregunta. Volver a esto en el Tribunal si alguien intenta "promediarlas".
+:::
+
 ## Teoría · De dónde sale la regla de Ramsey {.smaller}
 
 Un planificador social maximiza el bienestar descontado de generaciones sucesivas:
@@ -205,6 +321,10 @@ Con $\delta = 0{,}5\%$, $\eta = 1{,}5$ y $g = 1{,}3\%$ → $r = 0{,}5 + 1{,}5(1{
 Eso está **exactamente** en el rango de la encuesta a 197 expertos (media 2,25%, mediana 2,0%). No es coincidencia: es el mismo modelo.
 :::
 
+::: {.notes}
+MIN 100–108. $\delta$ es una posición ética, no un dato: decirlo así, literal. Es la frase que un estudiante de Matemáticas financieras no espera oír en una clase de valoración.
+:::
+
 ---
 
 ## Teoría · Las dos escuelas no discrepan, preguntan cosas distintas
@@ -221,6 +341,10 @@ Eso está **exactamente** en el rango de la encuesta a 197 expertos (media 2,25%
 **Un factor de 4 entre las dos escuelas.** No se resuelve con más datos — son marcos distintos.
 
 Lo que **sí** se les exige a ustedes es **declarar cuál usan y por qué**, y mostrar el resultado con las dos. El Banco Mundial exige exactamente eso con el carbono; nosotros lo extendemos a la tasa.
+:::
+
+::: {.notes}
+2 min. El factor de 4× no es un error de nadie: son dos preguntas distintas. Quien intente "promediar" Ramsey y Harberger para llegar a un punto medio no entendió la slide.
 :::
 
 ---
@@ -245,6 +369,12 @@ Una política mejora si **los que ganan podrían compensar a los que pierden** y
 :::
 :::
 
+Formalmente, la política pasa la prueba si la suma de cambios de bienestar de **todos** los afectados es positiva, sin importar quién gana y quién pierde:
+
+$$\sum_i \Delta B_i \;-\; \sum_i \Delta C_i \;>\; 0$$
+
+📖 Boardman, Greenberg, Vining & Weimer, *Cost-Benefit Analysis: Concepts and Practice*, cap. 2 — la referencia estándar del criterio (consulta, no obligatoria).
+
 ::: {.callout-important}
 ## La palabra que hace todo el trabajo: *podrían*
 Kaldor–Hicks **no exige que la compensación ocurra**. Sólo que sea teóricamente posible.
@@ -255,6 +385,10 @@ Por eso un proyecto con VPN social positivo puede, simultáneamente, **empeorar 
 :::
 
 **Por eso el análisis distributivo no es un adorno del ACB: es lo que le falta.**
+
+::: {.notes}
+MIN 108–110. Kaldor-Hicks es la puerta trasera por la que el ACB suma peras con manzanas: bienestar de un accionista, un jornalero y un río, en la misma suma. Decirlo así de crudo. La pregunta del comunero en el Investor Day (S5) vuelve exactamente aquí.
+:::
 
 ---
 
@@ -275,6 +409,10 @@ Justificación textual del DNP: *usar tasas sociales de descuento altas, que asi
 Colombia descuenta el **futuro lejano** casi como los expertos internacionales (3,5% vs. 2%), y el **futuro cercano** como un banco (9,5%). Esa asimetría es una decisión de política, no un tecnicismo.
 :::
 
+::: {.notes}
+MIN 110–118. Leer la justificación textual del DNP en voz alta, sin parafrasear: es la frase que un estudiante de finanzas corporativas no espera de un documento de gobierno.
+:::
+
 ---
 
 ## Input · Por qué la tasa lo es todo
@@ -291,6 +429,10 @@ Colombia descuenta el **futuro lejano** casi como los expertos internacionales (
 Un factor de **12×** entre el primero y el último. Sobre el mismo peso, del mismo año, del mismo proyecto.
 
 **Ninguno está haciendo trampa.** Le están preguntando cosas distintas al mismo flujo.
+:::
+
+::: {.notes}
+MIN 118–125. El factor 12× es la slide que se queda. Repetirla en el Tribunal si alguien intenta cerrar el debate "por consenso".
 :::
 
 ---
@@ -313,6 +455,10 @@ Un factor de **12×** entre el primero y el último. Sobre el mismo peso, del mi
 No hay respuesta correcta. Hay respuestas **defendibles** y respuestas que no lo son.
 :::
 
+::: {.notes}
+MIN 125–155. Circular. La pregunta 3 (¿quién paga la brecha?) es la que más se evade con generalidades — pedir un mecanismo concreto, no un principio.
+:::
+
 ---
 
 ## Tribunal · 20 min {data-cron="1200" data-cron-label="tribunal"}
@@ -330,6 +476,10 @@ Su trabajo es preguntar:
 
 ::: {.callout-warning}
 Esa última pregunta es real y casi nadie la responde bien. **El diseño del instrumento debe ser simétrico**, o el Estado asume todo el riesgo a la baja y ninguno del alza.
+:::
+
+::: {.notes}
+MIN 155–175. El escéptico fiscal de hoy va a atacar el subsidio, no el carbono. Si nadie trae la pregunta de la asimetría (precio del cacao sube, ¿devuelven el subsidio?), hacerla tú.
 :::
 
 ---

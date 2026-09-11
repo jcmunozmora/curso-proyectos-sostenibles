@@ -44,6 +44,10 @@ Hay un argumento para incluirla (mejora el bienestar del productor) y uno para e
 | 12:25 | Auditoría cruzada | 20 |
 | **13:00** | **Fin** · instrucciones del Investor Day | |
 
+::: {.notes}
+1 min. Hoy es más denso que ayer: tres construcciones más el caso Inditex, entre cuantificar carbono y la Construcción 1. Si van atrasados, el caso Inditex es lo primero que se resume a una sola tabla.
+:::
+
 ---
 
 ## Hoy construyen {background-color="#000066" style="color:white;"}
@@ -78,6 +82,10 @@ Hay un argumento para incluirla (mejora el bienestar del productor) y uno para e
 Eso no es un flujo social — es un flujo privado con propaganda. **Son dos flujos separados, con dos tasas distintas, que responden dos preguntas distintas.**
 :::
 
+::: {.notes}
+MIN 20–30. El diagrama se lee de arriba a abajo, literal, con el dedo. El error que van a cometer en la Construcción 1 está en la línea del callout: sumar sin quitar el WACC.
+:::
+
 ---
 
 ## Input 1 · Cuantificar el carbono de este proyecto
@@ -99,6 +107,145 @@ Eso no es un flujo social — es un flujo privado con propaganda. **Son dos fluj
 La **línea base es la decisión más contestada** de toda la contabilidad de carbono. Si asumen un potrero muy degradado, su adicionalidad crece. Es donde ocurre la mayor parte del greenwashing del sector.
 :::
 
+::: {.notes}
+MIN 30–40. La línea base (8 Mg C/ha) es una estimación [PV] sin verificar contra un estudio de suelos local — decirlo así. Es la decisión más contestable de toda la sesión, y es a propósito.
+:::
+
+---
+
+## Teoría · El salario sombra, término a término {.smaller}
+
+$$OpEx_{social} = OpEx \cdot (1 - f_{MO}) \;+\; OpEx \cdot f_{MO} \cdot SP_{MO}$$
+
+| Término | Qué es | En este proyecto (año 7) |
+|---|---|---|
+| $OpEx$ | Costo operativo total del año, a precio de mercado | 950.000 (1.900 USD/ha × 500 ha) |
+| $f_{MO}$ | Fracción del OpEx que es mano de obra | 60% |
+| $SP_{MO}$ (salario de reserva) | Cuánto vale ese trabajo para la sociedad si hay **subempleo rural**: menos que el jornal pagado, porque el trabajador no tenía un uso alternativo igual de productivo | 70% del jornal |
+| $OpEx_{social}$ | El costo que entra al flujo social | 380.000 (no laboral) + 570.000×0,70 (399.000) = **779.000** |
+
+::: {.callout-important}
+**El proyecto "cuesta" 171.000 menos en el flujo social que en el privado — en el mismo año.** No es que el trabajo sea gratis: es que paga por encima del salario de reserva, y esa diferencia es una **transferencia hacia el trabajador**, no un costo para la sociedad.
+:::
+
+::: {.callout-warning}
+El 70% es un supuesto, no un dato: sin una encuesta de subempleo local, se declara **[PV — estimado]** en la memoria del modelo, igual que la beta del viernes pasado.
+:::
+
+::: {.notes}
+2 min. Mismo patrón que el Ke del viernes pasado: una fórmula de dos líneas, un supuesto que nadie mide directamente, y la obligación de declararlo. El "factor 0,70" es al salario sombra lo que la beta 0,85 fue al WACC.
+:::
+
+---
+
+## Caso real · cuando una empresa cotizada hace esto mismo {background-color="#f5f5f5"}
+
+**Inditex** (Zara, Bershka, Massimo Dutti…) — la mayor cadena de moda rápida del mundo, más de 7.000 tiendas, ventas 2020: **€20.400 millones**.
+
+No es un proyecto de sostenibilidad. Es la valoración de una empresa que cotiza en bolsa, hecha con **exactamente el mismo movimiento** que están haciendo ustedes hoy:
+
+$$IV = FV + SV + EV$$
+
+| | Qué mide | Cómo se calcula |
+|---|---|---|
+| **FV** (valor financiero) | Lo que vale la empresa para el accionista | DCF estándar |
+| **SV** (valor social) | El bienestar que crea o destruye para trabajadores, clientes, comunidad | $Q \times SP$, descontado — el mismo $VF=Q\cdot SP$ de anoche |
+| **EV** (valor ambiental) | El daño o beneficio ambiental, en dinero | $Q \times SP$, descontado |
+
+::: {.callout-note}
+Este es el caso guiado del cap. 11 de **Schoenmaker & Schramade (2023)**, texto base del curso, acceso abierto. No es una ilustración inventada: es el ejercicio completo, con los mismos supuestos declarados que les exigimos a ustedes.
+:::
+
+::: {.notes}
+1 min. Puente: "esto que acaban de ver con el salario sombra, una empresa real de €20.000 millones en ventas lo hace a escala de miles de millones — y lo publica un libro de texto." Sirve para que dejen de ver el ACB como un ejercicio de salón.
+:::
+
+---
+
+## Teoría · Cómo Inditex pone precio al bienestar {.smaller}
+
+Dos de los tres precios sombra del caso, término a término:
+
+**Excedente del consumidor** — el bienestar que el cliente recibe por encima de lo que paga:
+
+$$\text{Excedente} = \frac{\text{Ventas}}{\varepsilon} \cdot \frac{1}{2}$$
+
+| Término | Qué es | Inditex, 2020 |
+|---|---|---|
+| Ventas | Ingresos totales | €20.400 M |
+| $\varepsilon$ (elasticidad precio de la demanda) | Cuánto cae la cantidad comprada cuando sube el precio — fuente: Khaled & Lattimore (2006), ropa de hombre y mujer | 3,45 |
+| Excedente | Bienestar del consumidor, antes de atribución | 20.400 / 3,45 × 0,5 = **€2.955 M** |
+| **Atribuido a Inditex** (50%, comparte el mérito con la cadena de suministro) | | **€1.478 M** |
+
+**Bienestar del empleado** — la satisfacción adicional de tener el empleo, más allá del salario:
+
+$$\text{Bienestar} = \text{puntos de satisfacción} \times SP_{\text{satisfacción}} \times \text{empleados}$$
+
+2 puntos (escala 0–100) × €2.407/punto × 144.116 empleados ≈ **€694 M**, antes de ajustar por la caída de ventas de 2020.
+
+::: {.callout-important}
+**Es la misma lógica del salario sombra rural que acaban de calcular** — poner precio a algo que el mercado no factura — aplicada al excedente de un consumidor y a la satisfacción de un empleado. Los datos son otros; la fórmula ($Q \times SP$) es idéntica.
+:::
+
+::: {.notes}
+2 min. No hay que derivar la elasticidad en vivo — el punto es mostrar que "poner precio al bienestar" no es una metáfora: es un cálculo con una fuente académica (Khaled & Lattimore) detrás de cada número.
+:::
+
+---
+
+## Caso real · la tabla que resume todo Inditex {.smaller}
+
+**Valoración integrada de Inditex, 2021 — € mil millones:**
+
+| | Valor | Fuente en el caso |
+|---|---:|---|
+| **FV** (valor financiero, DCF estándar) | **+79** | Tabla 11.6 |
+| **SV positivo** (excedente del consumidor, empleo, impuestos) | **+283** | Tabla 11.17 |
+| **SV negativo** (condiciones laborales en la cadena) | **−137** | Tabla 11.16 |
+| **EV negativo** (emisiones, agua, recursos — 50% atribuido) | **−183** | Tabla 11.15 |
+| **IV = FV + SV + EV** | **= 42** | |
+
+<div style="margin-top:16px;">
+<div style="display:flex; align-items:center; gap:12px; margin:6px 0;">
+  <div style="width:150px; text-align:right; font-size:0.8em; font-weight:600;">SV positivo</div>
+  <div style="background:#1b8a5a; height:26px; width:420px; border-radius:3px;"></div>
+  <div style="font-weight:700; font-size:0.8em;">+283</div>
+</div>
+<div style="display:flex; align-items:center; gap:12px; margin:6px 0;">
+  <div style="width:150px; text-align:right; font-size:0.8em; font-weight:600;">SV negativo</div>
+  <div style="background:#b91c1c; height:26px; width:203px; border-radius:3px;"></div>
+  <div style="font-weight:700; font-size:0.8em;">−137</div>
+</div>
+<div style="display:flex; align-items:center; gap:12px; margin:6px 0;">
+  <div style="width:150px; text-align:right; font-size:0.8em; font-weight:600;">EV negativo</div>
+  <div style="background:#7f1d1d; height:26px; width:271px; border-radius:3px;"></div>
+  <div style="font-weight:700; font-size:0.8em;">−183</div>
+</div>
+<div style="display:flex; align-items:center; gap:12px; margin:6px 0;">
+  <div style="width:150px; text-align:right; font-size:0.8em; font-weight:600;">FV</div>
+  <div style="background:#000066; height:26px; width:117px; border-radius:3px;"></div>
+  <div style="font-weight:700; font-size:0.8em;">+79</div>
+</div>
+<div style="display:flex; align-items:center; gap:12px; margin:6px 0;">
+  <div style="width:150px; text-align:right; font-size:0.8em; font-weight:600;">IV</div>
+  <div style="background:#00A9E0; height:26px; width:62px; border-radius:3px;"></div>
+  <div style="font-weight:700; font-size:0.8em;">42</div>
+</div>
+</div>
+
+::: {.callout-important}
+## La lección no es sobre Inditex — es sobre no netear
+El valor integrado (**42**) parece modesto. Pero esconde positivos y negativos de **más de €280.000 M cada uno**. Si sólo publicaran el neto, nadie sabría que la mitad del problema está en la cadena de suministro (EV −183) y la otra mitad en las condiciones laborales (SV −137). **Reportar el neto es lo mismo que no reportar nada.**
+:::
+
+::: {.callout-note}
+**El puente con lo de anoche:** SV y EV se descuentan a una **tasa social de descuento del 2,2%** — la misma familia de tasa que discutieron con Drupp et al. (2,0–2,25%), no el WACC del inversionista. Un libro de texto de finanzas corporativas usa el mismo número que ustedes defendieron anoche.
+:::
+
+::: {.notes}
+2 min. La cifra que se queda es "42 esconde dos números de 280.000 millones cada uno". Si preguntan por qué Inditex reporta esto: no lo reporta — lo calculan los autores del libro, desde afuera, con datos públicos. Esa es la lección adicional: se puede estimar SV/EV sin acceso interno a la empresa.
+:::
+
 ---
 
 ## Construcción 1 · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="construcción 1"}
@@ -113,6 +260,10 @@ La **línea base es la decisión más contestada** de toda la contabilidad de ca
 
 ::: {.callout-note}
 Cada supuesto va en una celda **etiquetada y editable**, nunca dentro de una fórmula. En 20 minutos van a tener que cambiarlos todos.
+:::
+
+::: {.notes}
+MIN 40–80. El caso Inditex que acaban de ver usa exactamente esta misma estructura, a otra escala: FV ya lo tienen (VPN privado de anoche), SV y EV son lo que construyen ahora.
 :::
 
 ---
@@ -135,6 +286,10 @@ Ninguna de esas cuatro decisiones es un dato. Las cuatro son juicios.
 
 Y entre el equipo más conservador y el más optimista de esta sala,
 el VPN social difiere en **más del doble**.
+:::
+
+::: {.notes}
+MIN 9:20–9:35. Pedir el número exacto de la diferencia entre el equipo más conservador y el más optimista antes de decir "más del doble" — que lo calculen ellos en voz alta.
 :::
 
 ---
@@ -171,6 +326,10 @@ PAUSA · 20 minutos
 Este proyecto se justifica socialmente **si y sólo si** uno cree que el carbono debe valer la mitad superior de esa banda. Toda la decisión cabe en esa frase.
 :::
 
+::: {.notes}
+MIN 9:55–10:05. La tabla completa cabe en una frase: "a este precio de cacao, el proyecto sólo se justifica socialmente si el carbono vale la mitad superior de la banda del Banco Mundial." Que la digan ellos antes de que la digas tú.
+:::
+
 ---
 
 ## Input 2 · Y la elección de tasa, sola, cambia el signo
@@ -193,6 +352,10 @@ Cambia un parámetro que ningún dato puede resolver.
 Cuando alguien les presente un VPN social sin declarar su tasa **y su justificación**, no les presentó un resultado. Les presentó una preferencia.
 :::
 
+::: {.notes}
+MIN 10:05–10:15. Mismo punto que el factor 12× de anoche, ahora con signo: la tasa sola cambia si el proyecto "pasa" o "no pasa" el ACB. Nadie puede decir que esto es un tecnicismo después de ver el signo cambiar.
+:::
+
 ---
 
 ## Construcción 2 · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="construcción 2"}
@@ -213,6 +376,10 @@ Escriban la **frase de cierre** de su análisis:
 > *"Este proyecto se justifica socialmente si el precio del carbono supera USD ___/tCO₂e, valor que está [dentro / fuera] del rango recomendado por el Banco Mundial."*
 
 Esa frase es la más comunicable de todo el curso. **Va en la primera página de su nota de inversión.**
+:::
+
+::: {.notes}
+MIN 10:15–10:55. Circular preguntando por la frase de cierre antes de que terminen: si no pueden completarla con un número, no terminaron el switching value.
 :::
 
 ---
@@ -246,6 +413,10 @@ Bajar el flujo por riesgo climático **y** subir la tasa por riesgo climático. 
 - **Net Zero 2050** — política agresiva; favorece modelos bajos en carbono
 - **Delayed Transition** — la acción se pospone y detona una **revaluación desordenada y súbita**
 
+::: {.notes}
+MIN 11:25–11:45. El error #1 es el mismo de la beta el viernes pasado, con otro nombre: riesgo específico al numerador, sistemático al denominador, nunca a los dos. Decirlo con esas palabras para que la conexión sea explícita.
+:::
+
 ---
 
 ## Construcción 3 · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="construcción 3"}
@@ -263,6 +434,10 @@ Bajar el flujo por riesgo climático **y** subir la tasa por riesgo climático. 
 
 ::: {.callout-important}
 **Lo que buscamos:** ¿el ranking entre sus alternativas se **invierte** entre escenarios? Si su proyecto gana en los tres, probablemente no construyeron escenarios de verdad — construyeron tres versiones del mismo.
+:::
+
+::: {.notes}
+MIN 11:45–12:25. Buscar el equipo cuyo ranking se invierte entre escenarios — es el hallazgo que vale la pena pedir que compartan en la síntesis.
 :::
 
 ---
@@ -285,13 +460,76 @@ Bajar el flujo por riesgo climático **y** subir la tasa por riesgo climático. 
 
 ---
 
+## ¿De dónde sale cada fórmula? {.smaller background-color="#f5f5f5"}
+
+✅ lectura asignada · 📖 consulta (bibliografía del curso, no obligatoria) · 🧑‍🏫 solo clase, brecha **declarada**
+
+| Fórmula de S3–S4 | ¿Dónde? | Fuente exacta |
+|---|---|---|
+| **Precio sombra** · $VF = Q \cdot SP$ | 📖 | Schoenmaker & Schramade, cap. 5, §5.3–5.4, ec. 5.2 |
+| **Excedente del consumidor** · $Q/\varepsilon \times 1/2$ | 📖 | Schoenmaker & Schramade, cap. 5, §5.4, ec. 5.5–5.7 |
+| **VPN social** · $\sum (B_t-C_t)_{soc}/(1+TSD)^t$ | 📖 | Schoenmaker & Schramade, cap. 5, ec. 5.3–5.4 |
+| **Kaldor-Hicks** · $\sum \Delta B_i - \sum \Delta C_i > 0$ | 📖 | Boardman, Greenberg, Vining & Weimer, *Cost-Benefit Analysis*, cap. 2 |
+| **Regla de Ramsey** · $r = \delta + \eta g$ | ✅ | Drupp, Freeman, Groom & Nesje (2018), lectura `04a` |
+| **TSD de Colombia** (9,5 / 6,4 / 3,5%) | ✅ | Resolución 1092 de 2022, DNP — Art. 1 y 2 |
+| **Protocolo del precio del carbono** (sin/bajo/alto + *switching value*) | ✅ | Banco Mundial (2024), *Guidance Note on Shadow Price of Carbon*, lectura `04b` |
+| **Escenarios NGFS** | 🧑‍🏫 | NGFS, *Guide to Climate Scenario Analysis* — no es lectura asignada, se enseña porque el proyecto los necesita |
+| **Caso Inditex** · $IV = FV+SV+EV$ | 📖 | Schoenmaker & Schramade, cap. 11, tabla 11.18 — texto base, acceso abierto |
+| **Salario sombra** (factor 0,70 de subempleo) | 🧑‍🏫 | No está en ninguna lectura — supuesto del caso, declarado **[PV]**, igual que la beta del viernes pasado |
+
+::: {.callout-note}
+Las lecturas obligatorias de hoy (Drupp y Banco Mundial) dan la **tasa** y el **protocolo del carbono**. Todo lo demás — precio sombra en general, Kaldor-Hicks, el caso Inditex — viene del texto base o de una referencia de consulta, no de una lectura que deban entregar. Se cita igual, porque el estándar del curso es declarar la fuente, no sólo lo que se leyó.
+:::
+
+::: {.notes}
+1 min. Mismo cierre que anoche: la mecánica no se inventó en esta clase, viene de un texto verificable. Ojo: NGFS es la única pieza sin respaldo de lectura — decirlo tal cual, no dorar la píldora.
+:::
+
+---
+
+## Gobernanza de IA · el archivo que dirige la herramienta {.smaller background-color="#f5f5f5"}
+
+En la S3, **la mitad de los libros de Excel del curso los escribió un script.** Eso está bien — el curso lo espera. Lo que apareció tres veces el mismo fin de semana no está bien:
+
+::: {.columns}
+::: {.column width="52%"}
+- Un modelo llegó **sin un solo valor calculado**: todas las fórmulas correctas, ningún resultado.
+- Un archivo traía los veredictos *"NO VIABLE"* / *"ALTAMENTE VIABLE"* **escritos a mano** sobre VPN que la máquina nunca calculó.
+- Un equipo escribió un protocolo cuya regla decía *"no reportar VPN mientras haya hallazgos abiertos"*… y reportó VPN con el hallazgo abierto en su propio documento.
+
+Ninguno es un error de finanzas. Los tres son de **proceso**.
+:::
+
+::: {.column width="48%"}
+**Entregable nuevo, desde hoy: `AGENTE.md`**
+[plantilla](../../plantillas/08-instrucciones-ia.html)
+
+1. **Alcance** — qué archivo es la fuente de verdad, qué puede tocar el asistente
+2. **Las reglas** que no se rompen
+3. **Estado de cada cifra** — `VERIFICADO` · `ESTIMADO` · `[sin verificar]` · `[dato faltante]`
+4. **Decisiones** tomadas y **pendientes**
+5. **Mapa** del modelo: qué hoja, qué tasa
+6. **Checklist de salida** — con la celda que prueba cada ítem
+7. **Lo que el agente NO hace**
+
+`MEMORIA.md` dice qué pasó. `AGENTE.md` dice **cómo se trabaja**.
+:::
+:::
+
+::: {.callout-important}
+**Dos reglas nuevas.** *El archivo que se entrega es el que se abrió y se recalculó* — un libro con fórmulas y sin resultados no es un modelo, es una hipótesis. Y en el checklist, **el veredicto por defecto es NO CUMPLE**: un ítem sólo se marca cumplido si hay una celda que lo prueba. Un `AGENTE.md` todo en verde vale menos que uno con tres NO CUMPLE escritos por ustedes mismos.
+:::
+
+---
+
 ## Para el viernes 18 · Investor Day {background-color="#f5f5f5"}
 
 ::: {.columns}
 ::: {.column width="50%"}
 **Entregar antes del miércoles 16**
 
-- Modelo financiero completo
+- Modelo financiero completo **recalculado**
+- `MEMORIA.md` + `AGENTE.md`
 - **Nota de inversión**, 4 páginas
 :::
 
