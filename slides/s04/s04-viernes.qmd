@@ -170,6 +170,31 @@ El precio del carbono subió: de USD 30/tCO₂e (nota de 2017) a USD 50–100/tC
 
 ---
 
+## Teoría · Cómo se leen las cifras de carbono {.smaller}
+
+Cuatro preguntas antes de repetir cualquier número de carbono — la mayoría de las confusiones, incluida la de la slide anterior, vienen de mezclar estos ejes:
+
+| Pregunta | Las dos opciones | Ejemplo de esta noche / mañana |
+|---|---|---|
+| **¿Masa de carbono o CO₂ equivalente?** | Mg **C** (sólo el átomo de carbono) vs. t **CO₂e** (CO₂ y gases equivalentes, en su poder de calentamiento) | 27 Mg C/ha × 44/12 = **99 tCO₂e/ha** — 44/12 es el peso molecular del CO₂ sobre el del C |
+| **¿Positivo o negativo?** | No hay convención única: puede reportarse como "capturado" (positivo = bueno) o como "emisiones evitadas frente a una línea base" (negativo = bueno) | Su proyecto: **+99 tCO₂e/ha** capturadas. El programa del Banco Mundial: **−455.163 tCO₂e/año** mitigadas. Los dos signos son buenas noticias |
+| **¿Acervo o flujo?** | Un **acervo** (*stock*) es una cantidad almacenada en un momento dado (Mg C/ha). Un **flujo** es una tasa por período (tCO₂e/año) | 35 − 8 = 27 Mg C/ha es un acervo; mañana lo reparten en un flujo año a año con una curva de acumulación |
+| **¿Por hectárea o total? ¿Anual o acumulado?** | Multiplicar por área y por años cambia la cifra en órdenes de magnitud | 99 tCO₂e/ha × 500 ha = **49.500 tCO₂e** (total de su proyecto) · −455.163 tCO₂e/año × 10 años ≈ **−4.551.630** (coincide con el texto del informe del BM) |
+
+::: {.callout-warning}
+**La verificación de 30 segundos:** antes de citar cualquier cifra de carbono, pregúntense unidad (C o CO₂e), signo (¿respecto a qué línea base?), acervo o flujo, y por hectárea o total. Si no pueden responder las cuatro, no la citen todavía.
+:::
+
+::: {.callout-note}
+El informe del Banco Mundial de la slide anterior **es** internamente consistente en su texto (−455.163 × 10 ≈ −4.551.630), pero su propio Cuadro 9 reporta un total distinto (−803.230). Es la prueba de que ni un documento real y revisado está libre de este tipo de error — por eso se audita, incluso lo propio.
+:::
+
+::: {.notes}
+2 min. Esta es la slide que evita que mañana confundan "49.500 tCO2e de su proyecto" con "−455.000 tCO2e/año del programa del Banco Mundial": son escalas y ejes distintos (500 ha vs. ~300.000 ha; acervo total vs. flujo anual), no números comparables directamente. Volver a esta tabla si alguien mezcla acervo y flujo en la Construcción 1 del sábado.
+:::
+
+---
+
 ## Input · Cuando el precio de mercado miente
 
 Un precio de mercado **no** refleja el valor social cuando hay externalidades, impuestos o subsidios, poder de mercado, desempleo involuntario, o bienes sin mercado.
