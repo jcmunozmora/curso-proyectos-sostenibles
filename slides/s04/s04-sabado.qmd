@@ -125,41 +125,6 @@ $$\text{Bienestar} = \text{puntos de satisfacción} \times SP_{\text{satisfacci�
 
 ---
 
-## Teoría · Otra manera de monetizar — SROI {.smaller}
-
-Shadow prices no es la única convención para poner precio al bienestar. **SROI** (*Social Return on Investment*, el estándar de Social Value International) es la otra que van a encontrar en la práctica — sobre todo si trabajan con una ONG o un fondo de impacto.
-
-$$\text{Valor neto} = Q \times SP \times (1-\text{deadweight}) \times \text{atribución} \times (1-\text{drop-off}) \times (1-\text{desplazamiento})$$
-
-$$SROI = \frac{\sum \text{Valor neto de los resultados}}{\text{Inversión total}}$$
-
-| Ajuste | Qué pregunta | Ya lo van a ver como… |
-|---|---|---|
-| **Deadweight** | ¿Habría pasado esto de todas formas, sin el proyecto? | La **adicionalidad** del carbono (sección de valor ambiental) |
-| **Atribución** | ¿Qué parte del mérito es de otro actor? | El **50% de Inditex** en las emisiones de su cadena |
-| **Drop-off** | ¿El efecto se degrada con el tiempo? | Nuevo — no lo habían visto |
-| **Desplazamiento** | ¿Perjudica a otro grupo al beneficiar a este? | Nuevo — no lo habían visto |
-
-::: {.callout-important}
-**La diferencia no es la fórmula — es la disciplina.** Schoenmaker también ajusta por atribución (el 50% de Inditex), pero lo hace una vez, a discreción. SROI **obliga** a declarar los cuatro ajustes, para cada resultado, por separado. Es más lento y más honesto sobre lo que no se sabe.
-:::
-
-**Ejemplo con su propio proyecto** — capacitación técnica a 50 productores, proxy financiero USD 300/productor (costo de un curso equivalente):
-
-$$50 \times 300 \times (1-0{,}20)_{deadweight} \times 0{,}70_{atribución} = \text{USD } 8.400 \text{ (año 1)}$$
-
-Año 2, con drop-off del 15%: USD 8.400 × (1 − 0,15) = **USD 7.140**.
-
-::: {.callout-note}
-Fuente del estándar: Nicholls, Lawlor, Neitzert & Goodspeed (2012), *A Guide to Social Return on Investment*, Social Value International (antes *The SROI Network*). Ninguna de las dos convenciones es "la correcta" — shadow prices y SROI son dos maneras distintas de hacer lo mismo: declarar el juicio en vez de esconderlo.
-:::
-
-::: {.notes}
-2 min. El puente más fuerte es deadweight = adicionalidad: mismo concepto, dos nombres, dos campos (carbono vs. social). Si un equipo ya domina adicionalidad, SROI les va a parecer obvio. Drop-off y desplazamiento sí son nuevos — no forzar más ejemplos, con el de capacitación alcanza.
-:::
-
----
-
 ## Caso real · la tabla que resume todo Inditex {.smaller}
 
 **Valoración integrada de Inditex, 2021 — € mil millones:**
@@ -268,6 +233,25 @@ Estas cifras llegan **vía prensa que cita el filing** (Valora Analitik, Pulzo),
 
 ::: {.notes}
 1 min. El punto no es Frisby — es que la mayoría de sus empleadores futuros van a ser así: privados, sin reporte propio, con datos dispersos en registros públicos y prensa. Inditex les enseñó el método; Frisby les enseña dónde buscar cuando el método no viene con los datos servidos.
+:::
+
+---
+
+## Caso nacional · la cultura detrás de los números de Frisby {.smaller}
+
+Los 90/44/61 que van a ver en la siguiente slide no salen de una campaña de comunicaciones — salen de **dos instituciones internas** que Frisby documenta desde hace años:
+
+| | Qué es | El dato que produce |
+|---|---|---|
+| **Universidad Frisby** | Academia de formación interna: técnica certificada por el SENA y terminación de bachillerato, dentro de la empresa | **85%** de las vacantes se llenan con personal formado internamente · **~45%** de la planta está matriculada en algún programa |
+| **Fundación Frisby** | Brazo social — incluye un centro de cuidado infantil para hijos de madres solteras del personal | Publica **sus propios estados financieros auditados**, en su propio sitio — más transparencia que el equivalente de la otra cadena colombiana |
+
+::: {.callout-important}
+**La diferencia con Crepes & Waffles no es el tamaño del compromiso social — es la trazabilidad.** Cuando una cifra social viene de un programa institucional con años de reportes fechados (Universidad Frisby, las Comunicaciones de Progreso desde 2016), es más difícil de inflar que un porcentaje que cambia según el medio que lo cite. **La materialidad de la Sección 2 se prueba aquí**: no basta con que la empresa diga que algo le importa — hay que ver la infraestructura detrás.
+:::
+
+::: {.notes}
+1 min. Esta slide es el puente entre "la empresa tiene una historia bonita" y "la empresa tiene un sistema que produce datos verificables". Universidad Frisby lleva funcionando más de una década — no es una iniciativa de un solo año para un reporte.
 :::
 
 ---
@@ -677,20 +661,29 @@ El 70% es un supuesto, no un dato: sin una encuesta de subempleo local, se decla
 
 ## Teoría · la intuición detrás del excedente del consumidor {.smaller}
 
-Antes de la fórmula, la idea con un ejemplo de bolsillo: si están dispuestos a pagar hasta **$15.000** por un almuerzo y sólo les cobran **$10.000**, su excedente son esos **$5.000** — el bienestar que se llevan gratis. Sumado sobre todos los clientes, es el área bajo la curva de demanda y sobre el precio de equilibrio: un **triángulo**.
+**Paso 1 · la idea, sin fórmula.** Si están dispuestos a pagar hasta **$15.000** por un almuerzo y sólo les cobran **$10.000**, se llevan **$5.000** de bienestar "gratis". No todos los clientes tienen la misma brecha: el que más lo valora pagaría casi cualquier precio; el último en comprar casi no tiene margen. Sumadas, esas brechas —de la más grande a cero— dibujan un **triángulo**:
 
-$$\text{Excedente} = \underbrace{\Delta P}_{\text{lo que "ahorra" cada cliente}} \times \underbrace{Q}_{\text{cuántos clientes}} \times \frac{1}{2}$$
+$$\text{Excedente} = \underbrace{\Delta P}_{\text{brecha máxima}} \times \underbrace{Q}_{\text{cuántos compran}} \times \frac{1}{2}$$
 
-**El problema:** nadie observa $\Delta P$ (el precio máximo que alguien habría pagado). La salida: la **elasticidad-precio** ($\varepsilon$) describe la misma curva de demanda sin necesitar ese dato — y con ella, ventas y elasticidad bastan:
+**Paso 2 · el problema.** Nadie observa $\Delta P$: el precio máximo que alguien habría pagado no está escrito en ningún lado — no aparece ni en la factura ni en el reporte anual.
+
+**Paso 3 · el atajo.** La elasticidad-precio ($\varepsilon$) mide, en otras palabras, **qué tan dispuesta está la gente a dejar de comprar si el precio sube** — lo mismo que $\Delta P$ intenta capturar, pero sí se puede estimar:
+
+| Elasticidad | En palabras simples | Ejemplo de esta sesión |
+|---|---|---|
+| **Alta** (número grande) | Sube el precio 10% → las ventas caen mucho. Hay a dónde más irse. | Ropa, $\varepsilon=3{,}45$: caen ~34,5% |
+| **Baja** (número pequeño) | Sube el precio 10% → las ventas caen poco. Cuesta más sustituirlo. | Pollo, $\varepsilon=1{,}69$: caen ~16,9% |
+
+Con esa pendiente y las ventas de hoy, el triángulo se resuelve **sin necesitar $\Delta P$**:
 
 $$\text{Excedente} = \frac{\text{Ventas}}{\varepsilon} \times \frac{1}{2}$$
 
 ::: {.callout-important}
-**La intuición que hay que quedarse:** a **menor** elasticidad (un producto sin buenos sustitutos), **mayor** excedente por cada peso de ventas — porque a la gente le cuesta más renunciar a él, y estaría dispuesta a pagar mucho más de lo que paga.
+**La intuición que hay que quedarse:** a **menor** elasticidad, **mayor** excedente por cada peso de ventas — porque a la gente le cuesta más renunciar al producto, y estaría dispuesta a pagar mucho más de lo que paga.
 :::
 
 ::: {.notes}
-2 min. Esta slide no estaba en la versión anterior del curso — es la explicación intuitiva que faltaba antes de mostrar la fórmula fría. No apurar el paso del triángulo a la fórmula de elasticidad; es el salto conceptual que más cuesta.
+2 min. Esta slide es la explicación intuitiva que faltaba antes de mostrar la fórmula fría. El paso que más cuesta es el 3: dejar claro que la elasticidad NO es un número abstracto — es literalmente "qué tanto cae la venta si el precio sube", y por eso puede reemplazar a ΔP sin inventar nada. No apurar la tabla de "en palabras simples": es el ancla de toda la slide siguiente.
 :::
 
 ---
@@ -714,7 +707,42 @@ Ninguna de las dos elasticidades es "de la empresa" — son de la **categoría**
 :::
 
 ::: {.notes}
-2 min. Cierre de la intuición: la comparación entre Inditex y Frisby no es sólo repetir los números — es mostrar que la fórmula responde de forma predecible a la elasticidad, y que eso es economía básica (sustitutos), no una caja negra. Puente a la Construcción 1: van a tener que elegir su propia elasticidad o su propio precio sombra para "una externalidad más".
+2 min. Cierre de la intuición: la comparación entre Inditex y Frisby no es sólo repetir los números — es mostrar que la fórmula responde de forma predecible a la elasticidad, y que eso es economía básica (sustitutos), no una caja negra.
+:::
+
+---
+
+## Teoría · Otra manera de monetizar — SROI {.smaller}
+
+Shadow prices no es la única convención para poner precio al bienestar. **SROI** (*Social Return on Investment*, el estándar de Social Value International) es la otra que van a encontrar en la práctica — sobre todo si trabajan con una ONG o un fondo de impacto.
+
+$$\text{Valor neto} = Q \times SP \times (1-\text{deadweight}) \times \text{atribución} \times (1-\text{drop-off}) \times (1-\text{desplazamiento})$$
+
+$$SROI = \frac{\sum \text{Valor neto de los resultados}}{\text{Inversión total}}$$
+
+| Ajuste | Qué pregunta | Ya lo vieron hoy como… |
+|---|---|---|
+| **Deadweight** | ¿Habría pasado esto de todas formas, sin el proyecto? | La **adicionalidad** del carbono (Sección 3) |
+| **Atribución** | ¿Qué parte del mérito es de otro actor? | El **50% de Inditex** en las emisiones de su cadena |
+| **Drop-off** | ¿El efecto se degrada con el tiempo? | Nuevo — no lo habían visto |
+| **Desplazamiento** | ¿Perjudica a otro grupo al beneficiar a este? | Nuevo — no lo habían visto |
+
+::: {.callout-important}
+**La diferencia no es la fórmula — es la disciplina.** Schoenmaker también ajusta por atribución (el 50% de Inditex), pero lo hace una vez, a discreción. SROI **obliga** a declarar los cuatro ajustes, para cada resultado, por separado. Es más lento y más honesto sobre lo que no se sabe.
+:::
+
+**Ejemplo con su propio proyecto** — capacitación técnica a 50 productores, proxy financiero USD 300/productor (costo de un curso equivalente):
+
+$$50 \times 300 \times (1-0{,}20)_{deadweight} \times 0{,}70_{atribución} = \text{USD } 8.400 \text{ (año 1)}$$
+
+Año 2, con drop-off del 15%: USD 8.400 × (1 − 0,15) = **USD 7.140**.
+
+::: {.callout-note}
+Fuente del estándar: Nicholls, Lawlor, Neitzert & Goodspeed (2012), *A Guide to Social Return on Investment*, Social Value International (antes *The SROI Network*). Ninguna de las dos convenciones es "la correcta" — shadow prices y SROI son dos maneras distintas de hacer lo mismo: declarar el juicio en vez de esconderlo.
+:::
+
+::: {.notes}
+2 min. El puente más fuerte es deadweight = adicionalidad: mismo concepto, dos nombres, dos campos — ya lo vieron esta mañana con el carbono del cacao. Si un equipo ya domina adicionalidad, SROI les va a parecer obvio. Drop-off y desplazamiento sí son nuevos — no forzar más ejemplos, con el de capacitación alcanza. Es el cierre de la Sección 4: van a tener que elegir su propia elasticidad o su propio precio sombra (o, si prefieren, la lógica SROI) para "una externalidad más" en la Construcción 1.
 :::
 
 ---
