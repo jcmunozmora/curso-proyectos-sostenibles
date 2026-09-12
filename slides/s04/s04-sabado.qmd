@@ -742,7 +742,31 @@ Fuente del estándar: Nicholls, Lawlor, Neitzert & Goodspeed (2012), *A Guide to
 :::
 
 ::: {.notes}
-2 min. El puente más fuerte es deadweight = adicionalidad: mismo concepto, dos nombres, dos campos — ya lo vieron esta mañana con el carbono del cacao. Si un equipo ya domina adicionalidad, SROI les va a parecer obvio. Drop-off y desplazamiento sí son nuevos — no forzar más ejemplos, con el de capacitación alcanza. Es el cierre de la Sección 4: van a tener que elegir su propia elasticidad o su propio precio sombra (o, si prefieren, la lógica SROI) para "una externalidad más" en la Construcción 1.
+2 min. El puente más fuerte es deadweight = adicionalidad: mismo concepto, dos nombres, dos campos — ya lo vieron esta mañana con el carbono del cacao. Si un equipo ya domina adicionalidad, SROI les va a parecer obvio. Drop-off y desplazamiento sí son nuevos — no forzar más ejemplos, con el de capacitación alcanza. Sigue el panorama de otros métodos (el que sí cierra la Sección 4): van a tener que elegir su propia elasticidad o su propio precio sombra (o, si prefieren, la lógica SROI) para "una externalidad más" en la Construcción 1.
+:::
+
+---
+
+## Teoría · el panorama más amplio — de la monetización a la madurez {.smaller}
+
+Shadow prices y SROI monetizan: convierten una externalidad en un número en pesos. No son las únicas familias de métodos que van a encontrar en la práctica. Tres más, cada una resolviendo una pregunta distinta de la cadena que ya conocen — **Materialidad → Cuantificación → Monetización**:
+
+| Método | Pregunta que resuelve | Qué produce | Relación con lo que vieron hoy |
+|---|---|---|---|
+| **Valor Económico Total (VET)** | ¿Cuánto vale un bien que nadie compra ni vende — un bosque, una cuenca? | Valor de uso (directo + indirecto + opción) + valor de no uso (legado + existencia) | Es la teoría detrás de cada precio sombra ambiental de la tabla de la Sección 2 |
+| **Balance Social ANDI-OIT** | ¿Qué hace la empresa por sus trabajadores y su comunidad? | Catálogo de indicadores en dos áreas — interna y externa — sin sumarlos en un número | Se detiene en la **cuantificación**; nunca llega al paso de **monetización** que hicieron hoy |
+| **IMI · Índice de Madurez de Impacto** | ¿La organización puede sostener este proceso, año tras año? | Índice 0–5 de madurez de gestión (teoría de cambio → indicadores → monitoreo → evidencia → aprendizaje) | Mide la **capacidad** de producir un SROI o un VF creíble — no el valor en sí |
+
+::: {.callout-note}
+**Un mapa, no una jerarquía.** Ningún método es "más avanzado" que otro — resuelven preguntas distintas. El VET es la teoría detrás del precio sombra de un bien ambiental; Balance Social es lo que la mayoría de empresas colombianas ya reportan (y por qué casi ninguna llega sola a un VF o un SROI); el IMI existe porque ninguna monetización es creíble si la organización no puede sostener el proceso que la produce.
+:::
+
+::: {.callout-tip}
+El IMI es un desarrollo del **Centro de Valor Público EAFIT**, en la plataforma **Valoria** (`valoria.app`): cinco sub-índices (i-ToC, i-Ind, i-MEL, i-Evi, i-Lea) con una regla dura — si el aprendizaje (i-Lea) no supera 3 sobre 5, el índice completo no puede pasar de 4,0. Se las menciono porque es el mismo Centro que produce parte de la literatura de este curso.
+:::
+
+::: {.notes}
+1.5 min. Este es el cierre real del "menú" de metodologías de la Sección 4 — no es para memorizar las tres nuevas, es para que sepan que existen y dónde ubicarlas cuando las encuentren en la práctica. El puente más útil: "si su empresa ya hace un Balance Social, no empiezan de cero — ya tienen la mitad del trabajo (cuantificación); les falta el paso de monetización que vieron hoy." El IMI es material de autoría propia (Centro de Valor Público EAFIT / Valoria) — mencionarlo con naturalidad, no como autopromoción forzada. Fuente: @andioit1987balancesocial (Balance Social); @boardman2018 (Valor Económico Total — capítulo de valoración de bienes ambientales sin mercado; [PV] confirmar número exacto de capítulo en la 5ª ed.); @imi_valorpublico_eafit (IMI).
 :::
 
 ---
@@ -1154,8 +1178,6 @@ Ninguno es un error de finanzas. Los tres son de **proceso**.
 :::
 :::
 
-<br>
-
 ::: {.columns}
 ::: {.column width="50%"}
 **Leer** (máx. 30 min)
@@ -1165,12 +1187,10 @@ Ninguno es un error de finanzas. Los tres son de **proceso**.
 :::
 :::
 
-<br>
-
 ::: {.callout-important}
 El comité **va a rechazar proyectos**. No alcanza el presupuesto para todos. Preparen no sólo por qué el suyo es bueno, sino **por qué es mejor que el del equipo de al lado.**
 :::
 
-::: {style="text-align:center; font-size:1.3em; color:#000066; font-weight:700; margin-top:20px;"}
+::: {style="text-align:center; font-size:1.3em; color:#000066; font-weight:700; margin-top:8px;"}
 Ya tienen los números. Falta la decisión.
 :::
