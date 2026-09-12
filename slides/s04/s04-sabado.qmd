@@ -992,6 +992,113 @@ Las lecturas obligatorias de hoy (Drupp y Banco Mundial) dan la **tasa** y el **
 
 ---
 
+## Sección 5 · El mercado, hoy {background-color="#000066" style="color:white;"}
+
+::: {style="font-size:1.4em; padding-top:60px;"}
+Todo lo que calcularon hoy — precio sombra, EX-ACT, SROI — no es un ejercicio de aula. Es la gramática que ya usa un mercado real, de billones de dólares, que apenas está tomando forma. Así se ve ese mercado en 2025.
+:::
+
+::: {.notes}
+30 seg. Transición pura, sin contenido nuevo todavía. El mensaje: "lo que construyeron con las manos hoy es el mismo lenguaje que usa el capital global." Sirve de puente hacia el Investor Day: el comité de inversión de la próxima sesión piensa exactamente en estas categorías.
+:::
+
+---
+
+## Panorama · una brecha de billones, 37 respuestas {.smaller}
+
+En 2022, casi **USD 7 billones** (7×10¹²) fluyeron hacia actividades que dañan la naturaleza — USD 1,7 billones en subsidios públicos dañinos y USD 5 billones de impacto privado. Frente a eso, sólo **USD 200.000 M** se invirtieron *a favor* de la naturaleza, y menos del 20% vino de capital privado.
+
+::: {.callout-note}
+**Ojo con el término.** "Trillion" en inglés = **billón** en español (10¹²), no "trillón". Es el error de traducción más común de este reporte — y el mismo tipo de descuido de unidades que se pidió declarar toda la sesión.
+:::
+
+La meta declarada (Marco Global de Biodiversidad de Kunming-Montreal, Meta 19): movilizar **USD 200.000 M/año para 2030**. La oportunidad, si se logra: una economía "nature-positive" que valdría **USD 10,1 billones/año** adicionales en 2030.
+
+Para cerrar esa brecha, el reporte cataloga **37 mecanismos de financiamiento**, en 4 categorías:
+
+| Categoría | # de mecanismos | Ejemplo que ya conocen |
+|---|---|---|
+| Instrumentos financieros | 17 | Bonos, préstamos, créditos ambientales |
+| Fondos y facilidades | 6 | Fondos de impacto (Mirova LDN) |
+| Mecanismos habilitantes | 9 | Precio interno a la naturaleza (Kering) |
+| Medidas fiscales y regulatorias | 5 | Impuestos y subsidios ambientales |
+
+::: {.notes}
+1 min. El objetivo de esta slide es una sola cifra que se quede: la brecha es de billones, no de millones. La nota sobre "trillion" vs. "billón" no es trivia idiomática — es el mismo tipo de error de unidades que se les exige declarar desde S3. Fuente: @wef2025naturefinance, resumen ejecutivo e introducción.
+:::
+
+---
+
+## Teoría · la misma rúbrica que ya usan ustedes, aplicada al mundo {.smaller}
+
+¿Cómo elige el reporte cuáles de los 37 mecanismos son "prioritarios"? Con una rúbrica de 6 criterios en 2 dimensiones — la misma lógica de **declarar el juicio, no esconderlo** que usaron todo el día con Bajo/Medio/Alto en el precio del carbono.
+
+| Dimensión | Criterio | Alto (3) anota cuando... |
+|---|---|---|
+| **Escalabilidad** | Facilidad de estructurar | la transacción es rápida y estandarizada |
+| | Aplicabilidad | funciona en muchos sectores y regiones |
+| | Capital que puede movilizar | es comparable a mercados de bonos o acciones globales |
+| **Impacto en la naturaleza** | Historial | hay evidencia verificada en varios proyectos |
+| | Estructura por resultados | el retorno depende directamente del impacto medido |
+| | Valoración de la naturaleza | el precio incorpora el valor completo del servicio ecosistémico |
+
+Cada criterio se puntúa **Bajo (1) / Medio (2) / Alto (3)**. Un mecanismo es "prioritario" si suma **≥ 6 de 9** en *ambas* dimensiones.
+
+::: {.callout-tip}
+Es el mismo espíritu del Tier 1 vs. Tier 2 de EX-ACT: una escala declarada y pública, que cualquiera puede auditar — no un número que sale de una caja negra.
+:::
+
+::: {.notes}
+1.5 min. Conectar explícitamente: esta rúbrica es un ejercicio de costo-beneficio aplicado a la elección de *instrumentos*, no a un proyecto — mismo principio metodológico de todo el curso. Fuente: @wef2025naturefinance, Recuadro 2 y Anexo A (tabla completa de criterios).
+:::
+
+---
+
+## El mapa · las 10 soluciones que superan el corte {.smaller}
+
+| Solución | Qué es, en una línea | Tamaño de mercado estimado |
+|---|---|---|
+| Bonos ligados a sostenibilidad | Cupón atado a metas de naturaleza de toda la entidad | ~USD 55.000 M/año (emisión 2024) |
+| Bonos temáticos | Recursos destinados a proyectos específicos | ~USD 630.000 M/año; ~113.000 M ligados a naturaleza |
+| Préstamos ligados a sostenibilidad | Tasa atada a metas de naturaleza | ~USD 707.000 M/año (2023) |
+| Préstamos temáticos | Deuda para proyectos específicos | ~USD 275.000 M/año (2023) |
+| **Fondos de impacto** | Capital paciente para resultados de naturaleza | ~USD 1,6 billones en AUM total (2024) |
+| Natural Asset Companies | Convierten el valor de la naturaleza en acciones | Sin transacciones suficientes para estimar |
+| **Créditos ambientales** | Certificados negociables de un resultado ambiental verificado | USD 50.000 – 10 M por proyecto |
+| Canjes de deuda por naturaleza | Deuda soberana reestructurada a cambio de conservación | ~USD 3.700 M acumulados (1980–2022) |
+| Pagos por servicios ecosistémicos | Contratos que premian conservar un servicio específico | USD 36.000–42.000 M/año (2018) |
+| **Precio interno a la naturaleza** | Precio sombra voluntario dentro de la empresa — el primo del precio interno del carbono | Sin esquemas activos aún — frontera nueva |
+
+::: {.callout-note}
+Ocho de las diez son instrumentos financieros clásicos (bonos, préstamos, créditos); uno es un vehículo de fondos (fondos de impacto); uno es un mecanismo habilitante (precio interno a la naturaleza). Las tres **resaltadas** ya las conocen — por su propio nombre — de este curso.
+:::
+
+::: {.notes}
+1.5–2 min. No leer la tabla completa en clase: señalar sólo las tres resaltadas y decir "esas ya las vieron". El resto queda como referencia en Interactiva para quien quiera profundizar. Fuente: @wef2025naturefinance, resumen ejecutivo (definiciones) y Figura 4 (tamaños de mercado).
+:::
+
+---
+
+## Cierre · el mapa mundial ya tiene los nombres que vieron hoy {.smaller background-color="#f5f5f5"}
+
+No es coincidencia que el reporte mencione temas parecidos. Son **los mismos proyectos**, citados como ejemplo global de cada categoría prioritaria:
+
+| Categoría prioritaria | Ejemplo global del reporte | El mismo caso, en este curso |
+|---|---|---|
+| **Créditos ambientales** | *El Globo* (Terrasos), Colombia — primer proyecto voluntario de créditos de biodiversidad del país, 340 ha de bosque de niebla | El banco de hábitat en Támesis, verificado por KPMG [@terrasos_elglobo] |
+| **Fondos de impacto** | Mirova LDN Fund, USD 208 M — capital paciente para agricultura y silvicultura sostenible en mercados emergentes | Su **primera inversión**: el fondo Urapi/RioSierra en la Sierra Nevada de Santa Marta — café, cacao y miel [@urapi_ldn] |
+| **Precio interno a la naturaleza** | Emergente, sin esquemas activos todavía según el reporte | Kering ya lo hace desde 2011 con su EP&L — la fuente de precios sombra que usaron hoy [@kering_epl] |
+
+::: {.callout-important}
+Esta es la prueba de que la pregunta que van a defender el viernes — *¿cuánto vale esto de verdad?* — no es un ejercicio de clase. Es la pregunta que ya mueve billones de dólares reales, y Colombia ya tiene un asiento en esa mesa.
+:::
+
+::: {.notes}
+1.5 min. Este es el cierre real del contenido del día — dejarlo respirar, no correr hacia Gobernanza de IA de inmediato. El punto no es "miren qué interesante" sino "el estándar que les exigimos — declarar supuestos, citar fuente, verificar — es literalmente el estándar que un comité de inversión global usa para decidir qué financiar". Puente directo al Investor Day: el comité de la próxima sesión actúa exactamente así. Fuente: @wef2025naturefinance, Recuadro 7 (créditos ambientales) y Recuadro 10 (fondos de impacto); cruce con @terrasos_elglobo, @urapi_ldn y @kering_epl, ya citados en sesiones anteriores.
+:::
+
+---
+
 ## Gobernanza de IA · el archivo que dirige la herramienta {.smaller background-color="#f5f5f5"}
 
 En la S3, **la mitad de los libros de Excel del curso los escribió un script.** Eso está bien — el curso lo espera. Lo que apareció tres veces el mismo fin de semana no está bien:
