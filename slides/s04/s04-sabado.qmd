@@ -279,6 +279,65 @@ El 70% es un supuesto, no un dato: sin una encuesta de subempleo local, se decla
 
 ---
 
+## Teoría · Los dos retos de medir valor social y ambiental {.smaller background-color="#f5f5f5"}
+
+Antes de calcular nada, el texto base nombra dos obstáculos — y no son el mismo problema:
+
+::: {.columns}
+::: {.column width="50%"}
+**Reto 1 · práctico**
+
+La disponibilidad de información. La mayoría de las empresas no reportan sus impactos S y E con el detalle necesario — y casi ninguna lo hace fuera de sus propias operaciones (alcance 3).
+
+→ Es exactamente lo que van a ver con Inditex: datos usables sólo para emisiones, y ni siquiera completos.
+:::
+
+::: {.column width="50%"}
+**Reto 2 · mental**
+
+Que quien decide empiece a **pensar, analizar y actuar así** — a pesar de los vacíos de datos. La mayoría fue entrenada para ver sólo el valor financiero.
+
+→ Es la resistencia que van a enfrentar en el Investor Day cuando presenten un VPN social junto al financiero.
+:::
+:::
+
+::: {.callout-important}
+**El reto mental es el más difícil de los dos, y es el que este curso ataca primero.** Se puede tener toda la información del mundo y seguir sin usarla si nadie en la sala está dispuesto a pensar en tres monedas a la vez — financiera, social, ambiental.
+:::
+
+::: {.notes}
+1 min. Nombrar los dos retos con las palabras exactas del libro: "practical challenge" (datos) y "mental challenge" (la disposición a pensar así). Es la frase que conecta toda la sesión, desde el salario sombra hasta Inditex.
+:::
+
+---
+
+## Teoría · Cómo se decide qué medir — la materialidad {.smaller}
+
+Antes de cuantificar o poner precio a nada, hay un primer paso que casi siempre se salta: **decidir qué es material** — qué impactos son lo bastante grandes para entrar en la cuenta.
+
+$$\text{Materialidad} \;\rightarrow\; \text{Cuantificación } (Q) \;\rightarrow\; \text{Monetización } (SP) \;\rightarrow\; VF = Q \cdot SP$$
+
+**El instrumento: un mapa de impacto de partes interesadas.** El texto base lo aplica primero a la moda rápida — el sector de Inditex:
+
+| | Trabajadores de la cadena | Sociedad en general |
+|---|---|---|
+| **Qué quieren** | Salario y condiciones dignas | Buenos resultados sociales y ambientales |
+| **¿La empresa ayuda o perjudica?** | **Perjudica** — los costos se aprietan sobre los proveedores | **Perjudica** — sufrimiento en la cadena (S) y daño ambiental grande (E) |
+
+::: {.callout-important}
+**La fricción central de la moda rápida:** lo que quiere el cliente (ropa barata y rápida) está en tensión directa con lo que necesitan los trabajadores de la cadena y la sociedad. Ningún cálculo posterior de SV o EV esconde esa fricción — sólo la cuantifica.
+:::
+
+::: {.callout-note}
+El mismo ejercicio en la industria aérea (el otro caso del texto base): la tensión es entre tiquetes baratos y las condiciones laborales, más el daño ambiental de las emisiones — casi siempre mayor que la utilidad de la aerolínea. **La materialidad es específica de cada industria: no hay una lista única que sirva para todas.**
+:::
+
+::: {.notes}
+2 min. Este mapa es lo que debió pasar ANTES de calcular el excedente del consumidor y el bienestar del empleado — es el paso 1 (materialidad) que la siguiente slide aplica sin volver a nombrarlo. Cerrar el círculo: por qué esos dos factores, y no otros, fueron los elegidos para Inditex.
+:::
+
+---
+
 ## Caso real · cuando una empresa cotizada hace esto mismo {background-color="#f5f5f5"}
 
 **Inditex** (Zara, Bershka, Massimo Dutti…) — la mayor cadena de moda rápida del mundo, más de 7.000 tiendas, ventas 2020: **€20.400 millones**.
@@ -385,6 +444,24 @@ El valor integrado (**42**) parece modesto. Pero esconde positivos y negativos d
 
 ::: {.notes}
 2 min. La cifra que se queda es "42 esconde dos números de 280.000 millones cada uno". Si preguntan por qué Inditex reporta esto: no lo reporta — lo calculan los autores del libro, desde afuera, con datos públicos. Esa es la lección adicional: se puede estimar SV/EV sin acceso interno a la empresa.
+:::
+
+---
+
+## Para repasar · El iceberg de Inditex {background-color="#f5f5f5"}
+
+::: {style="font-size:1.2em;"}
+**Lo que ven del valor financiero (79) es sólo la punta.** Debajo del agua: €283.000 M de valor social positivo, €137.000 M y €183.000 M de valor social y ambiental negativo — la mitad del caso que nadie publica en un reporte anual.
+:::
+
+🎥 **Video de repaso:** *El iceberg de Inditex* — resumen en audio/video del caso, generado con NotebookLM. [Ver el video](https://notebook.google.com/notebook/21367412-a19c-494b-9865-3146bfd78098/artifact/66316af9-2c16-4b96-b117-7c0c8363e7b2) (requiere cuenta de Google).
+
+::: {.callout-note}
+No reemplaza las dos slides anteriores — es para repasar antes de aplicar el mismo ejercicio a su propio proyecto, o antes del Investor Day si quieren citar el caso de memoria.
+:::
+
+::: {.notes}
+30 seg. Sólo mencionarlo y seguir — es material de repaso, no de clase en vivo. Si alguien no tiene cuenta de Google a mano, decir que lo revise después.
 :::
 
 ---
