@@ -31,7 +31,7 @@ Hay un argumento para incluirla (mejora el bienestar del productor) y uno para e
 | | Bloque | Min |
 |---|---|---:|
 | **8:00** | Recuperación | 20 |
-| 8:20 | Del flujo privado al social · cuantificar carbono | 20 |
+| 8:20 | Casos reales (Inditex, Frisby) → cómo se mide → valor ambiental → valor social | 20 |
 | 8:40 | **Construcción 1** · hoja FlujoSocial | **40** |
 | 9:20 | Síntesis · sus supuestos son la mitad del resultado | 15 |
 | **9:35** | **Pausa** | 20 |
@@ -45,7 +45,7 @@ Hay un argumento para incluirla (mejora el bienestar del productor) y uno para e
 | **13:00** | **Fin** · instrucciones del Investor Day | |
 
 ::: {.notes}
-1 min. Hoy es más denso que ayer: tres construcciones más el caso Inditex, entre cuantificar carbono y la Construcción 1. Si van atrasados, el caso Inditex es lo primero que se resume a una sola tabla.
+1 min. Hoy tiene cuatro tramos antes de la Construcción 1: dos casos reales (Inditex, Frisby), la teoría general de cómo se mide SV/EV, el valor ambiental de su propio proyecto, y el valor social. Si van atrasados, el orden de recorte está en cada sección — ver "Ojo con el tiempo" en las notas de cada bloque.
 :::
 
 ---
@@ -53,16 +53,282 @@ Hay un argumento para incluirla (mejora el bienestar del productor) y uno para e
 ## Hoy construyen {background-color="#000066" style="color:white;"}
 
 ::: {style="font-size:1.3em; padding-top:30px;"}
-1. El **flujo socioeconómico** con precios sombra
-2. La **cuantificación del carbono** de su proyecto
-3. La tabla del **protocolo del Banco Mundial** — sin / bajo / alto
-4. El ***switching value*** de carbono
-5. Los tres **escenarios climáticos NGFS**
+1. Dos **casos reales** de valor integrado — Inditex y Frisby
+2. La **caja de herramientas**: materialidad, retos, precios sombra
+3. El **valor ambiental** de su proyecto — con EX-ACT
+4. El **valor social** de su proyecto — salario sombra y excedente del consumidor
+5. Su propia hoja `FlujoSocial`
 :::
 
 ---
 
-## Input 1 · Del flujo privado al social
+## Sección 1 · Casos reales {background-color="#000066" style="color:white;"}
+
+::: {style="font-size:1.4em; padding-top:60px;"}
+Antes de la teoría, el resultado. Dos empresas reales, la misma pregunta: **¿cuánto vale esto de verdad, más allá de lo financiero?**
+:::
+
+---
+
+## Caso real · cuando una empresa cotizada hace esto mismo {background-color="#f5f5f5"}
+
+**Inditex** (Zara, Bershka, Massimo Dutti…) — la mayor cadena de moda rápida del mundo, más de 7.000 tiendas, ventas 2020: **€20.400 millones**.
+
+No es un proyecto de sostenibilidad. Es la valoración de una empresa que cotiza en bolsa, hecha con **exactamente el mismo movimiento** que van a aplicar hoy a su propio proyecto:
+
+$$IV = FV + SV + EV$$
+
+| | Qué mide | Cómo se calcula |
+|---|---|---|
+| **FV** (valor financiero) | Lo que vale la empresa para el accionista | DCF estándar |
+| **SV** (valor social) | El bienestar que crea o destruye para trabajadores, clientes, comunidad | $Q \times SP$, descontado |
+| **EV** (valor ambiental) | El daño o beneficio ambiental, en dinero | $Q \times SP$, descontado |
+
+::: {.callout-note}
+Este es el caso guiado del cap. 11 de **Schoenmaker & Schramade (2023)**, texto base del curso, acceso abierto. No es una ilustración inventada: es el ejercicio completo, con los mismos supuestos declarados que les exigimos a ustedes.
+:::
+
+::: {.notes}
+1 min. Abrir el día con esto: "esto es a donde llegan hoy — no una fórmula abstracta, una empresa real de miles de millones." El detalle de cómo se calcula cada pieza viene más adelante; por ahora sólo el marco y la promesa del resultado.
+:::
+
+---
+
+## Teoría · Cómo Inditex pone precio al bienestar {.smaller}
+
+Dos de los tres precios sombra del caso, término a término:
+
+**Excedente del consumidor** — el bienestar que el cliente recibe por encima de lo que paga:
+
+$$\text{Excedente} = \frac{\text{Ventas}}{\varepsilon} \cdot \frac{1}{2}$$
+
+| Término | Qué es | Inditex, 2020 |
+|---|---|---|
+| Ventas | Ingresos totales | €20.400 M |
+| $\varepsilon$ (elasticidad precio de la demanda) | Cuánto cae la cantidad comprada cuando sube el precio — fuente: Khaled & Lattimore (2006), ropa de hombre y mujer | 3,45 |
+| Excedente | Bienestar del consumidor, antes de atribución | 20.400 / 3,45 × 0,5 = **€2.955 M** |
+| **Atribuido a Inditex** (50%, comparte el mérito con la cadena de suministro) | | **€1.478 M** |
+
+**Bienestar del empleado** — la satisfacción adicional de tener el empleo, más allá del salario:
+
+$$\text{Bienestar} = \text{puntos de satisfacción} \times SP_{\text{satisfacción}} \times \text{empleados}$$
+
+2 puntos (escala 0–100) × €2.407/punto × 144.116 empleados ≈ **€694 M**, antes de ajustar por la caída de ventas de 2020.
+
+::: {.callout-important}
+**Es la misma lógica del salario sombra rural que van a calcular hoy** — poner precio a algo que el mercado no factura — aplicada al excedente de un consumidor y a la satisfacción de un empleado. Los datos son otros; la fórmula ($Q \times SP$) es idéntica.
+:::
+
+::: {.notes}
+2 min. No hay que derivar la elasticidad en vivo — el punto es mostrar que "poner precio al bienestar" no es una metáfora: es un cálculo con una fuente académica (Khaled & Lattimore) detrás de cada número. Vuelven a este número en la sección de valor social, para compararlo con el de Frisby.
+:::
+
+---
+
+## Teoría · Otra manera de monetizar — SROI {.smaller}
+
+Shadow prices no es la única convención para poner precio al bienestar. **SROI** (*Social Return on Investment*, el estándar de Social Value International) es la otra que van a encontrar en la práctica — sobre todo si trabajan con una ONG o un fondo de impacto.
+
+$$\text{Valor neto} = Q \times SP \times (1-\text{deadweight}) \times \text{atribución} \times (1-\text{drop-off}) \times (1-\text{desplazamiento})$$
+
+$$SROI = \frac{\sum \text{Valor neto de los resultados}}{\text{Inversión total}}$$
+
+| Ajuste | Qué pregunta | Ya lo van a ver como… |
+|---|---|---|
+| **Deadweight** | ¿Habría pasado esto de todas formas, sin el proyecto? | La **adicionalidad** del carbono (sección de valor ambiental) |
+| **Atribución** | ¿Qué parte del mérito es de otro actor? | El **50% de Inditex** en las emisiones de su cadena |
+| **Drop-off** | ¿El efecto se degrada con el tiempo? | Nuevo — no lo habían visto |
+| **Desplazamiento** | ¿Perjudica a otro grupo al beneficiar a este? | Nuevo — no lo habían visto |
+
+::: {.callout-important}
+**La diferencia no es la fórmula — es la disciplina.** Schoenmaker también ajusta por atribución (el 50% de Inditex), pero lo hace una vez, a discreción. SROI **obliga** a declarar los cuatro ajustes, para cada resultado, por separado. Es más lento y más honesto sobre lo que no se sabe.
+:::
+
+**Ejemplo con su propio proyecto** — capacitación técnica a 50 productores, proxy financiero USD 300/productor (costo de un curso equivalente):
+
+$$50 \times 300 \times (1-0{,}20)_{deadweight} \times 0{,}70_{atribución} = \text{USD } 8.400 \text{ (año 1)}$$
+
+Año 2, con drop-off del 15%: USD 8.400 × (1 − 0,15) = **USD 7.140**.
+
+::: {.callout-note}
+Fuente del estándar: Nicholls, Lawlor, Neitzert & Goodspeed (2012), *A Guide to Social Return on Investment*, Social Value International (antes *The SROI Network*). Ninguna de las dos convenciones es "la correcta" — shadow prices y SROI son dos maneras distintas de hacer lo mismo: declarar el juicio en vez de esconderlo.
+:::
+
+::: {.notes}
+2 min. El puente más fuerte es deadweight = adicionalidad: mismo concepto, dos nombres, dos campos (carbono vs. social). Si un equipo ya domina adicionalidad, SROI les va a parecer obvio. Drop-off y desplazamiento sí son nuevos — no forzar más ejemplos, con el de capacitación alcanza.
+:::
+
+---
+
+## Caso real · la tabla que resume todo Inditex {.smaller}
+
+**Valoración integrada de Inditex, 2021 — € mil millones:**
+
+| | Valor | Fuente en el caso |
+|---|---:|---|
+| **FV** (valor financiero, DCF estándar) | **+79** | Tabla 11.6 |
+| **SV positivo** (excedente del consumidor, empleo, impuestos) | **+283** | Tabla 11.17 |
+| **SV negativo** (condiciones laborales en la cadena) | **−137** | Tabla 11.16 |
+| **EV negativo** (emisiones, agua, recursos — 50% atribuido) | **−183** | Tabla 11.15 |
+| **IV = FV + SV + EV** | **= 42** | |
+
+<div style="margin-top:16px;">
+<div style="display:flex; align-items:center; gap:12px; margin:6px 0;">
+  <div style="width:150px; text-align:right; font-size:0.8em; font-weight:600;">SV positivo</div>
+  <div style="background:#1b8a5a; height:26px; width:420px; border-radius:3px;"></div>
+  <div style="font-weight:700; font-size:0.8em;">+283</div>
+</div>
+<div style="display:flex; align-items:center; gap:12px; margin:6px 0;">
+  <div style="width:150px; text-align:right; font-size:0.8em; font-weight:600;">SV negativo</div>
+  <div style="background:#b91c1c; height:26px; width:203px; border-radius:3px;"></div>
+  <div style="font-weight:700; font-size:0.8em;">−137</div>
+</div>
+<div style="display:flex; align-items:center; gap:12px; margin:6px 0;">
+  <div style="width:150px; text-align:right; font-size:0.8em; font-weight:600;">EV negativo</div>
+  <div style="background:#7f1d1d; height:26px; width:271px; border-radius:3px;"></div>
+  <div style="font-weight:700; font-size:0.8em;">−183</div>
+</div>
+<div style="display:flex; align-items:center; gap:12px; margin:6px 0;">
+  <div style="width:150px; text-align:right; font-size:0.8em; font-weight:600;">FV</div>
+  <div style="background:#000066; height:26px; width:117px; border-radius:3px;"></div>
+  <div style="font-weight:700; font-size:0.8em;">+79</div>
+</div>
+<div style="display:flex; align-items:center; gap:12px; margin:6px 0;">
+  <div style="width:150px; text-align:right; font-size:0.8em; font-weight:600;">IV</div>
+  <div style="background:#00A9E0; height:26px; width:62px; border-radius:3px;"></div>
+  <div style="font-weight:700; font-size:0.8em;">42</div>
+</div>
+</div>
+
+::: {.callout-important}
+## La lección no es sobre Inditex — es sobre no netear
+El valor integrado (**42**) parece modesto. Pero esconde positivos y negativos de **más de €280.000 M cada uno**. Si sólo publicaran el neto, nadie sabría que la mitad del problema está en la cadena de suministro (EV −183) y la otra mitad en las condiciones laborales (SV −137). **Reportar el neto es lo mismo que no reportar nada.**
+:::
+
+::: {.callout-note}
+**El puente con lo de anoche:** SV y EV se descuentan a una **tasa social de descuento del 2,2%** — la misma familia de tasa que discutieron con Drupp et al. (2,0–2,25%), no el WACC del inversionista. Un libro de texto de finanzas corporativas usa el mismo número que ustedes defendieron anoche.
+:::
+
+::: {.notes}
+2 min. La cifra que se queda es "42 esconde dos números de 280.000 millones cada uno". Si preguntan por qué Inditex reporta esto: no lo reporta — lo calculan los autores del libro, desde afuera, con datos públicos. Esa es la lección adicional: se puede estimar SV/EV sin acceso interno a la empresa.
+:::
+
+---
+
+## Para repasar · El iceberg de Inditex {background-color="#f5f5f5"}
+
+::: {style="font-size:1.2em;"}
+**Lo que ven del valor financiero (79) es sólo la punta.** Debajo del agua: €283.000 M de valor social positivo, €137.000 M y €183.000 M de valor social y ambiental negativo — la mitad del caso que nadie publica en un reporte anual.
+:::
+
+🎥 **Video de repaso:** *El iceberg de Inditex* — resumen en audio/video del caso, generado con NotebookLM. [Ver el video](https://notebook.google.com/notebook/21367412-a19c-494b-9865-3146bfd78098/artifact/66316af9-2c16-4b96-b117-7c0c8363e7b2) (requiere cuenta de Google).
+
+::: {.callout-note}
+No reemplaza las dos slides anteriores — es para repasar antes de aplicar el mismo ejercicio a su propio proyecto, o antes del Investor Day si quieren citar el caso de memoria.
+:::
+
+::: {.notes}
+30 seg. Sólo mencionarlo y seguir — es material de repaso, no de clase en vivo. Si alguien no tiene cuenta de Google a mano, decir que lo revise después.
+:::
+
+---
+
+## Caso real · el espejo nacional de Inditex {background-color="#000066" style="color:white;"}
+
+::: {style="font-size:1.3em; padding-top:20px;"}
+Inditex es pública: hay un *Annual Report* auditado, una acción que cotiza, un beta observable.
+
+**¿Y si la empresa es colombiana y privada — como la mayoría de las que van a evaluar en su carrera?**
+
+Tres slides con **Frisby**: mismo ejercicio, mismos huecos de información, pero esta vez de este lado del mundo.
+:::
+
+::: {.notes}
+Si el tiempo apremia, esta es la primera sección que se resume a una sola frase oral: "lo mismo que Inditex, pero para una empresa privada colombiana no hay Annual Report — hay que buscar en Supersociedades y en reportes de Pacto Global." Y saltar directo a la Sección 2.
+:::
+
+---
+
+## Caso nacional · Frisby, cuando la empresa es privada {.smaller}
+
+**Frisby** — cadena colombiana de pollo, fundada en Pereira en 1977, ~285 restaurantes en ~60 municipios, ~5.270 empleados directos.
+
+**El primer obstáculo, antes de calcular nada:** Frisby no cotiza en bolsa. No hay *Annual Report*. ¿De dónde sale cada pieza del caso?
+
+| | Inditex | Frisby |
+|---|---|---|
+| **FV** | Annual Report auditado, acción cotizada | **Superintendencia de Sociedades / SIREM** — toda gran empresa colombiana reporta estados financieros auditados, públicos |
+| **SV / EV** | Reporte de sostenibilidad propio | **Comunicación de Progreso, Pacto Global de la ONU** (2016–17, 2020, 2022) — el equivalente cuando no hay reporte GRI propio |
+
+**Lo que dice el filing (Supersociedades, 2023):** ingresos **$853.249 M COP** · utilidad neta **$42.270 M COP** · crecimiento 2024: EBITDA +21,8%, utilidad +13,8%.
+
+::: {.callout-warning}
+Estas cifras llegan **vía prensa que cita el filing** (Valora Analitik, Pulzo), no del filing mismo — verificar en SIIS (Supersociedades) antes de publicarlas en un documento oficial. Es exactamente la disciplina de `[PV]` que se les exige a ustedes.
+:::
+
+::: {.notes}
+1 min. El punto no es Frisby — es que la mayoría de sus empleadores futuros van a ser así: privados, sin reporte propio, con datos dispersos en registros públicos y prensa. Inditex les enseñó el método; Frisby les enseña dónde buscar cuando el método no viene con los datos servidos.
+:::
+
+---
+
+## Caso nacional · el valor social de Frisby, con datos reales {.smaller}
+
+**Excedente del consumidor** — misma fórmula, con una elasticidad *colombiana* de verdad:
+
+$$\text{Excedente} = \frac{\text{Ventas}}{\varepsilon} \cdot \frac{1}{2} = \frac{853.249}{1{,}69} \times 0{,}5 = \textbf{252.441 M COP}$$
+
+$\varepsilon = 1{,}69$: elasticidad-precio de la demanda de **pollo** en Colombia, Banco de la República (Galvis Aponte, 2000) — análogo de categoría, igual que Khaled & Lattimore fue "ropa" y no "Zara" para Inditex.
+
+**Bienestar del empleado** — misma fórmula, mismo precio sombra ($2.647/punto), convertido a COP:
+
+$$5.270 \text{ empleados} \times 2 \text{ puntos} \times \$11{,}4\text{M COP/punto} \approx \textbf{119.967 M COP}$$
+
+::: {.callout-important}
+**El dato que Frisby sí publica con nombre propio:** su Comunicación de Progreso 2020 documenta **90 padres/madres solteros**, **44 adultos mayores** y **61 migrantes** contratados — cifras exactas, no un porcentaje aproximado como el 68–82% que circula sobre otra cadena colombiana. Si a estas 195 personas se les asigna un premio de bienestar adicional (2 puntos más, por las barreras de empleo que enfrentan), son **+4.439 M COP** — ilustrativo, no sumado al total de arriba para no duplicar.
+:::
+
+::: {.notes}
+2 min. Comparar con Inditex: la elasticidad y el precio sombra vienen de la MISMA fuente metodológica (Impact Economy Foundation / literatura académica), sólo cambia el país y el producto. El dato de 195 contrataciones con nombre propio es más riguroso que cualquier porcentaje que hayan visto de otra cadena colombiana — vale la pena decirlo así, sin nombrarla, y dejar que caigan en cuenta solos. Guardar los dos números de elasticidad (Inditex 3,45, Frisby 1,69) — se comparan en la sección de valor social.
+:::
+
+---
+
+## Caso nacional · lo que falta — la lección del caso {.smaller}
+
+**Lo que Frisby sí divulga sobre E (Comunicación de Progreso 2020):** 67% de reducción en pitillos plásticos · 15,9 toneladas de plástico evitadas · 51% de empaques de bagazo de caña · 75 ha de reserva natural privada · **meta** de 0,28 tCO₂e/restaurante para 2021.
+
+::: {.callout-warning}
+**Eso no es un balance de carbono — son fragmentos.** No hay Scope 1/2/3, no hay un total en tCO₂e. Y no existe, para la cadena avícola colombiana, un estudio *true price* como el que Inditex usó para el textil. **El EV y el SV negativo de Frisby no son cero: son `[dato faltante]`.**
+:::
+
+**Lo único honesto que se puede sumar:**
+
+$$IV_{parcial} = FV + SV_{positivo} = 555.949 + 372.408 = \textbf{928.357 M COP (mínimo, no el IV real)}$$
+
+::: {.callout-important}
+Con Inditex, el SV negativo (−137) y el EV (−183) fueron **más grandes** que el SV positivo (+283). Si Frisby tuviera una proporción parecida, este número bajaría mucho — y no hay forma de saberlo sin que alguien audite su cadena avícola. **El caso no termina en un número: termina en una pregunta sin responder públicamente.**
+:::
+
+::: {.notes}
+2 min. Cierre de la Sección 1: esto anticipa "el reto práctico" que viene en la próxima sección, ahora con datos colombianos reales en vez de una frase abstracta. Si hay tiempo, preguntar: "¿quién tendría que publicar qué, para que este número dejara de ser un mínimo?" — no hay que responderla, sólo dejarla sobre la mesa.
+:::
+
+---
+
+## Sección 2 · Cómo se mide esto, en general {background-color="#000066" style="color:white;"}
+
+::: {style="font-size:1.4em; padding-top:60px;"}
+Ya vieron el resultado, dos veces. Ahora la pregunta de fondo: **¿por qué es tan difícil llegar a esos números?**
+:::
+
+::: {.notes}
+Transición. El cap. 5 del texto base (lectura `04a`) es la fuente de todo este bloque.
+:::
+
+---
+
+## Input · Del flujo privado al social
 
 ```
   FLUJO DE CAJA PRIVADO
@@ -83,12 +349,115 @@ Eso no es un flujo social — es un flujo privado con propaganda. **Son dos fluj
 :::
 
 ::: {.notes}
-MIN 20–30. El diagrama se lee de arriba a abajo, literal, con el dedo. El error que van a cometer en la Construcción 1 está en la línea del callout: sumar sin quitar el WACC.
+MIN 20–30. El diagrama se lee de arriba a abajo, literal, con el dedo. Es la receta general que Inditex, Frisby y su propio proyecto siguen por igual — sólo cambia qué tan completos están los datos para llenarla.
 :::
 
 ---
 
-## Input 1 · Cuantificar el carbono de este proyecto
+## Teoría · Los dos retos de medir valor social y ambiental {.smaller background-color="#f5f5f5"}
+
+Antes de calcular nada, el texto base nombra dos obstáculos — y no son el mismo problema:
+
+::: {.columns}
+::: {.column width="50%"}
+**Reto 1 · práctico**
+
+La disponibilidad de información. La mayoría de las empresas no reportan sus impactos S y E con el detalle necesario — y casi ninguna lo hace fuera de sus propias operaciones (alcance 3).
+
+→ Es exactamente lo que acaban de ver con Frisby: datos completos para algunas cosas, `[dato faltante]` para otras.
+:::
+
+::: {.column width="50%"}
+**Reto 2 · mental**
+
+Que quien decide empiece a **pensar, analizar y actuar así** — a pesar de los vacíos de datos. La mayoría fue entrenada para ver sólo el valor financiero.
+
+→ Es la resistencia que van a enfrentar en el Investor Day cuando presenten un VPN social junto al financiero.
+:::
+:::
+
+::: {.callout-important}
+**El reto mental es el más difícil de los dos, y es el que este curso ataca primero.** Se puede tener toda la información del mundo y seguir sin usarla si nadie en la sala está dispuesto a pensar en tres monedas a la vez — financiera, social, ambiental.
+:::
+
+::: {.notes}
+1 min. Nombrar los dos retos con las palabras exactas del libro: "practical challenge" (datos) y "mental challenge" (la disposición a pensar así). Frisby fue el reto práctico en carne propia; esta slide le pone nombre.
+:::
+
+---
+
+## Teoría · Cómo se decide qué medir — la materialidad {.smaller}
+
+Antes de cuantificar o poner precio a nada, hay un primer paso que casi siempre se salta: **decidir qué es material** — qué impactos son lo bastante grandes para entrar en la cuenta.
+
+$$\text{Materialidad} \;\rightarrow\; \text{Cuantificación } (Q) \;\rightarrow\; \text{Monetización } (SP) \;\rightarrow\; VF = Q \cdot SP$$
+
+**El instrumento: un mapa de impacto de partes interesadas.** El texto base lo aplica primero a la moda rápida — el sector de Inditex:
+
+| | Trabajadores de la cadena | Sociedad en general |
+|---|---|---|
+| **Qué quieren** | Salario y condiciones dignas | Buenos resultados sociales y ambientales |
+| **¿La empresa ayuda o perjudica?** | **Perjudica** — los costos se aprietan sobre los proveedores | **Perjudica** — sufrimiento en la cadena (S) y daño ambiental grande (E) |
+
+::: {.callout-important}
+**La fricción central de la moda rápida:** lo que quiere el cliente (ropa barata y rápida) está en tensión directa con lo que necesitan los trabajadores de la cadena y la sociedad. Ningún cálculo posterior de SV o EV esconde esa fricción — sólo la cuantifica.
+:::
+
+::: {.callout-note}
+El mismo ejercicio en la industria aérea (el otro caso del texto base): la tensión es entre tiquetes baratos y las condiciones laborales, más el daño ambiental de las emisiones — casi siempre mayor que la utilidad de la aerolínea. **La materialidad es específica de cada industria: no hay una lista única que sirva para todas.**
+:::
+
+::: {.notes}
+2 min. Este mapa es lo que debió pasar ANTES de calcular el excedente del consumidor y el bienestar del empleado que ya vieron con Inditex — es el paso 1 (materialidad) que ese cálculo aplicó sin nombrarlo. Cerrar el círculo: por qué esos dos factores, y no otros, fueron los elegidos.
+:::
+
+---
+
+## Teoría · la tabla de precios sombra {.smaller}
+
+El paso 3 (monetización) necesita un precio para cada tipo de impacto. El apéndice del cap. 5 (§A.1) publica una lista — un fragmento de la que mantienen **Impact Economy Foundation** y **[True Price](https://www.trueprice.org/resources/)**:
+
+**Ambientales**
+
+| Impacto | Precio sombra |
+|---|---:|
+| Cambio climático (GEI) | $224/ton CO₂e |
+| Contaminación del agua (eutrofización) | $290/kg P eq |
+| Uso de agua escasa | $1,49/m³ |
+| Ocupación de suelo — bosque tropical | $3.030/(MSA·ha·año) |
+| Degradación del suelo (pérdida de SOC) | $43/ton SOC |
+| Agotamiento de materiales no renovables | $261/ton cobre eq |
+
+**Sociales**
+
+| Impacto | Precio sombra |
+|---|---:|
+| Efectos en salud humana | $119.000/DALY |
+| Bienestar del empleo | $2.647/punto de satisfacción |
+| Incidente laboral no fatal | $4.170/incidente |
+| Incidente laboral fatal | $3.540.000/incidente |
+| Brecha salarial bajo el mínimo | USD 1,56 por USD 1 de brecha |
+| Trabajo infantil | $21.600/niño FTE |
+
+::: {.callout-note}
+**No es una lista cerrada ni definitiva.** Son factores derivados de teoría del bienestar (derechos + bienestar, cap. 5 §5.4), actualizados periódicamente. Cuando la Construcción 1 les pida un precio sombra que no está aquí, **True Price** es el sitio para buscarlo.
+:::
+
+::: {.notes}
+2 min. No leer la tabla entera en voz alta — señalar 2-3 filas (clima, salud, bienestar del empleo) y decir "el resto está ahí para cuando lo necesiten hoy". El punto es que existe una tabla, no memorizarla.
+:::
+
+---
+
+## Sección 3 · El valor ambiental {background-color="#000066" style="color:white;"}
+
+::: {style="font-size:1.4em; padding-top:60px;"}
+Ya tienen la caja de herramientas general. Ahora, **su propio proyecto**: ¿cuánto vale, en carbono, lo que están construyendo?
+:::
+
+---
+
+## Input · Cuantificar el carbono de este proyecto
 
 | Paso | Valor | Fuente |
 |---|---:|---|
@@ -187,7 +556,7 @@ El proyecto de Tanzania **aumenta** las emisiones en dos de sus tres componentes
 | Metodología | IPCC 2006 | IPCC 2019 (Refinamiento), Tier 1/2/3, alineada al Marco de Transparencia Reforzado (CMNUCC) |
 
 ::: {.callout-note}
-La lógica que ya aprendieron esta mañana **no cambió**: con proyecto vs. sin proyecto, la diferencia es el balance, Tier 1 por defecto y Tier 2 si hay datos propios. Lo que cambió es la plataforma y el detalle metodológico detrás — más riguroso, no distinto.
+La lógica que ya aprendieron **no cambió**: con proyecto vs. sin proyecto, la diferencia es el balance, Tier 1 por defecto y Tier 2 si hay datos propios. Lo que cambió es la plataforma y el detalle metodológico detrás — más riguroso, no distinto.
 :::
 
 **Para usarla fuera de clase:** entrar a `exact.apps.fao.org` y empezar por el módulo de cultivo perenne (agroforestería) — es el que aplica a este proyecto. La guía completa: *EX-ACT Handbook* (Maestripieri et al., FAO 2026), lectura `04d` — no hace falta leerla completa, con §1 (qué es) y §2.4.4 (el módulo de cultivo perenne) alcanza.
@@ -254,6 +623,33 @@ $$\Delta C = \Delta Biomasa + \Delta SOC = 27{,}0 + 0{,}4 = 27{,}4 \text{ tC/ha}
 
 ---
 
+## Preliminar · la familia EX-ACT, más allá del carbono {.smaller background-color="#f5f5f5"}
+
+EX-ACT no está sola. La FAO mantiene dos herramientas hermanas — muy preliminar, sólo para que sepan que existen:
+
+| Herramienta | Para qué sirve | Cuándo usarla en vez de EX-ACT |
+|---|---|---|
+| **EX-ACT VC** (*Value Chains*) | El mismo balance con/sin proyecto, pero para una **cadena de valor completa** — producción, procesamiento, transporte | Si su proyecto no termina en la finca: incluye una planta de beneficio, exportación, o varios eslabones |
+| **B-INTACT** (*Biodiversity Integrated Assessment and Computation Tool*) | El mismo marco con/sin proyecto, aplicado a **biodiversidad** en vez de carbono | Si quieren monetizar el eje de biodiversidad de su proyecto (no sólo carbono) además del EV |
+
+::: {.callout-note}
+No hay tiempo hoy para entrar en su metodología — quedan como lectura complementaria (módulo 4 de Interactiva, `04c` y `04e`) para el equipo que quiera subir la apuesta en su Nota de Inversión de S5.
+:::
+
+::: {.notes}
+30 seg. Sólo nombrarlas y seguir. Si alguien pregunta por biodiversidad de su proyecto (además del carbono), B-INTACT es la respuesta: "existe, está en las lecturas, no la vamos a ver hoy en detalle."
+:::
+
+---
+
+## Sección 4 · El valor social {background-color="#000066" style="color:white;"}
+
+::: {style="font-size:1.4em; padding-top:60px;"}
+Ya midieron el carbono. Ahora la otra mitad: **el trabajo que el mercado no factura, y el bienestar que no aparece en el precio.**
+:::
+
+---
+
 ## Teoría · El salario sombra, término a término {.smaller}
 
 $$OpEx_{social} = OpEx \cdot (1 - f_{MO}) \;+\; OpEx \cdot f_{MO} \cdot SP_{MO}$$
@@ -279,311 +675,46 @@ El 70% es un supuesto, no un dato: sin una encuesta de subempleo local, se decla
 
 ---
 
-## Teoría · Los dos retos de medir valor social y ambiental {.smaller background-color="#f5f5f5"}
+## Teoría · la intuición detrás del excedente del consumidor {.smaller}
 
-Antes de calcular nada, el texto base nombra dos obstáculos — y no son el mismo problema:
+Antes de la fórmula, la idea con un ejemplo de bolsillo: si están dispuestos a pagar hasta **$15.000** por un almuerzo y sólo les cobran **$10.000**, su excedente son esos **$5.000** — el bienestar que se llevan gratis. Sumado sobre todos los clientes, es el área bajo la curva de demanda y sobre el precio de equilibrio: un **triángulo**.
 
-::: {.columns}
-::: {.column width="50%"}
-**Reto 1 · práctico**
+$$\text{Excedente} = \underbrace{\Delta P}_{\text{lo que "ahorra" cada cliente}} \times \underbrace{Q}_{\text{cuántos clientes}} \times \frac{1}{2}$$
 
-La disponibilidad de información. La mayoría de las empresas no reportan sus impactos S y E con el detalle necesario — y casi ninguna lo hace fuera de sus propias operaciones (alcance 3).
+**El problema:** nadie observa $\Delta P$ (el precio máximo que alguien habría pagado). La salida: la **elasticidad-precio** ($\varepsilon$) describe la misma curva de demanda sin necesitar ese dato — y con ella, ventas y elasticidad bastan:
 
-→ Es exactamente lo que van a ver con Inditex: datos usables sólo para emisiones, y ni siquiera completos.
-:::
-
-::: {.column width="50%"}
-**Reto 2 · mental**
-
-Que quien decide empiece a **pensar, analizar y actuar así** — a pesar de los vacíos de datos. La mayoría fue entrenada para ver sólo el valor financiero.
-
-→ Es la resistencia que van a enfrentar en el Investor Day cuando presenten un VPN social junto al financiero.
-:::
-:::
+$$\text{Excedente} = \frac{\text{Ventas}}{\varepsilon} \times \frac{1}{2}$$
 
 ::: {.callout-important}
-**El reto mental es el más difícil de los dos, y es el que este curso ataca primero.** Se puede tener toda la información del mundo y seguir sin usarla si nadie en la sala está dispuesto a pensar en tres monedas a la vez — financiera, social, ambiental.
+**La intuición que hay que quedarse:** a **menor** elasticidad (un producto sin buenos sustitutos), **mayor** excedente por cada peso de ventas — porque a la gente le cuesta más renunciar a él, y estaría dispuesta a pagar mucho más de lo que paga.
 :::
 
 ::: {.notes}
-1 min. Nombrar los dos retos con las palabras exactas del libro: "practical challenge" (datos) y "mental challenge" (la disposición a pensar así). Es la frase que conecta toda la sesión, desde el salario sombra hasta Inditex.
+2 min. Esta slide no estaba en la versión anterior del curso — es la explicación intuitiva que faltaba antes de mostrar la fórmula fría. No apurar el paso del triángulo a la fórmula de elasticidad; es el salto conceptual que más cuesta.
 :::
 
 ---
 
-## Teoría · Cómo se decide qué medir — la materialidad {.smaller}
+## Teoría · dos ejemplos reales, comparados {.smaller}
 
-Antes de cuantificar o poner precio a nada, hay un primer paso que casi siempre se salta: **decidir qué es material** — qué impactos son lo bastante grandes para entrar en la cuenta.
+**La misma fórmula, dos elasticidades muy distintas — ya las vieron hoy:**
 
-$$\text{Materialidad} \;\rightarrow\; \text{Cuantificación } (Q) \;\rightarrow\; \text{Monetización } (SP) \;\rightarrow\; VF = Q \cdot SP$$
-
-**El instrumento: un mapa de impacto de partes interesadas.** El texto base lo aplica primero a la moda rápida — el sector de Inditex:
-
-| | Trabajadores de la cadena | Sociedad en general |
-|---|---|---|
-| **Qué quieren** | Salario y condiciones dignas | Buenos resultados sociales y ambientales |
-| **¿La empresa ayuda o perjudica?** | **Perjudica** — los costos se aprietan sobre los proveedores | **Perjudica** — sufrimiento en la cadena (S) y daño ambiental grande (E) |
+| | Inditex (ropa) | Frisby (pollo) |
+|---|---:|---:|
+| Ventas | €20.400 M | 853.249 M COP |
+| Elasticidad ($\varepsilon$) | **3,45** (Khaled & Lattimore, 2006) | **1,69** (Galvis Aponte, Banco de la República, 2000) |
+| Excedente / Ventas | 1/(3,45×2) ≈ **14,5%** | 1/(1,69×2) ≈ **29,6%** |
 
 ::: {.callout-important}
-**La fricción central de la moda rápida:** lo que quiere el cliente (ropa barata y rápida) está en tensión directa con lo que necesitan los trabajadores de la cadena y la sociedad. Ningún cálculo posterior de SV o EV esconde esa fricción — sólo la cuantifica.
+**Con casi la mitad de la elasticidad, Frisby genera el doble de excedente por cada peso de ventas.** La ropa tiene sustitutos cercanos (otra marca, otra tienda) — el pollo, como alimento básico, tiene menos. Esa es la intuición de la slide anterior, confirmada con dos números reales, en dos países y dos categorías distintas.
 :::
 
 ::: {.callout-note}
-El mismo ejercicio en la industria aérea (el otro caso del texto base): la tensión es entre tiquetes baratos y las condiciones laborales, más el daño ambiental de las emisiones — casi siempre mayor que la utilidad de la aerolínea. **La materialidad es específica de cada industria: no hay una lista única que sirva para todas.**
+Ninguna de las dos elasticidades es "de la empresa" — son de la **categoría** (ropa, pollo). Es la misma aproximación de Tier 1 que usaron con el carbono esta mañana: cuando no hay un dato específico de la firma, se usa el mejor análogo disponible, declarado como tal.
 :::
 
 ::: {.notes}
-2 min. Este mapa es lo que debió pasar ANTES de calcular el excedente del consumidor y el bienestar del empleado — es el paso 1 (materialidad) que la siguiente slide aplica sin volver a nombrarlo. Cerrar el círculo: por qué esos dos factores, y no otros, fueron los elegidos para Inditex.
-:::
-
----
-
-## Caso real · cuando una empresa cotizada hace esto mismo {background-color="#f5f5f5"}
-
-**Inditex** (Zara, Bershka, Massimo Dutti…) — la mayor cadena de moda rápida del mundo, más de 7.000 tiendas, ventas 2020: **€20.400 millones**.
-
-No es un proyecto de sostenibilidad. Es la valoración de una empresa que cotiza en bolsa, hecha con **exactamente el mismo movimiento** que están haciendo ustedes hoy:
-
-$$IV = FV + SV + EV$$
-
-| | Qué mide | Cómo se calcula |
-|---|---|---|
-| **FV** (valor financiero) | Lo que vale la empresa para el accionista | DCF estándar |
-| **SV** (valor social) | El bienestar que crea o destruye para trabajadores, clientes, comunidad | $Q \times SP$, descontado — el mismo $VF=Q\cdot SP$ de anoche |
-| **EV** (valor ambiental) | El daño o beneficio ambiental, en dinero | $Q \times SP$, descontado |
-
-::: {.callout-note}
-Este es el caso guiado del cap. 11 de **Schoenmaker & Schramade (2023)**, texto base del curso, acceso abierto. No es una ilustración inventada: es el ejercicio completo, con los mismos supuestos declarados que les exigimos a ustedes.
-:::
-
-::: {.notes}
-1 min. Puente: "esto que acaban de ver con el salario sombra, una empresa real de €20.000 millones en ventas lo hace a escala de miles de millones — y lo publica un libro de texto." Sirve para que dejen de ver el ACB como un ejercicio de salón.
-:::
-
----
-
-## Teoría · Cómo Inditex pone precio al bienestar {.smaller}
-
-Dos de los tres precios sombra del caso, término a término:
-
-**Excedente del consumidor** — el bienestar que el cliente recibe por encima de lo que paga:
-
-$$\text{Excedente} = \frac{\text{Ventas}}{\varepsilon} \cdot \frac{1}{2}$$
-
-| Término | Qué es | Inditex, 2020 |
-|---|---|---|
-| Ventas | Ingresos totales | €20.400 M |
-| $\varepsilon$ (elasticidad precio de la demanda) | Cuánto cae la cantidad comprada cuando sube el precio — fuente: Khaled & Lattimore (2006), ropa de hombre y mujer | 3,45 |
-| Excedente | Bienestar del consumidor, antes de atribución | 20.400 / 3,45 × 0,5 = **€2.955 M** |
-| **Atribuido a Inditex** (50%, comparte el mérito con la cadena de suministro) | | **€1.478 M** |
-
-**Bienestar del empleado** — la satisfacción adicional de tener el empleo, más allá del salario:
-
-$$\text{Bienestar} = \text{puntos de satisfacción} \times SP_{\text{satisfacción}} \times \text{empleados}$$
-
-2 puntos (escala 0–100) × €2.407/punto × 144.116 empleados ≈ **€694 M**, antes de ajustar por la caída de ventas de 2020.
-
-::: {.callout-important}
-**Es la misma lógica del salario sombra rural que acaban de calcular** — poner precio a algo que el mercado no factura — aplicada al excedente de un consumidor y a la satisfacción de un empleado. Los datos son otros; la fórmula ($Q \times SP$) es idéntica.
-:::
-
-::: {.callout-note}
-**¿De dónde salen estos precios sombra?** Del apéndice del cap. 5 (§A.1), que a su vez cita dos bases: **Impact Economy Foundation** y **[True Price](https://www.trueprice.org/resources/)** — la organización que mantiene la lista de factores de monetización más usada en la práctica. Si en la Construcción 1 necesitan un precio sombra que no está en el apéndice (agua, biodiversidad, salud), **ese es el sitio para buscarlo primero.**
-:::
-
-::: {.notes}
-2 min. No hay que derivar la elasticidad en vivo — el punto es mostrar que "poner precio al bienestar" no es una metáfora: es un cálculo con una fuente académica (Khaled & Lattimore) detrás de cada número.
-:::
-
----
-
-## Teoría · Otra manera de monetizar — SROI {.smaller}
-
-Shadow prices no es la única convención para el paso 3 (monetización). **SROI** (*Social Return on Investment*, el estándar de Social Value International) es la otra que van a encontrar en la práctica — sobre todo si trabajan con una ONG o un fondo de impacto.
-
-$$\text{Valor neto} = Q \times SP \times (1-\text{deadweight}) \times \text{atribución} \times (1-\text{drop-off}) \times (1-\text{desplazamiento})$$
-
-$$SROI = \frac{\sum \text{Valor neto de los resultados}}{\text{Inversión total}}$$
-
-| Ajuste | Qué pregunta | Ya lo vieron como… |
-|---|---|---|
-| **Deadweight** | ¿Habría pasado esto de todas formas, sin el proyecto? | La **adicionalidad** del carbono (viernes/hoy) |
-| **Atribución** | ¿Qué parte del mérito es de otro actor? | El **50% de Inditex** en las emisiones de su cadena |
-| **Drop-off** | ¿El efecto se degrada con el tiempo? | Nuevo — no lo habían visto |
-| **Desplazamiento** | ¿Perjudica a otro grupo al beneficiar a este? | Nuevo — no lo habían visto |
-
-::: {.callout-important}
-**La diferencia no es la fórmula — es la disciplina.** Schoenmaker también ajusta por atribución (el 50% de Inditex), pero lo hace una vez, a discreción. SROI **obliga** a declarar los cuatro ajustes, para cada resultado, por separado. Es más lento y más honesto sobre lo que no se sabe.
-:::
-
-**Ejemplo con su propio proyecto** — capacitación técnica a 50 productores, proxy financiero USD 300/productor (costo de un curso equivalente):
-
-$$50 \times 300 \times (1-0{,}20)_{deadweight} \times 0{,}70_{atribución} = \text{USD } 8.400 \text{ (año 1)}$$
-
-Año 2, con drop-off del 15%: USD 8.400 × (1 − 0,15) = **USD 7.140**.
-
-::: {.callout-note}
-Fuente del estándar: Nicholls, Lawlor, Neitzert & Goodspeed (2012), *A Guide to Social Return on Investment*, Social Value International (antes *The SROI Network*). Ninguna de las dos convenciones es "la correcta" — shadow prices y SROI son dos maneras distintas de hacer lo mismo: declarar el juicio en vez de esconderlo.
-:::
-
-::: {.notes}
-2 min. El puente más fuerte es deadweight = adicionalidad: mismo concepto, dos nombres, dos campos (carbono vs. social). Si un equipo ya domina adicionalidad, SROI les va a parecer obvio. Drop-off y desplazamiento sí son nuevos — no forzar más ejemplos, con el de capacitación alcanza.
-:::
-
----
-
-## Caso real · la tabla que resume todo Inditex {.smaller}
-
-**Valoración integrada de Inditex, 2021 — € mil millones:**
-
-| | Valor | Fuente en el caso |
-|---|---:|---|
-| **FV** (valor financiero, DCF estándar) | **+79** | Tabla 11.6 |
-| **SV positivo** (excedente del consumidor, empleo, impuestos) | **+283** | Tabla 11.17 |
-| **SV negativo** (condiciones laborales en la cadena) | **−137** | Tabla 11.16 |
-| **EV negativo** (emisiones, agua, recursos — 50% atribuido) | **−183** | Tabla 11.15 |
-| **IV = FV + SV + EV** | **= 42** | |
-
-<div style="margin-top:16px;">
-<div style="display:flex; align-items:center; gap:12px; margin:6px 0;">
-  <div style="width:150px; text-align:right; font-size:0.8em; font-weight:600;">SV positivo</div>
-  <div style="background:#1b8a5a; height:26px; width:420px; border-radius:3px;"></div>
-  <div style="font-weight:700; font-size:0.8em;">+283</div>
-</div>
-<div style="display:flex; align-items:center; gap:12px; margin:6px 0;">
-  <div style="width:150px; text-align:right; font-size:0.8em; font-weight:600;">SV negativo</div>
-  <div style="background:#b91c1c; height:26px; width:203px; border-radius:3px;"></div>
-  <div style="font-weight:700; font-size:0.8em;">−137</div>
-</div>
-<div style="display:flex; align-items:center; gap:12px; margin:6px 0;">
-  <div style="width:150px; text-align:right; font-size:0.8em; font-weight:600;">EV negativo</div>
-  <div style="background:#7f1d1d; height:26px; width:271px; border-radius:3px;"></div>
-  <div style="font-weight:700; font-size:0.8em;">−183</div>
-</div>
-<div style="display:flex; align-items:center; gap:12px; margin:6px 0;">
-  <div style="width:150px; text-align:right; font-size:0.8em; font-weight:600;">FV</div>
-  <div style="background:#000066; height:26px; width:117px; border-radius:3px;"></div>
-  <div style="font-weight:700; font-size:0.8em;">+79</div>
-</div>
-<div style="display:flex; align-items:center; gap:12px; margin:6px 0;">
-  <div style="width:150px; text-align:right; font-size:0.8em; font-weight:600;">IV</div>
-  <div style="background:#00A9E0; height:26px; width:62px; border-radius:3px;"></div>
-  <div style="font-weight:700; font-size:0.8em;">42</div>
-</div>
-</div>
-
-::: {.callout-important}
-## La lección no es sobre Inditex — es sobre no netear
-El valor integrado (**42**) parece modesto. Pero esconde positivos y negativos de **más de €280.000 M cada uno**. Si sólo publicaran el neto, nadie sabría que la mitad del problema está en la cadena de suministro (EV −183) y la otra mitad en las condiciones laborales (SV −137). **Reportar el neto es lo mismo que no reportar nada.**
-:::
-
-::: {.callout-note}
-**El puente con lo de anoche:** SV y EV se descuentan a una **tasa social de descuento del 2,2%** — la misma familia de tasa que discutieron con Drupp et al. (2,0–2,25%), no el WACC del inversionista. Un libro de texto de finanzas corporativas usa el mismo número que ustedes defendieron anoche.
-:::
-
-::: {.notes}
-2 min. La cifra que se queda es "42 esconde dos números de 280.000 millones cada uno". Si preguntan por qué Inditex reporta esto: no lo reporta — lo calculan los autores del libro, desde afuera, con datos públicos. Esa es la lección adicional: se puede estimar SV/EV sin acceso interno a la empresa.
-:::
-
----
-
-## Para repasar · El iceberg de Inditex {background-color="#f5f5f5"}
-
-::: {style="font-size:1.2em;"}
-**Lo que ven del valor financiero (79) es sólo la punta.** Debajo del agua: €283.000 M de valor social positivo, €137.000 M y €183.000 M de valor social y ambiental negativo — la mitad del caso que nadie publica en un reporte anual.
-:::
-
-🎥 **Video de repaso:** *El iceberg de Inditex* — resumen en audio/video del caso, generado con NotebookLM. [Ver el video](https://notebook.google.com/notebook/21367412-a19c-494b-9865-3146bfd78098/artifact/66316af9-2c16-4b96-b117-7c0c8363e7b2) (requiere cuenta de Google).
-
-::: {.callout-note}
-No reemplaza las dos slides anteriores — es para repasar antes de aplicar el mismo ejercicio a su propio proyecto, o antes del Investor Day si quieren citar el caso de memoria.
-:::
-
-::: {.notes}
-30 seg. Sólo mencionarlo y seguir — es material de repaso, no de clase en vivo. Si alguien no tiene cuenta de Google a mano, decir que lo revise después.
-:::
-
----
-
-## Profundización opcional · el espejo nacional de Inditex {background-color="#000066" style="color:white;"}
-
-::: {style="font-size:1.3em; padding-top:20px;"}
-Inditex es pública: hay un *Annual Report* auditado, una acción que cotiza, un beta observable.
-
-**¿Y si la empresa es colombiana y privada — como la mayoría de las que van a evaluar en su carrera?**
-
-Tres slides con **Frisby**: mismo ejercicio, mismos huecos de información, pero esta vez de este lado del mundo.
-:::
-
-::: {.notes}
-Opcional — si el tiempo apremia, saltar directo a Construcción 1. Sirve mejor como lectura entre sesiones o como insumo para el equipo que quiera un caso nacional en su Nota de Inversión de S5.
-:::
-
----
-
-## Caso nacional · Frisby, cuando la empresa es privada {.smaller}
-
-**Frisby** — cadena colombiana de pollo, fundada en Pereira en 1977, ~285 restaurantes en ~60 municipios, ~5.270 empleados directos.
-
-**El primer obstáculo, antes de calcular nada:** Frisby no cotiza en bolsa. No hay *Annual Report*. ¿De dónde sale cada pieza del caso?
-
-| | Inditex | Frisby |
-|---|---|---|
-| **FV** | Annual Report auditado, acción cotizada | **Superintendencia de Sociedades / SIREM** — toda gran empresa colombiana reporta estados financieros auditados, públicos |
-| **SV / EV** | Reporte de sostenibilidad propio | **Comunicación de Progreso, Pacto Global de la ONU** (2016–17, 2020, 2022) — el equivalente cuando no hay reporte GRI propio |
-
-**Lo que dice el filing (Supersociedades, 2023):** ingresos **$853.249 M COP** · utilidad neta **$42.270 M COP** · crecimiento 2024: EBITDA +21,8%, utilidad +13,8%.
-
-::: {.callout-warning}
-Estas cifras llegan **vía prensa que cita el filing** (Valora Analitik, Pulzo), no del filing mismo — verificar en SIIS (Supersociedades) antes de publicarlas en un documento oficial. Es exactamente la disciplina de `[PV]` que se les exige a ustedes.
-:::
-
-::: {.notes}
-1 min. El punto no es Frisby — es que la mayoría de sus empleadores futuros van a ser así: privados, sin reporte propio, con datos dispersos en registros públicos y prensa. Inditex les enseñó el método; Frisby les enseña dónde buscar cuando el método no viene con los datos servidos.
-:::
-
----
-
-## Caso nacional · el valor social de Frisby, con datos reales {.smaller}
-
-**Excedente del consumidor** — misma fórmula, con una elasticidad *colombiana* de verdad:
-
-$$\text{Excedente} = \frac{\text{Ventas}}{\varepsilon} \cdot \frac{1}{2} = \frac{853.249}{1{,}69} \times 0{,}5 = \textbf{252.441 M COP}$$
-
-$\varepsilon = 1{,}69$: elasticidad-precio de la demanda de **pollo** en Colombia, Banco de la República (Galvis Aponte, 2000) — análogo de categoría, igual que Khaled & Lattimore fue "ropa" y no "Zara" para Inditex.
-
-**Bienestar del empleado** — misma fórmula, mismo precio sombra ($2.647/punto), convertido a COP:
-
-$$5.270 \text{ empleados} \times 2 \text{ puntos} \times \$11{,}4\text{M COP/punto} \approx \textbf{119.967 M COP}$$
-
-::: {.callout-important}
-**El dato que Frisby sí publica con nombre propio:** su Comunicación de Progreso 2020 documenta **90 padres/madres solteros**, **44 adultos mayores** y **61 migrantes** contratados — cifras exactas, no un porcentaje aproximado como el 68–82% que circula sobre otra cadena colombiana. Si a estas 195 personas se les asigna un premio de bienestar adicional (2 puntos más, por las barreras de empleo que enfrentan), son **+4.439 M COP** — ilustrativo, no sumado al total de arriba para no duplicar.
-:::
-
-::: {.notes}
-2 min. Comparar con Inditex: la elasticidad y el precio sombra vienen de la MISMA fuente metodológica (Impact Economy Foundation / literatura académica), sólo cambia el país y el producto. El dato de 195 contrataciones con nombre propio es más riguroso que cualquier porcentaje que hayan visto de otra cadena colombiana — vale la pena decirlo así, sin nombrarla, y dejar que caigan en cuenta solos.
-:::
-
----
-
-## Caso nacional · lo que falta — la lección del caso {.smaller}
-
-**Lo que Frisby sí divulga sobre E (Comunicación de Progreso 2020):** 67% de reducción en pitillos plásticos · 15,9 toneladas de plástico evitadas · 51% de empaques de bagazo de caña · 75 ha de reserva natural privada · **meta** de 0,28 tCO₂e/restaurante para 2021.
-
-::: {.callout-warning}
-**Eso no es un balance de carbono — son fragmentos.** No hay Scope 1/2/3, no hay un total en tCO₂e. Y no existe, para la cadena avícola colombiana, un estudio *true price* como el que Inditex usó para el textil. **El EV y el SV negativo de Frisby no son cero: son `[dato faltante]`.**
-:::
-
-**Lo único honesto que se puede sumar:**
-
-$$IV_{parcial} = FV + SV_{positivo} = 555.949 + 372.408 = \textbf{928.357 M COP (mínimo, no el IV real)}$$
-
-::: {.callout-important}
-Con Inditex, el SV negativo (−137) y el EV (−183) fueron **más grandes** que el SV positivo (+283). Si Frisby tuviera una proporción parecida, este número bajaría mucho — y no hay forma de saberlo sin que alguien audite su cadena avícola. **El caso no termina en un número: termina en una pregunta sin responder públicamente.**
-:::
-
-::: {.notes}
-2 min. Cierre del bloque opcional: esto es "el reto práctico" de la slide de esta mañana, visto con datos colombianos reales en vez de una frase abstracta. Si hay tiempo, preguntar: "¿quién tendría que publicar qué, para que este número dejara de ser un mínimo?" — no hay que responderla, sólo dejarla sobre la mesa.
+2 min. Cierre de la intuición: la comparación entre Inditex y Frisby no es sólo repetir los números — es mostrar que la fórmula responde de forma predecible a la elasticidad, y que eso es economía básica (sustitutos), no una caja negra. Puente a la Construcción 1: van a tener que elegir su propia elasticidad o su propio precio sombra para "una externalidad más".
 :::
 
 ---
@@ -603,11 +734,11 @@ Cada supuesto va en una celda **etiquetada y editable**, nunca dentro de una fó
 :::
 
 ::: {.callout-tip}
-**¿No encuentran el precio sombra que necesitan?** [True Price](https://www.trueprice.org/resources/) es la fuente detrás de la tabla del apéndice de Schoenmaker (cap. 5, §A.1) — el primer sitio para buscar un factor que no esté ahí.
+**¿No encuentran el precio sombra que necesitan?** [True Price](https://www.trueprice.org/resources/) es la fuente detrás de la tabla que vieron en la Sección 2 — el primer sitio para buscar un factor que no esté ahí.
 :::
 
 ::: {.notes}
-MIN 40–80. El caso Inditex que acaban de ver usa exactamente esta misma estructura, a otra escala: FV ya lo tienen (VPN privado de anoche), SV y EV son lo que construyen ahora.
+MIN 40–80. Los casos de Inditex y Frisby que vieron al abrir usan exactamente esta misma estructura, a otra escala: FV ya lo tienen (VPN privado de anoche), SV y EV son lo que construyen ahora.
 :::
 
 ---
