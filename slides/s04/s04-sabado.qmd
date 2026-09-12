@@ -177,24 +177,79 @@ El proyecto de Tanzania **aumenta** las emisiones en dos de sus tres componentes
 
 ## EX-ACT · cómo se accede a la herramienta {.smaller}
 
-EX-ACT es gratuita y está basada en Excel (sin macros) — el Banco Mundial y equipos de la FAO la usan para exactamente este tipo de proyecto.
+**EX-ACT cambió de forma en 2026.** Ya no es el archivo de Excel de la guía de 2017: la FAO la reconstruyó como **Environmental eXternalities ACcounting Tool** — misma sigla, alcance más amplio (no solo carbono) — una aplicación **en línea**, con motor en Python y un componente geoespacial.
 
-::: {.callout-warning}
-**No se pudo descargar para hoy.** La descarga directa que documentaba la guía de la FAO (`fao.org/tc/exact/carbon-balance-tool-ex-act`) ya no existe — la FAO migró la herramienta a una plataforma con **registro obligatorio** (`exact.apps.fao.org`). Bajarla requiere crear una cuenta y verificar el correo — no es algo que se resuelva en el salón.
-:::
-
-**Para usarla fuera de clase:**
-
-1. Registrarse en `exact.apps.fao.org`
-2. Leer primero la guía rápida, gratuita: *EX-ACT Quick Guidance* (FAO, 2017, 17 pp.)
-3. Empezar siempre por el módulo de **Descripción** — sin él, el resto no calcula nada
+| | Antes (2017) | Ahora (2026) |
+|---|---|---|
+| Formato | Excel, sin macros, se descargaba | App web, en `exact.apps.fao.org` |
+| Alcance | Balance de carbono (AFOLU) | "Externalidades ambientales" — carbono es el núcleo, con puentes a biodiversidad vía B-INTACT |
+| Estructura | 8 hojas temáticas | 6 categorías IPCC de uso del suelo + 17 categorías de ganado + módulos de insumos, energía y pesca |
+| Metodología | IPCC 2006 | IPCC 2019 (Refinamiento), Tier 1/2/3, alineada al Marco de Transparencia Reforzado (CMNUCC) |
 
 ::: {.callout-note}
-Para el entregable de esta noche **no necesitan la herramienta** — la fórmula de tres líneas que ya calcularon (línea base, adicionalidad, ×44/12) es exactamente el Tier 1 de EX-ACT, hecho a mano. Vale la pena si algún equipo quiere subir la apuesta con datos Tier 2 (suelo y biomasa propios) para la Nota de Inversión de S5.
+La lógica que ya aprendieron esta mañana **no cambió**: con proyecto vs. sin proyecto, la diferencia es el balance, Tier 1 por defecto y Tier 2 si hay datos propios. Lo que cambió es la plataforma y el detalle metodológico detrás — más riguroso, no distinto.
+:::
+
+**Para usarla fuera de clase:** entrar a `exact.apps.fao.org` y empezar por el módulo de cultivo perenne (agroforestería) — es el que aplica a este proyecto. La guía completa: *EX-ACT Handbook* (Maestripieri et al., FAO 2026), lectura `04d` — no hace falta leerla completa, con §1 (qué es) y §2.4.4 (el módulo de cultivo perenne) alcanza.
+
+::: {.callout-important}
+Para el entregable de esta noche **no necesitan la herramienta** — la fórmula de tres líneas que ya calcularon (línea base, adicionalidad, ×44/12) es exactamente el Tier 1 de EX-ACT, hecho a mano. La siguiente slide muestra qué tan cerca están de lo que la herramienta calcularía formalmente.
 :::
 
 ::: {.notes}
-1 min. Ser honesto con el obstáculo: no es que no se intentó, es que la FAO cerró el acceso libre y ahora exige registro. Si algún equipo quiere usarla de verdad para S5, avisar que el registro puede tardar en responder — no dejarlo para la noche antes de la entrega.
+1 min. Corrección respecto a lo que se dijo la primera vez que se preparó esta slide: EX-ACT no está cerrada ni exige un registro engorroso — es una app nueva, más completa, en exact.apps.fao.org. El punto pedagógico no cambia: la lógica con/sin proyecto es la misma que ya construyeron.
+:::
+
+---
+
+## Caso · clasificando El Corredor del Cacao con EX-ACT {.smaller}
+
+En la taxonomía de EX-ACT, un SAF de cacao con sombra de musáceas y maderables en varios pisos **no** es un sistema de un solo estrato: es **"Multistrata"**, dentro del módulo de cultivo perenne (agroforestería).
+
+**¿Qué habría calculado la herramienta con su factor Tier 1 genérico, en vez del dato específico de cacao que ya usaron?**
+
+| | Tier 1 genérico (EX-ACT, Multistrata, trópico húmedo, Suramérica) | Tier 2 (cacao, Agroforestry Systems 2025) |
+|---|---:|---:|
+| Tasa de crecimiento | 3,02 tC/ha/año | — (valor de stock directo) |
+| Acumulado a 15 años | 3,02 × 15 = **45,3 tC/ha** (techo de la categoría: 65) | **35 tC/ha** (rango 33–42) |
+
+::: {.callout-important}
+**El genérico sobrestima la biomasa del cacao en 10,3 tC/ha (+29%).** No porque esté mal calculado — porque promedia café, cacao y frutales mixtos con densidades de sombra distintas. **Es exactamente la razón por la que Tier 2 (dato del cultivo) siempre le gana a Tier 1 (categoría genérica)** cuando existe literatura confiable: usar el genérico aquí habría inflado su crédito de carbono en casi un tercio.
+:::
+
+::: {.notes}
+2 min. Este es el argumento más fuerte de toda la sesión a favor de Tier 2: no es una preferencia metodológica abstracta, es una diferencia de 29% en el resultado. Guardarlo para cuando alguien pregunte "¿por qué no usamos el valor por defecto de la herramienta?".
+:::
+
+---
+
+## Caso · el balance completo, con el suelo incluido {.smaller}
+
+Lo de esta mañana sólo movía **biomasa**. EX-ACT, en su módulo de cultivo perenne, también mueve **carbono del suelo** — con la misma lógica de siempre: referencia × factor de uso del suelo.
+
+| | Sin proyecto (potrero) | Con proyecto (SAF cacao) |
+|---|---:|---:|
+| Biomasa aérea | 8 tC/ha | 35 tC/ha (Tier 2) |
+| Carbono del suelo (SOC) | 40 × 1,00 = 40,0 tC/ha | 40 × 1,01 = 40,4 tC/ha |
+
+$$\Delta C = \Delta Biomasa + \Delta SOC = 27{,}0 + 0{,}4 = 27{,}4 \text{ tC/ha}$$
+
+| | Sólo biomasa (esta mañana) | + suelo (EX-ACT completo) |
+|---|---:|---:|
+| tCO₂e/ha | 99,0 | **100,5** |
+| Total, 500 ha | 49.500 | **50.233** (+733, +1,5%) |
+| Por hectárea al año | — | 6,70 |
+
+::: {.callout-note}
+**El suelo suma poco (+1,5%) y eso también es un hallazgo honesto.** No todo cambio de uso del suelo mueve el carbono del suelo de forma dramática — aquí la biomasa manda. Reportar el componente aunque sea pequeño es más creíble que omitirlo.
+:::
+
+::: {.callout-important}
+**En la convención de signos de EX-ACT** (la de ayer: positivo = fuente, negativo = sumidero), este balance se reporta como **−100,5 tCO₂e/ha** — el proyecto **no es "carbono neutro"** (que sería balance = 0): es un **sumidero neto**, mejor que neutro.
+:::
+
+::: {.notes}
+2 min. Cerrar con la pregunta que responde al "carbono neutro" del inicio de la sesión: neutro es cero: esto es negativo en convención EX-ACT, un sumidero. La cifra +1,5% del suelo es deliberadamente modesta — no forzar una narrativa de "el suelo también es enorme" cuando los números no la sostienen. Script fuente: `datos/analisis_carbono_exact_s4.py`.
 :::
 
 ---
@@ -556,15 +611,16 @@ MIN 11:45–12:25. Buscar el equipo cuyo ranking se invierte entre escenarios �
 | **Excedente del consumidor** · $Q/\varepsilon \times 1/2$ | 📖 | Schoenmaker & Schramade, cap. 5, §5.4, ec. 5.5–5.7 |
 | **VPN social** · $\sum (B_t-C_t)_{soc}/(1+TSD)^t$ | 📖 | Schoenmaker & Schramade, cap. 5, ec. 5.3–5.4 |
 | **Kaldor-Hicks** · $\sum \Delta B_i - \sum \Delta C_i > 0$ | 📖 | Boardman, Greenberg, Vining & Weimer, *Cost-Benefit Analysis*, cap. 2 |
-| **Regla de Ramsey** · $r = \delta + \eta g$ | ✅ | Drupp, Freeman, Groom & Nesje (2018), lectura `04a` |
+| **Regla de Ramsey** · $r = \delta + \eta g$ | ✅ | Drupp, Freeman, Groom & Nesje (2018), lectura `03c` |
 | **TSD de Colombia** (9,5 / 6,4 / 3,5%) | ✅ | Resolución 1092 de 2022, DNP — Art. 1 y 2 |
-| **Protocolo del precio del carbono** (sin/bajo/alto + *switching value*) | ✅ | Banco Mundial (2024), *Guidance Note on Shadow Price of Carbon*, lectura `04b` |
+| **Protocolo del precio del carbono** (sin/bajo/alto + *switching value*) | ✅ | Banco Mundial (2024), *Guidance Note on Shadow Price of Carbon* — aún sin PDF en `readings/`, ver referencias.bib |
 | **Escenarios NGFS** | 🧑‍🏫 | NGFS, *Guide to Climate Scenario Analysis* — no es lectura asignada, se enseña porque el proyecto los necesita |
-| **Caso Inditex** · $IV = FV+SV+EV$ | 📖 | Schoenmaker & Schramade, cap. 11, tabla 11.18 — texto base, acceso abierto |
+| **Caso Inditex** · $IV = FV+SV+EV$ | 📖 | Schoenmaker & Schramade, cap. 11, tabla 11.18, lectura `04b` |
 | **Salario sombra** (factor 0,70 de subempleo) | 🧑‍🏫 | No está en ninguna lectura — supuesto del caso, declarado **[PV]**, igual que la beta del viernes pasado |
+| **Balance de carbono EX-ACT** (con − sin proyecto, tasas Tier 1 de biomasa) | 📖 | FAO (2026), *EX-ACT Handbook*, §2.4.4 y Anexo (tablas A38, A45), lectura `04d` |
 
 ::: {.callout-note}
-Las lecturas obligatorias de hoy (Drupp y Banco Mundial) dan la **tasa** y el **protocolo del carbono**. Todo lo demás — precio sombra en general, Kaldor-Hicks, el caso Inditex — viene del texto base o de una referencia de consulta, no de una lectura que deban entregar. Se cita igual, porque el estándar del curso es declarar la fuente, no sólo lo que se leyó.
+Las lecturas obligatorias de hoy (Drupp y Banco Mundial) dan la **tasa** y el **protocolo del carbono**. Todo lo demás — precio sombra en general, Kaldor-Hicks, el caso Inditex, la metodología de EX-ACT — viene del texto base, del manual de la FAO o de una referencia de consulta (📖, módulo 4 de Interactiva), no de una lectura que deban entregar. Se cita igual, porque el estándar del curso es declarar la fuente, no sólo lo que se leyó.
 :::
 
 ::: {.notes}

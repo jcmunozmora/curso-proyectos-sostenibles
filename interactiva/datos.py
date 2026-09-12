@@ -32,7 +32,7 @@ FUENTE = "'Inter', 'Helvetica Neue', Arial, sans-serif"
 
 # La ÚNICA variable del mantenimiento semanal: qué módulo destaca en "Esta semana".
 # Índice 1-based sobre MODULOS. Al 2026-08-21: está en curso S1 → apunta a M1.
-SEMANA_ACTUAL = 4  # 1=M0 orientación · 2=M1/S1 · 3=M2/S2 · 4=M3/S3 · 5=M4/S4 · 6=M5/S5
+SEMANA_ACTUAL = 5  # 1=M0 orientación · 2=M1/S1 · 3=M2/S2 · 4=M3/S3 · 5=M4/S4 · 6=M5/S5
 # Al 2026-08-31: semana de S3 "El denominador" (vie 4 + sáb 5 sep) → apunta a M3.
 
 # Formato D2L del curso (Content clásico vs New Content Experience/Lessons):
@@ -115,6 +115,8 @@ MODULOS = [
             {"id": "s04-sabado", "titulo": "🛠 Taller · Sáb 12 sep — VPN social, precio sombra, switching value",
              "tipo": "taller", "link": "/slides/s04/s04-sabado.html",
              "entrega": date(2026, 9, 12)},
+            {"id": "s04-agente", "titulo": "🤖 Plantilla: AGENTE.md — instrucciones para su asistente de IA (nuevo entregable)",
+             "tipo": "plantilla", "link": "/plantillas/08-instrucciones-ia.html"},
         ],
     },
     {
@@ -164,7 +166,9 @@ for modulo in MODULOS:
 # paquete; el LMS cerrado es el canal correcto). Se suben A MANO en D2L:
 # Content → módulo → Upload/Create → Upload Files. generar.py deriva de ESTA
 # lista la guía de subida (build/lecturas.md) — no duplicar esta info en otro lado.
-# S4 y S5 aún no tienen PDF en readings/ (ver literatura/README.md §Pendientes).
+# Las obligatorias de S4 (Banco Mundial, Jayachandran) y las de S5 aún no tienen
+# PDF en readings/ (ver literatura/README.md §Pendientes); S4 sí tiene ya sus
+# complementarias (m04, abajo).
 LECTURAS = [
     {"modulo": "m01", "archivo": "literatura/readings/01b_Berg-etal_2022.pdf",
      "titulo": "📖 Berg, Kölbel & Rigobon (2022) — Aggregate Confusion",
@@ -206,6 +210,26 @@ LECTURAS = [
      "titulo": "⭐ Sapag Chain (2014) — cap. 16, Costo de capital",
      "tipo": "complementaria",
      "nota": "Referencia de fórmulas del viernes: CAPM (§16.4), Kd(1−t) (§16.3), WACC (§16.2), beta apalancada (ec. 16.6–16.7), ajuste por riesgo país. Es la mecánica; el criterio lo ponen Welch y Drupp."},
+    {"modulo": "m04", "archivo": "literatura/readings/04a_Schoenmaker_Cap5_SV_EV.pdf",
+     "titulo": "⭐ Schoenmaker & Schramade (2023) — cap. 5, Calculating Social and Environmental Value",
+     "tipo": "complementaria",
+     "nota": "Opcional: de dónde sale la fórmula VF = Q·SP que usan para precios sombra, y el excedente del consumidor (ec. 5.5–5.7) del caso Inditex."},
+    {"modulo": "m04", "archivo": "literatura/readings/04b_Schoenmaker_Cap11_Inditex.pdf",
+     "titulo": "⭐ Schoenmaker & Schramade (2023) — cap. 11, Case Study: Inditex",
+     "tipo": "complementaria",
+     "nota": "Opcional: el caso guiado completo de valor integrado (IV = FV + SV + EV) que se usa en clase — tabla 11.18 y sus supuestos, en detalle."},
+    {"modulo": "m04", "archivo": "literatura/readings/04c_FAO_EX-ACT_VC.pdf",
+     "titulo": "⭐ FAO (2023) — EX-ACT VC, Guidelines (3ª ed.)",
+     "tipo": "complementaria",
+     "nota": "Opcional: la versión de EX-ACT para cadena de valor completa (producción + procesamiento + transporte), no solo finca — para el equipo que quiera modelar la cadena de exportación del cacao, no sólo el cultivo."},
+    {"modulo": "m04", "archivo": "literatura/readings/04d_FAO_EX-ACT.pdf",
+     "titulo": "⭐ FAO (2026) — EX-ACT Handbook (Maestripieri et al.)",
+     "tipo": "complementaria",
+     "nota": "Opcional, no completo (210 pp.): leer §1 (pp. 1–4, qué es la herramienta hoy — ya es una app en línea, no un Excel) y §2.4.4 (pp. 32–34, módulo de cultivo perenne/agroforestería, el que aplica a este proyecto)."},
+    {"modulo": "m04", "archivo": "literatura/readings/04e_FAO_B-INTACT.pdf",
+     "titulo": "⭐ FAO (2021) — B-INTACT, Guidelines (2ª ed.)",
+     "tipo": "complementaria",
+     "nota": "Opcional: la herramienta hermana de EX-ACT, para biodiversidad en vez de carbono — mismo marco con/sin proyecto. Para el equipo que quiera monetizar también el eje de biodiversidad."},
 ]
 
 # Podcast recomendado — título confirmado por el profesor (2026-08-22): "Proyectos
@@ -270,7 +294,7 @@ ASIGNACIONES = [
     {
         "id": "a07-artefacto-s4", "modulo": "m04", "nombre": "S4 · Flujo socioeconómico",
         "fecha": "2026-09-12", "categoria": "R1 · Artefactos de sesión", "peso": 5.0,
-        "rubrica": "R1", "equipo": True, "instrucciones": "Construyan el flujo socioeconómico con precio sombra del carbono, tasa social de descuento, externalidades y switching value. Expongan los supuestos que cambian el signo del VPN.",
+        "rubrica": "R1", "equipo": True, "instrucciones": "Construyan el flujo socioeconómico con precio sombra del carbono, tasa social de descuento, externalidades y switching value. Expongan los supuestos que cambian el signo del VPN. Suban tres archivos: el modelo (.xlsx, abierto y recalculado antes de entregar), MEMORIA.md y —nuevo desde esta sesión— AGENTE.md con las instrucciones de su asistente de IA y su checklist de salida.",
         "entrega": "/plantillas/modelo-financiero-PLANTILLA.xlsx",
     },
     {
@@ -282,7 +306,7 @@ ASIGNACIONES = [
     {
         "id": "a09-modelo-final", "modulo": "m05", "nombre": "Modelo financiero final",
         "fecha": "2026-09-16", "categoria": "R3 · Modelo financiero final", "peso": 25.0,
-        "rubrica": "R3", "equipo": True, "instrucciones": "Suban el modelo financiero completo, con supuestos trazables, flujos privado y social, VPN, criterios, sensibilidad, riesgos y control de versiones. Un número sin fuente verificable anula el entregable.",
+        "rubrica": "R3", "equipo": True, "instrucciones": "Suban el modelo financiero completo, con supuestos trazables, flujos privado y social, VPN, criterios, sensibilidad, riesgos y control de versiones, acompañado de MEMORIA.md y AGENTE.md. El libro debe traer sus valores calculados. Un número sin fuente verificable anula el entregable.",
         "entrega": "/plantillas/modelo-financiero-PLANTILLA.xlsx",
     },
     {
@@ -292,7 +316,7 @@ ASIGNACIONES = [
         # peso 0 bajo R4 (eso dejaba R1 en 20% y el curso en 95% en vez de 100%).
         "id": "a10-nota-inversion", "modulo": "m05", "nombre": "S5 · Nota de inversión",
         "fecha": "2026-09-16", "categoria": "R1 · Artefactos de sesión", "peso": 5.0,
-        "rubrica": "R1", "equipo": True, "instrucciones": "Suban la nota de inversión de máximo cuatro páginas. Debe contener decisión, estructura, análisis financiero y socioeconómico, riesgos, fuentes y anexo de uso de IA.",
+        "rubrica": "R1", "equipo": True, "instrucciones": "Suban la nota de inversión de máximo cuatro páginas. Debe contener decisión, estructura, análisis financiero y socioeconómico, riesgos, fuentes y anexo de uso de IA (MEMORIA.md §3 y AGENTE.md). Las cifras del texto deben coincidir con las del modelo.",
         "entrega": "/plantillas/02-nota-de-inversion.html",
     },
     {
