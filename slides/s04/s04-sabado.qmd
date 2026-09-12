@@ -113,6 +113,92 @@ MIN 30–40. La línea base (8 Mg C/ha) es una estimación [PV] sin verificar co
 
 ---
 
+## Teoría · Cómo funciona EX-ACT, la herramienta detrás del número {.smaller}
+
+Lo que acaban de calcular a mano (35 − 8 Mg C/ha × 44/12) es la versión de bolsillo de lo que hace, formalmente, la herramienta que usa el Banco Mundial: **EX-ACT** (*Ex-Ante Carbon-balance Tool*), desarrollada por la FAO.
+
+**La lógica central — la misma de todo el curso:**
+
+| | Qué es | En este proyecto |
+|---|---|---|
+| **Sin proyecto** (WOP) | El escenario de referencia: lo que pasaría con la tierra si el proyecto **no** existiera | El potrero degradado sigue igual — 8 Mg C/ha |
+| **Con proyecto** (WP) | El escenario con la intervención implementada | El SAF de cacao maduro — 35 Mg C/ha |
+| **Balance de carbono** | La **diferencia** entre los dos escenarios — nunca el nivel absoluto de ninguno de los dos | 27 Mg C/ha × 44/12 = 99 tCO₂e/ha |
+
+::: {.callout-important}
+**El balance de carbono nunca es "cuánto emite el proyecto"** — es cuánto emite **menos** (o captura más) que si el proyecto no existiera. Por eso la línea base (sin proyecto) es la mitad del cálculo, no un detalle técnico.
+:::
+
+**Ocho módulos, uno por tipo de actividad** (metodología IPCC 2006, Tier 1 por defecto, Tier 2 si hay datos propios de suelo o biomasa):
+
+Descripción del proyecto · Cambio de uso del suelo · Cultivos · Pastizales y ganadería · Degradación de tierras · Humedales costeros · Insumos e inversiones · Pesca y acuicultura
+
+::: {.callout-note}
+Sólo se llenan los módulos que el proyecto **realmente** cambia. Para "El Corredor del Cacao", el módulo relevante es **Cambio de uso del suelo** (o **Cultivos**, si lo tratan como sistema agroforestal perenne) — los otros seis quedan vacíos, y eso es lo normal, no un error.
+:::
+
+::: {.notes}
+2 min. El punto que hay que dejar clarísimo: sin proyecto y con proyecto no son "antes y después en el tiempo del mismo lugar" — son dos futuros hipotéticos que compiten HOY. El potrero degradado no es el pasado del proyecto: es lo que seguiría pasando si el proyecto no se hiciera.
+:::
+
+---
+
+## Teoría · Dos fases y el balance por módulo — caso FAO, Tanzania {.smaller}
+
+**El balance de carbono tiene dos tramos de tiempo**, no uno:
+
+| Fase | Qué pasa | En este proyecto |
+|---|---|---|
+| **Implementación** ($t_0 \to t_1$) | Los años en que se ejecutan las actividades activas del proyecto | Siembra y establecimiento del SAF, años 0–4 |
+| **Capitalización** ($t_1 \to t_2$) | El carbono sigue cambiando **después** de que termina la intervención — suelo y biomasa aún se acomodan | Acumulación de carbono en biomasa y suelo, años 5–15 |
+
+**Un caso real de la FAO (Tanzania, *Accelerated Food Security Project*) — para ver que no todo suma en la misma dirección:**
+
+| Componente | Balance (con proyecto − sin proyecto) |
+|---|---:|
+| Arroz irrigado | **+3,2 millones tCO₂e** (fuente) |
+| Fertilizantes | **+5,3 millones tCO₂e** (fuente) |
+| Manejo de suelo y cultivo | **−0,4 millones tCO₂e** (sumidero) |
+| **Balance total, 20 años** | **−5,6 millones tCO₂e** (sumidero neto) |
+
+::: {.callout-warning}
+**Positivo = fuente de emisiones. Negativo = sumidero.** Es la misma convención de signos que vieron anoche con el caso del Banco Mundial — EX-ACT la usa literalmente así en su tabla de resultados.
+:::
+
+::: {.callout-important}
+El proyecto de Tanzania **aumenta** las emisiones en dos de sus tres componentes (más fertilizante, más arroz irrigado) — y aun así el balance total es un sumidero neto, porque se compara contra un escenario "sin proyecto" que sigue quemando residuos de cosecha. **La pregunta nunca es "¿el proyecto emite?" — es "¿emite menos que la alternativa?"**
+:::
+
+::: {.notes}
+2 min. Mismo patrón que van a auditar en la Construcción 3 de hoy con los escenarios NGFS: ningún componente aislado dice la verdad, sólo el balance completo contra el escenario sin proyecto. Puente directo a esa construcción.
+:::
+
+---
+
+## EX-ACT · cómo se accede a la herramienta {.smaller}
+
+EX-ACT es gratuita y está basada en Excel (sin macros) — el Banco Mundial y equipos de la FAO la usan para exactamente este tipo de proyecto.
+
+::: {.callout-warning}
+**No se pudo descargar para hoy.** La descarga directa que documentaba la guía de la FAO (`fao.org/tc/exact/carbon-balance-tool-ex-act`) ya no existe — la FAO migró la herramienta a una plataforma con **registro obligatorio** (`exact.apps.fao.org`). Bajarla requiere crear una cuenta y verificar el correo — no es algo que se resuelva en el salón.
+:::
+
+**Para usarla fuera de clase:**
+
+1. Registrarse en `exact.apps.fao.org`
+2. Leer primero la guía rápida, gratuita: *EX-ACT Quick Guidance* (FAO, 2017, 17 pp.)
+3. Empezar siempre por el módulo de **Descripción** — sin él, el resto no calcula nada
+
+::: {.callout-note}
+Para el entregable de esta noche **no necesitan la herramienta** — la fórmula de tres líneas que ya calcularon (línea base, adicionalidad, ×44/12) es exactamente el Tier 1 de EX-ACT, hecho a mano. Vale la pena si algún equipo quiere subir la apuesta con datos Tier 2 (suelo y biomasa propios) para la Nota de Inversión de S5.
+:::
+
+::: {.notes}
+1 min. Ser honesto con el obstáculo: no es que no se intentó, es que la FAO cerró el acceso libre y ahora exige registro. Si algún equipo quiere usarla de verdad para S5, avisar que el registro puede tardar en responder — no dejarlo para la noche antes de la entrega.
+:::
+
+---
+
 ## Teoría · El salario sombra, término a término {.smaller}
 
 $$OpEx_{social} = OpEx \cdot (1 - f_{MO}) \;+\; OpEx \cdot f_{MO} \cdot SP_{MO}$$
