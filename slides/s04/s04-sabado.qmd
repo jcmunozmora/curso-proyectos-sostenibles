@@ -505,6 +505,89 @@ No reemplaza las dos slides anteriores — es para repasar antes de aplicar el m
 
 ---
 
+## Profundización opcional · el espejo nacional de Inditex {background-color="#000066" style="color:white;"}
+
+::: {style="font-size:1.3em; padding-top:20px;"}
+Inditex es pública: hay un *Annual Report* auditado, una acción que cotiza, un beta observable.
+
+**¿Y si la empresa es colombiana y privada — como la mayoría de las que van a evaluar en su carrera?**
+
+Tres slides con **Frisby**: mismo ejercicio, mismos huecos de información, pero esta vez de este lado del mundo.
+:::
+
+::: {.notes}
+Opcional — si el tiempo apremia, saltar directo a Construcción 1. Sirve mejor como lectura entre sesiones o como insumo para el equipo que quiera un caso nacional en su Nota de Inversión de S5.
+:::
+
+---
+
+## Caso nacional · Frisby, cuando la empresa es privada {.smaller}
+
+**Frisby** — cadena colombiana de pollo, fundada en Pereira en 1977, ~285 restaurantes en ~60 municipios, ~5.270 empleados directos.
+
+**El primer obstáculo, antes de calcular nada:** Frisby no cotiza en bolsa. No hay *Annual Report*. ¿De dónde sale cada pieza del caso?
+
+| | Inditex | Frisby |
+|---|---|---|
+| **FV** | Annual Report auditado, acción cotizada | **Superintendencia de Sociedades / SIREM** — toda gran empresa colombiana reporta estados financieros auditados, públicos |
+| **SV / EV** | Reporte de sostenibilidad propio | **Comunicación de Progreso, Pacto Global de la ONU** (2016–17, 2020, 2022) — el equivalente cuando no hay reporte GRI propio |
+
+**Lo que dice el filing (Supersociedades, 2023):** ingresos **$853.249 M COP** · utilidad neta **$42.270 M COP** · crecimiento 2024: EBITDA +21,8%, utilidad +13,8%.
+
+::: {.callout-warning}
+Estas cifras llegan **vía prensa que cita el filing** (Valora Analitik, Pulzo), no del filing mismo — verificar en SIIS (Supersociedades) antes de publicarlas en un documento oficial. Es exactamente la disciplina de `[PV]` que se les exige a ustedes.
+:::
+
+::: {.notes}
+1 min. El punto no es Frisby — es que la mayoría de sus empleadores futuros van a ser así: privados, sin reporte propio, con datos dispersos en registros públicos y prensa. Inditex les enseñó el método; Frisby les enseña dónde buscar cuando el método no viene con los datos servidos.
+:::
+
+---
+
+## Caso nacional · el valor social de Frisby, con datos reales {.smaller}
+
+**Excedente del consumidor** — misma fórmula, con una elasticidad *colombiana* de verdad:
+
+$$\text{Excedente} = \frac{\text{Ventas}}{\varepsilon} \cdot \frac{1}{2} = \frac{853.249}{1{,}69} \times 0{,}5 = \textbf{252.441 M COP}$$
+
+$\varepsilon = 1{,}69$: elasticidad-precio de la demanda de **pollo** en Colombia, Banco de la República (Galvis Aponte, 2000) — análogo de categoría, igual que Khaled & Lattimore fue "ropa" y no "Zara" para Inditex.
+
+**Bienestar del empleado** — misma fórmula, mismo precio sombra ($2.647/punto), convertido a COP:
+
+$$5.270 \text{ empleados} \times 2 \text{ puntos} \times \$11{,}4\text{M COP/punto} \approx \textbf{119.967 M COP}$$
+
+::: {.callout-important}
+**El dato que Frisby sí publica con nombre propio:** su Comunicación de Progreso 2020 documenta **90 padres/madres solteros**, **44 adultos mayores** y **61 migrantes** contratados — cifras exactas, no un porcentaje aproximado como el 68–82% que circula sobre otra cadena colombiana. Si a estas 195 personas se les asigna un premio de bienestar adicional (2 puntos más, por las barreras de empleo que enfrentan), son **+4.439 M COP** — ilustrativo, no sumado al total de arriba para no duplicar.
+:::
+
+::: {.notes}
+2 min. Comparar con Inditex: la elasticidad y el precio sombra vienen de la MISMA fuente metodológica (Impact Economy Foundation / literatura académica), sólo cambia el país y el producto. El dato de 195 contrataciones con nombre propio es más riguroso que cualquier porcentaje que hayan visto de otra cadena colombiana — vale la pena decirlo así, sin nombrarla, y dejar que caigan en cuenta solos.
+:::
+
+---
+
+## Caso nacional · lo que falta — la lección del caso {.smaller}
+
+**Lo que Frisby sí divulga sobre E (Comunicación de Progreso 2020):** 67% de reducción en pitillos plásticos · 15,9 toneladas de plástico evitadas · 51% de empaques de bagazo de caña · 75 ha de reserva natural privada · **meta** de 0,28 tCO₂e/restaurante para 2021.
+
+::: {.callout-warning}
+**Eso no es un balance de carbono — son fragmentos.** No hay Scope 1/2/3, no hay un total en tCO₂e. Y no existe, para la cadena avícola colombiana, un estudio *true price* como el que Inditex usó para el textil. **El EV y el SV negativo de Frisby no son cero: son `[dato faltante]`.**
+:::
+
+**Lo único honesto que se puede sumar:**
+
+$$IV_{parcial} = FV + SV_{positivo} = 555.949 + 372.408 = \textbf{928.357 M COP (mínimo, no el IV real)}$$
+
+::: {.callout-important}
+Con Inditex, el SV negativo (−137) y el EV (−183) fueron **más grandes** que el SV positivo (+283). Si Frisby tuviera una proporción parecida, este número bajaría mucho — y no hay forma de saberlo sin que alguien audite su cadena avícola. **El caso no termina en un número: termina en una pregunta sin responder públicamente.**
+:::
+
+::: {.notes}
+2 min. Cierre del bloque opcional: esto es "el reto práctico" de la slide de esta mañana, visto con datos colombianos reales en vez de una frase abstracta. Si hay tiempo, preguntar: "¿quién tendría que publicar qué, para que este número dejara de ser un mínimo?" — no hay que responderla, sólo dejarla sobre la mesa.
+:::
+
+---
+
 ## Construcción 1 · 40 min {background-color="#f5f5f5" data-cron="2400" data-cron-label="construcción 1"}
 
 **Hoja `FlujoSocial`:**
