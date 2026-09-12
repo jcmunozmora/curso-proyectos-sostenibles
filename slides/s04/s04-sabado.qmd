@@ -733,7 +733,7 @@ MIN 11:45–12:25. Buscar el equipo cuyo ranking se invierte entre escenarios �
 | **Kaldor-Hicks** · $\sum \Delta B_i - \sum \Delta C_i > 0$ | 📖 | Boardman, Greenberg, Vining & Weimer, *Cost-Benefit Analysis*, cap. 2 |
 | **Regla de Ramsey** · $r = \delta + \eta g$ | ✅ | Drupp, Freeman, Groom & Nesje (2018), lectura `03c` |
 | **TSD de Colombia** (9,5 / 6,4 / 3,5%) | ✅ | Resolución 1092 de 2022, DNP — Art. 1 y 2 |
-| **Protocolo del precio del carbono** (sin/bajo/alto + *switching value*) | ✅ | Banco Mundial (2024), *Guidance Note on Shadow Price of Carbon* — aún sin PDF en `readings/`, ver referencias.bib |
+| **Protocolo del precio del carbono** (sin/bajo/alto + *switching value*) | ✅ | Banco Mundial (2024), *Guidance Note on Shadow Price of Carbon*, lectura `04f` |
 | **Escenarios NGFS** | 🧑‍🏫 | NGFS, *Guide to Climate Scenario Analysis* — no es lectura asignada, se enseña porque el proyecto los necesita |
 | **Caso Inditex** · $IV = FV+SV+EV$ | 📖 | Schoenmaker & Schramade, cap. 11, tabla 11.18, lectura `04b` |
 | **Salario sombra** (factor 0,70 de subempleo) | 🧑‍🏫 | No está en ninguna lectura — supuesto del caso, declarado **[PV]**, igual que la beta del viernes pasado |

@@ -248,7 +248,7 @@ $$VPN_{social} = \sum_{t=0}^{n} \frac{(B_t - C_t)_{social}}{(1+TSD)^t}$$
 
 ## Input · El protocolo del Banco Mundial
 
-*2024 Guidance Note on Shadow Price of Carbon in Economic Analysis* — es compromiso corporativo del BIRF para todo financiamiento de proyectos.
+*2024 Guidance Note on Shadow Price of Carbon in Economic Analysis* — es compromiso corporativo del BIRF para todo financiamiento de proyectos. Lectura obligatoria de hoy, `04f`.
 
 ::: {.callout-note}
 ## Lo que exige reportar

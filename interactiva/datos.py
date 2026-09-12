@@ -166,9 +166,8 @@ for modulo in MODULOS:
 # paquete; el LMS cerrado es el canal correcto). Se suben A MANO en D2L:
 # Content → módulo → Upload/Create → Upload Files. generar.py deriva de ESTA
 # lista la guía de subida (build/lecturas.md) — no duplicar esta info en otro lado.
-# Las obligatorias de S4 (Banco Mundial, Jayachandran) y las de S5 aún no tienen
-# PDF en readings/ (ver literatura/README.md §Pendientes); S4 sí tiene ya sus
-# complementarias (m04, abajo).
+# La obligatoria de Jayachandran y las de S5 aún no tienen PDF en readings/
+# (ver literatura/README.md §Pendientes).
 LECTURAS = [
     {"modulo": "m01", "archivo": "literatura/readings/01b_Berg-etal_2022.pdf",
      "titulo": "📖 Berg, Kölbel & Rigobon (2022) — Aggregate Confusion",
@@ -230,6 +229,14 @@ LECTURAS = [
      "titulo": "⭐ FAO (2021) — B-INTACT, Guidelines (2ª ed.)",
      "tipo": "complementaria",
      "nota": "Opcional: la herramienta hermana de EX-ACT, para biodiversidad en vez de carbono — mismo marco con/sin proyecto. Para el equipo que quiera monetizar también el eje de biodiversidad."},
+    {"modulo": "m04", "archivo": "literatura/readings/04f_WB2024_shadow-price-carbon.pdf",
+     "titulo": "📖 Banco Mundial (2024) — Guidance Note on Shadow Price of Carbon",
+     "tipo": "obligatoria",
+     "nota": "El protocolo de reporte: VPN sin carbono / con precio bajo / con precio alto, más el switching value. Es el formato exacto del entregable de S4."},
+    {"modulo": "m04", "archivo": "literatura/readings/04g_WEF2025_finance-solutions-for-nature.pdf",
+     "titulo": "⭐ WEF & McKinsey (2025) — Finance Solutions for Nature",
+     "tipo": "complementaria",
+     "nota": "Opcional: panorama de mecanismos de financiamiento de la naturaleza (retornos y resultados) — para el equipo que quiera comparar estructuras de capital más allá de deuda + equity."},
 ]
 
 # Podcast recomendado — título confirmado por el profesor (2026-08-22): "Proyectos
