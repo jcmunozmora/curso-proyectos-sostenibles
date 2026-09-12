@@ -387,8 +387,47 @@ $$\text{Bienestar} = \text{puntos de satisfacción} \times SP_{\text{satisfacci�
 **Es la misma lógica del salario sombra rural que acaban de calcular** — poner precio a algo que el mercado no factura — aplicada al excedente de un consumidor y a la satisfacción de un empleado. Los datos son otros; la fórmula ($Q \times SP$) es idéntica.
 :::
 
+::: {.callout-note}
+**¿De dónde salen estos precios sombra?** Del apéndice del cap. 5 (§A.1), que a su vez cita dos bases: **Impact Economy Foundation** y **[True Price](https://www.trueprice.org/resources/)** — la organización que mantiene la lista de factores de monetización más usada en la práctica. Si en la Construcción 1 necesitan un precio sombra que no está en el apéndice (agua, biodiversidad, salud), **ese es el sitio para buscarlo primero.**
+:::
+
 ::: {.notes}
 2 min. No hay que derivar la elasticidad en vivo — el punto es mostrar que "poner precio al bienestar" no es una metáfora: es un cálculo con una fuente académica (Khaled & Lattimore) detrás de cada número.
+:::
+
+---
+
+## Teoría · Otra manera de monetizar — SROI {.smaller}
+
+Shadow prices no es la única convención para el paso 3 (monetización). **SROI** (*Social Return on Investment*, el estándar de Social Value International) es la otra que van a encontrar en la práctica — sobre todo si trabajan con una ONG o un fondo de impacto.
+
+$$\text{Valor neto} = Q \times SP \times (1-\text{deadweight}) \times \text{atribución} \times (1-\text{drop-off}) \times (1-\text{desplazamiento})$$
+
+$$SROI = \frac{\sum \text{Valor neto de los resultados}}{\text{Inversión total}}$$
+
+| Ajuste | Qué pregunta | Ya lo vieron como… |
+|---|---|---|
+| **Deadweight** | ¿Habría pasado esto de todas formas, sin el proyecto? | La **adicionalidad** del carbono (viernes/hoy) |
+| **Atribución** | ¿Qué parte del mérito es de otro actor? | El **50% de Inditex** en las emisiones de su cadena |
+| **Drop-off** | ¿El efecto se degrada con el tiempo? | Nuevo — no lo habían visto |
+| **Desplazamiento** | ¿Perjudica a otro grupo al beneficiar a este? | Nuevo — no lo habían visto |
+
+::: {.callout-important}
+**La diferencia no es la fórmula — es la disciplina.** Schoenmaker también ajusta por atribución (el 50% de Inditex), pero lo hace una vez, a discreción. SROI **obliga** a declarar los cuatro ajustes, para cada resultado, por separado. Es más lento y más honesto sobre lo que no se sabe.
+:::
+
+**Ejemplo con su propio proyecto** — capacitación técnica a 50 productores, proxy financiero USD 300/productor (costo de un curso equivalente):
+
+$$50 \times 300 \times (1-0{,}20)_{deadweight} \times 0{,}70_{atribución} = \text{USD } 8.400 \text{ (año 1)}$$
+
+Año 2, con drop-off del 15%: USD 8.400 × (1 − 0,15) = **USD 7.140**.
+
+::: {.callout-note}
+Fuente del estándar: Nicholls, Lawlor, Neitzert & Goodspeed (2012), *A Guide to Social Return on Investment*, Social Value International (antes *The SROI Network*). Ninguna de las dos convenciones es "la correcta" — shadow prices y SROI son dos maneras distintas de hacer lo mismo: declarar el juicio en vez de esconderlo.
+:::
+
+::: {.notes}
+2 min. El puente más fuerte es deadweight = adicionalidad: mismo concepto, dos nombres, dos campos (carbono vs. social). Si un equipo ya domina adicionalidad, SROI les va a parecer obvio. Drop-off y desplazamiento sí son nuevos — no forzar más ejemplos, con el de capacitación alcanza.
 :::
 
 ---
@@ -478,6 +517,10 @@ No reemplaza las dos slides anteriores — es para repasar antes de aplicar el m
 
 ::: {.callout-note}
 Cada supuesto va en una celda **etiquetada y editable**, nunca dentro de una fórmula. En 20 minutos van a tener que cambiarlos todos.
+:::
+
+::: {.callout-tip}
+**¿No encuentran el precio sombra que necesitan?** [True Price](https://www.trueprice.org/resources/) es la fuente detrás de la tabla del apéndice de Schoenmaker (cap. 5, §A.1) — el primer sitio para buscar un factor que no esté ahí.
 :::
 
 ::: {.notes}
@@ -695,6 +738,7 @@ MIN 11:45–12:25. Buscar el equipo cuyo ranking se invierte entre escenarios �
 | **Caso Inditex** · $IV = FV+SV+EV$ | 📖 | Schoenmaker & Schramade, cap. 11, tabla 11.18, lectura `04b` |
 | **Salario sombra** (factor 0,70 de subempleo) | 🧑‍🏫 | No está en ninguna lectura — supuesto del caso, declarado **[PV]**, igual que la beta del viernes pasado |
 | **Balance de carbono EX-ACT** (con − sin proyecto, tasas Tier 1 de biomasa) | 📖 | FAO (2026), *EX-ACT Handbook*, §2.4.4 y Anexo (tablas A38, A45), lectura `04d` |
+| **SROI** · $Q\cdot SP\cdot(1-dw)\cdot atrib\cdot(1-do)\cdot(1-desp)$ | 📖 | Nicholls, Lawlor, Neitzert & Goodspeed (2012), *A Guide to SROI*, Social Value International |
 
 ::: {.callout-note}
 Las lecturas obligatorias de hoy (Drupp y Banco Mundial) dan la **tasa** y el **protocolo del carbono**. Todo lo demás — precio sombra en general, Kaldor-Hicks, el caso Inditex, la metodología de EX-ACT — viene del texto base, del manual de la FAO o de una referencia de consulta (📖, módulo 4 de Interactiva), no de una lectura que deban entregar. Se cita igual, porque el estándar del curso es declarar la fuente, no sólo lo que se leyó.
